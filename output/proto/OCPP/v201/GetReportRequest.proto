@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/ComponentVariableType.proto";
+import "types/CustomDataType.proto";
+import "types/enums/ComponentCriterionEnumType.proto";
+
+message GetReportRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  repeated OCPP.v201.types.ComponentVariableType componentVariable = 2;
+  // NOTE: This field is required by standard Spec.
+  int32 requestId = 3;
+  repeated OCPP.v201.types.enums.componentcriterionenumtype.ComponentCriterionEnumType componentCriteria = 4;
+}

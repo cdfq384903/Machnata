@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v16;
+option go_package = "tmp/v16;OCPPv16";
+option csharp_namespace = "OCPP.v16";
+
+import "types/enums/BootNotificationResponse_status_enum.proto";
+
+message BootNotificationResponse {
+  // NOTE: This field is required by standard Spec.
+  OCPP.v16.types.enums.bootnotificationresponse_status_enum.BootNotificationResponse_status_enum status = 1;
+  // NOTE: This field is required by standard Spec.
+  string currentTime = 2;
+  // NOTE: This field is required by standard Spec.
+  int32 interval = 3;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/PowerDuringCessationEnumType.proto";
+
+message VoltageParamsType {
+  double hv10MinMeanValue = 1;
+  double hv10MinMeanTripDelay = 2;
+  OCPP.v21.types.enums.powerduringcessationenumtype.PowerDuringCessationEnumType powerDuringCessation = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

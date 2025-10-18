@@ -1,0 +1,21 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/IdTokenType.proto";
+import "types/MessageContentType.proto";
+import "types/enums/AuthorizationStatusEnumType.proto";
+
+message IdTokenInfoType {
+  OCPP.v21.types.enums.authorizationstatusenumtype.AuthorizationStatusEnumType status = 1;
+  string cacheExpiryDateTime = 2;
+  int32 chargingPriority = 3;
+  OCPP.v21.types.IdTokenType groupIdToken = 4;
+  string language1 = 5;
+  string language2 = 6;
+  repeated int32 evseId = 7;
+  OCPP.v21.types.MessageContentType personalMessage = 8;
+  OCPP.v21.types.CustomDataType customData = 9;
+}

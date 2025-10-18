@@ -1,0 +1,42 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/enums/ocpi_2_2_locations_response_data_item_parking_type_enum.proto";
+import "types/ocpi_2_2_locations_response_data_item_coordinates.proto";
+import "types/ocpi_2_2_locations_response_data_item_energy_mix.proto";
+import "types/ocpi_2_2_locations_response_data_item_evses_item.proto";
+import "types/ocpi_2_2_locations_response_data_item_opening_times.proto";
+import "types/ocpi_2_2_locations_response_data_item_operator.proto";
+import "types/ocpi_2_2_locations_response_data_item_publish_allowed_to_item.proto";
+import "types/ocpi_2_2_locations_response_data_item_related_locations_item.proto";
+
+message ocpi_2_2_locations_response_data_item {
+  string country_code = 1;
+  string party_id = 2;
+  string id = 3;
+  bool publish = 4;
+  repeated OCPI.v22.types.ocpi_2_2_locations_response_data_item_publish_allowed_to_item publish_allowed_to = 5;
+  string name = 6;
+  string address = 7;
+  string city = 8;
+  string postal_code = 9;
+  string state = 10;
+  string country = 11;
+  OCPI.v22.types.ocpi_2_2_locations_response_data_item_coordinates coordinates = 12;
+  repeated OCPI.v22.types.ocpi_2_2_locations_response_data_item_related_locations_item related_locations = 13;
+  OCPI.v22.types.enums.ocpi_2_2_locations_response_data_item_parking_type_enum.ocpi_2_2_locations_response_data_item_parking_type_enum parking_type = 14;
+  repeated OCPI.v22.types.ocpi_2_2_locations_response_data_item_evses_item evses = 15;
+  repeated string directions = 16;
+  OCPI.v22.types.ocpi_2_2_locations_response_data_item_operator operator = 17;
+  string suboperator = 18;
+  string owner = 19;
+  repeated string facilities = 20;
+  string time_zone = 21;
+  OCPI.v22.types.ocpi_2_2_locations_response_data_item_opening_times opening_times = 22;
+  bool charging_when_closed = 23;
+  repeated string images = 24;
+  OCPI.v22.types.ocpi_2_2_locations_response_data_item_energy_mix energy_mix = 25;
+  string last_updated = 26;
+}

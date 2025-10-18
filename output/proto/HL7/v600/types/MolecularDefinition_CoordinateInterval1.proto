@@ -1,0 +1,19 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/MolecularDefinition_CoordinateSystem1.proto";
+import "types/string.proto";
+
+message MolecularDefinition_CoordinateInterval1 {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.MolecularDefinition_CoordinateSystem1 coordinateSystem = 4;
+  HL7.v600.types.Quantity startQuantity = 5;
+  HL7.v600.types.Range startRange = 6;
+  HL7.v600.types.Quantity endQuantity = 7;
+  HL7.v600.types.Range endRange = 8;
+}

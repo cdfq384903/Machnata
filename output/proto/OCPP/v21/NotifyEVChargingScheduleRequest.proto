@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/ChargingScheduleType.proto";
+import "types/CustomDataType.proto";
+
+message NotifyEVChargingScheduleRequest {
+  // NOTE: This field is required by standard Spec.
+  string timeBase = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.ChargingScheduleType chargingSchedule = 2;
+  // NOTE: This field is required by standard Spec.
+  int32 evseId = 3;
+  int32 selectedChargingScheduleId = 4;
+  bool powerToleranceAcceptance = 5;
+  OCPP.v21.types.CustomDataType customData = 6;
+}

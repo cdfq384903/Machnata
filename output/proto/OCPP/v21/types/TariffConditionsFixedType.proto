@@ -1,0 +1,20 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/DayOfWeekEnumType.proto";
+import "types/enums/EvseKindEnumType.proto";
+
+message TariffConditionsFixedType {
+  string startTimeOfDay = 1;
+  string endTimeOfDay = 2;
+  repeated OCPP.v21.types.enums.dayofweekenumtype.DayOfWeekEnumType dayOfWeek = 3;
+  string validFromDate = 4;
+  string validToDate = 5;
+  OCPP.v21.types.enums.evsekindenumtype.EvseKindEnumType evseKind = 6;
+  string paymentBrand = 7;
+  string paymentRecognition = 8;
+  OCPP.v21.types.CustomDataType customData = 9;
+}

@@ -1,0 +1,27 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Measure_Component1.proto";
+import "types/canonical.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message Measure_Stratifier {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string linkId = 4;
+  HL7.v600.types.Element shadow__linkId = 5 [json_name = "_linkId"];
+  HL7.v600.types.CodeableConcept code = 6;
+  HL7.v600.types.markdown description = 7;
+  HL7.v600.types.Element shadow__description = 8 [json_name = "_description"];
+  HL7.v600.types.Expression criteria = 9;
+  HL7.v600.types.Reference groupDefinition = 10;
+  HL7.v600.types.canonical valueSet = 11;
+  HL7.v600.types.string unit = 12;
+  HL7.v600.types.Element shadow__unit = 13 [json_name = "_unit"];
+  repeated HL7.v600.types.Measure_Component1 component = 14;
+}

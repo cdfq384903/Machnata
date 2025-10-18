@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/enums/DERControlEnumType.proto";
+import "types/enums/GridEventFaultEnumType.proto";
+
+message NotifyDERAlarmRequest {
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.enums.dercontrolenumtype.DERControlEnumType controlType = 1;
+  OCPP.v21.types.enums.grideventfaultenumtype.GridEventFaultEnumType gridEventFault = 2;
+  bool alarmEnded = 3;
+  // NOTE: This field is required by standard Spec.
+  string timestamp = 4;
+  string extraInfo = 5;
+  OCPP.v21.types.CustomDataType customData = 6;
+}

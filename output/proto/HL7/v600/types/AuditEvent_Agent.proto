@@ -1,0 +1,29 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message AuditEvent_Agent {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept type = 4;
+  repeated HL7.v600.types.CodeableConcept role = 5;
+  HL7.v600.types.Reference who = 6;
+  HL7.v600.types.boolean requestor = 7;
+  HL7.v600.types.Element shadow__requestor = 8 [json_name = "_requestor"];
+  HL7.v600.types.Reference location = 9;
+  repeated HL7.v600.types.uri policy = 10;
+  repeated HL7.v600.types.Element shadow__policy = 11 [json_name = "_policy"];
+  HL7.v600.types.Reference networkReference = 12;
+  string networkUri = 13;
+  HL7.v600.types.Element shadow__networkUri = 14 [json_name = "_networkUri"];
+  string networkString = 15;
+  HL7.v600.types.Element shadow__networkString = 16 [json_name = "_networkString"];
+  repeated HL7.v600.types.CodeableConcept authorization = 17;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/ChargingLimitSourceEnumType.proto";
+import "types/enums/ChargingProfilePurposeEnumType.proto";
+
+message ChargingProfileCriterionType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  OCPP.v201.types.enums.chargingprofilepurposeenumtype.ChargingProfilePurposeEnumType chargingProfilePurpose = 2;
+  int32 stackLevel = 3;
+  repeated int32 chargingProfileId = 4;
+  repeated OCPP.v201.types.enums.charginglimitsourceenumtype.ChargingLimitSourceEnumType chargingLimitSource = 5;
+}

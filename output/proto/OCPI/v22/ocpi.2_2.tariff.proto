@@ -1,0 +1,34 @@
+syntax = "proto3";
+package OCPI.v22;
+option go_package = "tmp/v22;OCPIv22";
+option csharp_namespace = "OCPI.v22";
+
+import "types/enums/ocpi_2_2_tariff_type_enum.proto";
+import "types/ocpi_2_2_tariff.proto";
+import "types/ocpi_2_2_tariff_elements_item.proto";
+import "types/ocpi_2_2_tariff_energy_mix.proto";
+import "types/ocpi_2_2_tariff_min_price.proto";
+import "types/ocpi_2_2_tariff_tariff_alt_text_item.proto";
+
+message ocpi_2_2_tariff {
+  // NOTE: This field is required by standard Spec.
+  string country_code = 1;
+  // NOTE: This field is required by standard Spec.
+  string party_id = 2;
+  // NOTE: This field is required by standard Spec.
+  string id = 3;
+  // NOTE: This field is required by standard Spec.
+  string currency = 4;
+  OCPI.v22.types.enums.ocpi_2_2_tariff_type_enum.ocpi_2_2_tariff_type_enum type = 5;
+  repeated OCPI.v22.types.ocpi_2_2_tariff_tariff_alt_text_item tariff_alt_text = 6;
+  string tariff_alt_url = 7;
+  OCPI.v22.types.ocpi_2_2_tariff_min_price min_price = 8;
+  OCPI.v22.types.ocpi_2_2_tariff max_price = 9;
+  // NOTE: This field is required by standard Spec.
+  repeated OCPI.v22.types.ocpi_2_2_tariff_elements_item elements = 10;
+  string start_date_time = 11;
+  string end_date_time = 12;
+  OCPI.v22.types.ocpi_2_2_tariff_energy_mix energy_mix = 13;
+  // NOTE: This field is required by standard Spec.
+  string last_updated = 14;
+}

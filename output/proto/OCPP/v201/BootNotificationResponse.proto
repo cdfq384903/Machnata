@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CustomDataType.proto";
+import "types/StatusInfoType.proto";
+import "types/enums/RegistrationStatusEnumType.proto";
+
+message BootNotificationResponse {
+  OCPP.v201.types.CustomDataType customData = 1;
+  // NOTE: This field is required by standard Spec.
+  string currentTime = 2;
+  // NOTE: This field is required by standard Spec.
+  int32 interval = 3;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v201.types.enums.registrationstatusenumtype.RegistrationStatusEnumType status = 4;
+  OCPP.v201.types.StatusInfoType statusInfo = 5;
+}

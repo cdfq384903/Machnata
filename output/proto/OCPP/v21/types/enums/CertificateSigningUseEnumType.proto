@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.certificatesigninguseenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum CertificateSigningUseEnumType {
+  CERTIFICATESIGNINGUSEENUMTYPE_UNSPECIFIED = 0;
+  ChargingStationCertificate = 1;
+  V2GCertificate = 2;
+  V2G20Certificate = 3;
+}

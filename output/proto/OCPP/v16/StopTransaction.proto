@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v16;
+option go_package = "tmp/v16;OCPPv16";
+option csharp_namespace = "OCPP.v16";
+
+import "types/StopTransaction_transactionData_item.proto";
+import "types/enums/StopTransaction_reason_enum.proto";
+
+message StopTransaction {
+  string idTag = 1;
+  // NOTE: This field is required by standard Spec.
+  int32 meterStop = 2;
+  // NOTE: This field is required by standard Spec.
+  string timestamp = 3;
+  // NOTE: This field is required by standard Spec.
+  int32 transactionId = 4;
+  OCPP.v16.types.enums.stoptransaction_reason_enum.StopTransaction_reason_enum reason = 5;
+  repeated OCPP.v16.types.StopTransaction_transactionData_item transactionData = 6;
+}

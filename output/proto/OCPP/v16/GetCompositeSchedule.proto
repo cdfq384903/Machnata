@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v16;
+option go_package = "tmp/v16;OCPPv16";
+option csharp_namespace = "OCPP.v16";
+
+import "types/enums/GetCompositeSchedule_chargingRateUnit_enum.proto";
+
+message GetCompositeSchedule {
+  // NOTE: This field is required by standard Spec.
+  int32 connectorId = 1;
+  // NOTE: This field is required by standard Spec.
+  int32 duration = 2;
+  OCPP.v16.types.enums.getcompositeschedule_chargingrateunit_enum.GetCompositeSchedule_chargingRateUnit_enum chargingRateUnit = 3;
+}

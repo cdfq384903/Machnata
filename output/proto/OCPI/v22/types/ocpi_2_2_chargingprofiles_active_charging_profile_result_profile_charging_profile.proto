@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/enums/ocpi_2_2_chargingprofiles_active_charging_profile_result_profile_charging_profile_charging_rate_unit_enum.proto";
+import "types/ocpi_2_2_chargingprofiles_active_charging_profile_result_profile_charging_profile_charging_profile_period_item.proto";
+
+message ocpi_2_2_chargingprofiles_active_charging_profile_result_profile_charging_profile {
+  string start_date_time = 1;
+  int32 duration = 2;
+  OCPI.v22.types.enums.ocpi_2_2_chargingprofiles_active_charging_profile_result_profile_charging_profile_charging_rate_unit_enum.ocpi_2_2_chargingprofiles_active_charging_profile_result_profile_charging_profile_charging_rate_unit_enum charging_rate_unit = 3;
+  double min_charging_rate = 4;
+  repeated OCPI.v22.types.ocpi_2_2_chargingprofiles_active_charging_profile_result_profile_charging_profile_charging_profile_period_item charging_profile_period = 5;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/IdTokenType.proto";
+import "types/OCSPRequestDataType.proto";
+
+message AuthorizeRequest {
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.IdTokenType idToken = 1;
+  string certificate = 2;
+  repeated OCPP.v21.types.OCSPRequestDataType iso15118CertificateHashData = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

@@ -1,0 +1,28 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/ACChargingParametersType.proto";
+import "types/CustomDataType.proto";
+import "types/DCChargingParametersType.proto";
+import "types/DERChargingParametersType.proto";
+import "types/EVEnergyOfferType.proto";
+import "types/V2XChargingParametersType.proto";
+import "types/enums/ControlModeEnumType.proto";
+import "types/enums/EnergyTransferModeEnumType.proto";
+import "types/enums/MobilityNeedsModeEnumType.proto";
+
+message ChargingNeedsType {
+  OCPP.v21.types.ACChargingParametersType acChargingParameters = 1;
+  OCPP.v21.types.DERChargingParametersType derChargingParameters = 2;
+  OCPP.v21.types.EVEnergyOfferType evEnergyOffer = 3;
+  OCPP.v21.types.enums.energytransfermodeenumtype.EnergyTransferModeEnumType requestedEnergyTransfer = 4;
+  OCPP.v21.types.DCChargingParametersType dcChargingParameters = 5;
+  OCPP.v21.types.V2XChargingParametersType v2xChargingParameters = 6;
+  repeated OCPP.v21.types.enums.energytransfermodeenumtype.EnergyTransferModeEnumType availableEnergyTransfer = 7;
+  OCPP.v21.types.enums.controlmodeenumtype.ControlModeEnumType controlMode = 8;
+  OCPP.v21.types.enums.mobilityneedsmodeenumtype.MobilityNeedsModeEnumType mobilityNeedsMode = 9;
+  string departureTime = 10;
+  OCPP.v21.types.CustomDataType customData = 11;
+}

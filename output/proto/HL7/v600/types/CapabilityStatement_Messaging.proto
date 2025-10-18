@@ -1,0 +1,23 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/CapabilityStatement_Endpoint.proto";
+import "types/CapabilityStatement_SupportedMessage.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+import "types/unsignedInt.proto";
+
+message CapabilityStatement_Messaging {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  repeated HL7.v600.types.CapabilityStatement_Endpoint endpoint = 4;
+  HL7.v600.types.unsignedInt reliableCache = 5;
+  HL7.v600.types.Element shadow__reliableCache = 6 [json_name = "_reliableCache"];
+  HL7.v600.types.markdown documentation = 7;
+  HL7.v600.types.Element shadow__documentation = 8 [json_name = "_documentation"];
+  repeated HL7.v600.types.CapabilityStatement_SupportedMessage supportedMessage = 9;
+}

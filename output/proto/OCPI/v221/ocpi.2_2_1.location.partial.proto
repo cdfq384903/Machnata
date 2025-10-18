@@ -1,0 +1,34 @@
+syntax = "proto3";
+package OCPI.v221;
+option go_package = "tmp/v221;OCPIv221";
+option csharp_namespace = "OCPI.v221";
+
+
+message ocpi_2_2_1_location_partial {
+  string country_code = 1;
+  string party_id = 2;
+  string id = 3;
+  string publish = 4;
+  string publish_allowed_to = 5;
+  string name = 6;
+  string address = 7;
+  string city = 8;
+  string postal_code = 9;
+  string state = 10;
+  string country = 11;
+  string coordinates = 12;
+  string related_locations = 13;
+  string parking_type = 14;
+  string evses = 15;
+  string directions = 16;
+  string operator = 17;
+  string suboperator = 18;
+  string owner = 19;
+  string facilities = 20;
+  string time_zone = 21;
+  string opening_times = 22;
+  string charging_when_closed = 23;
+  string images = 24;
+  string energy_mix = 25;
+  string last_updated = 26;
+}

@@ -1,0 +1,45 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Citation_PublishedIn.proto";
+import "types/code.proto";
+import "types/dateTime.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message Citation_PublicationForm {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Citation_PublishedIn publishedIn = 4;
+  HL7.v600.types.CodeableConcept citedMedium = 5;
+  HL7.v600.types.string volume = 6;
+  HL7.v600.types.Element shadow__volume = 7 [json_name = "_volume"];
+  HL7.v600.types.string issue = 8;
+  HL7.v600.types.Element shadow__issue = 9 [json_name = "_issue"];
+  HL7.v600.types.dateTime articleDate = 10;
+  HL7.v600.types.Element shadow__articleDate = 11 [json_name = "_articleDate"];
+  HL7.v600.types.string publicationDateText = 12;
+  HL7.v600.types.Element shadow__publicationDateText = 13 [json_name = "_publicationDateText"];
+  HL7.v600.types.string publicationDateSeason = 14;
+  HL7.v600.types.Element shadow__publicationDateSeason = 15 [json_name = "_publicationDateSeason"];
+  HL7.v600.types.dateTime lastRevisionDate = 16;
+  HL7.v600.types.Element shadow__lastRevisionDate = 17 [json_name = "_lastRevisionDate"];
+  repeated HL7.v600.types.code language = 18;
+  repeated HL7.v600.types.Element shadow__language = 19 [json_name = "_language"];
+  HL7.v600.types.string accessionNumber = 20;
+  HL7.v600.types.Element shadow__accessionNumber = 21 [json_name = "_accessionNumber"];
+  HL7.v600.types.string pageString = 22;
+  HL7.v600.types.Element shadow__pageString = 23 [json_name = "_pageString"];
+  HL7.v600.types.string firstPage = 24;
+  HL7.v600.types.Element shadow__firstPage = 25 [json_name = "_firstPage"];
+  HL7.v600.types.string lastPage = 26;
+  HL7.v600.types.Element shadow__lastPage = 27 [json_name = "_lastPage"];
+  HL7.v600.types.string pageCount = 28;
+  HL7.v600.types.Element shadow__pageCount = 29 [json_name = "_pageCount"];
+  HL7.v600.types.markdown copyright = 30;
+  HL7.v600.types.Element shadow__copyright = 31 [json_name = "_copyright"];
+}

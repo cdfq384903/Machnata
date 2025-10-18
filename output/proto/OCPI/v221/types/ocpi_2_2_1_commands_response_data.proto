@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+import "types/enums/ocpi_2_2_1_commands_response_data_result_enum.proto";
+import "types/ocpi_2_2_1_commands_response_data_message_item.proto";
+
+message ocpi_2_2_1_commands_response_data {
+  OCPI.v221.types.enums.ocpi_2_2_1_commands_response_data_result_enum.ocpi_2_2_1_commands_response_data_result_enum result = 1;
+  int32 timeout = 2;
+  repeated OCPI.v221.types.ocpi_2_2_1_commands_response_data_message_item message = 3;
+}

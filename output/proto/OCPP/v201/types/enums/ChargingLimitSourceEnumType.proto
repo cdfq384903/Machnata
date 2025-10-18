@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.charginglimitsourceenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum ChargingLimitSourceEnumType {
+  CHARGINGLIMITSOURCEENUMTYPE_UNSPECIFIED = 0;
+  EMS = 1;
+  Other = 2;
+  SO = 3;
+  CSO = 4;
+}

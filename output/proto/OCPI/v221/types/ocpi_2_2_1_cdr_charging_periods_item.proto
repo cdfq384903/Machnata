@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+import "types/ocpi_2_2_1_cdr_charging_periods_item_dimensions_item.proto";
+
+message ocpi_2_2_1_cdr_charging_periods_item {
+  string start_date_time = 1;
+  repeated OCPI.v221.types.ocpi_2_2_1_cdr_charging_periods_item_dimensions_item dimensions = 2;
+  string tariff_id = 3;
+}

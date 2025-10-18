@@ -1,0 +1,24 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ValueSet_Include.proto";
+import "types/boolean.proto";
+import "types/date.proto";
+import "types/string.proto";
+
+message ValueSet_Compose {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.date lockedDate = 4;
+  HL7.v600.types.Element shadow__lockedDate = 5 [json_name = "_lockedDate"];
+  HL7.v600.types.boolean inactive = 6;
+  HL7.v600.types.Element shadow__inactive = 7 [json_name = "_inactive"];
+  repeated HL7.v600.types.ValueSet_Include include = 8;
+  repeated HL7.v600.types.ValueSet_Include exclude = 9;
+  repeated HL7.v600.types.string property = 10;
+  repeated HL7.v600.types.Element shadow__property = 11 [json_name = "_property"];
+}

@@ -1,0 +1,30 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/DayOfWeekEnumType.proto";
+import "types/enums/EvseKindEnumType.proto";
+
+message TariffConditionsType {
+  string startTimeOfDay = 1;
+  string endTimeOfDay = 2;
+  repeated OCPP.v21.types.enums.dayofweekenumtype.DayOfWeekEnumType dayOfWeek = 3;
+  string validFromDate = 4;
+  string validToDate = 5;
+  OCPP.v21.types.enums.evsekindenumtype.EvseKindEnumType evseKind = 6;
+  double minEnergy = 7;
+  double maxEnergy = 8;
+  double minCurrent = 9;
+  double maxCurrent = 10;
+  double minPower = 11;
+  double maxPower = 12;
+  int32 minTime = 13;
+  int32 maxTime = 14;
+  int32 minChargingTime = 15;
+  int32 maxChargingTime = 16;
+  int32 minIdleTime = 17;
+  int32 maxIdleTime = 18;
+  OCPP.v21.types.CustomDataType customData = 19;
+}

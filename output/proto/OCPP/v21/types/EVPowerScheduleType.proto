@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/EVPowerScheduleEntryType.proto";
+
+message EVPowerScheduleType {
+  repeated OCPP.v21.types.EVPowerScheduleEntryType evPowerScheduleEntries = 1;
+  string timeAnchor = 2;
+  OCPP.v21.types.CustomDataType customData = 3;
+}

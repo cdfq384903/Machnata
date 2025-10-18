@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.getcertificateiduseenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum GetCertificateIdUseEnumType {
+  GETCERTIFICATEIDUSEENUMTYPE_UNSPECIFIED = 0;
+  V2GRootCertificate = 1;
+  MORootCertificate = 2;
+  CSMSRootCertificate = 3;
+  V2GCertificateChain = 4;
+  ManufacturerRootCertificate = 5;
+  OEMRootCertificate = 6;
+}

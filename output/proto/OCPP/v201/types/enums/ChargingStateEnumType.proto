@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.chargingstateenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum ChargingStateEnumType {
+  CHARGINGSTATEENUMTYPE_UNSPECIFIED = 0;
+  Charging = 1;
+  EVConnected = 2;
+  SuspendedEV = 3;
+  SuspendedEVSE = 4;
+  Idle = 5;
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.firmwarestatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum FirmwareStatusEnumType {
+  FIRMWARESTATUSENUMTYPE_UNSPECIFIED = 0;
+  Downloaded = 1;
+  DownloadFailed = 2;
+  Downloading = 3;
+  DownloadScheduled = 4;
+  DownloadPaused = 5;
+  Idle = 6;
+  InstallationFailed = 7;
+  Installing = 8;
+  Installed = 9;
+  InstallRebooting = 10;
+  InstallScheduled = 11;
+  InstallVerificationFailed = 12;
+  InvalidSignature = 13;
+  SignatureVerified = 14;
+}

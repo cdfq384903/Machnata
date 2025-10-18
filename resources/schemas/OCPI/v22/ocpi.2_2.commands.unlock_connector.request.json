@@ -1,0 +1,34 @@
+{
+  "$ref": "#/definitions/ocpi.2_2.commands.unlock_connector.request",
+  "definitions": {
+    "ocpi.2_2.commands.unlock_connector.request": {
+      "type": "object",
+      "properties": {
+        "response_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "location_id": {
+          "type": "string",
+          "maxLength": 36
+        },
+        "evse_uid": {
+          "type": "string",
+          "maxLength": 36
+        },
+        "connector_id": {
+          "type": "string",
+          "maxLength": 36
+        }
+      },
+      "required": [
+        "response_url",
+        "location_id",
+        "evse_uid",
+        "connector_id"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

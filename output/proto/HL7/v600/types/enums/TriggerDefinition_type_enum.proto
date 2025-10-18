@@ -1,0 +1,16 @@
+syntax = "proto3";
+package HL7.v600.types.enums.triggerdefinition_type_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum TriggerDefinition_type_enum {
+  TRIGGERDEFINITION_TYPE_ENUM_UNSPECIFIED = 0;
+  named_event = 1;
+  periodic = 2;
+  data_changed = 3;
+  data_added = 4;
+  data_modified = 5;
+  data_removed = 6;
+  data_accessed = 7;
+  data_access_ended = 8;
+}

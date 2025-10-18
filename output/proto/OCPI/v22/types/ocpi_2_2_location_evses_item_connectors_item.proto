@@ -1,0 +1,21 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/enums/ocpi_2_2_location_evses_item_connectors_item_format_enum.proto";
+import "types/enums/ocpi_2_2_location_evses_item_connectors_item_power_type_enum.proto";
+import "types/enums/ocpi_2_2_location_evses_item_connectors_item_standard_enum.proto";
+
+message ocpi_2_2_location_evses_item_connectors_item {
+  string id = 1;
+  OCPI.v22.types.enums.ocpi_2_2_location_evses_item_connectors_item_standard_enum.ocpi_2_2_location_evses_item_connectors_item_standard_enum standard = 2;
+  OCPI.v22.types.enums.ocpi_2_2_location_evses_item_connectors_item_format_enum.ocpi_2_2_location_evses_item_connectors_item_format_enum format = 3;
+  OCPI.v22.types.enums.ocpi_2_2_location_evses_item_connectors_item_power_type_enum.ocpi_2_2_location_evses_item_connectors_item_power_type_enum power_type = 4;
+  int32 max_voltage = 5;
+  int32 max_amperage = 6;
+  int32 max_electric_power = 7;
+  repeated string tariff_ids = 8;
+  string terms_and_conditions = 9;
+  string last_updated = 10;
+}

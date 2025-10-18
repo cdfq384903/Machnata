@@ -1,0 +1,24 @@
+{
+  "$ref": "#/definitions/ocpi.2_2.commands.stop_session.request",
+  "definitions": {
+    "ocpi.2_2.commands.stop_session.request": {
+      "type": "object",
+      "properties": {
+        "response_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "session_id": {
+          "type": "string",
+          "maxLength": 36
+        }
+      },
+      "required": [
+        "response_url",
+        "session_id"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,31 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+import "types/enums/ocpi_2_2_1_session_response_data_auth_method_enum.proto";
+import "types/enums/ocpi_2_2_1_session_response_data_status_enum.proto";
+import "types/ocpi_2_2_1_session_response_data_cdr_token.proto";
+import "types/ocpi_2_2_1_session_response_data_charging_periods_item.proto";
+import "types/ocpi_2_2_1_session_response_data_total_cost.proto";
+
+message ocpi_2_2_1_session_response_data {
+  string country_code = 1;
+  string party_id = 2;
+  string id = 3;
+  string start_date_time = 4;
+  string end_date_time = 5;
+  double kwh = 6;
+  OCPI.v221.types.ocpi_2_2_1_session_response_data_cdr_token cdr_token = 7;
+  OCPI.v221.types.enums.ocpi_2_2_1_session_response_data_auth_method_enum.ocpi_2_2_1_session_response_data_auth_method_enum auth_method = 8;
+  string authorization_reference = 9;
+  string location_id = 10;
+  string evse_uid = 11;
+  string connector_id = 12;
+  string meter_id = 13;
+  string currency = 14;
+  repeated OCPI.v221.types.ocpi_2_2_1_session_response_data_charging_periods_item charging_periods = 15;
+  OCPI.v221.types.ocpi_2_2_1_session_response_data_total_cost total_cost = 16;
+  OCPI.v221.types.enums.ocpi_2_2_1_session_response_data_status_enum.ocpi_2_2_1_session_response_data_status_enum status = 17;
+  string last_updated = 18;
+}

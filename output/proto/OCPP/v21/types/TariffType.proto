@@ -1,0 +1,27 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/MessageContentType.proto";
+import "types/PriceType.proto";
+import "types/TariffEnergyType.proto";
+import "types/TariffFixedType.proto";
+import "types/TariffTimeType.proto";
+
+message TariffType {
+  string tariffId = 1;
+  repeated OCPP.v21.types.MessageContentType description = 2;
+  string currency = 3;
+  OCPP.v21.types.TariffEnergyType energy = 4;
+  string validFrom = 5;
+  OCPP.v21.types.TariffTimeType chargingTime = 6;
+  OCPP.v21.types.TariffTimeType idleTime = 7;
+  OCPP.v21.types.TariffFixedType fixedFee = 8;
+  OCPP.v21.types.TariffTimeType reservationTime = 9;
+  OCPP.v21.types.TariffFixedType reservationFixed = 10;
+  OCPP.v21.types.PriceType minCost = 11;
+  OCPP.v21.types.PriceType maxCost = 12;
+  OCPP.v21.types.CustomDataType customData = 13;
+}

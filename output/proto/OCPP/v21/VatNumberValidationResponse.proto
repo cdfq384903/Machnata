@@ -1,0 +1,20 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/AddressType.proto";
+import "types/CustomDataType.proto";
+import "types/StatusInfoType.proto";
+import "types/enums/GenericStatusEnumType.proto";
+
+message VatNumberValidationResponse {
+  OCPP.v21.types.AddressType company = 1;
+  OCPP.v21.types.StatusInfoType statusInfo = 2;
+  // NOTE: This field is required by standard Spec.
+  string vatNumber = 3;
+  int32 evseId = 4;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.enums.genericstatusenumtype.GenericStatusEnumType status = 5;
+  OCPP.v21.types.CustomDataType customData = 6;
+}

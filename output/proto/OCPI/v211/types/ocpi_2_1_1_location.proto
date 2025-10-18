@@ -1,0 +1,39 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/enums/ocpi_2_1_1_location_type_enum.proto";
+import "types/ocpi_2_1_1_location_coordinates.proto";
+import "types/ocpi_2_1_1_location_energy_mix.proto";
+import "types/ocpi_2_1_1_location_evses_item.proto";
+import "types/ocpi_2_1_1_location_opening_times.proto";
+import "types/ocpi_2_1_1_location_operator.proto";
+import "types/ocpi_2_1_1_location_properties_evses_anyOf_0_items_properties_images_anyOf_0_items.proto";
+import "types/ocpi_2_1_1_location_properties_operator_anyOf_0.proto";
+import "types/ocpi_2_1_1_location_properties_related_locations_anyOf_0_items_properties_name_anyOf_0.proto";
+import "types/ocpi_2_1_1_location_related_locations_item.proto";
+
+message ocpi_2_1_1_location {
+  string id = 1;
+  OCPI.v211.types.enums.ocpi_2_1_1_location_type_enum.ocpi_2_1_1_location_type_enum type = 2;
+  string name = 3;
+  string address = 4;
+  string city = 5;
+  string postal_code = 6;
+  string country = 7;
+  OCPI.v211.types.ocpi_2_1_1_location_coordinates coordinates = 8;
+  repeated OCPI.v211.types.ocpi_2_1_1_location_related_locations_item related_locations = 9;
+  repeated OCPI.v211.types.ocpi_2_1_1_location_evses_item evses = 10;
+  repeated OCPI.v211.types.ocpi_2_1_1_location_properties_related_locations_anyOf_0_items_properties_name_anyOf_0 directions = 11;
+  OCPI.v211.types.ocpi_2_1_1_location_operator operator = 12;
+  OCPI.v211.types.ocpi_2_1_1_location_properties_operator_anyOf_0 suboperator = 13;
+  OCPI.v211.types.ocpi_2_1_1_location_properties_operator_anyOf_0 owner = 14;
+  repeated string facilities = 15;
+  string time_zone = 16;
+  OCPI.v211.types.ocpi_2_1_1_location_opening_times opening_times = 17;
+  bool charging_when_closed = 18;
+  repeated OCPI.v211.types.ocpi_2_1_1_location_properties_evses_anyOf_0_items_properties_images_anyOf_0_items images = 19;
+  OCPI.v211.types.ocpi_2_1_1_location_energy_mix energy_mix = 20;
+  string last_updated = 21;
+}

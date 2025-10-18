@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/ocpi_2_1_1_cdrs_response_data_item_charging_periods_item_dimensions_item.proto";
+
+message ocpi_2_1_1_cdrs_response_data_item_charging_periods_item {
+  string start_date_time = 1;
+  repeated OCPI.v211.types.ocpi_2_1_1_cdrs_response_data_item_charging_periods_item_dimensions_item dimensions = 2;
+}

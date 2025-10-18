@@ -1,0 +1,23 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/id.proto";
+import "types/string.proto";
+
+message StructureMap_Input {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.id name = 4;
+  HL7.v600.types.Element shadow__name = 5 [json_name = "_name"];
+  HL7.v600.types.string type = 6;
+  HL7.v600.types.Element shadow__type = 7 [json_name = "_type"];
+  HL7.v600.types.code mode = 8;
+  HL7.v600.types.Element shadow__mode = 9 [json_name = "_mode"];
+  HL7.v600.types.string documentation = 10;
+  HL7.v600.types.Element shadow__documentation = 11 [json_name = "_documentation"];
+}

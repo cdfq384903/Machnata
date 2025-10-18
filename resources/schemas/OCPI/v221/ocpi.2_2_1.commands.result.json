@@ -1,0 +1,58 @@
+{
+  "$ref": "#/definitions/ocpi.2_2_1.commands.result",
+  "definitions": {
+    "ocpi.2_2_1.commands.result": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string",
+          "enum": [
+            "ACCEPTED",
+            "CANCELED_RESERVATION",
+            "EVSE_OCCUPIED",
+            "EVSE_INOPERATIVE",
+            "FAILED",
+            "NOT_SUPPORTED",
+            "REJECTED",
+            "TIMEOUT",
+            "UNKNOWN_RESERVATION"
+          ]
+        },
+        "message": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "language": {
+                    "type": "string",
+                    "minLength": 2,
+                    "maxLength": 2
+                  },
+                  "text": {
+                    "type": "string",
+                    "maxLength": 512
+                  }
+                },
+                "required": [
+                  "language",
+                  "text"
+                ],
+                "additionalProperties": false
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "result"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

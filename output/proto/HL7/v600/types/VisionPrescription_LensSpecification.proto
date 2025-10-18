@@ -1,0 +1,41 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/VisionPrescription_Prism.proto";
+import "types/code.proto";
+import "types/decimal.proto";
+import "types/integer.proto";
+import "types/string.proto";
+
+message VisionPrescription_LensSpecification {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept product = 4;
+  HL7.v600.types.code eye = 5;
+  HL7.v600.types.Element shadow__eye = 6 [json_name = "_eye"];
+  HL7.v600.types.decimal sphere = 7;
+  HL7.v600.types.Element shadow__sphere = 8 [json_name = "_sphere"];
+  HL7.v600.types.decimal cylinder = 9;
+  HL7.v600.types.Element shadow__cylinder = 10 [json_name = "_cylinder"];
+  HL7.v600.types.integer axis = 11;
+  HL7.v600.types.Element shadow__axis = 12 [json_name = "_axis"];
+  repeated HL7.v600.types.VisionPrescription_Prism prism = 13;
+  HL7.v600.types.decimal add = 14;
+  HL7.v600.types.Element shadow__add = 15 [json_name = "_add"];
+  HL7.v600.types.decimal power = 16;
+  HL7.v600.types.Element shadow__power = 17 [json_name = "_power"];
+  HL7.v600.types.decimal backCurve = 18;
+  HL7.v600.types.Element shadow__backCurve = 19 [json_name = "_backCurve"];
+  HL7.v600.types.decimal diameter = 20;
+  HL7.v600.types.Element shadow__diameter = 21 [json_name = "_diameter"];
+  HL7.v600.types.Quantity duration = 22;
+  HL7.v600.types.string color = 23;
+  HL7.v600.types.Element shadow__color = 24 [json_name = "_color"];
+  HL7.v600.types.string brand = 25;
+  HL7.v600.types.Element shadow__brand = 26 [json_name = "_brand"];
+  repeated HL7.v600.types.Annotation note = 27;
+}

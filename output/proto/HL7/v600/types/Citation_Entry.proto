@@ -1,0 +1,27 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Citation_ContributionInstance.proto";
+import "types/boolean.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+
+message Citation_Entry {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Reference contributor = 4;
+  HL7.v600.types.string forenameInitials = 5;
+  HL7.v600.types.Element shadow__forenameInitials = 6 [json_name = "_forenameInitials"];
+  repeated HL7.v600.types.Reference affiliation = 7;
+  repeated HL7.v600.types.CodeableConcept contributionType = 8;
+  HL7.v600.types.CodeableConcept role = 9;
+  repeated HL7.v600.types.Citation_ContributionInstance contributionInstance = 10;
+  HL7.v600.types.boolean correspondingContact = 11;
+  HL7.v600.types.Element shadow__correspondingContact = 12 [json_name = "_correspondingContact"];
+  HL7.v600.types.positiveInt rankingOrder = 13;
+  HL7.v600.types.Element shadow__rankingOrder = 14 [json_name = "_rankingOrder"];
+}

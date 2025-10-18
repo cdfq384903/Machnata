@@ -1,0 +1,28 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/enums/ocpi_2_1_1_cdrs_response_data_item_auth_method_enum.proto";
+import "types/ocpi_2_1_1_cdrs_response_data_item_charging_periods_item.proto";
+import "types/ocpi_2_1_1_cdrs_response_data_item_location.proto";
+import "types/ocpi_2_1_1_cdrs_response_data_item_tariffs_item.proto";
+
+message ocpi_2_1_1_cdrs_response_data_item {
+  string id = 1;
+  string start_date_time = 2;
+  string stop_date_time = 3;
+  string auth_id = 4;
+  OCPI.v211.types.enums.ocpi_2_1_1_cdrs_response_data_item_auth_method_enum.ocpi_2_1_1_cdrs_response_data_item_auth_method_enum auth_method = 5;
+  OCPI.v211.types.ocpi_2_1_1_cdrs_response_data_item_location location = 6;
+  string meter_id = 7;
+  string currency = 8;
+  repeated OCPI.v211.types.ocpi_2_1_1_cdrs_response_data_item_tariffs_item tariffs = 9;
+  repeated OCPI.v211.types.ocpi_2_1_1_cdrs_response_data_item_charging_periods_item charging_periods = 10;
+  double total_cost = 11;
+  double total_energy = 12;
+  double total_time = 13;
+  double total_parking_time = 14;
+  string remark = 15;
+  string last_updated = 16;
+}

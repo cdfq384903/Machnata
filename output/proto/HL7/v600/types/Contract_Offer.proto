@@ -1,0 +1,29 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Contract_Answer.proto";
+import "types/Contract_Party.proto";
+import "types/string.proto";
+import "types/unsignedInt.proto";
+
+message Contract_Offer {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  repeated HL7.v600.types.Identifier identifier = 4;
+  repeated HL7.v600.types.Contract_Party party = 5;
+  HL7.v600.types.Reference topic = 6;
+  HL7.v600.types.CodeableConcept type = 7;
+  HL7.v600.types.CodeableConcept decision = 8;
+  repeated HL7.v600.types.CodeableConcept decisionMode = 9;
+  repeated HL7.v600.types.Contract_Answer answer = 10;
+  HL7.v600.types.string text = 11;
+  HL7.v600.types.Element shadow__text = 12 [json_name = "_text"];
+  repeated HL7.v600.types.string linkId = 13;
+  repeated HL7.v600.types.Element shadow__linkId = 14 [json_name = "_linkId"];
+  repeated HL7.v600.types.unsignedInt securityLabelNumber = 15;
+  repeated HL7.v600.types.Element shadow__securityLabelNumber = 16 [json_name = "_securityLabelNumber"];
+}

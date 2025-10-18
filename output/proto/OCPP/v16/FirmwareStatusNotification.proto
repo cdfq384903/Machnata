@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v16;
+option go_package = "tmp/v16;OCPPv16";
+option csharp_namespace = "OCPP.v16";
+
+import "types/enums/FirmwareStatusNotification_status_enum.proto";
+
+message FirmwareStatusNotification {
+  // NOTE: This field is required by standard Spec.
+  OCPP.v16.types.enums.firmwarestatusnotification_status_enum.FirmwareStatusNotification_status_enum status = 1;
+}

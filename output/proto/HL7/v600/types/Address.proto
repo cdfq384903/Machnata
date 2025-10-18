@@ -1,0 +1,735 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/base64Binary.proto";
+import "types/boolean.proto";
+import "types/canonical.proto";
+import "types/code.proto";
+import "types/date.proto";
+import "types/dateTime.proto";
+import "types/decimal.proto";
+import "types/enums/Address_type_enum.proto";
+import "types/enums/Address_use_enum.proto";
+import "types/enums/Age_comparator_enum.proto";
+import "types/enums/ContactPoint_system_enum.proto";
+import "types/enums/ContactPoint_use_enum.proto";
+import "types/enums/Count_comparator_enum.proto";
+import "types/enums/DataRequirement_Sort_direction_enum.proto";
+import "types/enums/Distance_comparator_enum.proto";
+import "types/enums/Duration_comparator_enum.proto";
+import "types/enums/HumanName_use_enum.proto";
+import "types/enums/Identifier_use_enum.proto";
+import "types/enums/Quantity_comparator_enum.proto";
+import "types/enums/RelatedArtifact_type_enum.proto";
+import "types/enums/Timing_Repeat_durationUnit_enum.proto";
+import "types/enums/Timing_Repeat_periodUnit_enum.proto";
+import "types/enums/Timing_Repeat_when_item_enum.proto";
+import "types/enums/TriggerDefinition_type_enum.proto";
+import "types/id.proto";
+import "types/instant.proto";
+import "types/integer.proto";
+import "types/integer64.proto";
+import "types/markdown.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+import "types/time.proto";
+import "types/unsignedInt.proto";
+import "types/uri.proto";
+import "types/url.proto";
+
+message UsageContext {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.Coding code = 3;
+  HL7.v600.types.CodeableConcept valueCodeableConcept = 4;
+  HL7.v600.types.Quantity valueQuantity = 5;
+  HL7.v600.types.Range valueRange = 6;
+  HL7.v600.types.Reference valueReference = 7;
+}
+
+message TriggerDefinition {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.enums.triggerdefinition_type_enum.TriggerDefinition_type_enum type = 3;
+  HL7.v600.types.Element shadow__type = 4 [json_name = "_type"];
+  HL7.v600.types.string name = 5;
+  HL7.v600.types.Element shadow__name = 6 [json_name = "_name"];
+  HL7.v600.types.CodeableConcept code = 7;
+  HL7.v600.types.canonical subscriptionTopic = 8;
+  HL7.v600.types.Timing timingTiming = 9;
+  HL7.v600.types.Reference timingReference = 10;
+  string timingDate = 11;
+  HL7.v600.types.Element shadow__timingDate = 12 [json_name = "_timingDate"];
+  string timingDateTime = 13;
+  HL7.v600.types.Element shadow__timingDateTime = 14 [json_name = "_timingDateTime"];
+  repeated HL7.v600.types.DataRequirement data = 15;
+  HL7.v600.types.Expression condition = 16;
+}
+
+message Signature {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Coding type = 3;
+  HL7.v600.types.instant when = 4;
+  HL7.v600.types.Element shadow__when = 5 [json_name = "_when"];
+  HL7.v600.types.Reference who = 6;
+  HL7.v600.types.Reference onBehalfOf = 7;
+  HL7.v600.types.code targetFormat = 8;
+  HL7.v600.types.Element shadow__targetFormat = 9 [json_name = "_targetFormat"];
+  HL7.v600.types.code sigFormat = 10;
+  HL7.v600.types.Element shadow__sigFormat = 11 [json_name = "_sigFormat"];
+  HL7.v600.types.base64Binary data = 12;
+  HL7.v600.types.Element shadow__data = 13 [json_name = "_data"];
+}
+
+message SampledData {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.Quantity origin = 3;
+  HL7.v600.types.decimal interval = 4;
+  HL7.v600.types.Element shadow__interval = 5 [json_name = "_interval"];
+  HL7.v600.types.code intervalUnit = 6;
+  HL7.v600.types.Element shadow__intervalUnit = 7 [json_name = "_intervalUnit"];
+  HL7.v600.types.decimal factor = 8;
+  HL7.v600.types.Element shadow__factor = 9 [json_name = "_factor"];
+  HL7.v600.types.decimal lowerLimit = 10;
+  HL7.v600.types.Element shadow__lowerLimit = 11 [json_name = "_lowerLimit"];
+  HL7.v600.types.decimal upperLimit = 12;
+  HL7.v600.types.Element shadow__upperLimit = 13 [json_name = "_upperLimit"];
+  HL7.v600.types.positiveInt dimensions = 14;
+  HL7.v600.types.Element shadow__dimensions = 15 [json_name = "_dimensions"];
+  HL7.v600.types.canonical codeMap = 16;
+  HL7.v600.types.string offsets = 17;
+  HL7.v600.types.Element shadow__offsets = 18 [json_name = "_offsets"];
+  HL7.v600.types.string data = 19;
+  HL7.v600.types.Element shadow__data = 20 [json_name = "_data"];
+}
+
+message RelatedArtifact {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.enums.relatedartifact_type_enum.RelatedArtifact_type_enum type = 3;
+  HL7.v600.types.Element shadow__type = 4 [json_name = "_type"];
+  repeated HL7.v600.types.CodeableConcept classifier = 5;
+  HL7.v600.types.string label = 6;
+  HL7.v600.types.Element shadow__label = 7 [json_name = "_label"];
+  HL7.v600.types.string display = 8;
+  HL7.v600.types.Element shadow__display = 9 [json_name = "_display"];
+  HL7.v600.types.markdown citation = 10;
+  HL7.v600.types.Element shadow__citation = 11 [json_name = "_citation"];
+  HL7.v600.types.Attachment document = 12;
+  HL7.v600.types.canonical resource = 13;
+  HL7.v600.types.Reference resourceReference = 14;
+  HL7.v600.types.code publicationStatus = 15;
+  HL7.v600.types.Element shadow__publicationStatus = 16 [json_name = "_publicationStatus"];
+  HL7.v600.types.date publicationDate = 17;
+  HL7.v600.types.Element shadow__publicationDate = 18 [json_name = "_publicationDate"];
+}
+
+message RatioRange {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.Quantity lowNumerator = 3;
+  HL7.v600.types.Quantity highNumerator = 4;
+  HL7.v600.types.Quantity denominator = 5;
+}
+
+message ParameterDefinition {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.code name = 3;
+  HL7.v600.types.Element shadow__name = 4 [json_name = "_name"];
+  HL7.v600.types.code use = 5;
+  HL7.v600.types.Element shadow__use = 6 [json_name = "_use"];
+  HL7.v600.types.integer min = 7;
+  HL7.v600.types.Element shadow__min = 8 [json_name = "_min"];
+  HL7.v600.types.string max = 9;
+  HL7.v600.types.Element shadow__max = 10 [json_name = "_max"];
+  HL7.v600.types.string documentation = 11;
+  HL7.v600.types.Element shadow__documentation = 12 [json_name = "_documentation"];
+  HL7.v600.types.code type = 13;
+  HL7.v600.types.Element shadow__type = 14 [json_name = "_type"];
+  HL7.v600.types.canonical profile = 15;
+}
+
+message Money {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.decimal value = 3;
+  HL7.v600.types.Element shadow__value = 4 [json_name = "_value"];
+  HL7.v600.types.code currency = 5;
+  HL7.v600.types.Element shadow__currency = 6 [json_name = "_currency"];
+}
+
+message Meta {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.id versionId = 3;
+  HL7.v600.types.Element shadow__versionId = 4 [json_name = "_versionId"];
+  HL7.v600.types.instant lastUpdated = 5;
+  HL7.v600.types.Element shadow__lastUpdated = 6 [json_name = "_lastUpdated"];
+  HL7.v600.types.uri source = 7;
+  HL7.v600.types.Element shadow__source = 8 [json_name = "_source"];
+  repeated HL7.v600.types.canonical profile = 9;
+  repeated HL7.v600.types.Coding security = 10;
+  repeated HL7.v600.types.Coding tag = 11;
+}
+
+message HumanName {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.enums.humanname_use_enum.HumanName_use_enum use = 3;
+  HL7.v600.types.Element shadow__use = 4 [json_name = "_use"];
+  HL7.v600.types.string text = 5;
+  HL7.v600.types.Element shadow__text = 6 [json_name = "_text"];
+  HL7.v600.types.string family = 7;
+  HL7.v600.types.Element shadow__family = 8 [json_name = "_family"];
+  repeated HL7.v600.types.string given = 9;
+  repeated HL7.v600.types.Element shadow__given = 10 [json_name = "_given"];
+  repeated HL7.v600.types.string prefix = 11;
+  repeated HL7.v600.types.Element shadow__prefix = 12 [json_name = "_prefix"];
+  repeated HL7.v600.types.string suffix = 13;
+  repeated HL7.v600.types.Element shadow__suffix = 14 [json_name = "_suffix"];
+  HL7.v600.types.Period period = 15;
+}
+
+message ExtendedContactDetail {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.CodeableConcept purpose = 3;
+  repeated HL7.v600.types.HumanName name = 4;
+  repeated HL7.v600.types.ContactPoint telecom = 5;
+  HL7.v600.types.Address address = 6;
+  HL7.v600.types.Reference organization = 7;
+  HL7.v600.types.Period period = 8;
+}
+
+message Expression {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.string description = 3;
+  HL7.v600.types.Element shadow__description = 4 [json_name = "_description"];
+  HL7.v600.types.code name = 5;
+  HL7.v600.types.Element shadow__name = 6 [json_name = "_name"];
+  HL7.v600.types.code language = 7;
+  HL7.v600.types.Element shadow__language = 8 [json_name = "_language"];
+  HL7.v600.types.string expression = 9;
+  HL7.v600.types.Element shadow__expression = 10 [json_name = "_expression"];
+  HL7.v600.types.uri reference = 11;
+  HL7.v600.types.Element shadow__reference = 12 [json_name = "_reference"];
+}
+
+message Timing_Repeat {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Duration boundsDuration = 4;
+  HL7.v600.types.Range boundsRange = 5;
+  HL7.v600.types.Period boundsPeriod = 6;
+  HL7.v600.types.positiveInt count = 7;
+  HL7.v600.types.Element shadow__count = 8 [json_name = "_count"];
+  HL7.v600.types.positiveInt countMax = 9;
+  HL7.v600.types.Element shadow__countMax = 10 [json_name = "_countMax"];
+  HL7.v600.types.decimal duration = 11;
+  HL7.v600.types.Element shadow__duration = 12 [json_name = "_duration"];
+  HL7.v600.types.decimal durationMax = 13;
+  HL7.v600.types.Element shadow__durationMax = 14 [json_name = "_durationMax"];
+  HL7.v600.types.enums.timing_repeat_durationunit_enum.Timing_Repeat_durationUnit_enum durationUnit = 15;
+  HL7.v600.types.Element shadow__durationUnit = 16 [json_name = "_durationUnit"];
+  HL7.v600.types.positiveInt frequency = 17;
+  HL7.v600.types.Element shadow__frequency = 18 [json_name = "_frequency"];
+  HL7.v600.types.positiveInt frequencyMax = 19;
+  HL7.v600.types.Element shadow__frequencyMax = 20 [json_name = "_frequencyMax"];
+  HL7.v600.types.decimal period = 21;
+  HL7.v600.types.Element shadow__period = 22 [json_name = "_period"];
+  HL7.v600.types.decimal periodMax = 23;
+  HL7.v600.types.Element shadow__periodMax = 24 [json_name = "_periodMax"];
+  HL7.v600.types.enums.timing_repeat_periodunit_enum.Timing_Repeat_periodUnit_enum periodUnit = 25;
+  HL7.v600.types.Element shadow__periodUnit = 26 [json_name = "_periodUnit"];
+  repeated HL7.v600.types.code dayOfWeek = 27;
+  repeated HL7.v600.types.Element shadow__dayOfWeek = 28 [json_name = "_dayOfWeek"];
+  repeated HL7.v600.types.time timeOfDay = 29;
+  repeated HL7.v600.types.Element shadow__timeOfDay = 30 [json_name = "_timeOfDay"];
+  repeated HL7.v600.types.enums.timing_repeat_when_item_enum.Timing_Repeat_when_item_enum when = 31;
+  repeated HL7.v600.types.Element shadow__when = 32 [json_name = "_when"];
+  HL7.v600.types.unsignedInt offset = 33;
+  HL7.v600.types.Element shadow__offset = 34 [json_name = "_offset"];
+}
+
+message Timing {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  repeated HL7.v600.types.dateTime event = 4;
+  repeated HL7.v600.types.Element shadow__event = 5 [json_name = "_event"];
+  HL7.v600.types.Timing_Repeat repeat = 6;
+  HL7.v600.types.CodeableConcept code = 7;
+}
+
+message Ratio {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.Quantity numerator = 3;
+  HL7.v600.types.Quantity denominator = 4;
+}
+
+message Range {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.Quantity low = 3;
+  HL7.v600.types.Quantity high = 4;
+}
+
+message Quantity {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.decimal value = 3;
+  HL7.v600.types.Element shadow__value = 4 [json_name = "_value"];
+  HL7.v600.types.enums.quantity_comparator_enum.Quantity_comparator_enum comparator = 5;
+  HL7.v600.types.Element shadow__comparator = 6 [json_name = "_comparator"];
+  HL7.v600.types.string unit = 7;
+  HL7.v600.types.Element shadow__unit = 8 [json_name = "_unit"];
+  HL7.v600.types.uri system = 9;
+  HL7.v600.types.Element shadow__system = 10 [json_name = "_system"];
+  HL7.v600.types.code code = 11;
+  HL7.v600.types.Element shadow__code = 12 [json_name = "_code"];
+}
+
+message Dosage_DoseAndRate {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept type = 4;
+  HL7.v600.types.Range doseRange = 5;
+  HL7.v600.types.Quantity doseQuantity = 6;
+  HL7.v600.types.Ratio rateRatio = 7;
+  HL7.v600.types.Range rateRange = 8;
+  HL7.v600.types.Quantity rateQuantity = 9;
+}
+
+message Dosage {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.integer sequence = 4;
+  HL7.v600.types.Element shadow__sequence = 5 [json_name = "_sequence"];
+  HL7.v600.types.string text = 6;
+  HL7.v600.types.Element shadow__text = 7 [json_name = "_text"];
+  repeated HL7.v600.types.CodeableConcept additionalInstruction = 8;
+  HL7.v600.types.string patientInstruction = 9;
+  HL7.v600.types.Element shadow__patientInstruction = 10 [json_name = "_patientInstruction"];
+  HL7.v600.types.Timing timing = 11;
+  HL7.v600.types.boolean asNeeded = 12;
+  HL7.v600.types.Element shadow__asNeeded = 13 [json_name = "_asNeeded"];
+  repeated HL7.v600.types.CodeableConcept asNeededFor = 14;
+  HL7.v600.types.CodeableConcept site = 15;
+  HL7.v600.types.CodeableConcept route = 16;
+  HL7.v600.types.CodeableConcept method = 17;
+  repeated HL7.v600.types.Dosage_DoseAndRate doseAndRate = 18;
+  repeated HL7.v600.types.Ratio maxDosePerPeriod = 19;
+  HL7.v600.types.Quantity maxDosePerAdministration = 20;
+  HL7.v600.types.Quantity maxDosePerLifetime = 21;
+}
+
+message Distance {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.decimal value = 3;
+  HL7.v600.types.Element shadow__value = 4 [json_name = "_value"];
+  HL7.v600.types.enums.distance_comparator_enum.Distance_comparator_enum comparator = 5;
+  HL7.v600.types.Element shadow__comparator = 6 [json_name = "_comparator"];
+  HL7.v600.types.string unit = 7;
+  HL7.v600.types.Element shadow__unit = 8 [json_name = "_unit"];
+  HL7.v600.types.uri system = 9;
+  HL7.v600.types.Element shadow__system = 10 [json_name = "_system"];
+  HL7.v600.types.code code = 11;
+  HL7.v600.types.Element shadow__code = 12 [json_name = "_code"];
+}
+
+message DataRequirement_ValueFilter {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string path = 4;
+  HL7.v600.types.Element shadow__path = 5 [json_name = "_path"];
+  HL7.v600.types.string searchParam = 6;
+  HL7.v600.types.Element shadow__searchParam = 7 [json_name = "_searchParam"];
+  HL7.v600.types.code comparator = 8;
+  HL7.v600.types.Element shadow__comparator = 9 [json_name = "_comparator"];
+  string valueDateTime = 10;
+  HL7.v600.types.Element shadow__valueDateTime = 11 [json_name = "_valueDateTime"];
+  HL7.v600.types.Period valuePeriod = 12;
+  HL7.v600.types.Duration valueDuration = 13;
+}
+
+message DataRequirement_Sort {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string path = 4;
+  HL7.v600.types.Element shadow__path = 5 [json_name = "_path"];
+  HL7.v600.types.enums.datarequirement_sort_direction_enum.DataRequirement_Sort_direction_enum direction = 6;
+  HL7.v600.types.Element shadow__direction = 7 [json_name = "_direction"];
+}
+
+message Duration {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.decimal value = 3;
+  HL7.v600.types.Element shadow__value = 4 [json_name = "_value"];
+  HL7.v600.types.enums.duration_comparator_enum.Duration_comparator_enum comparator = 5;
+  HL7.v600.types.Element shadow__comparator = 6 [json_name = "_comparator"];
+  HL7.v600.types.string unit = 7;
+  HL7.v600.types.Element shadow__unit = 8 [json_name = "_unit"];
+  HL7.v600.types.uri system = 9;
+  HL7.v600.types.Element shadow__system = 10 [json_name = "_system"];
+  HL7.v600.types.code code = 11;
+  HL7.v600.types.Element shadow__code = 12 [json_name = "_code"];
+}
+
+message DataRequirement_DateFilter {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string path = 4;
+  HL7.v600.types.Element shadow__path = 5 [json_name = "_path"];
+  HL7.v600.types.string searchParam = 6;
+  HL7.v600.types.Element shadow__searchParam = 7 [json_name = "_searchParam"];
+  string valueDateTime = 8;
+  HL7.v600.types.Element shadow__valueDateTime = 9 [json_name = "_valueDateTime"];
+  HL7.v600.types.Period valuePeriod = 10;
+  HL7.v600.types.Duration valueDuration = 11;
+}
+
+message DataRequirement_CodeFilter {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string path = 4;
+  HL7.v600.types.Element shadow__path = 5 [json_name = "_path"];
+  HL7.v600.types.string searchParam = 6;
+  HL7.v600.types.Element shadow__searchParam = 7 [json_name = "_searchParam"];
+  HL7.v600.types.canonical valueSet = 8;
+  repeated HL7.v600.types.Coding code = 9;
+}
+
+message DataRequirement {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.code type = 3;
+  HL7.v600.types.Element shadow__type = 4 [json_name = "_type"];
+  repeated HL7.v600.types.canonical profile = 5;
+  HL7.v600.types.CodeableConcept subjectCodeableConcept = 6;
+  HL7.v600.types.Reference subjectReference = 7;
+  repeated HL7.v600.types.string mustSupport = 8;
+  repeated HL7.v600.types.Element shadow__mustSupport = 9 [json_name = "_mustSupport"];
+  repeated HL7.v600.types.DataRequirement_CodeFilter codeFilter = 10;
+  repeated HL7.v600.types.DataRequirement_DateFilter dateFilter = 11;
+  repeated HL7.v600.types.DataRequirement_ValueFilter valueFilter = 12;
+  HL7.v600.types.positiveInt limit = 13;
+  HL7.v600.types.Element shadow__limit = 14 [json_name = "_limit"];
+  repeated HL7.v600.types.DataRequirement_Sort sort = 15;
+}
+
+message Count {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.decimal value = 3;
+  HL7.v600.types.Element shadow__value = 4 [json_name = "_value"];
+  HL7.v600.types.enums.count_comparator_enum.Count_comparator_enum comparator = 5;
+  HL7.v600.types.Element shadow__comparator = 6 [json_name = "_comparator"];
+  HL7.v600.types.string unit = 7;
+  HL7.v600.types.Element shadow__unit = 8 [json_name = "_unit"];
+  HL7.v600.types.uri system = 9;
+  HL7.v600.types.Element shadow__system = 10 [json_name = "_system"];
+  HL7.v600.types.code code = 11;
+  HL7.v600.types.Element shadow__code = 12 [json_name = "_code"];
+}
+
+message ContactPoint {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.enums.contactpoint_system_enum.ContactPoint_system_enum system = 3;
+  HL7.v600.types.Element shadow__system = 4 [json_name = "_system"];
+  HL7.v600.types.string value = 5;
+  HL7.v600.types.Element shadow__value = 6 [json_name = "_value"];
+  HL7.v600.types.enums.contactpoint_use_enum.ContactPoint_use_enum use = 7;
+  HL7.v600.types.Element shadow__use = 8 [json_name = "_use"];
+  HL7.v600.types.positiveInt rank = 9;
+  HL7.v600.types.Element shadow__rank = 10 [json_name = "_rank"];
+  HL7.v600.types.Period period = 11;
+}
+
+message ContactDetail {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.string name = 3;
+  HL7.v600.types.Element shadow__name = 4 [json_name = "_name"];
+  repeated HL7.v600.types.ContactPoint telecom = 5;
+}
+
+message CodeableReference {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.CodeableConcept concept = 3;
+  HL7.v600.types.Reference reference = 4;
+}
+
+message Availability_NotAvailableTime {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string description = 4;
+  HL7.v600.types.Element shadow__description = 5 [json_name = "_description"];
+  HL7.v600.types.Period during = 6;
+}
+
+message Availability_AvailableTime {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  repeated HL7.v600.types.code daysOfWeek = 4;
+  repeated HL7.v600.types.Element shadow__daysOfWeek = 5 [json_name = "_daysOfWeek"];
+  HL7.v600.types.boolean allDay = 6;
+  HL7.v600.types.Element shadow__allDay = 7 [json_name = "_allDay"];
+  HL7.v600.types.time availableStartTime = 8;
+  HL7.v600.types.Element shadow__availableStartTime = 9 [json_name = "_availableStartTime"];
+  HL7.v600.types.time availableEndTime = 10;
+  HL7.v600.types.Element shadow__availableEndTime = 11 [json_name = "_availableEndTime"];
+}
+
+message Availability {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.Period period = 3;
+  repeated HL7.v600.types.Availability_AvailableTime availableTime = 4;
+  repeated HL7.v600.types.Availability_NotAvailableTime notAvailableTime = 5;
+}
+
+message Attachment {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.code contentType = 3;
+  HL7.v600.types.Element shadow__contentType = 4 [json_name = "_contentType"];
+  HL7.v600.types.code language = 5;
+  HL7.v600.types.Element shadow__language = 6 [json_name = "_language"];
+  HL7.v600.types.base64Binary data = 7;
+  HL7.v600.types.Element shadow__data = 8 [json_name = "_data"];
+  HL7.v600.types.url url = 9;
+  HL7.v600.types.Element shadow__url = 10 [json_name = "_url"];
+  HL7.v600.types.integer64 size = 11;
+  HL7.v600.types.Element shadow__size = 12 [json_name = "_size"];
+  HL7.v600.types.base64Binary hash = 13;
+  HL7.v600.types.Element shadow__hash = 14 [json_name = "_hash"];
+  HL7.v600.types.string title = 15;
+  HL7.v600.types.Element shadow__title = 16 [json_name = "_title"];
+  HL7.v600.types.dateTime creation = 17;
+  HL7.v600.types.Element shadow__creation = 18 [json_name = "_creation"];
+  HL7.v600.types.positiveInt height = 19;
+  HL7.v600.types.Element shadow__height = 20 [json_name = "_height"];
+  HL7.v600.types.positiveInt width = 21;
+  HL7.v600.types.Element shadow__width = 22 [json_name = "_width"];
+  HL7.v600.types.positiveInt frames = 23;
+  HL7.v600.types.Element shadow__frames = 24 [json_name = "_frames"];
+  HL7.v600.types.decimal duration = 25;
+  HL7.v600.types.Element shadow__duration = 26 [json_name = "_duration"];
+  HL7.v600.types.positiveInt pages = 27;
+  HL7.v600.types.Element shadow__pages = 28 [json_name = "_pages"];
+}
+
+message Identifier {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.enums.identifier_use_enum.Identifier_use_enum use = 3;
+  HL7.v600.types.Element shadow__use = 4 [json_name = "_use"];
+  HL7.v600.types.CodeableConcept type = 5;
+  HL7.v600.types.uri system = 6;
+  HL7.v600.types.Element shadow__system = 7 [json_name = "_system"];
+  HL7.v600.types.string value = 8;
+  HL7.v600.types.Element shadow__value = 9 [json_name = "_value"];
+  HL7.v600.types.Period period = 10;
+  HL7.v600.types.Reference assigner = 11;
+}
+
+message Reference {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.string reference = 3;
+  HL7.v600.types.Element shadow__reference = 4 [json_name = "_reference"];
+  HL7.v600.types.uri type = 5;
+  HL7.v600.types.Element shadow__type = 6 [json_name = "_type"];
+  HL7.v600.types.Identifier identifier = 7;
+  HL7.v600.types.string display = 8;
+  HL7.v600.types.Element shadow__display = 9 [json_name = "_display"];
+}
+
+message Annotation {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.Reference authorReference = 3;
+  string authorString = 4;
+  HL7.v600.types.Element shadow__authorString = 5 [json_name = "_authorString"];
+  HL7.v600.types.dateTime time = 6;
+  HL7.v600.types.Element shadow__time = 7 [json_name = "_time"];
+  HL7.v600.types.markdown text = 8;
+  HL7.v600.types.Element shadow__text = 9 [json_name = "_text"];
+}
+
+message Age {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.decimal value = 3;
+  HL7.v600.types.Element shadow__value = 4 [json_name = "_value"];
+  HL7.v600.types.enums.age_comparator_enum.Age_comparator_enum comparator = 5;
+  HL7.v600.types.Element shadow__comparator = 6 [json_name = "_comparator"];
+  HL7.v600.types.string unit = 7;
+  HL7.v600.types.Element shadow__unit = 8 [json_name = "_unit"];
+  HL7.v600.types.uri system = 9;
+  HL7.v600.types.Element shadow__system = 10 [json_name = "_system"];
+  HL7.v600.types.code code = 11;
+  HL7.v600.types.Element shadow__code = 12 [json_name = "_code"];
+}
+
+message Period {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.dateTime start = 3;
+  HL7.v600.types.Element shadow__start = 4 [json_name = "_start"];
+  HL7.v600.types.dateTime end = 5;
+  HL7.v600.types.Element shadow__end = 6 [json_name = "_end"];
+}
+
+message Address {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.enums.address_use_enum.Address_use_enum use = 3;
+  HL7.v600.types.Element shadow__use = 4 [json_name = "_use"];
+  HL7.v600.types.enums.address_type_enum.Address_type_enum type = 5;
+  HL7.v600.types.Element shadow__type = 6 [json_name = "_type"];
+  HL7.v600.types.string text = 7;
+  HL7.v600.types.Element shadow__text = 8 [json_name = "_text"];
+  repeated HL7.v600.types.string line = 9;
+  repeated HL7.v600.types.Element shadow__line = 10 [json_name = "_line"];
+  HL7.v600.types.string city = 11;
+  HL7.v600.types.Element shadow__city = 12 [json_name = "_city"];
+  HL7.v600.types.string district = 13;
+  HL7.v600.types.Element shadow__district = 14 [json_name = "_district"];
+  HL7.v600.types.string state = 15;
+  HL7.v600.types.Element shadow__state = 16 [json_name = "_state"];
+  HL7.v600.types.string postalCode = 17;
+  HL7.v600.types.Element shadow__postalCode = 18 [json_name = "_postalCode"];
+  HL7.v600.types.string country = 19;
+  HL7.v600.types.Element shadow__country = 20 [json_name = "_country"];
+  HL7.v600.types.Period period = 21;
+}
+
+message Extension {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.uri url = 3;
+  HL7.v600.types.Element shadow__url = 4 [json_name = "_url"];
+  string valueBase64Binary = 5;
+  HL7.v600.types.Element shadow__valueBase64Binary = 6 [json_name = "_valueBase64Binary"];
+  bool valueBoolean = 7;
+  HL7.v600.types.Element shadow__valueBoolean = 8 [json_name = "_valueBoolean"];
+  string valueCanonical = 9;
+  HL7.v600.types.Element shadow__valueCanonical = 10 [json_name = "_valueCanonical"];
+  string valueCode = 11;
+  HL7.v600.types.Element shadow__valueCode = 12 [json_name = "_valueCode"];
+  string valueDate = 13;
+  HL7.v600.types.Element shadow__valueDate = 14 [json_name = "_valueDate"];
+  string valueDateTime = 15;
+  HL7.v600.types.Element shadow__valueDateTime = 16 [json_name = "_valueDateTime"];
+  double valueDecimal = 17;
+  HL7.v600.types.Element shadow__valueDecimal = 18 [json_name = "_valueDecimal"];
+  string valueId = 19;
+  HL7.v600.types.Element shadow__valueId = 20 [json_name = "_valueId"];
+  string valueInstant = 21;
+  HL7.v600.types.Element shadow__valueInstant = 22 [json_name = "_valueInstant"];
+  double valueInteger = 23;
+  HL7.v600.types.Element shadow__valueInteger = 24 [json_name = "_valueInteger"];
+  string valueInteger64 = 25;
+  HL7.v600.types.Element shadow__valueInteger64 = 26 [json_name = "_valueInteger64"];
+  string valueMarkdown = 27;
+  HL7.v600.types.Element shadow__valueMarkdown = 28 [json_name = "_valueMarkdown"];
+  string valueOid = 29;
+  HL7.v600.types.Element shadow__valueOid = 30 [json_name = "_valueOid"];
+  double valuePositiveInt = 31;
+  HL7.v600.types.Element shadow__valuePositiveInt = 32 [json_name = "_valuePositiveInt"];
+  string valueString = 33;
+  HL7.v600.types.Element shadow__valueString = 34 [json_name = "_valueString"];
+  string valueTime = 35;
+  HL7.v600.types.Element shadow__valueTime = 36 [json_name = "_valueTime"];
+  double valueUnsignedInt = 37;
+  HL7.v600.types.Element shadow__valueUnsignedInt = 38 [json_name = "_valueUnsignedInt"];
+  string valueUri = 39;
+  HL7.v600.types.Element shadow__valueUri = 40 [json_name = "_valueUri"];
+  string valueUrl = 41;
+  HL7.v600.types.Element shadow__valueUrl = 42 [json_name = "_valueUrl"];
+  string valueUuid = 43;
+  HL7.v600.types.Element shadow__valueUuid = 44 [json_name = "_valueUuid"];
+  HL7.v600.types.Address valueAddress = 45;
+  HL7.v600.types.Age valueAge = 46;
+  HL7.v600.types.Annotation valueAnnotation = 47;
+  HL7.v600.types.Attachment valueAttachment = 48;
+  HL7.v600.types.CodeableConcept valueCodeableConcept = 49;
+  HL7.v600.types.CodeableReference valueCodeableReference = 50;
+  HL7.v600.types.Coding valueCoding = 51;
+  HL7.v600.types.ContactPoint valueContactPoint = 52;
+  HL7.v600.types.Count valueCount = 53;
+  HL7.v600.types.Distance valueDistance = 54;
+  HL7.v600.types.Duration valueDuration = 55;
+  HL7.v600.types.HumanName valueHumanName = 56;
+  HL7.v600.types.Identifier valueIdentifier = 57;
+  HL7.v600.types.Money valueMoney = 58;
+  HL7.v600.types.Period valuePeriod = 59;
+  HL7.v600.types.Quantity valueQuantity = 60;
+  HL7.v600.types.Range valueRange = 61;
+  HL7.v600.types.Ratio valueRatio = 62;
+  HL7.v600.types.RatioRange valueRatioRange = 63;
+  HL7.v600.types.Reference valueReference = 64;
+  HL7.v600.types.SampledData valueSampledData = 65;
+  HL7.v600.types.Signature valueSignature = 66;
+  HL7.v600.types.Timing valueTiming = 67;
+  HL7.v600.types.ContactDetail valueContactDetail = 68;
+  HL7.v600.types.DataRequirement valueDataRequirement = 69;
+  HL7.v600.types.Expression valueExpression = 70;
+  HL7.v600.types.ParameterDefinition valueParameterDefinition = 71;
+  HL7.v600.types.RelatedArtifact valueRelatedArtifact = 72;
+  HL7.v600.types.TriggerDefinition valueTriggerDefinition = 73;
+  HL7.v600.types.UsageContext valueUsageContext = 74;
+  HL7.v600.types.Availability valueAvailability = 75;
+  HL7.v600.types.ExtendedContactDetail valueExtendedContactDetail = 76;
+  HL7.v600.types.Dosage valueDosage = 77;
+  HL7.v600.types.Meta valueMeta = 78;
+}
+
+message Element {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+}
+
+message Coding {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.uri system = 3;
+  HL7.v600.types.Element shadow__system = 4 [json_name = "_system"];
+  HL7.v600.types.string version = 5;
+  HL7.v600.types.Element shadow__version = 6 [json_name = "_version"];
+  HL7.v600.types.code code = 7;
+  HL7.v600.types.Element shadow__code = 8 [json_name = "_code"];
+  HL7.v600.types.string display = 9;
+  HL7.v600.types.Element shadow__display = 10 [json_name = "_display"];
+  HL7.v600.types.boolean userSelected = 11;
+  HL7.v600.types.Element shadow__userSelected = 12 [json_name = "_userSelected"];
+}
+
+message CodeableConcept {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Coding coding = 3;
+  HL7.v600.types.string text = 4;
+  HL7.v600.types.Element shadow__text = 5 [json_name = "_text"];
+}

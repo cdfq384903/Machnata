@@ -1,0 +1,44 @@
+syntax = "proto3";
+package HL7.v600.types.enums.relatedartifact_type_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum RelatedArtifact_type_enum {
+  RELATEDARTIFACT_TYPE_ENUM_UNSPECIFIED = 0;
+  documentation = 1;
+  justification = 2;
+  citation = 3;
+  predecessor = 4;
+  successor = 5;
+  derived_from = 6;
+  depends_on = 7;
+  composed_of = 8;
+  part_of = 9;
+  amends = 10;
+  amended_with = 11;
+  appends = 12;
+  appended_with = 13;
+  cites = 14;
+  cited_by = 15;
+  comments_on = 16;
+  comment_in = 17;
+  contains = 18;
+  contained_in = 19;
+  corrects = 20;
+  correction_in = 21;
+  replaces = 22;
+  replaced_with = 23;
+  retracts = 24;
+  retracted_by = 25;
+  signs = 26;
+  similar_to = 27;
+  supports = 28;
+  supported_with = 29;
+  transforms = 30;
+  transformed_into = 31;
+  transformed_with = 32;
+  documents = 33;
+  specification_of = 34;
+  created_with = 35;
+  cite_as = 36;
+}

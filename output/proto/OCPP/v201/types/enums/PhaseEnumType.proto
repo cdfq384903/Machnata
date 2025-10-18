@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.phaseenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum PhaseEnumType {
+  PHASEENUMTYPE_UNSPECIFIED = 0;
+  L1 = 1;
+  L2 = 2;
+  L3 = 3;
+  N = 4;
+  L1_N = 5;
+  L2_N = 6;
+  L3_N = 7;
+  L1_L2 = 8;
+  L2_L3 = 9;
+  L3_L1 = 10;
+}

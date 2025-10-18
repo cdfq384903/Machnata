@@ -1,0 +1,38 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ExplanationOfBenefit_Adjudication.proto";
+import "types/ExplanationOfBenefit_ReviewOutcome.proto";
+import "types/decimal.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+
+message ExplanationOfBenefit_SubDetail {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.positiveInt sequence = 4;
+  HL7.v600.types.Element shadow__sequence = 5 [json_name = "_sequence"];
+  repeated HL7.v600.types.Identifier traceNumber = 6;
+  HL7.v600.types.CodeableConcept revenue = 7;
+  HL7.v600.types.CodeableConcept category = 8;
+  HL7.v600.types.CodeableConcept productOrService = 9;
+  HL7.v600.types.CodeableConcept productOrServiceEnd = 10;
+  repeated HL7.v600.types.CodeableConcept modifier = 11;
+  repeated HL7.v600.types.CodeableConcept programCode = 12;
+  HL7.v600.types.Money patientPaid = 13;
+  HL7.v600.types.Quantity quantity = 14;
+  HL7.v600.types.Money unitPrice = 15;
+  HL7.v600.types.decimal factor = 16;
+  HL7.v600.types.Element shadow__factor = 17 [json_name = "_factor"];
+  HL7.v600.types.Money tax = 18;
+  HL7.v600.types.Money net = 19;
+  repeated HL7.v600.types.Reference udi = 20;
+  repeated HL7.v600.types.positiveInt noteNumber = 21;
+  repeated HL7.v600.types.Element shadow__noteNumber = 22 [json_name = "_noteNumber"];
+  HL7.v600.types.ExplanationOfBenefit_ReviewOutcome reviewOutcome = 23;
+  repeated HL7.v600.types.ExplanationOfBenefit_Adjudication adjudication = 24;
+}

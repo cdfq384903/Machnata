@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/ACChargingParametersType.proto";
+import "types/CustomDataType.proto";
+import "types/DCChargingParametersType.proto";
+import "types/enums/EnergyTransferModeEnumType.proto";
+
+message ChargingNeedsType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  OCPP.v201.types.ACChargingParametersType acChargingParameters = 2;
+  OCPP.v201.types.DCChargingParametersType dcChargingParameters = 3;
+  OCPP.v201.types.enums.energytransfermodeenumtype.EnergyTransferModeEnumType requestedEnergyTransfer = 4;
+  string departureTime = 5;
+}

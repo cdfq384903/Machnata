@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v16;
+option go_package = "tmp/v16;OCPPv16";
+option csharp_namespace = "OCPP.v16";
+
+
+message BootNotification {
+  // NOTE: This field is required by standard Spec.
+  string chargePointVendor = 1;
+  // NOTE: This field is required by standard Spec.
+  string chargePointModel = 2;
+  string chargePointSerialNumber = 3;
+  string chargeBoxSerialNumber = 4;
+  string firmwareVersion = 5;
+  string iccid = 6;
+  string imsi = 7;
+  string meterType = 8;
+  string meterSerialNumber = 9;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/EventDataType.proto";
+
+message NotifyEventRequest {
+  // NOTE: This field is required by standard Spec.
+  string generatedAt = 1;
+  bool tbc = 2;
+  // NOTE: This field is required by standard Spec.
+  int32 seqNo = 3;
+  // NOTE: This field is required by standard Spec.
+  repeated OCPP.v21.types.EventDataType eventData = 4;
+  OCPP.v21.types.CustomDataType customData = 5;
+}

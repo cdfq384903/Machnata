@@ -1,0 +1,8 @@
+syntax = "proto3";
+package OCPI.v22;
+option go_package = "tmp/v22;OCPIv22";
+option csharp_namespace = "OCPI.v22";
+
+
+message ocpi_2_2_versions {
+}

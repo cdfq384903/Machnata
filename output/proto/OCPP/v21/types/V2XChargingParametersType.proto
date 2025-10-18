@@ -1,0 +1,34 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+
+message V2XChargingParametersType {
+  double minChargePower = 1;
+  double minChargePower_L2 = 2;
+  double minChargePower_L3 = 3;
+  double maxChargePower = 4;
+  double maxChargePower_L2 = 5;
+  double maxChargePower_L3 = 6;
+  double minDischargePower = 7;
+  double minDischargePower_L2 = 8;
+  double minDischargePower_L3 = 9;
+  double maxDischargePower = 10;
+  double maxDischargePower_L2 = 11;
+  double maxDischargePower_L3 = 12;
+  double minChargeCurrent = 13;
+  double maxChargeCurrent = 14;
+  double minDischargeCurrent = 15;
+  double maxDischargeCurrent = 16;
+  double minVoltage = 17;
+  double maxVoltage = 18;
+  double evTargetEnergyRequest = 19;
+  double evMinEnergyRequest = 20;
+  double evMaxEnergyRequest = 21;
+  double evMinV2XEnergyRequest = 22;
+  double evMaxV2XEnergyRequest = 23;
+  int32 targetSoC = 24;
+  OCPP.v21.types.CustomDataType customData = 25;
+}

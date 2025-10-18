@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/ChargingLimitType.proto";
+import "types/ChargingScheduleType.proto";
+import "types/CustomDataType.proto";
+
+message NotifyChargingLimitRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  repeated OCPP.v201.types.ChargingScheduleType chargingSchedule = 2;
+  int32 evseId = 3;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v201.types.ChargingLimitType chargingLimit = 4;
+}

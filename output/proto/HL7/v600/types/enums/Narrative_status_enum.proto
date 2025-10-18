@@ -1,0 +1,12 @@
+syntax = "proto3";
+package HL7.v600.types.enums.narrative_status_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum Narrative_status_enum {
+  NARRATIVE_STATUS_ENUM_UNSPECIFIED = 0;
+  generated = 1;
+  extensions = 2;
+  additional = 3;
+  empty = 4;
+}

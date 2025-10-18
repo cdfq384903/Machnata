@@ -1,0 +1,20 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CustomDataType.proto";
+import "types/LogParametersType.proto";
+import "types/enums/LogEnumType.proto";
+
+message GetLogRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v201.types.LogParametersType log = 2;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v201.types.enums.logenumtype.LogEnumType logType = 3;
+  // NOTE: This field is required by standard Spec.
+  int32 requestId = 4;
+  int32 retries = 5;
+  int32 retryInterval = 6;
+}

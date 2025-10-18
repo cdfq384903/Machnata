@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPI.v221;
+option go_package = "tmp/v221;OCPIv221";
+option csharp_namespace = "OCPI.v221";
+
+
+message ocpi_2_2_1_connector_partial {
+  string id = 1;
+  string standard = 2;
+  string format = 3;
+  string power_type = 4;
+  string max_voltage = 5;
+  string max_amperage = 6;
+  string max_electric_power = 7;
+  string tariff_ids = 8;
+  string terms_and_conditions = 9;
+  string last_updated = 10;
+}

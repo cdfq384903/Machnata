@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v16.types;
+option go_package = "tmp/v16/types;types";
+option csharp_namespace = "OCPP.v16.types";
+
+import "types/StopTransaction_transactionData_item_sampledValue_item.proto";
+
+message StopTransaction_transactionData_item {
+  string timestamp = 1;
+  repeated OCPP.v16.types.StopTransaction_transactionData_item_sampledValue_item sampledValue = 2;
+}

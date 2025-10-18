@@ -1,0 +1,23 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/CustomDataType.proto";
+import "types/SignedMeterValueType.proto";
+import "types/UnitOfMeasureType.proto";
+import "types/enums/LocationEnumType.proto";
+import "types/enums/MeasurandEnumType.proto";
+import "types/enums/PhaseEnumType.proto";
+import "types/enums/ReadingContextEnumType.proto";
+
+message SampledValueType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  double value = 2;
+  OCPP.v201.types.enums.readingcontextenumtype.ReadingContextEnumType context = 3;
+  OCPP.v201.types.enums.measurandenumtype.MeasurandEnumType measurand = 4;
+  OCPP.v201.types.enums.phaseenumtype.PhaseEnumType phase = 5;
+  OCPP.v201.types.enums.locationenumtype.LocationEnumType location = 6;
+  OCPP.v201.types.SignedMeterValueType signedMeterValue = 7;
+  OCPP.v201.types.UnitOfMeasureType unitOfMeasure = 8;
+}

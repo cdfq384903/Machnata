@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/SubstanceSourceMaterial_Author.proto";
+import "types/SubstanceSourceMaterial_Hybrid.proto";
+import "types/SubstanceSourceMaterial_OrganismGeneral.proto";
+import "types/string.proto";
+
+message SubstanceSourceMaterial_Organism {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept family = 4;
+  HL7.v600.types.CodeableConcept genus = 5;
+  HL7.v600.types.CodeableConcept species = 6;
+  HL7.v600.types.CodeableConcept intraspecificType = 7;
+  HL7.v600.types.string intraspecificDescription = 8;
+  HL7.v600.types.Element shadow__intraspecificDescription = 9 [json_name = "_intraspecificDescription"];
+  repeated HL7.v600.types.SubstanceSourceMaterial_Author author = 10;
+  HL7.v600.types.SubstanceSourceMaterial_Hybrid hybrid = 11;
+  HL7.v600.types.SubstanceSourceMaterial_OrganismGeneral organismGeneral = 12;
+}

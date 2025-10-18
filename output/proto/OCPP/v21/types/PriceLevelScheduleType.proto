@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/PriceLevelScheduleEntryType.proto";
+
+message PriceLevelScheduleType {
+  repeated OCPP.v21.types.PriceLevelScheduleEntryType priceLevelScheduleEntries = 1;
+  string timeAnchor = 2;
+  int32 priceScheduleId = 3;
+  string priceScheduleDescription = 4;
+  int32 numberOfPriceLevels = 5;
+  OCPP.v21.types.CustomDataType customData = 6;
+}

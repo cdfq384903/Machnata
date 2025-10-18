@@ -1,0 +1,22 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+
+message ChargingScheduleUpdateType {
+  double limit = 1;
+  double limit_L2 = 2;
+  double limit_L3 = 3;
+  double dischargeLimit = 4;
+  double dischargeLimit_L2 = 5;
+  double dischargeLimit_L3 = 6;
+  double setpoint = 7;
+  double setpoint_L2 = 8;
+  double setpoint_L3 = 9;
+  double setpointReactive = 10;
+  double setpointReactive_L2 = 11;
+  double setpointReactive_L3 = 12;
+  OCPP.v21.types.CustomDataType customData = 13;
+}

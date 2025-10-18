@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/VPNEnumType.proto";
+
+message VPNType {
+  string server = 1;
+  string user = 2;
+  string group = 3;
+  string password = 4;
+  string key = 5;
+  OCPP.v21.types.enums.vpnenumtype.VPNEnumType type = 6;
+  OCPP.v21.types.CustomDataType customData = 7;
+}

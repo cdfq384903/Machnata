@@ -1,0 +1,30 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.dercontrolenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum DERControlEnumType {
+  DERCONTROLENUMTYPE_UNSPECIFIED = 0;
+  EnterService = 1;
+  FreqDroop = 2;
+  FreqWatt = 3;
+  FixedPFAbsorb = 4;
+  FixedPFInject = 5;
+  FixedVar = 6;
+  Gradients = 7;
+  HFMustTrip = 8;
+  HFMayTrip = 9;
+  HVMustTrip = 10;
+  HVMomCess = 11;
+  HVMayTrip = 12;
+  LimitMaxDischarge = 13;
+  LFMustTrip = 14;
+  LVMustTrip = 15;
+  LVMomCess = 16;
+  LVMayTrip = 17;
+  PowerMonitoringMustTrip = 18;
+  VoltVar = 19;
+  VoltWatt = 20;
+  WattPF = 21;
+  WattVar = 22;
+}

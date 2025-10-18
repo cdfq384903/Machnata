@@ -1,0 +1,21 @@
+syntax = "proto3";
+package OCPI.v221.types.enums.ocpi_2_2_1_session_charging_periods_item_dimensions_item_type_enum;
+option go_package = "tmp/v221/types/enums;enums";
+option csharp_namespace = "OCPI.v221.types.enums";
+
+enum ocpi_2_2_1_session_charging_periods_item_dimensions_item_type_enum {
+  OCPI_2_2_1_SESSION_CHARGING_PERIODS_ITEM_DIMENSIONS_ITEM_TYPE_ENUM_UNSPECIFIED = 0;
+  CURRENT = 1;
+  ENERGY = 2;
+  ENERGY_EXPORT = 3;
+  ENERGY_IMPORT = 4;
+  MAX_CURRENT = 5;
+  MIN_CURRENT = 6;
+  MAX_POWER = 7;
+  MIN_POWER = 8;
+  PARKING_TIME = 9;
+  POWER = 10;
+  RESERVATION_TIME = 11;
+  STATE_OF_CHARGE = 12;
+  TIME = 13;
+}

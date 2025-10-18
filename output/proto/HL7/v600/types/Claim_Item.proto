@@ -1,0 +1,52 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Claim_BodySite.proto";
+import "types/Claim_Detail.proto";
+import "types/decimal.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+
+message Claim_Item {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.positiveInt sequence = 4;
+  HL7.v600.types.Element shadow__sequence = 5 [json_name = "_sequence"];
+  repeated HL7.v600.types.Identifier traceNumber = 6;
+  repeated HL7.v600.types.positiveInt careTeamSequence = 7;
+  repeated HL7.v600.types.Element shadow__careTeamSequence = 8 [json_name = "_careTeamSequence"];
+  repeated HL7.v600.types.positiveInt diagnosisSequence = 9;
+  repeated HL7.v600.types.Element shadow__diagnosisSequence = 10 [json_name = "_diagnosisSequence"];
+  repeated HL7.v600.types.positiveInt procedureSequence = 11;
+  repeated HL7.v600.types.Element shadow__procedureSequence = 12 [json_name = "_procedureSequence"];
+  repeated HL7.v600.types.positiveInt informationSequence = 13;
+  repeated HL7.v600.types.Element shadow__informationSequence = 14 [json_name = "_informationSequence"];
+  HL7.v600.types.CodeableConcept revenue = 15;
+  HL7.v600.types.CodeableConcept category = 16;
+  HL7.v600.types.CodeableConcept productOrService = 17;
+  HL7.v600.types.CodeableConcept productOrServiceEnd = 18;
+  repeated HL7.v600.types.Reference request = 19;
+  repeated HL7.v600.types.CodeableConcept modifier = 20;
+  repeated HL7.v600.types.CodeableConcept programCode = 21;
+  string servicedDate = 22;
+  HL7.v600.types.Element shadow__servicedDate = 23 [json_name = "_servicedDate"];
+  HL7.v600.types.Period servicedPeriod = 24;
+  HL7.v600.types.CodeableConcept locationCodeableConcept = 25;
+  HL7.v600.types.Address locationAddress = 26;
+  HL7.v600.types.Reference locationReference = 27;
+  HL7.v600.types.Money patientPaid = 28;
+  HL7.v600.types.Quantity quantity = 29;
+  HL7.v600.types.Money unitPrice = 30;
+  HL7.v600.types.decimal factor = 31;
+  HL7.v600.types.Element shadow__factor = 32 [json_name = "_factor"];
+  HL7.v600.types.Money tax = 33;
+  HL7.v600.types.Money net = 34;
+  repeated HL7.v600.types.Reference udi = 35;
+  repeated HL7.v600.types.Claim_BodySite bodySite = 36;
+  repeated HL7.v600.types.Reference encounter = 37;
+  repeated HL7.v600.types.Claim_Detail detail = 38;
+}

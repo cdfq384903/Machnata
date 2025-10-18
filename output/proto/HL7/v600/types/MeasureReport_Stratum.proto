@@ -1,0 +1,32 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/MeasureReport_Component.proto";
+import "types/MeasureReport_Population1.proto";
+import "types/string.proto";
+
+message MeasureReport_Stratum {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept valueCodeableConcept = 4;
+  bool valueBoolean = 5;
+  HL7.v600.types.Element shadow__valueBoolean = 6 [json_name = "_valueBoolean"];
+  HL7.v600.types.Quantity valueQuantity = 7;
+  HL7.v600.types.Range valueRange = 8;
+  HL7.v600.types.Reference valueReference = 9;
+  repeated HL7.v600.types.MeasureReport_Component component = 10;
+  repeated HL7.v600.types.MeasureReport_Population1 population = 11;
+  HL7.v600.types.Quantity measureScoreQuantity = 12;
+  string measureScoreDateTime = 13;
+  HL7.v600.types.Element shadow__measureScoreDateTime = 14 [json_name = "_measureScoreDateTime"];
+  HL7.v600.types.CodeableConcept measureScoreCodeableConcept = 15;
+  HL7.v600.types.Period measureScorePeriod = 16;
+  HL7.v600.types.Range measureScoreRange = 17;
+  HL7.v600.types.Duration measureScoreDuration = 18;
+  bool measureScoreBoolean = 19;
+  HL7.v600.types.Element shadow__measureScoreBoolean = 20 [json_name = "_measureScoreBoolean"];
+}

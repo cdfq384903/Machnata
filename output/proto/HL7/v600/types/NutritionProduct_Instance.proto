@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/dateTime.proto";
+import "types/string.proto";
+
+message NutritionProduct_Instance {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Quantity quantity = 4;
+  repeated HL7.v600.types.Identifier identifier = 5;
+  HL7.v600.types.string name = 6;
+  HL7.v600.types.Element shadow__name = 7 [json_name = "_name"];
+  HL7.v600.types.string lotNumber = 8;
+  HL7.v600.types.Element shadow__lotNumber = 9 [json_name = "_lotNumber"];
+  HL7.v600.types.dateTime expiry = 10;
+  HL7.v600.types.Element shadow__expiry = 11 [json_name = "_expiry"];
+  HL7.v600.types.dateTime useBy = 12;
+  HL7.v600.types.Element shadow__useBy = 13 [json_name = "_useBy"];
+  HL7.v600.types.Identifier biologicalSourceEvent = 14;
+}

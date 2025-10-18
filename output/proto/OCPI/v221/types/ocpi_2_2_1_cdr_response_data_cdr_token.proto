@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+import "types/enums/ocpi_2_2_1_cdr_response_data_cdr_token_type_enum.proto";
+
+message ocpi_2_2_1_cdr_response_data_cdr_token {
+  string uid = 1;
+  OCPI.v221.types.enums.ocpi_2_2_1_cdr_response_data_cdr_token_type_enum.ocpi_2_2_1_cdr_response_data_cdr_token_type_enum type = 2;
+  string contract_id = 3;
+  string country_code = 4;
+  string party_id = 5;
+}

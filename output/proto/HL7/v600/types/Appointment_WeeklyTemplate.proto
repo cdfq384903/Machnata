@@ -1,0 +1,31 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+
+message Appointment_WeeklyTemplate {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.boolean monday = 4;
+  HL7.v600.types.Element shadow__monday = 5 [json_name = "_monday"];
+  HL7.v600.types.boolean tuesday = 6;
+  HL7.v600.types.Element shadow__tuesday = 7 [json_name = "_tuesday"];
+  HL7.v600.types.boolean wednesday = 8;
+  HL7.v600.types.Element shadow__wednesday = 9 [json_name = "_wednesday"];
+  HL7.v600.types.boolean thursday = 10;
+  HL7.v600.types.Element shadow__thursday = 11 [json_name = "_thursday"];
+  HL7.v600.types.boolean friday = 12;
+  HL7.v600.types.Element shadow__friday = 13 [json_name = "_friday"];
+  HL7.v600.types.boolean saturday = 14;
+  HL7.v600.types.Element shadow__saturday = 15 [json_name = "_saturday"];
+  HL7.v600.types.boolean sunday = 16;
+  HL7.v600.types.Element shadow__sunday = 17 [json_name = "_sunday"];
+  HL7.v600.types.positiveInt weekInterval = 18;
+  HL7.v600.types.Element shadow__weekInterval = 19 [json_name = "_weekInterval"];
+}

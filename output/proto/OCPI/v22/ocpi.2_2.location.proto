@@ -1,0 +1,53 @@
+syntax = "proto3";
+package OCPI.v22;
+option go_package = "tmp/v22;OCPIv22";
+option csharp_namespace = "OCPI.v22";
+
+import "types/enums/ocpi_2_2_location_parking_type_enum.proto";
+import "types/ocpi_2_2_location.proto";
+import "types/ocpi_2_2_location_coordinates.proto";
+import "types/ocpi_2_2_location_energy_mix.proto";
+import "types/ocpi_2_2_location_evses_item.proto";
+import "types/ocpi_2_2_location_opening_times.proto";
+import "types/ocpi_2_2_location_operator.proto";
+import "types/ocpi_2_2_location_publish_allowed_to_item.proto";
+import "types/ocpi_2_2_location_related_locations_item.proto";
+
+message ocpi_2_2_location {
+  // NOTE: This field is required by standard Spec.
+  string country_code = 1;
+  // NOTE: This field is required by standard Spec.
+  string party_id = 2;
+  // NOTE: This field is required by standard Spec.
+  string id = 3;
+  // NOTE: This field is required by standard Spec.
+  bool publish = 4;
+  repeated OCPI.v22.types.ocpi_2_2_location_publish_allowed_to_item publish_allowed_to = 5;
+  string name = 6;
+  // NOTE: This field is required by standard Spec.
+  string address = 7;
+  // NOTE: This field is required by standard Spec.
+  string city = 8;
+  string postal_code = 9;
+  string state = 10;
+  // NOTE: This field is required by standard Spec.
+  string country = 11;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v22.types.ocpi_2_2_location_coordinates coordinates = 12;
+  repeated OCPI.v22.types.ocpi_2_2_location_related_locations_item related_locations = 13;
+  OCPI.v22.types.enums.ocpi_2_2_location_parking_type_enum.ocpi_2_2_location_parking_type_enum parking_type = 14;
+  repeated OCPI.v22.types.ocpi_2_2_location_evses_item evses = 15;
+  repeated OCPI.v22.types.ocpi_2_2_location directions = 16;
+  OCPI.v22.types.ocpi_2_2_location_operator operator = 17;
+  OCPI.v22.types.ocpi_2_2_location suboperator = 18;
+  OCPI.v22.types.ocpi_2_2_location owner = 19;
+  repeated string facilities = 20;
+  // NOTE: This field is required by standard Spec.
+  string time_zone = 21;
+  OCPI.v22.types.ocpi_2_2_location_opening_times opening_times = 22;
+  bool charging_when_closed = 23;
+  repeated OCPI.v22.types.ocpi_2_2_location images = 24;
+  OCPI.v22.types.ocpi_2_2_location_energy_mix energy_mix = 25;
+  // NOTE: This field is required by standard Spec.
+  string last_updated = 26;
+}

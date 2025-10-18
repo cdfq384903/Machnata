@@ -1,0 +1,52 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/CapabilityStatement_Interaction.proto";
+import "types/CapabilityStatement_Operation.proto";
+import "types/CapabilityStatement_SearchParam.proto";
+import "types/boolean.proto";
+import "types/canonical.proto";
+import "types/code.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message CapabilityStatement_Resource {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.code type = 4;
+  HL7.v600.types.Element shadow__type = 5 [json_name = "_type"];
+  HL7.v600.types.canonical definition = 6;
+  HL7.v600.types.canonical profile = 7;
+  repeated HL7.v600.types.canonical supportedProfile = 8;
+  HL7.v600.types.markdown documentation = 9;
+  HL7.v600.types.Element shadow__documentation = 10 [json_name = "_documentation"];
+  repeated HL7.v600.types.CapabilityStatement_Interaction interaction = 11;
+  HL7.v600.types.code versioning = 12;
+  HL7.v600.types.Element shadow__versioning = 13 [json_name = "_versioning"];
+  HL7.v600.types.boolean readHistory = 14;
+  HL7.v600.types.Element shadow__readHistory = 15 [json_name = "_readHistory"];
+  HL7.v600.types.boolean updateCreate = 16;
+  HL7.v600.types.Element shadow__updateCreate = 17 [json_name = "_updateCreate"];
+  HL7.v600.types.boolean conditionalCreate = 18;
+  HL7.v600.types.Element shadow__conditionalCreate = 19 [json_name = "_conditionalCreate"];
+  HL7.v600.types.code conditionalRead = 20;
+  HL7.v600.types.Element shadow__conditionalRead = 21 [json_name = "_conditionalRead"];
+  HL7.v600.types.boolean conditionalUpdate = 22;
+  HL7.v600.types.Element shadow__conditionalUpdate = 23 [json_name = "_conditionalUpdate"];
+  HL7.v600.types.boolean conditionalPatch = 24;
+  HL7.v600.types.Element shadow__conditionalPatch = 25 [json_name = "_conditionalPatch"];
+  HL7.v600.types.code conditionalDelete = 26;
+  HL7.v600.types.Element shadow__conditionalDelete = 27 [json_name = "_conditionalDelete"];
+  repeated HL7.v600.types.code referencePolicy = 28;
+  repeated HL7.v600.types.Element shadow__referencePolicy = 29 [json_name = "_referencePolicy"];
+  repeated HL7.v600.types.string searchInclude = 30;
+  repeated HL7.v600.types.Element shadow__searchInclude = 31 [json_name = "_searchInclude"];
+  repeated HL7.v600.types.string searchRevInclude = 32;
+  repeated HL7.v600.types.Element shadow__searchRevInclude = 33 [json_name = "_searchRevInclude"];
+  repeated HL7.v600.types.CapabilityStatement_SearchParam searchParam = 34;
+  repeated HL7.v600.types.CapabilityStatement_Operation operation = 35;
+}

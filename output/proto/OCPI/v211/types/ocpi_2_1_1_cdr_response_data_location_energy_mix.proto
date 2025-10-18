@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/ocpi_2_1_1_cdr_response_data_location_energy_mix_energy_sources_item.proto";
+import "types/ocpi_2_1_1_cdr_response_data_location_energy_mix_environ_impact_item.proto";
+
+message ocpi_2_1_1_cdr_response_data_location_energy_mix {
+  bool is_green_energy = 1;
+  repeated OCPI.v211.types.ocpi_2_1_1_cdr_response_data_location_energy_mix_energy_sources_item energy_sources = 2;
+  repeated OCPI.v211.types.ocpi_2_1_1_cdr_response_data_location_energy_mix_environ_impact_item environ_impact = 3;
+  string supplier_name = 4;
+  string energy_product_name = 5;
+}

@@ -1,0 +1,26 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/string.proto";
+
+message SubstanceDefinition_Relationship {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Reference substanceDefinitionReference = 4;
+  HL7.v600.types.CodeableConcept substanceDefinitionCodeableConcept = 5;
+  HL7.v600.types.CodeableConcept type = 6;
+  HL7.v600.types.boolean isDefining = 7;
+  HL7.v600.types.Element shadow__isDefining = 8 [json_name = "_isDefining"];
+  HL7.v600.types.Quantity amountQuantity = 9;
+  HL7.v600.types.Ratio amountRatio = 10;
+  string amountString = 11;
+  HL7.v600.types.Element shadow__amountString = 12 [json_name = "_amountString"];
+  HL7.v600.types.Ratio ratioHighLimitAmount = 13;
+  HL7.v600.types.CodeableConcept comparator = 14;
+  repeated HL7.v600.types.Reference source = 15;
+}

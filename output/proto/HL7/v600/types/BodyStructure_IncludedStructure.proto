@@ -1,0 +1,19 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/BodyStructure_BodyLandmarkOrientation.proto";
+import "types/string.proto";
+
+message BodyStructure_IncludedStructure {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept structure = 4;
+  HL7.v600.types.CodeableConcept laterality = 5;
+  repeated HL7.v600.types.BodyStructure_BodyLandmarkOrientation bodyLandmarkOrientation = 6;
+  repeated HL7.v600.types.Reference spatialReference = 7;
+  repeated HL7.v600.types.CodeableConcept qualifier = 8;
+}

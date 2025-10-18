@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/enums/ocpi_2_1_1_location_evses_item_images_item_category_enum.proto";
+
+message ocpi_2_1_1_location_evses_item_images_item {
+  string url = 1;
+  string thumbnail = 2;
+  OCPI.v211.types.enums.ocpi_2_1_1_location_evses_item_images_item_category_enum.ocpi_2_1_1_location_evses_item_images_item_category_enum category = 3;
+  string type = 4;
+  int32 width = 5;
+  int32 height = 6;
+}

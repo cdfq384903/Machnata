@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CustomDataType.proto";
+import "types/EVSEType.proto";
+import "types/enums/MessageTriggerEnumType.proto";
+
+message TriggerMessageRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  OCPP.v201.types.EVSEType evse = 2;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v201.types.enums.messagetriggerenumtype.MessageTriggerEnumType requestedMessage = 3;
+}

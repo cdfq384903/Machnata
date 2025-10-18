@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.eventnotificationenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum EventNotificationEnumType {
+  EVENTNOTIFICATIONENUMTYPE_UNSPECIFIED = 0;
+  HardWiredNotification = 1;
+  HardWiredMonitor = 2;
+  PreconfiguredMonitor = 3;
+  CustomMonitor = 4;
+}

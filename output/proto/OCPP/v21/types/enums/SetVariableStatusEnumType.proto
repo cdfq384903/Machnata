@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.setvariablestatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum SetVariableStatusEnumType {
+  SETVARIABLESTATUSENUMTYPE_UNSPECIFIED = 0;
+  Accepted = 1;
+  Rejected = 2;
+  UnknownComponent = 3;
+  UnknownVariable = 4;
+  NotSupportedAttributeType = 5;
+  RebootRequired = 6;
+}

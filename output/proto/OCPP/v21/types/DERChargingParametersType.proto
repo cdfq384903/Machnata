@@ -1,0 +1,53 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/DERControlEnumType.proto";
+import "types/enums/IslandingDetectionEnumType.proto";
+
+message DERChargingParametersType {
+  repeated OCPP.v21.types.enums.dercontrolenumtype.DERControlEnumType evSupportedDERControl = 1;
+  double evOverExcitedMaxDischargePower = 2;
+  double evOverExcitedPowerFactor = 3;
+  double evUnderExcitedMaxDischargePower = 4;
+  double evUnderExcitedPowerFactor = 5;
+  double maxApparentPower = 6;
+  double maxChargeApparentPower = 7;
+  double maxChargeApparentPower_L2 = 8;
+  double maxChargeApparentPower_L3 = 9;
+  double maxDischargeApparentPower = 10;
+  double maxDischargeApparentPower_L2 = 11;
+  double maxDischargeApparentPower_L3 = 12;
+  double maxChargeReactivePower = 13;
+  double maxChargeReactivePower_L2 = 14;
+  double maxChargeReactivePower_L3 = 15;
+  double minChargeReactivePower = 16;
+  double minChargeReactivePower_L2 = 17;
+  double minChargeReactivePower_L3 = 18;
+  double maxDischargeReactivePower = 19;
+  double maxDischargeReactivePower_L2 = 20;
+  double maxDischargeReactivePower_L3 = 21;
+  double minDischargeReactivePower = 22;
+  double minDischargeReactivePower_L2 = 23;
+  double minDischargeReactivePower_L3 = 24;
+  double nominalVoltage = 25;
+  double nominalVoltageOffset = 26;
+  double maxNominalVoltage = 27;
+  double minNominalVoltage = 28;
+  string evInverterManufacturer = 29;
+  string evInverterModel = 30;
+  string evInverterSerialNumber = 31;
+  string evInverterSwVersion = 32;
+  string evInverterHwVersion = 33;
+  repeated OCPP.v21.types.enums.islandingdetectionenumtype.IslandingDetectionEnumType evIslandingDetectionMethod = 34;
+  double evIslandingTripTime = 35;
+  double evMaximumLevel1DCInjection = 36;
+  double evDurationLevel1DCInjection = 37;
+  double evMaximumLevel2DCInjection = 38;
+  double evDurationLevel2DCInjection = 39;
+  double evReactiveSusceptance = 40;
+  double evSessionTotalDischargeEnergyAvailable = 41;
+  OCPP.v21.types.CustomDataType customData = 42;
+}

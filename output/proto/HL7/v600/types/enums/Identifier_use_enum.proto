@@ -1,0 +1,13 @@
+syntax = "proto3";
+package HL7.v600.types.enums.identifier_use_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum Identifier_use_enum {
+  IDENTIFIER_USE_ENUM_UNSPECIFIED = 0;
+  usual = 1;
+  official = 2;
+  temp = 3;
+  secondary = 4;
+  old = 5;
+}

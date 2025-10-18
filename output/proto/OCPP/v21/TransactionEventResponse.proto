@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/IdTokenInfoType.proto";
+import "types/MessageContentType.proto";
+import "types/TransactionLimitType.proto";
+
+message TransactionEventResponse {
+  double totalCost = 1;
+  int32 chargingPriority = 2;
+  OCPP.v21.types.IdTokenInfoType idTokenInfo = 3;
+  OCPP.v21.types.TransactionLimitType transactionLimit = 4;
+  OCPP.v21.types.MessageContentType updatedPersonalMessage = 5;
+  repeated OCPP.v21.types.MessageContentType updatedPersonalMessageExtra = 6;
+  OCPP.v21.types.CustomDataType customData = 7;
+}

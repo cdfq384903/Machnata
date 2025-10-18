@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.remotestarttransaction_chargingprofile_recurrencykind_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum RemoteStartTransaction_chargingProfile_recurrencyKind_enum {
+  REMOTESTARTTRANSACTION_CHARGINGPROFILE_RECURRENCYKIND_ENUM_UNSPECIFIED = 0;
+  Daily = 1;
+  Weekly = 2;
+}

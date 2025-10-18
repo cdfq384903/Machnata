@@ -1,0 +1,41 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/GenomicStudy_Device.proto";
+import "types/GenomicStudy_Input.proto";
+import "types/GenomicStudy_Output.proto";
+import "types/GenomicStudy_Performer.proto";
+import "types/canonical.proto";
+import "types/dateTime.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message GenomicStudy_Analysis {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  repeated HL7.v600.types.Identifier identifier = 4;
+  repeated HL7.v600.types.CodeableConcept methodType = 5;
+  repeated HL7.v600.types.CodeableConcept changeType = 6;
+  HL7.v600.types.CodeableConcept genomeBuild = 7;
+  HL7.v600.types.canonical instantiatesCanonical = 8;
+  HL7.v600.types.uri instantiatesUri = 9;
+  HL7.v600.types.Element shadow__instantiatesUri = 10 [json_name = "_instantiatesUri"];
+  HL7.v600.types.string title = 11;
+  HL7.v600.types.Element shadow__title = 12 [json_name = "_title"];
+  repeated HL7.v600.types.Reference focus = 13;
+  repeated HL7.v600.types.Reference specimen = 14;
+  HL7.v600.types.dateTime date = 15;
+  HL7.v600.types.Element shadow__date = 16 [json_name = "_date"];
+  repeated HL7.v600.types.Annotation note = 17;
+  HL7.v600.types.Reference protocolPerformed = 18;
+  repeated HL7.v600.types.Reference regionsStudied = 19;
+  repeated HL7.v600.types.Reference regionsCalled = 20;
+  repeated HL7.v600.types.GenomicStudy_Input input = 21;
+  repeated HL7.v600.types.GenomicStudy_Output output = 22;
+  repeated HL7.v600.types.GenomicStudy_Performer performer = 23;
+  repeated HL7.v600.types.GenomicStudy_Device device = 24;
+}

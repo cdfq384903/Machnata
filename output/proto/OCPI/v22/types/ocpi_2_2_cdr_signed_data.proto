@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/ocpi_2_2_cdr_signed_data_signed_values_item.proto";
+
+message ocpi_2_2_cdr_signed_data {
+  string encoding_method = 1;
+  int32 encoding_method_version = 2;
+  string public_key = 3;
+  repeated OCPI.v22.types.ocpi_2_2_cdr_signed_data_signed_values_item signed_values = 4;
+  string url = 5;
+}

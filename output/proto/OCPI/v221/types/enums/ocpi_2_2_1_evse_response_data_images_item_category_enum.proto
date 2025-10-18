@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPI.v221.types.enums.ocpi_2_2_1_evse_response_data_images_item_category_enum;
+option go_package = "tmp/v221/types/enums;enums";
+option csharp_namespace = "OCPI.v221.types.enums";
+
+enum ocpi_2_2_1_evse_response_data_images_item_category_enum {
+  OCPI_2_2_1_EVSE_RESPONSE_DATA_IMAGES_ITEM_CATEGORY_ENUM_UNSPECIFIED = 0;
+  CHARGER = 1;
+  ENTRANCE = 2;
+  LOCATION = 3;
+  NETWORK = 4;
+  OPERATOR = 5;
+  OTHER = 6;
+  OWNER = 7;
+}

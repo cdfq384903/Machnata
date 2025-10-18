@@ -1,0 +1,25 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/APNType.proto";
+import "types/CustomDataType.proto";
+import "types/VPNType.proto";
+import "types/enums/OCPPInterfaceEnumType.proto";
+import "types/enums/OCPPTransportEnumType.proto";
+import "types/enums/OCPPVersionEnumType.proto";
+
+message NetworkConnectionProfileType {
+  OCPP.v21.types.APNType apn = 1;
+  OCPP.v21.types.enums.ocppversionenumtype.OCPPVersionEnumType ocppVersion = 2;
+  OCPP.v21.types.enums.ocppinterfaceenumtype.OCPPInterfaceEnumType ocppInterface = 3;
+  OCPP.v21.types.enums.ocpptransportenumtype.OCPPTransportEnumType ocppTransport = 4;
+  int32 messageTimeout = 5;
+  string ocppCsmsUrl = 6;
+  int32 securityProfile = 7;
+  string identity = 8;
+  string basicAuthPassword = 9;
+  OCPP.v21.types.VPNType vpn = 10;
+  OCPP.v21.types.CustomDataType customData = 11;
+}

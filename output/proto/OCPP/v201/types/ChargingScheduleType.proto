@@ -1,0 +1,20 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/ChargingSchedulePeriodType.proto";
+import "types/CustomDataType.proto";
+import "types/SalesTariffType.proto";
+import "types/enums/ChargingRateUnitEnumType.proto";
+
+message ChargingScheduleType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  int32 id = 2;
+  string startSchedule = 3;
+  int32 duration = 4;
+  OCPP.v201.types.enums.chargingrateunitenumtype.ChargingRateUnitEnumType chargingRateUnit = 5;
+  repeated OCPP.v201.types.ChargingSchedulePeriodType chargingSchedulePeriod = 6;
+  double minChargingRate = 7;
+  OCPP.v201.types.SalesTariffType salesTariff = 8;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/ChargingProfilePurposeEnumType.proto";
+
+message ClearChargingProfileType {
+  int32 evseId = 1;
+  OCPP.v21.types.enums.chargingprofilepurposeenumtype.ChargingProfilePurposeEnumType chargingProfilePurpose = 2;
+  int32 stackLevel = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

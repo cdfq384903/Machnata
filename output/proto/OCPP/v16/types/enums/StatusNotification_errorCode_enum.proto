@@ -1,0 +1,24 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.statusnotification_errorcode_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum StatusNotification_errorCode_enum {
+  STATUSNOTIFICATION_ERRORCODE_ENUM_UNSPECIFIED = 0;
+  ConnectorLockFailure = 1;
+  EVCommunicationError = 2;
+  GroundFailure = 3;
+  HighTemperature = 4;
+  InternalError = 5;
+  LocalListConflict = 6;
+  NoError = 7;
+  OtherError = 8;
+  OverCurrentFailure = 9;
+  PowerMeterFailure = 10;
+  PowerSwitchFailure = 11;
+  ReaderFailure = 12;
+  ResetFailure = 13;
+  UnderVoltage = 14;
+  OverVoltage = 15;
+  WeakSignal = 16;
+}

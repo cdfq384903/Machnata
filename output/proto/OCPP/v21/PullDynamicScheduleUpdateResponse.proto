@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/ChargingScheduleUpdateType.proto";
+import "types/CustomDataType.proto";
+import "types/StatusInfoType.proto";
+import "types/enums/ChargingProfileStatusEnumType.proto";
+
+message PullDynamicScheduleUpdateResponse {
+  OCPP.v21.types.ChargingScheduleUpdateType scheduleUpdate = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.enums.chargingprofilestatusenumtype.ChargingProfileStatusEnumType status = 2;
+  OCPP.v21.types.StatusInfoType statusInfo = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

@@ -1,0 +1,418 @@
+{
+  "$ref": "#/definitions/ocpi.2_2.evse",
+  "definitions": {
+    "ocpi.2_2.evse": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "maxLength": 39
+        },
+        "evse_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 48,
+              "pattern": "^(([A-Z]{2}\\*?[A-Z0-9]{3}\\*?E[A-Z0-9\\*]{1,30})|(\\+?[0-9]{1,3}\\*[0-9]{3}\\*[0-9\\*]{1,32}))$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "AVAILABLE",
+            "BLOCKED",
+            "CHARGING",
+            "INOPERATIVE",
+            "OUTOFORDER",
+            "PLANNED",
+            "REMOVED",
+            "RESERVED",
+            "UNKNOWN"
+          ]
+        },
+        "status_schedule": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "period_begin": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "period_end": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "status": {
+                    "$ref": "#/definitions/ocpi.2_2.evse/properties/status"
+                  }
+                },
+                "required": [
+                  "period_begin",
+                  "status"
+                ],
+                "additionalProperties": false
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "capabilities": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "CHARGING_PROFILE_CAPABLE",
+                  "CHARGING_PREFERENCES_CAPABLE",
+                  "CHIP_CARD_SUPPORT",
+                  "CONTACTLESS_CARD_SUPPORT",
+                  "CREDIT_CARD_PAYABLE",
+                  "DEBIT_CARD_PAYABLE",
+                  "PED_TERMINAL",
+                  "REMOTE_START_STOP_CAPABLE",
+                  "RESERVABLE",
+                  "RFID_READER",
+                  "TOKEN_GROUP_CAPABLE",
+                  "UNLOCK_CAPABLE"
+                ]
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "connectors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "maxLength": 36
+              },
+              "standard": {
+                "type": "string",
+                "enum": [
+                  "CHADEMO",
+                  "DOMESTIC_A",
+                  "DOMESTIC_B",
+                  "DOMESTIC_C",
+                  "DOMESTIC_D",
+                  "DOMESTIC_E",
+                  "DOMESTIC_F",
+                  "DOMESTIC_G",
+                  "DOMESTIC_H",
+                  "DOMESTIC_I",
+                  "DOMESTIC_J",
+                  "DOMESTIC_K",
+                  "DOMESTIC_L",
+                  "IEC_60309_2_single_16",
+                  "IEC_60309_2_three_16",
+                  "IEC_60309_2_three_32",
+                  "IEC_60309_2_three_64",
+                  "IEC_62196_T1",
+                  "IEC_62196_T1_COMBO",
+                  "IEC_62196_T2",
+                  "IEC_62196_T2_COMBO",
+                  "IEC_62196_T3A",
+                  "IEC_62196_T3C",
+                  "PANTOGRAPH_BOTTOM_UP",
+                  "PANTOGRAPH_TOP_DOWN",
+                  "TESLA_R",
+                  "TESLA_S"
+                ]
+              },
+              "format": {
+                "type": "string",
+                "enum": [
+                  "SOCKET",
+                  "CABLE"
+                ]
+              },
+              "power_type": {
+                "type": "string",
+                "enum": [
+                  "AC_1_PHASE",
+                  "AC_3_PHASE",
+                  "DC"
+                ]
+              },
+              "max_voltage": {
+                "type": "integer"
+              },
+              "max_amperage": {
+                "type": "integer"
+              },
+              "max_electric_power": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "tariff_ids": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "anyOf": [
+                        {
+                          "not": {}
+                        },
+                        {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "maxLength": 36
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "terms_and_conditions": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "last_updated": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "id",
+              "standard",
+              "format",
+              "power_type",
+              "max_voltage",
+              "max_amperage",
+              "last_updated"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "floor_level": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 4
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "coordinates": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "latitude": {
+                  "type": "string",
+                  "maxLength": 10,
+                  "pattern": "-?[0-9]{1,2}\\.[0-9]{5,7}"
+                },
+                "longitude": {
+                  "type": "string",
+                  "maxLength": 11,
+                  "pattern": "-?[0-9]{1,3}\\.[0-9]{5,7}"
+                }
+              },
+              "required": [
+                "latitude",
+                "longitude"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "physical_reference": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 16
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "directions": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "language": {
+                    "type": "string",
+                    "minLength": 2,
+                    "maxLength": 2
+                  },
+                  "text": {
+                    "type": "string",
+                    "maxLength": 512
+                  }
+                },
+                "required": [
+                  "language",
+                  "text"
+                ],
+                "additionalProperties": false
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "parking_restrictions": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "EV_ONLY",
+                  "PLUGGED",
+                  "DISABLED",
+                  "CUSTOMERS",
+                  "MOTORCYCLES"
+                ]
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "images": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "thumbnail": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "category": {
+                    "type": "string",
+                    "enum": [
+                      "CHARGER",
+                      "ENTRANCE",
+                      "LOCATION",
+                      "NETWORK",
+                      "OPERATOR",
+                      "OTHER",
+                      "OWNER"
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "maxLength": 4
+                  },
+                  "width": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "maximum": 99999
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "height": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "maximum": 99999
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "url",
+                  "category",
+                  "type"
+                ],
+                "additionalProperties": false
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "uid",
+        "status",
+        "connectors",
+        "last_updated"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v16;
+option go_package = "tmp/v16;OCPPv16";
+option csharp_namespace = "OCPP.v16";
+
+import "types/GetCompositeScheduleResponse_chargingSchedule.proto";
+import "types/enums/GetCompositeScheduleResponse_status_enum.proto";
+
+message GetCompositeScheduleResponse {
+  // NOTE: This field is required by standard Spec.
+  OCPP.v16.types.enums.getcompositescheduleresponse_status_enum.GetCompositeScheduleResponse_status_enum status = 1;
+  int32 connectorId = 2;
+  string scheduleStart = 3;
+  OCPP.v16.types.GetCompositeScheduleResponse_chargingSchedule chargingSchedule = 4;
+}

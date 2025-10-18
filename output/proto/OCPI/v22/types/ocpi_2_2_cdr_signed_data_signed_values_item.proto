@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+message ocpi_2_2_cdr_signed_data_signed_values_item {
+  string nature = 1;
+  string plain_data = 2;
+  string signed_data = 3;
+}

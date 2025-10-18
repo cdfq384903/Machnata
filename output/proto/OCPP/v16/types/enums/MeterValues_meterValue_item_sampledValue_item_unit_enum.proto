@@ -1,0 +1,25 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.metervalues_metervalue_item_sampledvalue_item_unit_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum MeterValues_meterValue_item_sampledValue_item_unit_enum {
+  METERVALUES_METERVALUE_ITEM_SAMPLEDVALUE_ITEM_UNIT_ENUM_UNSPECIFIED = 0;
+  Wh = 1;
+  kWh = 2;
+  varh = 3;
+  kvarh = 4;
+  W = 5;
+  kW = 6;
+  VA = 7;
+  kVA = 8;
+  var = 9;
+  kvar = 10;
+  A = 11;
+  V = 12;
+  K = 13;
+  Celcius = 14;
+  Celsius = 15;
+  Fahrenheit = 16;
+  Percent = 17;
+}

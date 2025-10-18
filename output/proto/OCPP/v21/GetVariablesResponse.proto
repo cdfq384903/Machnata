@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/GetVariableResultType.proto";
+
+message GetVariablesResponse {
+  // NOTE: This field is required by standard Spec.
+  repeated OCPP.v21.types.GetVariableResultType getVariableResult = 1;
+  OCPP.v21.types.CustomDataType customData = 2;
+}

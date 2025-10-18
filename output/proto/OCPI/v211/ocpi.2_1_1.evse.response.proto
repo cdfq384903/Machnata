@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPI.v211;
+option go_package = "tmp/v211;OCPIv211";
+option csharp_namespace = "OCPI.v211";
+
+import "types/ocpi_2_1_1_evse_response_data.proto";
+
+message ocpi_2_1_1_evse_response {
+  // NOTE: This field is required by standard Spec.
+  OCPI.v211.types.ocpi_2_1_1_evse_response_data data = 1;
+  // NOTE: This field is required by standard Spec.
+  int32 status_code = 2;
+  string status_message = 3;
+  // NOTE: This field is required by standard Spec.
+  string timestamp = 4;
+}

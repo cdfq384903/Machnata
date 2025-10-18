@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/ocpi_2_2_chargingprofiles_charging_profile.proto";
+
+message ocpi_2_2_chargingprofiles {
+  OCPI.v22.types.ocpi_2_2_chargingprofiles_charging_profile charging_profile = 1;
+  string response_url = 2;
+}

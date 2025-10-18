@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.grideventfaultenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum GridEventFaultEnumType {
+  GRIDEVENTFAULTENUMTYPE_UNSPECIFIED = 0;
+  CurrentImbalance = 1;
+  LocalEmergency = 2;
+  LowInputPower = 3;
+  OverCurrent = 4;
+  OverFrequency = 5;
+  OverVoltage = 6;
+  PhaseRotation = 7;
+  RemoteEmergency = 8;
+  UnderFrequency = 9;
+  UnderVoltage = 10;
+  VoltageImbalance = 11;
+}

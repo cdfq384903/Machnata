@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.costkindenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum CostKindEnumType {
+  COSTKINDENUMTYPE_UNSPECIFIED = 0;
+  CarbonDioxideEmission = 1;
+  RelativePricePercentage = 2;
+  RenewableGenerationPercentage = 3;
+}

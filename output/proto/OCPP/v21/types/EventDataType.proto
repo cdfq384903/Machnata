@@ -1,0 +1,28 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/ComponentType.proto";
+import "types/CustomDataType.proto";
+import "types/VariableType.proto";
+import "types/enums/EventNotificationEnumType.proto";
+import "types/enums/EventTriggerEnumType.proto";
+
+message EventDataType {
+  int32 eventId = 1;
+  string timestamp = 2;
+  OCPP.v21.types.enums.eventtriggerenumtype.EventTriggerEnumType trigger = 3;
+  int32 cause = 4;
+  string actualValue = 5;
+  string techCode = 6;
+  string techInfo = 7;
+  bool cleared = 8;
+  string transactionId = 9;
+  OCPP.v21.types.ComponentType component = 10;
+  int32 variableMonitoringId = 11;
+  OCPP.v21.types.enums.eventnotificationenumtype.EventNotificationEnumType eventNotificationType = 12;
+  OCPP.v21.types.VariableType variable = 13;
+  int32 severity = 14;
+  OCPP.v21.types.CustomDataType customData = 15;
+}

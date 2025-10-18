@@ -1,0 +1,9 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+message ocpi_2_2_1_chargingprofiles_active_charging_profile_result_profile_charging_profile_charging_profile_period_item {
+  int32 start_period = 1;
+  double limit = 2;
+}

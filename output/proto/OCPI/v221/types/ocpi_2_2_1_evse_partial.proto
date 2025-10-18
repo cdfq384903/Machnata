@@ -1,0 +1,21 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+
+message ocpi_2_2_1_evse_partial {
+  string uid = 1;
+  string evse_id = 2;
+  string status = 3;
+  string status_schedule = 4;
+  string capabilities = 5;
+  string connectors = 6;
+  string floor_level = 7;
+  string coordinates = 8;
+  string physical_reference = 9;
+  string directions = 10;
+  string parking_restrictions = 11;
+  string images = 12;
+  string last_updated = 13;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.hashalgorithmenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum HashAlgorithmEnumType {
+  HASHALGORITHMENUMTYPE_UNSPECIFIED = 0;
+  SHA256 = 1;
+  SHA384 = 2;
+  SHA512 = 3;
+}

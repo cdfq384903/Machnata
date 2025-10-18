@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.unlockconnectorresponse_status_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum UnlockConnectorResponse_status_enum {
+  UNLOCKCONNECTORRESPONSE_STATUS_ENUM_UNSPECIFIED = 0;
+  Unlocked = 1;
+  UnlockFailed = 2;
+  NotSupported = 3;
+}

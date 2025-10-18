@@ -1,0 +1,30 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/canonical.proto";
+import "types/integer.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message TestScript_Capability {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.boolean required = 4;
+  HL7.v600.types.Element shadow__required = 5 [json_name = "_required"];
+  HL7.v600.types.boolean validated = 6;
+  HL7.v600.types.Element shadow__validated = 7 [json_name = "_validated"];
+  HL7.v600.types.string description = 8;
+  HL7.v600.types.Element shadow__description = 9 [json_name = "_description"];
+  repeated HL7.v600.types.integer origin = 10;
+  repeated HL7.v600.types.Element shadow__origin = 11 [json_name = "_origin"];
+  HL7.v600.types.integer destination = 12;
+  HL7.v600.types.Element shadow__destination = 13 [json_name = "_destination"];
+  repeated HL7.v600.types.uri link = 14;
+  repeated HL7.v600.types.Element shadow__link = 15 [json_name = "_link"];
+  HL7.v600.types.canonical capabilities = 16;
+}

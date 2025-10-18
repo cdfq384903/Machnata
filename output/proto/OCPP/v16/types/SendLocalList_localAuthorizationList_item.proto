@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v16.types;
+option go_package = "tmp/v16/types;types";
+option csharp_namespace = "OCPP.v16.types";
+
+import "types/SendLocalList_localAuthorizationList_item_idTagInfo.proto";
+
+message SendLocalList_localAuthorizationList_item {
+  string idTag = 1;
+  OCPP.v16.types.SendLocalList_localAuthorizationList_item_idTagInfo idTagInfo = 2;
+}

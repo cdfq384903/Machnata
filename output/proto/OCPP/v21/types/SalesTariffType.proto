@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/SalesTariffEntryType.proto";
+
+message SalesTariffType {
+  int32 id = 1;
+  string salesTariffDescription = 2;
+  int32 numEPriceLevels = 3;
+  repeated OCPP.v21.types.SalesTariffEntryType salesTariffEntry = 4;
+  OCPP.v21.types.CustomDataType customData = 5;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CustomDataType.proto";
+import "types/StatusInfoType.proto";
+import "types/enums/Iso15118EVCertificateStatusEnumType.proto";
+
+message Get15118EVCertificateResponse {
+  OCPP.v201.types.CustomDataType customData = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v201.types.enums.iso15118evcertificatestatusenumtype.Iso15118EVCertificateStatusEnumType status = 2;
+  OCPP.v201.types.StatusInfoType statusInfo = 3;
+  // NOTE: This field is required by standard Spec.
+  string exiResponse = 4;
+}

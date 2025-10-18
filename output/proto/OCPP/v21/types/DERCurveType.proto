@@ -1,0 +1,24 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/DERCurvePointsType.proto";
+import "types/HysteresisType.proto";
+import "types/ReactivePowerParamsType.proto";
+import "types/VoltageParamsType.proto";
+import "types/enums/DERUnitEnumType.proto";
+
+message DERCurveType {
+  repeated OCPP.v21.types.DERCurvePointsType curveData = 1;
+  OCPP.v21.types.HysteresisType hysteresis = 2;
+  int32 priority = 3;
+  OCPP.v21.types.ReactivePowerParamsType reactivePowerParams = 4;
+  OCPP.v21.types.VoltageParamsType voltageParams = 5;
+  OCPP.v21.types.enums.derunitenumtype.DERUnitEnumType yUnit = 6;
+  double responseTime = 7;
+  string startTime = 8;
+  double duration = 9;
+  OCPP.v21.types.CustomDataType customData = 10;
+}

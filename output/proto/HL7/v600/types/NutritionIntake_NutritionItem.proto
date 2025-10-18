@@ -1,0 +1,19 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/NutritionIntake_ConsumedItem.proto";
+import "types/NutritionIntake_NotConsumedItem.proto";
+import "types/string.proto";
+
+message NutritionIntake_NutritionItem {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept type = 4;
+  HL7.v600.types.CodeableReference nutritionProduct = 5;
+  repeated HL7.v600.types.NutritionIntake_ConsumedItem consumedItem = 6;
+  repeated HL7.v600.types.NutritionIntake_NotConsumedItem notConsumedItem = 7;
+}

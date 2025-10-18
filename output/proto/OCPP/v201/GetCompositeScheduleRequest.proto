@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CustomDataType.proto";
+import "types/enums/ChargingRateUnitEnumType.proto";
+
+message GetCompositeScheduleRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  // NOTE: This field is required by standard Spec.
+  int32 duration = 2;
+  OCPP.v201.types.enums.chargingrateunitenumtype.ChargingRateUnitEnumType chargingRateUnit = 3;
+  // NOTE: This field is required by standard Spec.
+  int32 evseId = 4;
+}

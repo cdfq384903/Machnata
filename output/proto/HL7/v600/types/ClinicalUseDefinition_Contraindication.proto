@@ -1,0 +1,20 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ClinicalUseDefinition_OtherTherapy.proto";
+import "types/string.proto";
+
+message ClinicalUseDefinition_Contraindication {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableReference diseaseSymptomProcedure = 4;
+  HL7.v600.types.CodeableReference diseaseStatus = 5;
+  repeated HL7.v600.types.CodeableReference comorbidity = 6;
+  repeated HL7.v600.types.Reference indication = 7;
+  HL7.v600.types.Expression applicability = 8;
+  repeated HL7.v600.types.ClinicalUseDefinition_OtherTherapy otherTherapy = 9;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.reservationupdatestatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum ReservationUpdateStatusEnumType {
+  RESERVATIONUPDATESTATUSENUMTYPE_UNSPECIFIED = 0;
+  Expired = 1;
+  Removed = 2;
+  NoTransaction = 3;
+}

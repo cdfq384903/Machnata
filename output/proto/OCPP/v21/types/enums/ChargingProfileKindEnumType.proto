@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.chargingprofilekindenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum ChargingProfileKindEnumType {
+  CHARGINGPROFILEKINDENUMTYPE_UNSPECIFIED = 0;
+  Absolute = 1;
+  Recurring = 2;
+  Relative = 3;
+  Dynamic = 4;
+}

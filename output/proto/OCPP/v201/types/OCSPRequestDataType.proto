@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/HashAlgorithmEnumType.proto";
+
+message OCSPRequestDataType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  OCPP.v201.types.enums.hashalgorithmenumtype.HashAlgorithmEnumType hashAlgorithm = 2;
+  string issuerNameHash = 3;
+  string issuerKeyHash = 4;
+  string serialNumber = 5;
+  string responderURL = 6;
+}

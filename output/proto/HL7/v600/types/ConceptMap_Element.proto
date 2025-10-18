@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ConceptMap_Target.proto";
+import "types/boolean.proto";
+import "types/canonical.proto";
+import "types/code.proto";
+import "types/string.proto";
+
+message ConceptMap_Element {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.code code = 4;
+  HL7.v600.types.Element shadow__code = 5 [json_name = "_code"];
+  HL7.v600.types.string display = 6;
+  HL7.v600.types.Element shadow__display = 7 [json_name = "_display"];
+  HL7.v600.types.canonical valueSet = 8;
+  HL7.v600.types.boolean noMap = 9;
+  HL7.v600.types.Element shadow__noMap = 10 [json_name = "_noMap"];
+  repeated HL7.v600.types.ConceptMap_Target target = 11;
+}

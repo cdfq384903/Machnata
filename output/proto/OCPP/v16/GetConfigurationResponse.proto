@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v16;
+option go_package = "tmp/v16;OCPPv16";
+option csharp_namespace = "OCPP.v16";
+
+import "types/GetConfigurationResponse_configurationKey_item.proto";
+
+message GetConfigurationResponse {
+  repeated OCPP.v16.types.GetConfigurationResponse_configurationKey_item configurationKey = 1;
+  repeated string unknownKey = 2;
+}

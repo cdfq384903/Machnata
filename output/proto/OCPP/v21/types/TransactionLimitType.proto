@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+
+message TransactionLimitType {
+  double maxCost = 1;
+  double maxEnergy = 2;
+  int32 maxTime = 3;
+  int32 maxSoC = 4;
+  OCPP.v21.types.CustomDataType customData = 5;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package HL7.v600.types.enums.elementdefinition_slicing_rules_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum ElementDefinition_Slicing_rules_enum {
+  ELEMENTDEFINITION_SLICING_RULES_ENUM_UNSPECIFIED = 0;
+  closed = 1;
+  open = 2;
+  openAtEnd = 3;
+}

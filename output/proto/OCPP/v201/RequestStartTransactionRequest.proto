@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/ChargingProfileType.proto";
+import "types/CustomDataType.proto";
+import "types/IdTokenType.proto";
+
+message RequestStartTransactionRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  int32 evseId = 2;
+  OCPP.v201.types.IdTokenType groupIdToken = 3;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v201.types.IdTokenType idToken = 4;
+  // NOTE: This field is required by standard Spec.
+  int32 remoteStartId = 5;
+  OCPP.v201.types.ChargingProfileType chargingProfile = 6;
+}

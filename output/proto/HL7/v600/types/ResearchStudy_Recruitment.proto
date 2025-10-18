@@ -1,0 +1,20 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/string.proto";
+import "types/unsignedInt.proto";
+
+message ResearchStudy_Recruitment {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.unsignedInt targetNumber = 4;
+  HL7.v600.types.Element shadow__targetNumber = 5 [json_name = "_targetNumber"];
+  HL7.v600.types.unsignedInt actualNumber = 6;
+  HL7.v600.types.Element shadow__actualNumber = 7 [json_name = "_actualNumber"];
+  HL7.v600.types.Reference eligibility = 8;
+  HL7.v600.types.Reference actualGroup = 9;
+}

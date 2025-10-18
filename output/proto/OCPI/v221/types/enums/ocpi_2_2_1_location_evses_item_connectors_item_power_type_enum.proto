@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPI.v221.types.enums.ocpi_2_2_1_location_evses_item_connectors_item_power_type_enum;
+option go_package = "tmp/v221/types/enums;enums";
+option csharp_namespace = "OCPI.v221.types.enums";
+
+enum ocpi_2_2_1_location_evses_item_connectors_item_power_type_enum {
+  OCPI_2_2_1_LOCATION_EVSES_ITEM_CONNECTORS_ITEM_POWER_TYPE_ENUM_UNSPECIFIED = 0;
+  AC_1_PHASE = 1;
+  AC_2_PHASE = 2;
+  AC_2_PHASE_SPLIT = 3;
+  AC_3_PHASE = 4;
+  DC = 5;
+}

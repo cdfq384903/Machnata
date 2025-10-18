@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPI.v221.types.enums.ocpi_2_2_1_chargingprofiles_clear_profile_result_result_enum;
+option go_package = "tmp/v221/types/enums;enums";
+option csharp_namespace = "OCPI.v221.types.enums";
+
+enum ocpi_2_2_1_chargingprofiles_clear_profile_result_result_enum {
+  OCPI_2_2_1_CHARGINGPROFILES_CLEAR_PROFILE_RESULT_RESULT_ENUM_UNSPECIFIED = 0;
+  ACCEPTED = 1;
+  REJECTED = 2;
+  UNKNOWN = 3;
+}

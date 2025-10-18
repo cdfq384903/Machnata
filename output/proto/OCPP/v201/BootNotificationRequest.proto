@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/ChargingStationType.proto";
+import "types/CustomDataType.proto";
+import "types/enums/BootReasonEnumType.proto";
+
+message BootNotificationRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v201.types.ChargingStationType chargingStation = 2;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v201.types.enums.bootreasonenumtype.BootReasonEnumType reason = 3;
+}

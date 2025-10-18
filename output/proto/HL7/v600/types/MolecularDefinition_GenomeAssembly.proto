@@ -1,0 +1,20 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/string.proto";
+
+message MolecularDefinition_GenomeAssembly {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept organism = 4;
+  HL7.v600.types.CodeableConcept build = 5;
+  HL7.v600.types.CodeableConcept accession = 6;
+  string descriptionMarkdown = 7;
+  HL7.v600.types.Element shadow__descriptionMarkdown = 8 [json_name = "_descriptionMarkdown"];
+  string descriptionString = 9;
+  HL7.v600.types.Element shadow__descriptionString = 10 [json_name = "_descriptionString"];
+}

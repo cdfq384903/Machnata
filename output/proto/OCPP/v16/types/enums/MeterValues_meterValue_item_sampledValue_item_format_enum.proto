@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.metervalues_metervalue_item_sampledvalue_item_format_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum MeterValues_meterValue_item_sampledValue_item_format_enum {
+  METERVALUES_METERVALUE_ITEM_SAMPLEDVALUE_ITEM_FORMAT_ENUM_UNSPECIFIED = 0;
+  Raw = 1;
+  SignedData = 2;
+}

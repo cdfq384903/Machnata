@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/RationalNumberType.proto";
+
+message TaxRuleType {
+  int32 taxRuleID = 1;
+  string taxRuleName = 2;
+  bool taxIncludedInPrice = 3;
+  bool appliesToEnergyFee = 4;
+  bool appliesToParkingFee = 5;
+  bool appliesToOverstayFee = 6;
+  bool appliesToMinimumMaximumCost = 7;
+  OCPP.v21.types.RationalNumberType taxRate = 8;
+  OCPP.v21.types.CustomDataType customData = 9;
+}

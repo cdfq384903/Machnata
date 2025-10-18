@@ -1,0 +1,23 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/id.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message StructureDefinition_Mapping {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.id identity = 4;
+  HL7.v600.types.Element shadow__identity = 5 [json_name = "_identity"];
+  HL7.v600.types.uri uri = 6;
+  HL7.v600.types.Element shadow__uri = 7 [json_name = "_uri"];
+  HL7.v600.types.string name = 8;
+  HL7.v600.types.Element shadow__name = 9 [json_name = "_name"];
+  HL7.v600.types.string comment = 10;
+  HL7.v600.types.Element shadow__comment = 11 [json_name = "_comment"];
+}

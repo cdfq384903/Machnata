@@ -1,0 +1,20 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/decimal.proto";
+import "types/string.proto";
+
+message MonetaryComponent {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.code type = 3;
+  HL7.v600.types.Element shadow__type = 4 [json_name = "_type"];
+  HL7.v600.types.CodeableConcept code = 5;
+  HL7.v600.types.decimal factor = 6;
+  HL7.v600.types.Element shadow__factor = 7 [json_name = "_factor"];
+  HL7.v600.types.Money amount = 8;
+}

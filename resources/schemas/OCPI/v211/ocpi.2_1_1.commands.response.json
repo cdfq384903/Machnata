@@ -1,0 +1,51 @@
+{
+  "$ref": "#/definitions/ocpi.2_1_1.commands.response",
+  "definitions": {
+    "ocpi.2_1_1.commands.response": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "string",
+              "enum": [
+                "NOT_SUPPORTED",
+                "REJECTED",
+                "ACCEPTED",
+                "TIMEOUT",
+                "UNKNOWN_SESSION"
+              ]
+            }
+          },
+          "required": [
+            "result"
+          ],
+          "additionalProperties": false
+        },
+        "status_code": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 1999
+        },
+        "status_message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "data",
+        "status_code",
+        "timestamp"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

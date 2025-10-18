@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/dateTime.proto";
+import "types/string.proto";
+
+message AllergyIntolerance_Reaction {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept substance = 4;
+  repeated HL7.v600.types.CodeableReference manifestation = 5;
+  HL7.v600.types.string description = 6;
+  HL7.v600.types.Element shadow__description = 7 [json_name = "_description"];
+  HL7.v600.types.dateTime onset = 8;
+  HL7.v600.types.Element shadow__onset = 9 [json_name = "_onset"];
+  HL7.v600.types.code severity = 10;
+  HL7.v600.types.Element shadow__severity = 11 [json_name = "_severity"];
+  HL7.v600.types.CodeableConcept exposureRoute = 12;
+  repeated HL7.v600.types.Annotation note = 13;
+}

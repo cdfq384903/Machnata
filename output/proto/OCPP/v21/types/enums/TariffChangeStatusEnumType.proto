@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.tariffchangestatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum TariffChangeStatusEnumType {
+  TARIFFCHANGESTATUSENUMTYPE_UNSPECIFIED = 0;
+  Accepted = 1;
+  Rejected = 2;
+  TooManyElements = 3;
+  ConditionNotSupported = 4;
+  TxNotFound = 5;
+  NoCurrencyChange = 6;
+}

@@ -1,0 +1,28 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message SubscriptionTopic_CanFilterBy {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.markdown description = 4;
+  HL7.v600.types.Element shadow__description = 5 [json_name = "_description"];
+  HL7.v600.types.uri resource = 6;
+  HL7.v600.types.Element shadow__resource = 7 [json_name = "_resource"];
+  HL7.v600.types.string filterParameter = 8;
+  HL7.v600.types.Element shadow__filterParameter = 9 [json_name = "_filterParameter"];
+  HL7.v600.types.uri filterDefinition = 10;
+  HL7.v600.types.Element shadow__filterDefinition = 11 [json_name = "_filterDefinition"];
+  repeated HL7.v600.types.code comparator = 12;
+  repeated HL7.v600.types.Element shadow__comparator = 13 [json_name = "_comparator"];
+  repeated HL7.v600.types.code modifier = 14;
+  repeated HL7.v600.types.Element shadow__modifier = 15 [json_name = "_modifier"];
+}

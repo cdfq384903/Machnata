@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.unlockstatusenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum UnlockStatusEnumType {
+  UNLOCKSTATUSENUMTYPE_UNSPECIFIED = 0;
+  Unlocked = 1;
+  UnlockFailed = 2;
+  OngoingAuthorizedTransaction = 3;
+  UnknownConnector = 4;
+}

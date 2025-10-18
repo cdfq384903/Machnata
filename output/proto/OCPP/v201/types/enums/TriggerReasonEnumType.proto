@@ -1,0 +1,29 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.triggerreasonenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum TriggerReasonEnumType {
+  TRIGGERREASONENUMTYPE_UNSPECIFIED = 0;
+  Authorized = 1;
+  CablePluggedIn = 2;
+  ChargingRateChanged = 3;
+  ChargingStateChanged = 4;
+  Deauthorized = 5;
+  EnergyLimitReached = 6;
+  EVCommunicationLost = 7;
+  EVConnectTimeout = 8;
+  MeterValueClock = 9;
+  MeterValuePeriodic = 10;
+  TimeLimitReached = 11;
+  Trigger = 12;
+  UnlockCommand = 13;
+  StopAuthorized = 14;
+  EVDeparted = 15;
+  EVDetected = 16;
+  RemoteStop = 17;
+  RemoteStart = 18;
+  AbnormalCondition = 19;
+  SignedDataReceived = 20;
+  ResetCommand = 21;
+}

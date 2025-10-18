@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPI.v22;
+option go_package = "tmp/v22;OCPIv22";
+option csharp_namespace = "OCPI.v22";
+
+import "types/enums/ocpi_2_2_commands_result_result_enum.proto";
+import "types/ocpi_2_2_commands_result_message_item.proto";
+
+message ocpi_2_2_commands_result {
+  // NOTE: This field is required by standard Spec.
+  OCPI.v22.types.enums.ocpi_2_2_commands_result_result_enum.ocpi_2_2_commands_result_result_enum result = 1;
+  repeated OCPI.v22.types.ocpi_2_2_commands_result_message_item message = 2;
+}

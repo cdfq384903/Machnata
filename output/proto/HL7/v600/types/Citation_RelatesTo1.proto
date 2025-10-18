@@ -1,0 +1,30 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message Citation_RelatesTo1 {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.code type = 4;
+  HL7.v600.types.Element shadow__type = 5 [json_name = "_type"];
+  repeated HL7.v600.types.CodeableConcept classifier = 6;
+  HL7.v600.types.string label = 7;
+  HL7.v600.types.Element shadow__label = 8 [json_name = "_label"];
+  HL7.v600.types.string display = 9;
+  HL7.v600.types.Element shadow__display = 10 [json_name = "_display"];
+  HL7.v600.types.markdown citation = 11;
+  HL7.v600.types.Element shadow__citation = 12 [json_name = "_citation"];
+  string targetUri = 13;
+  HL7.v600.types.Element shadow__targetUri = 14 [json_name = "_targetUri"];
+  HL7.v600.types.Attachment targetAttachment = 15;
+  string targetCanonical = 16;
+  HL7.v600.types.Element shadow__targetCanonical = 17 [json_name = "_targetCanonical"];
+  HL7.v600.types.Reference targetReference = 18;
+}

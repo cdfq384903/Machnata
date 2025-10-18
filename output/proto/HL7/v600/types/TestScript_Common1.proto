@@ -1,0 +1,24 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/TestScript_Action3.proto";
+import "types/TestScript_Parameter1.proto";
+import "types/id.proto";
+import "types/string.proto";
+
+message TestScript_Common1 {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.id key = 4;
+  HL7.v600.types.Element shadow__key = 5 [json_name = "_key"];
+  HL7.v600.types.string name = 6;
+  HL7.v600.types.Element shadow__name = 7 [json_name = "_name"];
+  HL7.v600.types.string description = 8;
+  HL7.v600.types.Element shadow__description = 9 [json_name = "_description"];
+  repeated HL7.v600.types.TestScript_Parameter1 parameter = 10;
+  repeated HL7.v600.types.TestScript_Action3 action = 11;
+}

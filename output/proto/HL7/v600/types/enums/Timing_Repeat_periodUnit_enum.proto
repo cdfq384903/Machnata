@@ -1,0 +1,15 @@
+syntax = "proto3";
+package HL7.v600.types.enums.timing_repeat_periodunit_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum Timing_Repeat_periodUnit_enum {
+  TIMING_REPEAT_PERIODUNIT_ENUM_UNSPECIFIED = 0;
+  s = 1;
+  min = 2;
+  h = 3;
+  d = 4;
+  wk = 5;
+  mo = 6;
+  a = 7;
+}

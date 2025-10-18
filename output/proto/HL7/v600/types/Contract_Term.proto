@@ -1,0 +1,33 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Contract_Action.proto";
+import "types/Contract_Asset.proto";
+import "types/Contract_Offer.proto";
+import "types/Contract_SecurityLabel.proto";
+import "types/dateTime.proto";
+import "types/string.proto";
+
+message Contract_Term {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Identifier identifier = 4;
+  HL7.v600.types.dateTime issued = 5;
+  HL7.v600.types.Element shadow__issued = 6 [json_name = "_issued"];
+  HL7.v600.types.Period applies = 7;
+  HL7.v600.types.CodeableConcept topicCodeableConcept = 8;
+  HL7.v600.types.Reference topicReference = 9;
+  HL7.v600.types.CodeableConcept type = 10;
+  HL7.v600.types.CodeableConcept subType = 11;
+  HL7.v600.types.string text = 12;
+  HL7.v600.types.Element shadow__text = 13 [json_name = "_text"];
+  repeated HL7.v600.types.Contract_SecurityLabel securityLabel = 14;
+  HL7.v600.types.Contract_Offer offer = 15;
+  repeated HL7.v600.types.Contract_Asset asset = 16;
+  repeated HL7.v600.types.Contract_Action action = 17;
+  repeated HL7.v600.types.Contract_Term group = 18;
+}

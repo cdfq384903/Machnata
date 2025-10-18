@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/DERCurveType.proto";
+import "types/enums/DERControlEnumType.proto";
+
+message DERCurveGetType {
+  OCPP.v21.types.DERCurveType curve = 1;
+  string id = 2;
+  OCPP.v21.types.enums.dercontrolenumtype.DERControlEnumType curveType = 3;
+  bool isDefault = 4;
+  bool isSuperseded = 5;
+  OCPP.v21.types.CustomDataType customData = 6;
+}

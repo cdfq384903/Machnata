@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+import "types/enums/ocpi_2_2_1_session_response_data_charging_periods_item_dimensions_item_type_enum.proto";
+
+message ocpi_2_2_1_session_response_data_charging_periods_item_dimensions_item {
+  OCPI.v221.types.enums.ocpi_2_2_1_session_response_data_charging_periods_item_dimensions_item_type_enum.ocpi_2_2_1_session_response_data_charging_periods_item_dimensions_item_type_enum type = 1;
+  double volume = 2;
+}

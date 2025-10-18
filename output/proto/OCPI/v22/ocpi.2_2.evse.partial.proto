@@ -1,0 +1,21 @@
+syntax = "proto3";
+package OCPI.v22;
+option go_package = "tmp/v22;OCPIv22";
+option csharp_namespace = "OCPI.v22";
+
+
+message ocpi_2_2_evse_partial {
+  string uid = 1;
+  string evse_id = 2;
+  string status = 3;
+  string status_schedule = 4;
+  string capabilities = 5;
+  string connectors = 6;
+  string floor_level = 7;
+  string coordinates = 8;
+  string physical_reference = 9;
+  string directions = 10;
+  string parking_restrictions = 11;
+  string images = 12;
+  string last_updated = 13;
+}

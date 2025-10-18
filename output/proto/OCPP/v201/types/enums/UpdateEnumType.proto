@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.updateenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum UpdateEnumType {
+  UPDATEENUMTYPE_UNSPECIFIED = 0;
+  Differential = 1;
+  Full = 2;
+}

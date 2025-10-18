@@ -1,0 +1,58 @@
+syntax = "proto3";
+package OCPI.v22;
+option go_package = "tmp/v22;OCPIv22";
+option csharp_namespace = "OCPI.v22";
+
+import "types/enums/ocpi_2_2_cdr_auth_method_enum.proto";
+import "types/ocpi_2_2_cdr.proto";
+import "types/ocpi_2_2_cdr_cdr_location.proto";
+import "types/ocpi_2_2_cdr_cdr_token.proto";
+import "types/ocpi_2_2_cdr_charging_periods_item.proto";
+import "types/ocpi_2_2_cdr_signed_data.proto";
+import "types/ocpi_2_2_cdr_tariffs_item.proto";
+
+message ocpi_2_2_cdr {
+  // NOTE: This field is required by standard Spec.
+  string country_code = 1;
+  // NOTE: This field is required by standard Spec.
+  string party_id = 2;
+  // NOTE: This field is required by standard Spec.
+  string id = 3;
+  // NOTE: This field is required by standard Spec.
+  string start_date_time = 4;
+  // NOTE: This field is required by standard Spec.
+  string end_date_time = 5;
+  string session_id = 6;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v22.types.ocpi_2_2_cdr_cdr_token cdr_token = 7;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v22.types.enums.ocpi_2_2_cdr_auth_method_enum.ocpi_2_2_cdr_auth_method_enum auth_method = 8;
+  string authorization_reference = 9;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v22.types.ocpi_2_2_cdr_cdr_location cdr_location = 10;
+  string meter_id = 11;
+  // NOTE: This field is required by standard Spec.
+  string currency = 12;
+  repeated OCPI.v22.types.ocpi_2_2_cdr_tariffs_item tariffs = 13;
+  // NOTE: This field is required by standard Spec.
+  repeated OCPI.v22.types.ocpi_2_2_cdr_charging_periods_item charging_periods = 14;
+  OCPI.v22.types.ocpi_2_2_cdr_signed_data signed_data = 15;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v22.types.ocpi_2_2_cdr total_cost = 16;
+  OCPI.v22.types.ocpi_2_2_cdr total_fixed_cost = 17;
+  // NOTE: This field is required by standard Spec.
+  double total_energy = 18;
+  OCPI.v22.types.ocpi_2_2_cdr total_energy_cost = 19;
+  // NOTE: This field is required by standard Spec.
+  double total_time = 20;
+  OCPI.v22.types.ocpi_2_2_cdr total_time_cost = 21;
+  double total_parking_time = 22;
+  OCPI.v22.types.ocpi_2_2_cdr total_parking_cost = 23;
+  OCPI.v22.types.ocpi_2_2_cdr total_reservation_cost = 24;
+  string remark = 25;
+  string invoice_reference_id = 26;
+  bool credit = 27;
+  string credit_reference_id = 28;
+  // NOTE: This field is required by standard Spec.
+  string last_updated = 29;
+}

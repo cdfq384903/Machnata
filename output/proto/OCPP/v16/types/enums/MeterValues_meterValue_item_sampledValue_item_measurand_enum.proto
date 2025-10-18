@@ -1,0 +1,30 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.metervalues_metervalue_item_sampledvalue_item_measurand_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum MeterValues_meterValue_item_sampledValue_item_measurand_enum {
+  METERVALUES_METERVALUE_ITEM_SAMPLEDVALUE_ITEM_MEASURAND_ENUM_UNSPECIFIED = 0;
+  Energy_Active_Export_Register = 1;
+  Energy_Active_Import_Register = 2;
+  Energy_Reactive_Export_Register = 3;
+  Energy_Reactive_Import_Register = 4;
+  Energy_Active_Export_Interval = 5;
+  Energy_Active_Import_Interval = 6;
+  Energy_Reactive_Export_Interval = 7;
+  Energy_Reactive_Import_Interval = 8;
+  Power_Active_Export = 9;
+  Power_Active_Import = 10;
+  Power_Offered = 11;
+  Power_Reactive_Export = 12;
+  Power_Reactive_Import = 13;
+  Power_Factor = 14;
+  Current_Import = 15;
+  Current_Export = 16;
+  Current_Offered = 17;
+  Voltage = 18;
+  Frequency = 19;
+  Temperature = 20;
+  SoC = 21;
+  RPM = 22;
+}

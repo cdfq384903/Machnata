@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v16;
+option go_package = "tmp/v16;OCPPv16";
+option csharp_namespace = "OCPP.v16";
+
+
+message GetLocalListVersionResponse {
+  // NOTE: This field is required by standard Spec.
+  int32 listVersion = 1;
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/ComponentType.proto";
+import "types/CustomDataType.proto";
+import "types/MessageContentType.proto";
+import "types/enums/MessagePriorityEnumType.proto";
+import "types/enums/MessageStateEnumType.proto";
+
+message MessageInfoType {
+  OCPP.v21.types.ComponentType display = 1;
+  int32 id = 2;
+  OCPP.v21.types.enums.messagepriorityenumtype.MessagePriorityEnumType priority = 3;
+  OCPP.v21.types.enums.messagestateenumtype.MessageStateEnumType state = 4;
+  string startDateTime = 5;
+  string endDateTime = 6;
+  string transactionId = 7;
+  OCPP.v21.types.MessageContentType message = 8;
+  repeated OCPP.v21.types.MessageContentType messageExtra = 9;
+  OCPP.v21.types.CustomDataType customData = 10;
+}

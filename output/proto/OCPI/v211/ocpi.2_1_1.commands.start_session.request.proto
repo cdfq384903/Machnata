@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPI.v211;
+option go_package = "tmp/v211;OCPIv211";
+option csharp_namespace = "OCPI.v211";
+
+import "types/ocpi_2_1_1_commands_start_session_request_token.proto";
+
+message ocpi_2_1_1_commands_start_session_request {
+  // NOTE: This field is required by standard Spec.
+  string response_url = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v211.types.ocpi_2_1_1_commands_start_session_request_token token = 2;
+  // NOTE: This field is required by standard Spec.
+  string location_id = 3;
+  string evse_uid = 4;
+}

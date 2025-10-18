@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/enums/ocpi_2_1_1_commands_reserve_now_request_token_type_enum.proto";
+import "types/enums/ocpi_2_1_1_commands_reserve_now_request_token_whitelist_enum.proto";
+
+message ocpi_2_1_1_commands_reserve_now_request_token {
+  string uid = 1;
+  OCPI.v211.types.enums.ocpi_2_1_1_commands_reserve_now_request_token_type_enum.ocpi_2_1_1_commands_reserve_now_request_token_type_enum type = 2;
+  string auth_id = 3;
+  string visual_number = 4;
+  string issuer = 5;
+  bool valid = 6;
+  OCPI.v211.types.enums.ocpi_2_1_1_commands_reserve_now_request_token_whitelist_enum.ocpi_2_1_1_commands_reserve_now_request_token_whitelist_enum whitelist = 7;
+  string language = 8;
+  string last_updated = 9;
+}

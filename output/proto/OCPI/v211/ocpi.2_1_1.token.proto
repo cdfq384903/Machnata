@@ -1,0 +1,26 @@
+syntax = "proto3";
+package OCPI.v211;
+option go_package = "tmp/v211;OCPIv211";
+option csharp_namespace = "OCPI.v211";
+
+import "types/enums/ocpi_2_1_1_token_type_enum.proto";
+import "types/enums/ocpi_2_1_1_token_whitelist_enum.proto";
+
+message ocpi_2_1_1_token {
+  // NOTE: This field is required by standard Spec.
+  string uid = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v211.types.enums.ocpi_2_1_1_token_type_enum.ocpi_2_1_1_token_type_enum type = 2;
+  // NOTE: This field is required by standard Spec.
+  string auth_id = 3;
+  string visual_number = 4;
+  // NOTE: This field is required by standard Spec.
+  string issuer = 5;
+  // NOTE: This field is required by standard Spec.
+  bool valid = 6;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v211.types.enums.ocpi_2_1_1_token_whitelist_enum.ocpi_2_1_1_token_whitelist_enum whitelist = 7;
+  string language = 8;
+  // NOTE: This field is required by standard Spec.
+  string last_updated = 9;
+}

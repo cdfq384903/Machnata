@@ -1,0 +1,33 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/string.proto";
+
+message Questionnaire_AnswerOption {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  double valueDecimal = 4;
+  HL7.v600.types.Element shadow__valueDecimal = 5 [json_name = "_valueDecimal"];
+  double valueInteger = 6;
+  HL7.v600.types.Element shadow__valueInteger = 7 [json_name = "_valueInteger"];
+  string valueDate = 8;
+  HL7.v600.types.Element shadow__valueDate = 9 [json_name = "_valueDate"];
+  string valueDateTime = 10;
+  HL7.v600.types.Element shadow__valueDateTime = 11 [json_name = "_valueDateTime"];
+  string valueTime = 12;
+  HL7.v600.types.Element shadow__valueTime = 13 [json_name = "_valueTime"];
+  string valueString = 14;
+  HL7.v600.types.Element shadow__valueString = 15 [json_name = "_valueString"];
+  string valueUri = 16;
+  HL7.v600.types.Element shadow__valueUri = 17 [json_name = "_valueUri"];
+  HL7.v600.types.Coding valueCoding = 18;
+  HL7.v600.types.Quantity valueQuantity = 19;
+  HL7.v600.types.Reference valueReference = 20;
+  HL7.v600.types.boolean initialSelected = 21;
+  HL7.v600.types.Element shadow__initialSelected = 22 [json_name = "_initialSelected"];
+}

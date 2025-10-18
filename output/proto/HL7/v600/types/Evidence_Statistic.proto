@@ -1,0 +1,31 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Evidence_AttributeEstimate.proto";
+import "types/Evidence_ModelCharacteristic.proto";
+import "types/Evidence_SampleSize.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+import "types/unsignedInt.proto";
+
+message Evidence_Statistic {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.markdown description = 4;
+  HL7.v600.types.Element shadow__description = 5 [json_name = "_description"];
+  repeated HL7.v600.types.Annotation note = 6;
+  HL7.v600.types.CodeableConcept statisticType = 7;
+  HL7.v600.types.CodeableConcept category = 8;
+  HL7.v600.types.Quantity quantity = 9;
+  HL7.v600.types.unsignedInt numberOfEvents = 10;
+  HL7.v600.types.Element shadow__numberOfEvents = 11 [json_name = "_numberOfEvents"];
+  HL7.v600.types.unsignedInt numberAffected = 12;
+  HL7.v600.types.Element shadow__numberAffected = 13 [json_name = "_numberAffected"];
+  HL7.v600.types.Evidence_SampleSize sampleSize = 14;
+  repeated HL7.v600.types.Evidence_AttributeEstimate attributeEstimate = 15;
+  repeated HL7.v600.types.Evidence_ModelCharacteristic modelCharacteristic = 16;
+}

@@ -1,0 +1,31 @@
+{
+  "$ref": "#/definitions/ocpi.2_1_1.versions",
+  "definitions": {
+    "ocpi.2_1_1.versions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "enum": [
+              "2.0",
+              "2.1",
+              "2.1.1"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "version",
+          "url"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

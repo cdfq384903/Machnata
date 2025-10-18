@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/ConsumptionCostType.proto";
+import "types/CustomDataType.proto";
+import "types/RelativeTimeIntervalType.proto";
+
+message SalesTariffEntryType {
+  OCPP.v21.types.RelativeTimeIntervalType relativeTimeInterval = 1;
+  int32 ePriceLevel = 2;
+  repeated OCPP.v21.types.ConsumptionCostType consumptionCost = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

@@ -1,0 +1,31 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/SubscriptionTopic_CanFilterBy.proto";
+import "types/SubscriptionTopic_NotificationShape.proto";
+import "types/SubscriptionTopic_QueryCriteria.proto";
+import "types/code.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message SubscriptionTopic_Trigger {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.markdown description = 4;
+  HL7.v600.types.Element shadow__description = 5 [json_name = "_description"];
+  HL7.v600.types.uri resource = 6;
+  HL7.v600.types.Element shadow__resource = 7 [json_name = "_resource"];
+  repeated HL7.v600.types.code supportedInteraction = 8;
+  repeated HL7.v600.types.Element shadow__supportedInteraction = 9 [json_name = "_supportedInteraction"];
+  HL7.v600.types.SubscriptionTopic_QueryCriteria queryCriteria = 10;
+  HL7.v600.types.string fhirPathCriteria = 11;
+  HL7.v600.types.Element shadow__fhirPathCriteria = 12 [json_name = "_fhirPathCriteria"];
+  HL7.v600.types.CodeableConcept event = 13;
+  repeated HL7.v600.types.SubscriptionTopic_CanFilterBy canFilterBy = 14;
+  repeated HL7.v600.types.SubscriptionTopic_NotificationShape notificationShape = 15;
+}

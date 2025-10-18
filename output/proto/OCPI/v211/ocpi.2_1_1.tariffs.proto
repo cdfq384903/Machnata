@@ -1,0 +1,8 @@
+syntax = "proto3";
+package OCPI.v211;
+option go_package = "tmp/v211;OCPIv211";
+option csharp_namespace = "OCPI.v211";
+
+
+message ocpi_2_1_1_tariffs {
+}

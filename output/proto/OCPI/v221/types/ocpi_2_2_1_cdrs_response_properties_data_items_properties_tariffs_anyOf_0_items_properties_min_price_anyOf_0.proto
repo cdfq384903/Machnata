@@ -1,0 +1,7 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+message ocpi_2_2_1_cdrs_response_properties_data_items_properties_tariffs_anyOf_0_items_properties_min_price_anyOf_0 {
+}

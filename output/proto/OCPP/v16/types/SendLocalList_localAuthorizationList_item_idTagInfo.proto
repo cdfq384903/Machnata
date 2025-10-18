@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v16.types;
+option go_package = "tmp/v16/types;types";
+option csharp_namespace = "OCPP.v16.types";
+
+import "types/enums/SendLocalList_localAuthorizationList_item_idTagInfo_status_enum.proto";
+
+message SendLocalList_localAuthorizationList_item_idTagInfo {
+  string expiryDate = 1;
+  string parentIdTag = 2;
+  OCPP.v16.types.enums.sendlocallist_localauthorizationlist_item_idtaginfo_status_enum.SendLocalList_localAuthorizationList_item_idTagInfo_status_enum status = 3;
+}

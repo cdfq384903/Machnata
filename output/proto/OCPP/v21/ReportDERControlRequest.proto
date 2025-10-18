@@ -1,0 +1,28 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/DERCurveGetType.proto";
+import "types/EnterServiceGetType.proto";
+import "types/FixedPFGetType.proto";
+import "types/FixedVarGetType.proto";
+import "types/FreqDroopGetType.proto";
+import "types/GradientGetType.proto";
+import "types/LimitMaxDischargeGetType.proto";
+
+message ReportDERControlRequest {
+  repeated OCPP.v21.types.DERCurveGetType curve = 1;
+  repeated OCPP.v21.types.EnterServiceGetType enterService = 2;
+  repeated OCPP.v21.types.FixedPFGetType fixedPFAbsorb = 3;
+  repeated OCPP.v21.types.FixedPFGetType fixedPFInject = 4;
+  repeated OCPP.v21.types.FixedVarGetType fixedVar = 5;
+  repeated OCPP.v21.types.FreqDroopGetType freqDroop = 6;
+  repeated OCPP.v21.types.GradientGetType gradient = 7;
+  repeated OCPP.v21.types.LimitMaxDischargeGetType limitMaxDischarge = 8;
+  // NOTE: This field is required by standard Spec.
+  int32 requestId = 9;
+  bool tbc = 10;
+  OCPP.v21.types.CustomDataType customData = 11;
+}

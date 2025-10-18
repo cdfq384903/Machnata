@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPI.v211;
+option go_package = "tmp/v211;OCPIv211";
+option csharp_namespace = "OCPI.v211";
+
+
+message ocpi_2_1_1_token_partial {
+  string uid = 1;
+  string type = 2;
+  string auth_id = 3;
+  string visual_number = 4;
+  string issuer = 5;
+  string valid = 6;
+  string whitelist = 7;
+  string language = 8;
+  string last_updated = 9;
+}

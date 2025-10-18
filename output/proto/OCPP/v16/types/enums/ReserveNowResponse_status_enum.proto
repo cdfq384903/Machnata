@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.reservenowresponse_status_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum ReserveNowResponse_status_enum {
+  RESERVENOWRESPONSE_STATUS_ENUM_UNSPECIFIED = 0;
+  Accepted = 1;
+  Faulted = 2;
+  Occupied = 3;
+  Rejected = 4;
+  Unavailable = 5;
+}

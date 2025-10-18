@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.mutabilityenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum MutabilityEnumType {
+  MUTABILITYENUMTYPE_UNSPECIFIED = 0;
+  ReadOnly = 1;
+  WriteOnly = 2;
+  ReadWrite = 3;
+}

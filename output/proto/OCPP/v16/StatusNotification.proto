@@ -1,0 +1,20 @@
+syntax = "proto3";
+package OCPP.v16;
+option go_package = "tmp/v16;OCPPv16";
+option csharp_namespace = "OCPP.v16";
+
+import "types/enums/StatusNotification_errorCode_enum.proto";
+import "types/enums/StatusNotification_status_enum.proto";
+
+message StatusNotification {
+  // NOTE: This field is required by standard Spec.
+  int32 connectorId = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v16.types.enums.statusnotification_errorcode_enum.StatusNotification_errorCode_enum errorCode = 2;
+  string info = 3;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v16.types.enums.statusnotification_status_enum.StatusNotification_status_enum status = 4;
+  string timestamp = 5;
+  string vendorId = 6;
+  string vendorErrorCode = 7;
+}

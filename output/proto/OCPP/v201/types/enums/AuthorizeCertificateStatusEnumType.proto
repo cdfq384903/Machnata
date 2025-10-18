@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.authorizecertificatestatusenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum AuthorizeCertificateStatusEnumType {
+  AUTHORIZECERTIFICATESTATUSENUMTYPE_UNSPECIFIED = 0;
+  Accepted = 1;
+  SignatureError = 2;
+  CertificateExpired = 3;
+  CertificateRevoked = 4;
+  NoCertificateAvailable = 5;
+  CertChainError = 6;
+  ContractCancelled = 7;
+}

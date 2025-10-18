@@ -1,0 +1,32 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ExampleScenario_ContainedInstance.proto";
+import "types/ExampleScenario_Version.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message ExampleScenario_Instance {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string key = 4;
+  HL7.v600.types.Element shadow__key = 5 [json_name = "_key"];
+  HL7.v600.types.Coding structureType = 6;
+  HL7.v600.types.string structureVersion = 7;
+  HL7.v600.types.Element shadow__structureVersion = 8 [json_name = "_structureVersion"];
+  string structureProfileCanonical = 9;
+  HL7.v600.types.Element shadow__structureProfileCanonical = 10 [json_name = "_structureProfileCanonical"];
+  string structureProfileUri = 11;
+  HL7.v600.types.Element shadow__structureProfileUri = 12 [json_name = "_structureProfileUri"];
+  HL7.v600.types.string title = 13;
+  HL7.v600.types.Element shadow__title = 14 [json_name = "_title"];
+  HL7.v600.types.markdown description = 15;
+  HL7.v600.types.Element shadow__description = 16 [json_name = "_description"];
+  HL7.v600.types.Reference content = 17;
+  repeated HL7.v600.types.ExampleScenario_Version version = 18;
+  repeated HL7.v600.types.ExampleScenario_ContainedInstance containedInstance = 19;
+}

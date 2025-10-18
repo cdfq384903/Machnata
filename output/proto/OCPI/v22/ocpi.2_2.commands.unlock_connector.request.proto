@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPI.v22;
+option go_package = "tmp/v22;OCPIv22";
+option csharp_namespace = "OCPI.v22";
+
+
+message ocpi_2_2_commands_unlock_connector_request {
+  // NOTE: This field is required by standard Spec.
+  string response_url = 1;
+  // NOTE: This field is required by standard Spec.
+  string location_id = 2;
+  // NOTE: This field is required by standard Spec.
+  string evse_uid = 3;
+  // NOTE: This field is required by standard Spec.
+  string connector_id = 4;
+}

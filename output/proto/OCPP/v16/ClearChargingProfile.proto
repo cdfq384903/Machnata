@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v16;
+option go_package = "tmp/v16;OCPPv16";
+option csharp_namespace = "OCPP.v16";
+
+import "types/enums/ClearChargingProfile_chargingProfilePurpose_enum.proto";
+
+message ClearChargingProfile {
+  int32 id = 1;
+  int32 connectorId = 2;
+  OCPP.v16.types.enums.clearchargingprofile_chargingprofilepurpose_enum.ClearChargingProfile_chargingProfilePurpose_enum chargingProfilePurpose = 3;
+  int32 stackLevel = 4;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CustomDataType.proto";
+import "types/MessageInfoType.proto";
+
+message NotifyDisplayMessagesRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  repeated OCPP.v201.types.MessageInfoType messageInfo = 2;
+  // NOTE: This field is required by standard Spec.
+  int32 requestId = 3;
+  bool tbc = 4;
+}

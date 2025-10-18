@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.messagestateenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum MessageStateEnumType {
+  MESSAGESTATEENUMTYPE_UNSPECIFIED = 0;
+  Charging = 1;
+  Faulted = 2;
+  Idle = 3;
+  Unavailable = 4;
+  Suspended = 5;
+  Discharging = 6;
+}

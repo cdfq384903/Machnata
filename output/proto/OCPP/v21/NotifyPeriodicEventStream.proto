@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/StreamDataElementType.proto";
+
+message NotifyPeriodicEventStream {
+  // NOTE: This field is required by standard Spec.
+  repeated OCPP.v21.types.StreamDataElementType data = 1;
+  // NOTE: This field is required by standard Spec.
+  int32 id = 2;
+  // NOTE: This field is required by standard Spec.
+  int32 pending = 3;
+  // NOTE: This field is required by standard Spec.
+  string basetime = 4;
+  OCPP.v21.types.CustomDataType customData = 5;
+}

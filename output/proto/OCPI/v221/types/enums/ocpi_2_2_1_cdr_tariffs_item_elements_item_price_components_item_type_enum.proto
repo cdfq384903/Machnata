@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPI.v221.types.enums.ocpi_2_2_1_cdr_tariffs_item_elements_item_price_components_item_type_enum;
+option go_package = "tmp/v221/types/enums;enums";
+option csharp_namespace = "OCPI.v221.types.enums";
+
+enum ocpi_2_2_1_cdr_tariffs_item_elements_item_price_components_item_type_enum {
+  OCPI_2_2_1_CDR_TARIFFS_ITEM_ELEMENTS_ITEM_PRICE_COMPONENTS_ITEM_TYPE_ENUM_UNSPECIFIED = 0;
+  ENERGY = 1;
+  FLAT = 2;
+  PARKING_TIME = 3;
+  TIME = 4;
+}

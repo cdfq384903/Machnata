@@ -1,0 +1,84 @@
+{
+  "$ref": "#/definitions/ocpi.2_2.commands.response",
+  "definitions": {
+    "ocpi.2_2.commands.response": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "string",
+              "enum": [
+                "NOT_SUPPORTED",
+                "REJECTED",
+                "ACCEPTED",
+                "UNKNOWN_SESSION"
+              ]
+            },
+            "timeout": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "message": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "language": {
+                        "type": "string",
+                        "minLength": 2,
+                        "maxLength": 2
+                      },
+                      "text": {
+                        "type": "string",
+                        "maxLength": 512
+                      }
+                    },
+                    "required": [
+                      "language",
+                      "text"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "result",
+            "timeout"
+          ],
+          "additionalProperties": false
+        },
+        "status_code": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 1999
+        },
+        "status_message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "data",
+        "status_code",
+        "timestamp"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

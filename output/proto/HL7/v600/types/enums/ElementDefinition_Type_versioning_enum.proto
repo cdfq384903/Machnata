@@ -1,0 +1,11 @@
+syntax = "proto3";
+package HL7.v600.types.enums.elementdefinition_type_versioning_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum ElementDefinition_Type_versioning_enum {
+  ELEMENTDEFINITION_TYPE_VERSIONING_ENUM_UNSPECIFIED = 0;
+  either = 1;
+  independent = 2;
+  specific = 3;
+}

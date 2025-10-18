@@ -1,0 +1,21 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/integer.proto";
+import "types/string.proto";
+
+message SubstancePolymer_DegreeOfPolymerisation {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept type = 4;
+  HL7.v600.types.integer average = 5;
+  HL7.v600.types.Element shadow__average = 6 [json_name = "_average"];
+  HL7.v600.types.integer low = 7;
+  HL7.v600.types.Element shadow__low = 8 [json_name = "_low"];
+  HL7.v600.types.integer high = 9;
+  HL7.v600.types.Element shadow__high = 10 [json_name = "_high"];
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CostDimensionType.proto";
+import "types/CustomDataType.proto";
+
+message ChargingPeriodType {
+  repeated OCPP.v21.types.CostDimensionType dimensions = 1;
+  string tariffId = 2;
+  string startPeriod = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

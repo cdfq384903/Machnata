@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPI.v221;
+option go_package = "tmp/v221;OCPIv221";
+option csharp_namespace = "OCPI.v221";
+
+import "types/enums/ocpi_2_2_1_chargingprofiles_charging_profile_result_result_enum.proto";
+
+message ocpi_2_2_1_chargingprofiles_charging_profile_result {
+  // NOTE: This field is required by standard Spec.
+  OCPI.v221.types.enums.ocpi_2_2_1_chargingprofiles_charging_profile_result_result_enum.ocpi_2_2_1_chargingprofiles_charging_profile_result_result_enum result = 1;
+}

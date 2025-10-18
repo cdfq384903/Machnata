@@ -1,0 +1,33 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/string.proto";
+
+message Contract_Answer {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  bool valueBoolean = 4;
+  HL7.v600.types.Element shadow__valueBoolean = 5 [json_name = "_valueBoolean"];
+  double valueDecimal = 6;
+  HL7.v600.types.Element shadow__valueDecimal = 7 [json_name = "_valueDecimal"];
+  double valueInteger = 8;
+  HL7.v600.types.Element shadow__valueInteger = 9 [json_name = "_valueInteger"];
+  string valueDate = 10;
+  HL7.v600.types.Element shadow__valueDate = 11 [json_name = "_valueDate"];
+  string valueDateTime = 12;
+  HL7.v600.types.Element shadow__valueDateTime = 13 [json_name = "_valueDateTime"];
+  string valueTime = 14;
+  HL7.v600.types.Element shadow__valueTime = 15 [json_name = "_valueTime"];
+  string valueString = 16;
+  HL7.v600.types.Element shadow__valueString = 17 [json_name = "_valueString"];
+  string valueUri = 18;
+  HL7.v600.types.Element shadow__valueUri = 19 [json_name = "_valueUri"];
+  HL7.v600.types.Attachment valueAttachment = 20;
+  HL7.v600.types.Coding valueCoding = 21;
+  HL7.v600.types.Quantity valueQuantity = 22;
+  HL7.v600.types.Reference valueReference = 23;
+}

@@ -1,0 +1,21 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CertificateHashDataType.proto";
+import "types/CustomDataType.proto";
+import "types/IdTokenType.proto";
+
+message CustomerInformationRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  OCPP.v201.types.CertificateHashDataType customerCertificate = 2;
+  OCPP.v201.types.IdTokenType idToken = 3;
+  // NOTE: This field is required by standard Spec.
+  int32 requestId = 4;
+  // NOTE: This field is required by standard Spec.
+  bool report = 5;
+  // NOTE: This field is required by standard Spec.
+  bool clear = 6;
+  string customerIdentifier = 7;
+}

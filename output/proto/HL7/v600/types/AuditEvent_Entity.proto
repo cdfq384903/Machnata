@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/AuditEvent_Agent.proto";
+import "types/AuditEvent_Detail.proto";
+import "types/base64Binary.proto";
+import "types/string.proto";
+
+message AuditEvent_Entity {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Reference what = 4;
+  HL7.v600.types.CodeableConcept role = 5;
+  repeated HL7.v600.types.CodeableConcept securityLabel = 6;
+  HL7.v600.types.string description = 7;
+  HL7.v600.types.Element shadow__description = 8 [json_name = "_description"];
+  HL7.v600.types.base64Binary query = 9;
+  HL7.v600.types.Element shadow__query = 10 [json_name = "_query"];
+  repeated HL7.v600.types.AuditEvent_Detail detail = 11;
+  repeated HL7.v600.types.AuditEvent_Agent agent = 12;
+}

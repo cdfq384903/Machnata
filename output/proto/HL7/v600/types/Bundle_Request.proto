@@ -1,0 +1,28 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/instant.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message Bundle_Request {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.code method = 4;
+  HL7.v600.types.Element shadow__method = 5 [json_name = "_method"];
+  HL7.v600.types.uri url = 6;
+  HL7.v600.types.Element shadow__url = 7 [json_name = "_url"];
+  HL7.v600.types.string ifNoneMatch = 8;
+  HL7.v600.types.Element shadow__ifNoneMatch = 9 [json_name = "_ifNoneMatch"];
+  HL7.v600.types.instant ifModifiedSince = 10;
+  HL7.v600.types.Element shadow__ifModifiedSince = 11 [json_name = "_ifModifiedSince"];
+  HL7.v600.types.string ifMatch = 12;
+  HL7.v600.types.Element shadow__ifMatch = 13 [json_name = "_ifMatch"];
+  HL7.v600.types.string ifNoneExist = 14;
+  HL7.v600.types.Element shadow__ifNoneExist = 15 [json_name = "_ifNoneExist"];
+}

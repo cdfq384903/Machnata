@@ -1,0 +1,26 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+import "types/enums/ocpi_2_2_1_cdr_cdr_location_connector_format_enum.proto";
+import "types/enums/ocpi_2_2_1_cdr_cdr_location_connector_power_type_enum.proto";
+import "types/enums/ocpi_2_2_1_cdr_cdr_location_connector_standard_enum.proto";
+import "types/ocpi_2_2_1_cdr_cdr_location_coordinates.proto";
+
+message ocpi_2_2_1_cdr_cdr_location {
+  string id = 1;
+  string name = 2;
+  string address = 3;
+  string city = 4;
+  string postal_code = 5;
+  string state = 6;
+  string country = 7;
+  OCPI.v221.types.ocpi_2_2_1_cdr_cdr_location_coordinates coordinates = 8;
+  string evse_uid = 9;
+  string evse_id = 10;
+  string connector_id = 11;
+  OCPI.v221.types.enums.ocpi_2_2_1_cdr_cdr_location_connector_standard_enum.ocpi_2_2_1_cdr_cdr_location_connector_standard_enum connector_standard = 12;
+  OCPI.v221.types.enums.ocpi_2_2_1_cdr_cdr_location_connector_format_enum.ocpi_2_2_1_cdr_cdr_location_connector_format_enum connector_format = 13;
+  OCPI.v221.types.enums.ocpi_2_2_1_cdr_cdr_location_connector_power_type_enum.ocpi_2_2_1_cdr_cdr_location_connector_power_type_enum connector_power_type = 14;
+}

@@ -1,0 +1,91 @@
+{
+  "$ref": "#/definitions/ocpi.2_2.version_details.response",
+  "definitions": {
+    "ocpi.2_2.version_details.response": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "string",
+              "enum": [
+                "2.0",
+                "2.1",
+                "2.1.1",
+                "2.2"
+              ]
+            },
+            "endpoints": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "identifier": {
+                    "type": "string",
+                    "enum": [
+                      "cdrs",
+                      "chargingprofiles",
+                      "commands",
+                      "credentials",
+                      "hubclientinfo",
+                      "locations",
+                      "sessions",
+                      "tariffs",
+                      "tokens"
+                    ]
+                  },
+                  "role": {
+                    "type": "string",
+                    "enum": [
+                      "SENDER",
+                      "RECEIVER"
+                    ]
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "required": [
+                  "identifier",
+                  "role",
+                  "url"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "version",
+            "endpoints"
+          ],
+          "additionalProperties": false
+        },
+        "status_code": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 1999
+        },
+        "status_message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "data",
+        "status_code",
+        "timestamp"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

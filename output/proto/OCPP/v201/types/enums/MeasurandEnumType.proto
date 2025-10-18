@@ -1,0 +1,33 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.measurandenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum MeasurandEnumType {
+  MEASURANDENUMTYPE_UNSPECIFIED = 0;
+  Current_Export = 1;
+  Current_Import = 2;
+  Current_Offered = 3;
+  Energy_Active_Export_Register = 4;
+  Energy_Active_Import_Register = 5;
+  Energy_Reactive_Export_Register = 6;
+  Energy_Reactive_Import_Register = 7;
+  Energy_Active_Export_Interval = 8;
+  Energy_Active_Import_Interval = 9;
+  Energy_Active_Net = 10;
+  Energy_Reactive_Export_Interval = 11;
+  Energy_Reactive_Import_Interval = 12;
+  Energy_Reactive_Net = 13;
+  Energy_Apparent_Net = 14;
+  Energy_Apparent_Import = 15;
+  Energy_Apparent_Export = 16;
+  Frequency = 17;
+  Power_Active_Export = 18;
+  Power_Active_Import = 19;
+  Power_Factor = 20;
+  Power_Offered = 21;
+  Power_Reactive_Export = 22;
+  Power_Reactive_Import = 23;
+  SoC = 24;
+  Voltage = 25;
+}

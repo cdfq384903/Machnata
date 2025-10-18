@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.operationmodeenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum OperationModeEnumType {
+  OPERATIONMODEENUMTYPE_UNSPECIFIED = 0;
+  Idle = 1;
+  ChargingOnly = 2;
+  CentralSetpoint = 3;
+  ExternalSetpoint = 4;
+  ExternalLimits = 5;
+  CentralFrequency = 6;
+  LocalFrequency = 7;
+  LocalLoadBalancing = 8;
+}

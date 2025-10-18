@@ -1,0 +1,26 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message Evidence_VariableDefinition {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.markdown description = 4;
+  HL7.v600.types.Element shadow__description = 5 [json_name = "_description"];
+  repeated HL7.v600.types.Annotation note = 6;
+  HL7.v600.types.code variableRole = 7;
+  HL7.v600.types.Element shadow__variableRole = 8 [json_name = "_variableRole"];
+  HL7.v600.types.CodeableConcept roleSubtype = 9;
+  HL7.v600.types.string comparatorCategory = 10;
+  HL7.v600.types.Element shadow__comparatorCategory = 11 [json_name = "_comparatorCategory"];
+  HL7.v600.types.Reference observed = 12;
+  HL7.v600.types.Reference intended = 13;
+  HL7.v600.types.CodeableConcept directnessMatch = 14;
+}

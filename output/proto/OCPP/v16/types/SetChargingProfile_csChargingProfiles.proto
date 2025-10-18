@@ -1,0 +1,21 @@
+syntax = "proto3";
+package OCPP.v16.types;
+option go_package = "tmp/v16/types;types";
+option csharp_namespace = "OCPP.v16.types";
+
+import "types/SetChargingProfile_csChargingProfiles_chargingSchedule.proto";
+import "types/enums/SetChargingProfile_csChargingProfiles_chargingProfileKind_enum.proto";
+import "types/enums/SetChargingProfile_csChargingProfiles_chargingProfilePurpose_enum.proto";
+import "types/enums/SetChargingProfile_csChargingProfiles_recurrencyKind_enum.proto";
+
+message SetChargingProfile_csChargingProfiles {
+  int32 chargingProfileId = 1;
+  int32 transactionId = 2;
+  int32 stackLevel = 3;
+  OCPP.v16.types.enums.setchargingprofile_cschargingprofiles_chargingprofilepurpose_enum.SetChargingProfile_csChargingProfiles_chargingProfilePurpose_enum chargingProfilePurpose = 4;
+  OCPP.v16.types.enums.setchargingprofile_cschargingprofiles_chargingprofilekind_enum.SetChargingProfile_csChargingProfiles_chargingProfileKind_enum chargingProfileKind = 5;
+  OCPP.v16.types.enums.setchargingprofile_cschargingprofiles_recurrencykind_enum.SetChargingProfile_csChargingProfiles_recurrencyKind_enum recurrencyKind = 6;
+  string validFrom = 7;
+  string validTo = 8;
+  OCPP.v16.types.SetChargingProfile_csChargingProfiles_chargingSchedule chargingSchedule = 9;
+}

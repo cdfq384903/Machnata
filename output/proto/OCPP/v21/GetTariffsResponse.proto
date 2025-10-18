@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/StatusInfoType.proto";
+import "types/TariffAssignmentType.proto";
+import "types/enums/TariffGetStatusEnumType.proto";
+
+message GetTariffsResponse {
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.enums.tariffgetstatusenumtype.TariffGetStatusEnumType status = 1;
+  OCPP.v21.types.StatusInfoType statusInfo = 2;
+  repeated OCPP.v21.types.TariffAssignmentType tariffAssignments = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

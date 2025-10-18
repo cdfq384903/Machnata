@@ -1,0 +1,12 @@
+syntax = "proto3";
+package HL7.v600.types.enums.contributor_type_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum Contributor_type_enum {
+  CONTRIBUTOR_TYPE_ENUM_UNSPECIFIED = 0;
+  author = 1;
+  editor = 2;
+  reviewer = 3;
+  endorser = 4;
+}

@@ -1,0 +1,3416 @@
+{
+  "$ref": "#/definitions/ocpi.2_2.location.partial",
+  "definitions": {
+    "ocpi.2_2.location.partial": {
+      "type": "object",
+      "properties": {
+        "country_code": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "type": "string",
+                  "minLength": 2,
+                  "maxLength": 2
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "party_id": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "type": "string",
+                  "maxLength": 3
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "type": "string",
+                  "maxLength": 36
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "publish": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "publish_allowed_to": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "uid": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "string",
+                                                "maxLength": 36
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "type": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "string",
+                                                "enum": [
+                                                  "AD_HOC_USER",
+                                                  "APP_USER",
+                                                  "OTHER",
+                                                  "RFID"
+                                                ]
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "visual_number": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "string",
+                                                "maxLength": 64
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "issuer": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "string",
+                                                "maxLength": 64
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "group_id": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "string",
+                                                "maxLength": 36
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "name": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 255
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "address": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "type": "string",
+                  "maxLength": 45
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "city": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "type": "string",
+                  "maxLength": 45
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "postal_code": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 10
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "maxLength": 20
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "country": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "type": "string",
+                  "minLength": 3,
+                  "maxLength": 3
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "coordinates": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "latitude": {
+                      "anyOf": [
+                        {
+                          "anyOf": [
+                            {
+                              "not": {}
+                            },
+                            {
+                              "type": "string",
+                              "maxLength": 10,
+                              "pattern": "-?[0-9]{1,2}\\.[0-9]{5,7}"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "longitude": {
+                      "anyOf": [
+                        {
+                          "anyOf": [
+                            {
+                              "not": {}
+                            },
+                            {
+                              "type": "string",
+                              "maxLength": 11,
+                              "pattern": "-?[0-9]{1,3}\\.[0-9]{5,7}"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "related_locations": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "latitude": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "type": "string",
+                                        "maxLength": 10,
+                                        "pattern": "-?[0-9]{1,2}\\.[0-9]{5,7}"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "longitude": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "type": "string",
+                                        "maxLength": 11,
+                                        "pattern": "-?[0-9]{1,3}\\.[0-9]{5,7}"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "name": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "object",
+                                                "properties": {
+                                                  "language": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "type": "string",
+                                                            "minLength": 2,
+                                                            "maxLength": 2
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "text": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "type": "string",
+                                                            "maxLength": 512
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "additionalProperties": false
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "parking_type": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "ALONG_MOTORWAY",
+                            "ON_STREET",
+                            "ON_DRIVEWAY",
+                            "PARKING_GARAGE",
+                            "UNDERGROUND_GARAGE",
+                            "PARKING_LOT"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evses": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "uid": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "type": "string",
+                                        "maxLength": 39
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "evse_id": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "string",
+                                                "maxLength": 48,
+                                                "pattern": "^(([A-Z]{2}\\*?[A-Z0-9]{3}\\*?E[A-Z0-9\\*]{1,30})|(\\+?[0-9]{1,3}\\*[0-9]{3}\\*[0-9\\*]{1,32}))$"
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "status": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "type": "string",
+                                        "enum": [
+                                          "AVAILABLE",
+                                          "BLOCKED",
+                                          "CHARGING",
+                                          "INOPERATIVE",
+                                          "OUTOFORDER",
+                                          "PLANNED",
+                                          "REMOVED",
+                                          "RESERVED",
+                                          "UNKNOWN"
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "status_schedule": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "array",
+                                                "items": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "period_begin": {
+                                                      "anyOf": [
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "type": "string",
+                                                              "format": "date-time"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    },
+                                                    "period_end": {
+                                                      "anyOf": [
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "not": {}
+                                                                },
+                                                                {
+                                                                  "anyOf": [
+                                                                    {
+                                                                      "type": "string",
+                                                                      "format": "date-time"
+                                                                    },
+                                                                    {
+                                                                      "type": "null"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    },
+                                                    "status": {
+                                                      "anyOf": [
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/status/anyOf/0/anyOf/1"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "additionalProperties": false
+                                                }
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "capabilities": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "array",
+                                                "items": {
+                                                  "type": "string",
+                                                  "enum": [
+                                                    "CHARGING_PROFILE_CAPABLE",
+                                                    "CHARGING_PREFERENCES_CAPABLE",
+                                                    "CHIP_CARD_SUPPORT",
+                                                    "CONTACTLESS_CARD_SUPPORT",
+                                                    "CREDIT_CARD_PAYABLE",
+                                                    "DEBIT_CARD_PAYABLE",
+                                                    "PED_TERMINAL",
+                                                    "REMOTE_START_STOP_CAPABLE",
+                                                    "RESERVABLE",
+                                                    "RFID_READER",
+                                                    "TOKEN_GROUP_CAPABLE",
+                                                    "UNLOCK_CAPABLE"
+                                                  ]
+                                                }
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "connectors": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "anyOf": [
+                                                {
+                                                  "anyOf": [
+                                                    {
+                                                      "not": {}
+                                                    },
+                                                    {
+                                                      "type": "string",
+                                                      "maxLength": 36
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "null"
+                                                }
+                                              ]
+                                            },
+                                            "standard": {
+                                              "anyOf": [
+                                                {
+                                                  "anyOf": [
+                                                    {
+                                                      "not": {}
+                                                    },
+                                                    {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "CHADEMO",
+                                                        "DOMESTIC_A",
+                                                        "DOMESTIC_B",
+                                                        "DOMESTIC_C",
+                                                        "DOMESTIC_D",
+                                                        "DOMESTIC_E",
+                                                        "DOMESTIC_F",
+                                                        "DOMESTIC_G",
+                                                        "DOMESTIC_H",
+                                                        "DOMESTIC_I",
+                                                        "DOMESTIC_J",
+                                                        "DOMESTIC_K",
+                                                        "DOMESTIC_L",
+                                                        "IEC_60309_2_single_16",
+                                                        "IEC_60309_2_three_16",
+                                                        "IEC_60309_2_three_32",
+                                                        "IEC_60309_2_three_64",
+                                                        "IEC_62196_T1",
+                                                        "IEC_62196_T1_COMBO",
+                                                        "IEC_62196_T2",
+                                                        "IEC_62196_T2_COMBO",
+                                                        "IEC_62196_T3A",
+                                                        "IEC_62196_T3C",
+                                                        "PANTOGRAPH_BOTTOM_UP",
+                                                        "PANTOGRAPH_TOP_DOWN",
+                                                        "TESLA_R",
+                                                        "TESLA_S"
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "null"
+                                                }
+                                              ]
+                                            },
+                                            "format": {
+                                              "anyOf": [
+                                                {
+                                                  "anyOf": [
+                                                    {
+                                                      "not": {}
+                                                    },
+                                                    {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "SOCKET",
+                                                        "CABLE"
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "null"
+                                                }
+                                              ]
+                                            },
+                                            "power_type": {
+                                              "anyOf": [
+                                                {
+                                                  "anyOf": [
+                                                    {
+                                                      "not": {}
+                                                    },
+                                                    {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "AC_1_PHASE",
+                                                        "AC_3_PHASE",
+                                                        "DC"
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "null"
+                                                }
+                                              ]
+                                            },
+                                            "max_voltage": {
+                                              "anyOf": [
+                                                {
+                                                  "anyOf": [
+                                                    {
+                                                      "not": {}
+                                                    },
+                                                    {
+                                                      "type": "integer"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "null"
+                                                }
+                                              ]
+                                            },
+                                            "max_amperage": {
+                                              "anyOf": [
+                                                {
+                                                  "anyOf": [
+                                                    {
+                                                      "not": {}
+                                                    },
+                                                    {
+                                                      "type": "integer"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "null"
+                                                }
+                                              ]
+                                            },
+                                            "max_electric_power": {
+                                              "anyOf": [
+                                                {
+                                                  "anyOf": [
+                                                    {
+                                                      "not": {}
+                                                    },
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "type": "integer"
+                                                            },
+                                                            {
+                                                              "type": "null"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "null"
+                                                }
+                                              ]
+                                            },
+                                            "tariff_ids": {
+                                              "anyOf": [
+                                                {
+                                                  "anyOf": [
+                                                    {
+                                                      "not": {}
+                                                    },
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "type": "array",
+                                                              "items": {
+                                                                "anyOf": [
+                                                                  {
+                                                                    "not": {}
+                                                                  },
+                                                                  {
+                                                                    "anyOf": [
+                                                                      {
+                                                                        "type": "string",
+                                                                        "maxLength": 36
+                                                                      },
+                                                                      {
+                                                                        "type": "null"
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            },
+                                                            {
+                                                              "type": "null"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "null"
+                                                }
+                                              ]
+                                            },
+                                            "terms_and_conditions": {
+                                              "anyOf": [
+                                                {
+                                                  "anyOf": [
+                                                    {
+                                                      "not": {}
+                                                    },
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "type": "string",
+                                                              "format": "uri"
+                                                            },
+                                                            {
+                                                              "type": "null"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "null"
+                                                }
+                                              ]
+                                            },
+                                            "last_updated": {
+                                              "anyOf": [
+                                                {
+                                                  "anyOf": [
+                                                    {
+                                                      "not": {}
+                                                    },
+                                                    {
+                                                      "type": "string",
+                                                      "format": "date-time"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "null"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "additionalProperties": false
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "floor_level": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "string",
+                                                "maxLength": 4
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "coordinates": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "object",
+                                                "properties": {
+                                                  "latitude": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "$ref": "#/definitions/ocpi.2_2.location.partial/properties/coordinates/anyOf/0/anyOf/1/properties/latitude/anyOf/0/anyOf/1"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "longitude": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "$ref": "#/definitions/ocpi.2_2.location.partial/properties/coordinates/anyOf/0/anyOf/1/properties/longitude/anyOf/0/anyOf/1"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "additionalProperties": false
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "physical_reference": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "string",
+                                                "maxLength": 16
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "directions": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "array",
+                                                "items": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "language": {
+                                                      "anyOf": [
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "$ref": "#/definitions/ocpi.2_2.location.partial/properties/related_locations/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/name/anyOf/0/anyOf/1/anyOf/1/anyOf/0/properties/language/anyOf/0/anyOf/1"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    },
+                                                    "text": {
+                                                      "anyOf": [
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "$ref": "#/definitions/ocpi.2_2.location.partial/properties/related_locations/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/name/anyOf/0/anyOf/1/anyOf/1/anyOf/0/properties/text/anyOf/0/anyOf/1"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "additionalProperties": false
+                                                }
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "parking_restrictions": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "array",
+                                                "items": {
+                                                  "type": "string",
+                                                  "enum": [
+                                                    "EV_ONLY",
+                                                    "PLUGGED",
+                                                    "DISABLED",
+                                                    "CUSTOMERS",
+                                                    "MOTORCYCLES"
+                                                  ]
+                                                }
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "images": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "type": "array",
+                                                "items": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "url": {
+                                                      "anyOf": [
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "type": "string",
+                                                              "format": "uri"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    },
+                                                    "thumbnail": {
+                                                      "anyOf": [
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "not": {}
+                                                                },
+                                                                {
+                                                                  "anyOf": [
+                                                                    {
+                                                                      "type": "string",
+                                                                      "format": "uri"
+                                                                    },
+                                                                    {
+                                                                      "type": "null"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    },
+                                                    "category": {
+                                                      "anyOf": [
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "type": "string",
+                                                              "enum": [
+                                                                "CHARGER",
+                                                                "ENTRANCE",
+                                                                "LOCATION",
+                                                                "NETWORK",
+                                                                "OPERATOR",
+                                                                "OTHER",
+                                                                "OWNER"
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    },
+                                                    "type": {
+                                                      "anyOf": [
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "type": "string",
+                                                              "maxLength": 4
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    },
+                                                    "width": {
+                                                      "anyOf": [
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "not": {}
+                                                                },
+                                                                {
+                                                                  "anyOf": [
+                                                                    {
+                                                                      "type": "integer",
+                                                                      "maximum": 99999
+                                                                    },
+                                                                    {
+                                                                      "type": "null"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    },
+                                                    "height": {
+                                                      "anyOf": [
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "not": {}
+                                                                },
+                                                                {
+                                                                  "anyOf": [
+                                                                    {
+                                                                      "type": "integer",
+                                                                      "maximum": 99999
+                                                                    },
+                                                                    {
+                                                                      "type": "null"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "null"
+                                                        }
+                                                      ]
+                                                    }
+                                                  },
+                                                  "additionalProperties": false
+                                                }
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "last_updated": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "type": "string",
+                                        "format": "date-time"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "directions": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "language": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "$ref": "#/definitions/ocpi.2_2.location.partial/properties/related_locations/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/name/anyOf/0/anyOf/1/anyOf/1/anyOf/0/properties/language/anyOf/0/anyOf/1"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "text": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "$ref": "#/definitions/ocpi.2_2.location.partial/properties/related_locations/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/name/anyOf/0/anyOf/1/anyOf/1/anyOf/0/properties/text/anyOf/0/anyOf/1"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "operator": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "type": "string",
+                                      "maxLength": 100
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "website": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "type": "string",
+                                              "format": "uri"
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "logo": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "type": "object",
+                                              "properties": {
+                                                "url": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/url/anyOf/0/anyOf/1"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "thumbnail": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/thumbnail/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                                                },
+                                                                {
+                                                                  "type": "null"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "category": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/category/anyOf/0/anyOf/1"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/type/anyOf/0/anyOf/1"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "width": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/width/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                                                },
+                                                                {
+                                                                  "type": "null"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "height": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/height/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                                                },
+                                                                {
+                                                                  "type": "null"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "additionalProperties": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "suboperator": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "$ref": "#/definitions/ocpi.2_2.location.partial/properties/operator/anyOf/0/anyOf/1/anyOf/1/anyOf/0/properties/name/anyOf/0/anyOf/1"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "website": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "$ref": "#/definitions/ocpi.2_2.location.partial/properties/operator/anyOf/0/anyOf/1/anyOf/1/anyOf/0/properties/website/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "logo": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "type": "object",
+                                              "properties": {
+                                                "url": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/url/anyOf/0/anyOf/1"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "thumbnail": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/thumbnail/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                                                },
+                                                                {
+                                                                  "type": "null"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "category": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/category/anyOf/0/anyOf/1"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/type/anyOf/0/anyOf/1"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "width": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/width/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                                                },
+                                                                {
+                                                                  "type": "null"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "height": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/height/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                                                },
+                                                                {
+                                                                  "type": "null"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "additionalProperties": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "owner": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "name": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "$ref": "#/definitions/ocpi.2_2.location.partial/properties/operator/anyOf/0/anyOf/1/anyOf/1/anyOf/0/properties/name/anyOf/0/anyOf/1"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "website": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "$ref": "#/definitions/ocpi.2_2.location.partial/properties/operator/anyOf/0/anyOf/1/anyOf/1/anyOf/0/properties/website/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "logo": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "type": "object",
+                                              "properties": {
+                                                "url": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/url/anyOf/0/anyOf/1"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "thumbnail": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/thumbnail/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                                                },
+                                                                {
+                                                                  "type": "null"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "category": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/category/anyOf/0/anyOf/1"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/type/anyOf/0/anyOf/1"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "width": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/width/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                                                },
+                                                                {
+                                                                  "type": "null"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                },
+                                                "height": {
+                                                  "anyOf": [
+                                                    {
+                                                      "anyOf": [
+                                                        {
+                                                          "not": {}
+                                                        },
+                                                        {
+                                                          "anyOf": [
+                                                            {
+                                                              "not": {}
+                                                            },
+                                                            {
+                                                              "anyOf": [
+                                                                {
+                                                                  "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/height/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                                                },
+                                                                {
+                                                                  "type": "null"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "null"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "additionalProperties": false
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "facilities": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "HOTEL",
+                              "RESTAURANT",
+                              "CAFE",
+                              "MALL",
+                              "SUPERMARKET",
+                              "SPORT",
+                              "RECREATION_AREA",
+                              "NATURE",
+                              "MUSEUM",
+                              "BIKE_SHARING",
+                              "BUS_STOP",
+                              "TAXI_STAND",
+                              "TRAM_STOP",
+                              "METRO_STATION",
+                              "TRAIN_STATION",
+                              "AIRPORT",
+                              "PARKING_LOT",
+                              "CARPOOL_PARKING",
+                              "FUEL_STATION",
+                              "WIFI"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "time_zone": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "type": "string",
+                  "maxLength": 255
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "opening_times": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "regular_hours": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "weekday": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "type": "integer",
+                                                            "minimum": 1,
+                                                            "maximum": 7
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "period_begin": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "type": "string",
+                                                            "minLength": 5,
+                                                            "maxLength": 5,
+                                                            "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "period_end": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "type": "string",
+                                                            "minLength": 5,
+                                                            "maxLength": 5,
+                                                            "pattern": "([0-1][0-9]|2[0-3]):[0-5][0-9]"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "additionalProperties": false
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "twentyfourseven": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "type": "boolean"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "exceptional_openings": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "period_begin": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "type": "string",
+                                                            "format": "date-time"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "period_end": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "type": "string",
+                                                            "format": "date-time"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "additionalProperties": false
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "exceptional_closings": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "period_begin": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "$ref": "#/definitions/ocpi.2_2.location.partial/properties/opening_times/anyOf/0/anyOf/1/anyOf/1/anyOf/0/properties/exceptional_openings/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/period_begin/anyOf/0/anyOf/1"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "period_end": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "$ref": "#/definitions/ocpi.2_2.location.partial/properties/opening_times/anyOf/0/anyOf/1/anyOf/1/anyOf/0/properties/exceptional_openings/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/period_end/anyOf/0/anyOf/1"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "additionalProperties": false
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "charging_when_closed": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "images": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "url": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/url/anyOf/0/anyOf/1"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "thumbnail": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/thumbnail/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "category": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/category/anyOf/0/anyOf/1"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "type": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/type/anyOf/0/anyOf/1"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "width": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/width/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "height": {
+                                "anyOf": [
+                                  {
+                                    "anyOf": [
+                                      {
+                                        "not": {}
+                                      },
+                                      {
+                                        "anyOf": [
+                                          {
+                                            "not": {}
+                                          },
+                                          {
+                                            "anyOf": [
+                                              {
+                                                "$ref": "#/definitions/ocpi.2_2.location.partial/properties/evses/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/images/anyOf/0/anyOf/1/anyOf/1/anyOf/0/items/properties/height/anyOf/0/anyOf/1/anyOf/1/anyOf/0"
+                                              },
+                                              {
+                                                "type": "null"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "energy_mix": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "anyOf": [
+                    {
+                      "not": {}
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "is_green_energy": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "type": "boolean"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "energy_sources": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "source": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "type": "string",
+                                                            "enum": [
+                                                              "NUCLEAR",
+                                                              "GENERAL_FOSSIL",
+                                                              "COAL",
+                                                              "GAS",
+                                                              "GENERAL_GREEN",
+                                                              "SOLAR",
+                                                              "WIND",
+                                                              "WATER"
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "percentage": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "type": "number",
+                                                            "minimum": 0,
+                                                            "maximum": 100
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "additionalProperties": false
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "environ_impact": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "source": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "type": "string",
+                                                            "enum": [
+                                                              "NUCLEAR_WASTE",
+                                                              "CARBON_DIOXIDE"
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "amount": {
+                                                    "anyOf": [
+                                                      {
+                                                        "anyOf": [
+                                                          {
+                                                            "not": {}
+                                                          },
+                                                          {
+                                                            "type": "number"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "type": "null"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "additionalProperties": false
+                                              }
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "supplier_name": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "type": "string",
+                                              "maxLength": 64
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "energy_product_name": {
+                              "anyOf": [
+                                {
+                                  "anyOf": [
+                                    {
+                                      "not": {}
+                                    },
+                                    {
+                                      "anyOf": [
+                                        {
+                                          "not": {}
+                                        },
+                                        {
+                                          "anyOf": [
+                                            {
+                                              "type": "string",
+                                              "maxLength": 64
+                                            },
+                                            {
+                                              "type": "null"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          },
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "last_updated": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "not": {}
+                },
+                {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

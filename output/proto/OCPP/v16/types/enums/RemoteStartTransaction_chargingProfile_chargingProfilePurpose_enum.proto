@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.remotestarttransaction_chargingprofile_chargingprofilepurpose_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum RemoteStartTransaction_chargingProfile_chargingProfilePurpose_enum {
+  REMOTESTARTTRANSACTION_CHARGINGPROFILE_CHARGINGPROFILEPURPOSE_ENUM_UNSPECIFIED = 0;
+  ChargePointMaxProfile = 1;
+  TxDefaultProfile = 2;
+  TxProfile = 3;
+}

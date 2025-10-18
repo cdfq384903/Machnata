@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CustomDataType.proto";
+import "types/MonitoringDataType.proto";
+
+message NotifyMonitoringReportRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  repeated OCPP.v201.types.MonitoringDataType monitor = 2;
+  // NOTE: This field is required by standard Spec.
+  int32 requestId = 3;
+  bool tbc = 4;
+  // NOTE: This field is required by standard Spec.
+  int32 seqNo = 5;
+  // NOTE: This field is required by standard Spec.
+  string generatedAt = 6;
+}

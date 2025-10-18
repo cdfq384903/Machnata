@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.sendlocallist_updatetype_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum SendLocalList_updateType_enum {
+  SENDLOCALLIST_UPDATETYPE_ENUM_UNSPECIFIED = 0;
+  Differential = 1;
+  Full = 2;
+}

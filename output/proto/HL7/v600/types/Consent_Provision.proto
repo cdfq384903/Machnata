@@ -1,0 +1,27 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Consent_Actor.proto";
+import "types/Consent_Data.proto";
+import "types/string.proto";
+
+message Consent_Provision {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Period period = 4;
+  repeated HL7.v600.types.Consent_Actor actor = 5;
+  repeated HL7.v600.types.CodeableConcept action = 6;
+  repeated HL7.v600.types.Coding securityLabel = 7;
+  repeated HL7.v600.types.Coding purpose = 8;
+  repeated HL7.v600.types.Coding documentType = 9;
+  repeated HL7.v600.types.Coding resourceType = 10;
+  repeated HL7.v600.types.CodeableConcept code = 11;
+  HL7.v600.types.Period dataPeriod = 12;
+  repeated HL7.v600.types.Consent_Data data = 13;
+  HL7.v600.types.Expression expression = 14;
+  repeated HL7.v600.types.Consent_Provision provision = 15;
+}

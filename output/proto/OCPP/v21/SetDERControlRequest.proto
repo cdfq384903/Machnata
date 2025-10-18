@@ -1,0 +1,32 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/DERCurveType.proto";
+import "types/EnterServiceType.proto";
+import "types/FixedPFType.proto";
+import "types/FixedVarType.proto";
+import "types/FreqDroopType.proto";
+import "types/GradientType.proto";
+import "types/LimitMaxDischargeType.proto";
+import "types/enums/DERControlEnumType.proto";
+
+message SetDERControlRequest {
+  // NOTE: This field is required by standard Spec.
+  bool isDefault = 1;
+  // NOTE: This field is required by standard Spec.
+  string controlId = 2;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.enums.dercontrolenumtype.DERControlEnumType controlType = 3;
+  OCPP.v21.types.DERCurveType curve = 4;
+  OCPP.v21.types.EnterServiceType enterService = 5;
+  OCPP.v21.types.FixedPFType fixedPFAbsorb = 6;
+  OCPP.v21.types.FixedPFType fixedPFInject = 7;
+  OCPP.v21.types.FixedVarType fixedVar = 8;
+  OCPP.v21.types.FreqDroopType freqDroop = 9;
+  OCPP.v21.types.GradientType gradient = 10;
+  OCPP.v21.types.LimitMaxDischargeType limitMaxDischarge = 11;
+  OCPP.v21.types.CustomDataType customData = 12;
+}

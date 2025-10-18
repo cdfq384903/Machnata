@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v16;
+option go_package = "tmp/v16;OCPPv16";
+option csharp_namespace = "OCPP.v16";
+
+import "types/SendLocalList_localAuthorizationList_item.proto";
+import "types/enums/SendLocalList_updateType_enum.proto";
+
+message SendLocalList {
+  // NOTE: This field is required by standard Spec.
+  int32 listVersion = 1;
+  repeated OCPP.v16.types.SendLocalList_localAuthorizationList_item localAuthorizationList = 2;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v16.types.enums.sendlocallist_updatetype_enum.SendLocalList_updateType_enum updateType = 3;
+}

@@ -1,0 +1,24 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/string.proto";
+
+message GraphDefinition_Compartment {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.code use = 4;
+  HL7.v600.types.Element shadow__use = 5 [json_name = "_use"];
+  HL7.v600.types.code rule = 6;
+  HL7.v600.types.Element shadow__rule = 7 [json_name = "_rule"];
+  HL7.v600.types.code code = 8;
+  HL7.v600.types.Element shadow__code = 9 [json_name = "_code"];
+  HL7.v600.types.string expression = 10;
+  HL7.v600.types.Element shadow__expression = 11 [json_name = "_expression"];
+  HL7.v600.types.string description = 12;
+  HL7.v600.types.Element shadow__description = 13 [json_name = "_description"];
+}

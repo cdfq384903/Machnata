@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/dateTime.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+
+message Account_Diagnosis {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.positiveInt sequence = 4;
+  HL7.v600.types.Element shadow__sequence = 5 [json_name = "_sequence"];
+  HL7.v600.types.CodeableReference condition = 6;
+  HL7.v600.types.dateTime dateOfDiagnosis = 7;
+  HL7.v600.types.Element shadow__dateOfDiagnosis = 8 [json_name = "_dateOfDiagnosis"];
+  repeated HL7.v600.types.CodeableConcept type = 9;
+  HL7.v600.types.boolean onAdmission = 10;
+  HL7.v600.types.Element shadow__onAdmission = 11 [json_name = "_onAdmission"];
+  repeated HL7.v600.types.CodeableConcept packageCode = 12;
+}

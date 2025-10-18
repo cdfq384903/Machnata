@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/DataEnumType.proto";
+
+message VariableCharacteristicsType {
+  string unit = 1;
+  OCPP.v21.types.enums.dataenumtype.DataEnumType dataType = 2;
+  double minLimit = 3;
+  double maxLimit = 4;
+  int32 maxElements = 5;
+  string valuesList = 6;
+  bool supportsMonitoring = 7;
+  OCPP.v21.types.CustomDataType customData = 8;
+}

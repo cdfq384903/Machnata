@@ -1,0 +1,23 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.islandingdetectionenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum IslandingDetectionEnumType {
+  ISLANDINGDETECTIONENUMTYPE_UNSPECIFIED = 0;
+  NoAntiIslandingSupport = 1;
+  RoCoF = 2;
+  UVP_OVP = 3;
+  UFP_OFP = 4;
+  VoltageVectorShift = 5;
+  ZeroCrossingDetection = 6;
+  OtherPassive = 7;
+  ImpedanceMeasurement = 8;
+  ImpedanceAtFrequency = 9;
+  SlipModeFrequencyShift = 10;
+  SandiaFrequencyShift = 11;
+  SandiaVoltageShift = 12;
+  FrequencyJump = 13;
+  RCLQFactor = 14;
+  OtherActive = 15;
+}

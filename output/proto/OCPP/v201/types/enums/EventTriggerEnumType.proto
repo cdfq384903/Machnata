@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.eventtriggerenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum EventTriggerEnumType {
+  EVENTTRIGGERENUMTYPE_UNSPECIFIED = 0;
+  Alerting = 1;
+  Delta = 2;
+  Periodic = 3;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.statusnotification_status_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum StatusNotification_status_enum {
+  STATUSNOTIFICATION_STATUS_ENUM_UNSPECIFIED = 0;
+  Available = 1;
+  Preparing = 2;
+  Charging = 3;
+  SuspendedEVSE = 4;
+  SuspendedEV = 5;
+  Finishing = 6;
+  Reserved = 7;
+  Unavailable = 8;
+  Faulted = 9;
+}

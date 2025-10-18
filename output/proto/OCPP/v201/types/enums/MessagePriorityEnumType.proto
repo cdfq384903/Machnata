@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.messagepriorityenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum MessagePriorityEnumType {
+  MESSAGEPRIORITYENUMTYPE_UNSPECIFIED = 0;
+  AlwaysFront = 1;
+  InFront = 2;
+  NormalCycle = 3;
+}

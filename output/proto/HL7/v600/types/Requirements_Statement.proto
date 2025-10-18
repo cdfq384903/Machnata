@@ -1,0 +1,39 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Requirements_DerivedFrom.proto";
+import "types/Requirements_PartOf.proto";
+import "types/boolean.proto";
+import "types/code.proto";
+import "types/id.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+import "types/url.proto";
+
+message Requirements_Statement {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.id key = 4;
+  HL7.v600.types.Element shadow__key = 5 [json_name = "_key"];
+  HL7.v600.types.string label = 6;
+  HL7.v600.types.Element shadow__label = 7 [json_name = "_label"];
+  repeated HL7.v600.types.code conformance = 8;
+  repeated HL7.v600.types.Element shadow__conformance = 9 [json_name = "_conformance"];
+  HL7.v600.types.boolean conditionality = 10;
+  HL7.v600.types.Element shadow__conditionality = 11 [json_name = "_conditionality"];
+  HL7.v600.types.markdown requirement = 12;
+  HL7.v600.types.Element shadow__requirement = 13 [json_name = "_requirement"];
+  HL7.v600.types.Requirements_DerivedFrom derivedFrom = 14;
+  HL7.v600.types.Requirements_PartOf partOf = 15;
+  repeated HL7.v600.types.url satisfiedBy = 16;
+  repeated HL7.v600.types.Element shadow__satisfiedBy = 17 [json_name = "_satisfiedBy"];
+  repeated HL7.v600.types.url reference = 18;
+  repeated HL7.v600.types.Element shadow__reference = 19 [json_name = "_reference"];
+  repeated HL7.v600.types.Reference source = 20;
+  repeated HL7.v600.types.id actor = 21;
+  repeated HL7.v600.types.Element shadow__actor = 22 [json_name = "_actor"];
+}

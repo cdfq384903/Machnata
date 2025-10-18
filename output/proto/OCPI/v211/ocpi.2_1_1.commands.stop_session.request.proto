@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPI.v211;
+option go_package = "tmp/v211;OCPIv211";
+option csharp_namespace = "OCPI.v211";
+
+
+message ocpi_2_1_1_commands_stop_session_request {
+  // NOTE: This field is required by standard Spec.
+  string response_url = 1;
+  // NOTE: This field is required by standard Spec.
+  string session_id = 2;
+}

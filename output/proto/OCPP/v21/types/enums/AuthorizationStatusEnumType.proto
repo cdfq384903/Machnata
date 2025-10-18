@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.authorizationstatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum AuthorizationStatusEnumType {
+  AUTHORIZATIONSTATUSENUMTYPE_UNSPECIFIED = 0;
+  Accepted = 1;
+  Blocked = 2;
+  ConcurrentTx = 3;
+  Expired = 4;
+  Invalid = 5;
+  NoCredit = 6;
+  NotAllowedTypeEVSE = 7;
+  NotAtThisLocation = 8;
+  NotAtThisTime = 9;
+  Unknown = 10;
+}

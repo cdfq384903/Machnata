@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.setchargingprofile_cschargingprofiles_chargingprofilepurpose_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum SetChargingProfile_csChargingProfiles_chargingProfilePurpose_enum {
+  SETCHARGINGPROFILE_CSCHARGINGPROFILES_CHARGINGPROFILEPURPOSE_ENUM_UNSPECIFIED = 0;
+  ChargePointMaxProfile = 1;
+  TxDefaultProfile = 2;
+  TxProfile = 3;
+}

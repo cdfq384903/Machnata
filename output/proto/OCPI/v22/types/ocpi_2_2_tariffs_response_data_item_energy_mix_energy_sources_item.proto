@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/enums/ocpi_2_2_tariffs_response_data_item_energy_mix_energy_sources_item_source_enum.proto";
+
+message ocpi_2_2_tariffs_response_data_item_energy_mix_energy_sources_item {
+  OCPI.v22.types.enums.ocpi_2_2_tariffs_response_data_item_energy_mix_energy_sources_item_source_enum.ocpi_2_2_tariffs_response_data_item_energy_mix_energy_sources_item_source_enum source = 1;
+  double percentage = 2;
+}

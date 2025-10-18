@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/APNAuthenticationEnumType.proto";
+
+message APNType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  string apn = 2;
+  string apnUserName = 3;
+  string apnPassword = 4;
+  int32 simPin = 5;
+  string preferredNetwork = 6;
+  bool useOnlyPreferredNetwork = 7;
+  OCPP.v201.types.enums.apnauthenticationenumtype.APNAuthenticationEnumType apnAuthentication = 8;
+}

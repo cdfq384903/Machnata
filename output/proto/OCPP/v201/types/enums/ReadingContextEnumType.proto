@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.readingcontextenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum ReadingContextEnumType {
+  READINGCONTEXTENUMTYPE_UNSPECIFIED = 0;
+  Interruption_Begin = 1;
+  Interruption_End = 2;
+  Other = 3;
+  Sample_Clock = 4;
+  Sample_Periodic = 5;
+  Transaction_Begin = 6;
+  Transaction_End = 7;
+  Trigger = 8;
+}

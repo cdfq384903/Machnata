@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPI.v211.types.enums.ocpi_2_1_1_cdr_charging_periods_item_dimensions_item_type_enum;
+option go_package = "tmp/v211/types/enums;enums";
+option csharp_namespace = "OCPI.v211.types.enums";
+
+enum ocpi_2_1_1_cdr_charging_periods_item_dimensions_item_type_enum {
+  OCPI_2_1_1_CDR_CHARGING_PERIODS_ITEM_DIMENSIONS_ITEM_TYPE_ENUM_UNSPECIFIED = 0;
+  ENERGY = 1;
+  FLAT = 2;
+  MAX_CURRENT = 3;
+  MIN_CURRENT = 4;
+  PARKING_TIME = 5;
+  TIME = 6;
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.apnauthenticationenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum APNAuthenticationEnumType {
+  APNAUTHENTICATIONENUMTYPE_UNSPECIFIED = 0;
+  PAP = 1;
+  CHAP = 2;
+  NONE = 3;
+  AUTO = 4;
+}

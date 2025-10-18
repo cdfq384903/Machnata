@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.powerduringcessationenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum PowerDuringCessationEnumType {
+  POWERDURINGCESSATIONENUMTYPE_UNSPECIFIED = 0;
+  Active = 1;
+  Reactive = 2;
+}

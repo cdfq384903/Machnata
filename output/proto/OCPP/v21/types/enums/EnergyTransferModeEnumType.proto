@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.energytransfermodeenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum EnergyTransferModeEnumType {
+  ENERGYTRANSFERMODEENUMTYPE_UNSPECIFIED = 0;
+  AC_single_phase = 1;
+  AC_two_phase = 2;
+  AC_three_phase = 3;
+  DC = 4;
+  AC_BPT = 5;
+  AC_BPT_DER = 6;
+  AC_DER = 7;
+  DC_BPT = 8;
+  DC_ACDP = 9;
+  DC_ACDP_BPT = 10;
+  WPT = 11;
+}

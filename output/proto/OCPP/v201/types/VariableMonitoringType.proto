@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/MonitorEnumType.proto";
+
+message VariableMonitoringType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  int32 id = 2;
+  bool transaction = 3;
+  double value = 4;
+  OCPP.v201.types.enums.monitorenumtype.MonitorEnumType type = 5;
+  int32 severity = 6;
+}

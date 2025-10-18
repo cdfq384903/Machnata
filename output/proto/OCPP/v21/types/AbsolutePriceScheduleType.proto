@@ -1,0 +1,27 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/AdditionalSelectedServicesType.proto";
+import "types/CustomDataType.proto";
+import "types/OverstayRuleListType.proto";
+import "types/PriceRuleStackType.proto";
+import "types/RationalNumberType.proto";
+import "types/TaxRuleType.proto";
+
+message AbsolutePriceScheduleType {
+  string timeAnchor = 1;
+  int32 priceScheduleID = 2;
+  string priceScheduleDescription = 3;
+  string currency = 4;
+  string language = 5;
+  string priceAlgorithm = 6;
+  OCPP.v21.types.RationalNumberType minimumCost = 7;
+  OCPP.v21.types.RationalNumberType maximumCost = 8;
+  repeated OCPP.v21.types.PriceRuleStackType priceRuleStacks = 9;
+  repeated OCPP.v21.types.TaxRuleType taxRules = 10;
+  OCPP.v21.types.OverstayRuleListType overstayRuleList = 11;
+  repeated OCPP.v21.types.AdditionalSelectedServicesType additionalSelectedServices = 12;
+  OCPP.v21.types.CustomDataType customData = 13;
+}

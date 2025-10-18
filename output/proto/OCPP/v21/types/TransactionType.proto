@@ -1,0 +1,22 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/TransactionLimitType.proto";
+import "types/enums/ChargingStateEnumType.proto";
+import "types/enums/OperationModeEnumType.proto";
+import "types/enums/ReasonEnumType.proto";
+
+message TransactionType {
+  string transactionId = 1;
+  OCPP.v21.types.enums.chargingstateenumtype.ChargingStateEnumType chargingState = 2;
+  int32 timeSpentCharging = 3;
+  OCPP.v21.types.enums.reasonenumtype.ReasonEnumType stoppedReason = 4;
+  int32 remoteStartId = 5;
+  OCPP.v21.types.enums.operationmodeenumtype.OperationModeEnumType operationMode = 6;
+  string tariffId = 7;
+  OCPP.v21.types.TransactionLimitType transactionLimit = 8;
+  OCPP.v21.types.CustomDataType customData = 9;
+}

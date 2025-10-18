@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CustomDataType.proto";
+import "types/enums/CertificateActionEnumType.proto";
+
+message Get15118EVCertificateRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  // NOTE: This field is required by standard Spec.
+  string iso15118SchemaVersion = 2;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v201.types.enums.certificateactionenumtype.CertificateActionEnumType action = 3;
+  // NOTE: This field is required by standard Spec.
+  string exiRequest = 4;
+}

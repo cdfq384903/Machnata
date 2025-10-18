@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.monitoringcriterionenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum MonitoringCriterionEnumType {
+  MONITORINGCRITERIONENUMTYPE_UNSPECIFIED = 0;
+  ThresholdMonitoring = 1;
+  DeltaMonitoring = 2;
+  PeriodicMonitoring = 3;
+}

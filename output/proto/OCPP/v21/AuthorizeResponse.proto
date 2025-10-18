@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/IdTokenInfoType.proto";
+import "types/TariffType.proto";
+import "types/enums/AuthorizeCertificateStatusEnumType.proto";
+import "types/enums/EnergyTransferModeEnumType.proto";
+
+message AuthorizeResponse {
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.IdTokenInfoType idTokenInfo = 1;
+  OCPP.v21.types.enums.authorizecertificatestatusenumtype.AuthorizeCertificateStatusEnumType certificateStatus = 2;
+  repeated OCPP.v21.types.enums.energytransfermodeenumtype.EnergyTransferModeEnumType allowedEnergyTransfer = 3;
+  OCPP.v21.types.TariffType tariff = 4;
+  OCPP.v21.types.CustomDataType customData = 5;
+}

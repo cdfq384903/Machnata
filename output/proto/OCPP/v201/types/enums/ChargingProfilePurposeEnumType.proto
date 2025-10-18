@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.chargingprofilepurposeenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum ChargingProfilePurposeEnumType {
+  CHARGINGPROFILEPURPOSEENUMTYPE_UNSPECIFIED = 0;
+  ChargingStationExternalConstraints = 1;
+  ChargingStationMaxProfile = 2;
+  TxDefaultProfile = 3;
+  TxProfile = 4;
+}

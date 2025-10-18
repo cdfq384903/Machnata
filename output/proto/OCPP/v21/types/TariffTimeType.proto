@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/TariffTimePriceType.proto";
+import "types/TaxRateType.proto";
+
+message TariffTimeType {
+  repeated OCPP.v21.types.TariffTimePriceType prices = 1;
+  repeated OCPP.v21.types.TaxRateType taxRates = 2;
+  OCPP.v21.types.CustomDataType customData = 3;
+}

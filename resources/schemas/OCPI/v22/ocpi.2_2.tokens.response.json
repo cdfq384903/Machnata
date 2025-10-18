@@ -1,0 +1,179 @@
+{
+  "$ref": "#/definitions/ocpi.2_2.tokens.response",
+  "definitions": {
+    "ocpi.2_2.tokens.response": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "country_code": {
+                "type": "string",
+                "minLength": 2,
+                "maxLength": 2
+              },
+              "party_id": {
+                "type": "string",
+                "maxLength": 3
+              },
+              "uid": {
+                "type": "string",
+                "maxLength": 36
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "AD_HOC_USER",
+                  "APP_USER",
+                  "OTHER",
+                  "RFID"
+                ]
+              },
+              "contract_id": {
+                "type": "string",
+                "maxLength": 36
+              },
+              "visual_number": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 64
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "issuer": {
+                "type": "string",
+                "maxLength": 64
+              },
+              "group_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 36
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "valid": {
+                "type": "boolean"
+              },
+              "whitelist": {
+                "type": "string",
+                "enum": [
+                  "ALWAYS",
+                  "ALLOWED",
+                  "ALLOWED_OFFLINE",
+                  "NEVER"
+                ]
+              },
+              "language": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 2,
+                    "maxLength": 2
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "default_profile_type": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "CHEAP",
+                      "FAST",
+                      "GREEN",
+                      "REGULAR"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "energy_contract": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "supplier_name": {
+                        "type": "string",
+                        "maxLength": 64
+                      },
+                      "contract_id": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "maxLength": 64
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "supplier_name"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "last_updated": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "country_code",
+              "party_id",
+              "uid",
+              "type",
+              "contract_id",
+              "issuer",
+              "valid",
+              "whitelist",
+              "last_updated"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "status_code": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 1999
+        },
+        "status_message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "data",
+        "status_code",
+        "timestamp"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

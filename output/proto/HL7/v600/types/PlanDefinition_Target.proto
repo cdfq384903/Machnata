@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/string.proto";
+
+message PlanDefinition_Target {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept measure = 4;
+  HL7.v600.types.Quantity detailQuantity = 5;
+  HL7.v600.types.Range detailRange = 6;
+  HL7.v600.types.CodeableConcept detailCodeableConcept = 7;
+  string detailString = 8;
+  HL7.v600.types.Element shadow__detailString = 9 [json_name = "_detailString"];
+  bool detailBoolean = 10;
+  HL7.v600.types.Element shadow__detailBoolean = 11 [json_name = "_detailBoolean"];
+  double detailInteger = 12;
+  HL7.v600.types.Element shadow__detailInteger = 13 [json_name = "_detailInteger"];
+  HL7.v600.types.Ratio detailRatio = 14;
+  HL7.v600.types.Duration due = 15;
+}

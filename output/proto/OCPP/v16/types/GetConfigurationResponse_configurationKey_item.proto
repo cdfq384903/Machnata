@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v16.types;
+option go_package = "tmp/v16/types;types";
+option csharp_namespace = "OCPP.v16.types";
+
+message GetConfigurationResponse_configurationKey_item {
+  string key = 1;
+  bool readonly = 2;
+  string value = 3;
+}

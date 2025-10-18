@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.logenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum LogEnumType {
+  LOGENUMTYPE_UNSPECIFIED = 0;
+  DiagnosticsLog = 1;
+  SecurityLog = 2;
+  DataCollectorLog = 3;
+}

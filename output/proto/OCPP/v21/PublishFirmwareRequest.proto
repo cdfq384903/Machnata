@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+
+message PublishFirmwareRequest {
+  // NOTE: This field is required by standard Spec.
+  string location = 1;
+  int32 retries = 2;
+  // NOTE: This field is required by standard Spec.
+  string checksum = 3;
+  // NOTE: This field is required by standard Spec.
+  int32 requestId = 4;
+  int32 retryInterval = 5;
+  OCPP.v21.types.CustomDataType customData = 6;
+}

@@ -1,0 +1,20 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/string.proto";
+
+message Evidence_Variable {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Reference variableDefinition = 4;
+  HL7.v600.types.code handling = 5;
+  HL7.v600.types.Element shadow__handling = 6 [json_name = "_handling"];
+  repeated HL7.v600.types.CodeableConcept valueCategory = 7;
+  repeated HL7.v600.types.Quantity valueQuantity = 8;
+  repeated HL7.v600.types.Range valueRange = 9;
+}

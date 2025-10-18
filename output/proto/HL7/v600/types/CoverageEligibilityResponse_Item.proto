@@ -1,0 +1,35 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/CoverageEligibilityResponse_Benefit.proto";
+import "types/boolean.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message CoverageEligibilityResponse_Item {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept category = 4;
+  HL7.v600.types.CodeableConcept productOrService = 5;
+  repeated HL7.v600.types.CodeableConcept modifier = 6;
+  HL7.v600.types.Reference provider = 7;
+  HL7.v600.types.boolean excluded = 8;
+  HL7.v600.types.Element shadow__excluded = 9 [json_name = "_excluded"];
+  HL7.v600.types.string name = 10;
+  HL7.v600.types.Element shadow__name = 11 [json_name = "_name"];
+  HL7.v600.types.string description = 12;
+  HL7.v600.types.Element shadow__description = 13 [json_name = "_description"];
+  HL7.v600.types.CodeableConcept network = 14;
+  HL7.v600.types.CodeableConcept unit = 15;
+  HL7.v600.types.CodeableConcept term = 16;
+  repeated HL7.v600.types.CoverageEligibilityResponse_Benefit benefit = 17;
+  HL7.v600.types.boolean authorizationRequired = 18;
+  HL7.v600.types.Element shadow__authorizationRequired = 19 [json_name = "_authorizationRequired"];
+  repeated HL7.v600.types.CodeableConcept authorizationSupporting = 20;
+  HL7.v600.types.uri authorizationUrl = 21;
+  HL7.v600.types.Element shadow__authorizationUrl = 22 [json_name = "_authorizationUrl"];
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.genericstatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum GenericStatusEnumType {
+  GENERICSTATUSENUMTYPE_UNSPECIFIED = 0;
+  Accepted = 1;
+  Rejected = 2;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/enums/ocpi_2_1_1_session_response_data_location_energy_mix_environ_impact_item_source_enum.proto";
+
+message ocpi_2_1_1_session_response_data_location_energy_mix_environ_impact_item {
+  OCPI.v211.types.enums.ocpi_2_1_1_session_response_data_location_energy_mix_environ_impact_item_source_enum.ocpi_2_1_1_session_response_data_location_energy_mix_environ_impact_item_source_enum source = 1;
+  double amount = 2;
+}

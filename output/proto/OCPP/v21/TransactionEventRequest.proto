@@ -1,0 +1,38 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CostDetailsType.proto";
+import "types/CustomDataType.proto";
+import "types/EVSEType.proto";
+import "types/IdTokenType.proto";
+import "types/MeterValueType.proto";
+import "types/TransactionType.proto";
+import "types/enums/PreconditioningStatusEnumType.proto";
+import "types/enums/TransactionEventEnumType.proto";
+import "types/enums/TriggerReasonEnumType.proto";
+
+message TransactionEventRequest {
+  OCPP.v21.types.CostDetailsType costDetails = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.enums.transactioneventenumtype.TransactionEventEnumType eventType = 2;
+  repeated OCPP.v21.types.MeterValueType meterValue = 3;
+  // NOTE: This field is required by standard Spec.
+  string timestamp = 4;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.enums.triggerreasonenumtype.TriggerReasonEnumType triggerReason = 5;
+  // NOTE: This field is required by standard Spec.
+  int32 seqNo = 6;
+  bool offline = 7;
+  int32 numberOfPhasesUsed = 8;
+  int32 cableMaxCurrent = 9;
+  int32 reservationId = 10;
+  OCPP.v21.types.enums.preconditioningstatusenumtype.PreconditioningStatusEnumType preconditioningStatus = 11;
+  bool evseSleep = 12;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.TransactionType transactionInfo = 13;
+  OCPP.v21.types.EVSEType evse = 14;
+  OCPP.v21.types.IdTokenType idToken = 15;
+  OCPP.v21.types.CustomDataType customData = 16;
+}

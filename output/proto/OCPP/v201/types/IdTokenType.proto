@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/AdditionalInfoType.proto";
+import "types/CustomDataType.proto";
+import "types/enums/IdTokenEnumType.proto";
+
+message IdTokenType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  repeated OCPP.v201.types.AdditionalInfoType additionalInfo = 2;
+  string idToken = 3;
+  OCPP.v201.types.enums.idtokenenumtype.IdTokenEnumType type = 4;
+}

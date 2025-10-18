@@ -1,0 +1,32 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ValueSet_Contains.proto";
+import "types/ValueSet_Parameter.proto";
+import "types/ValueSet_Property.proto";
+import "types/dateTime.proto";
+import "types/integer.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message ValueSet_Expansion {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.uri identifier = 4;
+  HL7.v600.types.Element shadow__identifier = 5 [json_name = "_identifier"];
+  HL7.v600.types.uri next = 6;
+  HL7.v600.types.Element shadow__next = 7 [json_name = "_next"];
+  HL7.v600.types.dateTime timestamp = 8;
+  HL7.v600.types.Element shadow__timestamp = 9 [json_name = "_timestamp"];
+  HL7.v600.types.integer total = 10;
+  HL7.v600.types.Element shadow__total = 11 [json_name = "_total"];
+  HL7.v600.types.integer offset = 12;
+  HL7.v600.types.Element shadow__offset = 13 [json_name = "_offset"];
+  repeated HL7.v600.types.ValueSet_Parameter parameter = 14;
+  repeated HL7.v600.types.ValueSet_Property property = 15;
+  repeated HL7.v600.types.ValueSet_Contains contains = 16;
+}

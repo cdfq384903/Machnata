@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/enums/GetCertificateIdUseEnumType.proto";
+
+message GetInstalledCertificateIdsRequest {
+  repeated OCPP.v21.types.enums.getcertificateiduseenumtype.GetCertificateIdUseEnumType certificateType = 1;
+  OCPP.v21.types.CustomDataType customData = 2;
+}

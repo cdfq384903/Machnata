@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.chargingprofilestatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum ChargingProfileStatusEnumType {
+  CHARGINGPROFILESTATUSENUMTYPE_UNSPECIFIED = 0;
+  Accepted = 1;
+  Rejected = 2;
+}

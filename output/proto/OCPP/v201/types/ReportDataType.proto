@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/ComponentType.proto";
+import "types/CustomDataType.proto";
+import "types/VariableAttributeType.proto";
+import "types/VariableCharacteristicsType.proto";
+import "types/VariableType.proto";
+
+message ReportDataType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  OCPP.v201.types.ComponentType component = 2;
+  OCPP.v201.types.VariableType variable = 3;
+  repeated OCPP.v201.types.VariableAttributeType variableAttribute = 4;
+  OCPP.v201.types.VariableCharacteristicsType variableCharacteristics = 5;
+}

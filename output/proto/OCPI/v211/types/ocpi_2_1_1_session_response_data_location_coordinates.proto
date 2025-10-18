@@ -1,0 +1,9 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+message ocpi_2_1_1_session_response_data_location_coordinates {
+  string latitude = 1;
+  string longitude = 2;
+}

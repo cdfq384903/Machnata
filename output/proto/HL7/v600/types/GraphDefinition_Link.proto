@@ -1,0 +1,33 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/GraphDefinition_Compartment.proto";
+import "types/id.proto";
+import "types/integer.proto";
+import "types/string.proto";
+
+message GraphDefinition_Link {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string description = 4;
+  HL7.v600.types.Element shadow__description = 5 [json_name = "_description"];
+  HL7.v600.types.integer min = 6;
+  HL7.v600.types.Element shadow__min = 7 [json_name = "_min"];
+  HL7.v600.types.string max = 8;
+  HL7.v600.types.Element shadow__max = 9 [json_name = "_max"];
+  HL7.v600.types.id sourceId = 10;
+  HL7.v600.types.Element shadow__sourceId = 11 [json_name = "_sourceId"];
+  HL7.v600.types.string path = 12;
+  HL7.v600.types.Element shadow__path = 13 [json_name = "_path"];
+  HL7.v600.types.string sliceName = 14;
+  HL7.v600.types.Element shadow__sliceName = 15 [json_name = "_sliceName"];
+  HL7.v600.types.id targetId = 16;
+  HL7.v600.types.Element shadow__targetId = 17 [json_name = "_targetId"];
+  HL7.v600.types.string params = 18;
+  HL7.v600.types.Element shadow__params = 19 [json_name = "_params"];
+  repeated HL7.v600.types.GraphDefinition_Compartment compartment = 20;
+}

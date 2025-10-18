@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/ComponentType.proto";
+import "types/CustomDataType.proto";
+import "types/VariableType.proto";
+import "types/enums/AttributeEnumType.proto";
+
+message GetVariableDataType {
+  OCPP.v21.types.enums.attributeenumtype.AttributeEnumType attributeType = 1;
+  OCPP.v21.types.ComponentType component = 2;
+  OCPP.v21.types.VariableType variable = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

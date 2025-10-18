@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPI.v211.types.enums.ocpi_2_1_1_version_details_endpoints_item_identifier_enum;
+option go_package = "tmp/v211/types/enums;enums";
+option csharp_namespace = "OCPI.v211.types.enums";
+
+enum ocpi_2_1_1_version_details_endpoints_item_identifier_enum {
+  OCPI_2_1_1_VERSION_DETAILS_ENDPOINTS_ITEM_IDENTIFIER_ENUM_UNSPECIFIED = 0;
+  cdrs = 1;
+  commands = 2;
+  credentials = 3;
+  locations = 4;
+  sessions = 5;
+  tariffs = 6;
+  tokens = 7;
+}

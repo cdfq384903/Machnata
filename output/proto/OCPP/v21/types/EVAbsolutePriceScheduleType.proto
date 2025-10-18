@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/EVAbsolutePriceScheduleEntryType.proto";
+
+message EVAbsolutePriceScheduleType {
+  string timeAnchor = 1;
+  string currency = 2;
+  repeated OCPP.v21.types.EVAbsolutePriceScheduleEntryType evAbsolutePriceScheduleEntries = 3;
+  string priceAlgorithm = 4;
+  OCPP.v21.types.CustomDataType customData = 5;
+}

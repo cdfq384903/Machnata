@@ -1,0 +1,45 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/enums/ocpi_2_2_location_parking_type_enum.proto";
+import "types/ocpi_2_2_location_coordinates.proto";
+import "types/ocpi_2_2_location_energy_mix.proto";
+import "types/ocpi_2_2_location_evses_item.proto";
+import "types/ocpi_2_2_location_opening_times.proto";
+import "types/ocpi_2_2_location_operator.proto";
+import "types/ocpi_2_2_location_properties_evses_anyOf_0_items_properties_images_anyOf_0_items.proto";
+import "types/ocpi_2_2_location_properties_operator_anyOf_0.proto";
+import "types/ocpi_2_2_location_properties_related_locations_anyOf_0_items_properties_name_anyOf_0.proto";
+import "types/ocpi_2_2_location_publish_allowed_to_item.proto";
+import "types/ocpi_2_2_location_related_locations_item.proto";
+
+message ocpi_2_2_location {
+  string country_code = 1;
+  string party_id = 2;
+  string id = 3;
+  bool publish = 4;
+  repeated OCPI.v22.types.ocpi_2_2_location_publish_allowed_to_item publish_allowed_to = 5;
+  string name = 6;
+  string address = 7;
+  string city = 8;
+  string postal_code = 9;
+  string state = 10;
+  string country = 11;
+  OCPI.v22.types.ocpi_2_2_location_coordinates coordinates = 12;
+  repeated OCPI.v22.types.ocpi_2_2_location_related_locations_item related_locations = 13;
+  OCPI.v22.types.enums.ocpi_2_2_location_parking_type_enum.ocpi_2_2_location_parking_type_enum parking_type = 14;
+  repeated OCPI.v22.types.ocpi_2_2_location_evses_item evses = 15;
+  repeated OCPI.v22.types.ocpi_2_2_location_properties_related_locations_anyOf_0_items_properties_name_anyOf_0 directions = 16;
+  OCPI.v22.types.ocpi_2_2_location_operator operator = 17;
+  OCPI.v22.types.ocpi_2_2_location_properties_operator_anyOf_0 suboperator = 18;
+  OCPI.v22.types.ocpi_2_2_location_properties_operator_anyOf_0 owner = 19;
+  repeated string facilities = 20;
+  string time_zone = 21;
+  OCPI.v22.types.ocpi_2_2_location_opening_times opening_times = 22;
+  bool charging_when_closed = 23;
+  repeated OCPI.v22.types.ocpi_2_2_location_properties_evses_anyOf_0_items_properties_images_anyOf_0_items images = 24;
+  OCPI.v22.types.ocpi_2_2_location_energy_mix energy_mix = 25;
+  string last_updated = 26;
+}

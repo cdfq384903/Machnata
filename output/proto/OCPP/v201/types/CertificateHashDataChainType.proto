@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/CertificateHashDataType.proto";
+import "types/CustomDataType.proto";
+import "types/enums/GetCertificateIdUseEnumType.proto";
+
+message CertificateHashDataChainType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  OCPP.v201.types.CertificateHashDataType certificateHashData = 2;
+  OCPP.v201.types.enums.getcertificateiduseenumtype.GetCertificateIdUseEnumType certificateType = 3;
+  repeated OCPP.v201.types.CertificateHashDataType childCertificateHashData = 4;
+}

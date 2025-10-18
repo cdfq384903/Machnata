@@ -1,0 +1,58 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ExplanationOfBenefit_Adjudication.proto";
+import "types/ExplanationOfBenefit_BodySite.proto";
+import "types/ExplanationOfBenefit_Detail.proto";
+import "types/ExplanationOfBenefit_ReviewOutcome.proto";
+import "types/decimal.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+
+message ExplanationOfBenefit_Item {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.positiveInt sequence = 4;
+  HL7.v600.types.Element shadow__sequence = 5 [json_name = "_sequence"];
+  repeated HL7.v600.types.positiveInt careTeamSequence = 6;
+  repeated HL7.v600.types.Element shadow__careTeamSequence = 7 [json_name = "_careTeamSequence"];
+  repeated HL7.v600.types.positiveInt diagnosisSequence = 8;
+  repeated HL7.v600.types.Element shadow__diagnosisSequence = 9 [json_name = "_diagnosisSequence"];
+  repeated HL7.v600.types.positiveInt procedureSequence = 10;
+  repeated HL7.v600.types.Element shadow__procedureSequence = 11 [json_name = "_procedureSequence"];
+  repeated HL7.v600.types.positiveInt informationSequence = 12;
+  repeated HL7.v600.types.Element shadow__informationSequence = 13 [json_name = "_informationSequence"];
+  repeated HL7.v600.types.Identifier traceNumber = 14;
+  HL7.v600.types.CodeableConcept revenue = 15;
+  HL7.v600.types.CodeableConcept category = 16;
+  HL7.v600.types.CodeableConcept productOrService = 17;
+  HL7.v600.types.CodeableConcept productOrServiceEnd = 18;
+  repeated HL7.v600.types.Reference request = 19;
+  repeated HL7.v600.types.CodeableConcept modifier = 20;
+  repeated HL7.v600.types.CodeableConcept programCode = 21;
+  string servicedDate = 22;
+  HL7.v600.types.Element shadow__servicedDate = 23 [json_name = "_servicedDate"];
+  HL7.v600.types.Period servicedPeriod = 24;
+  HL7.v600.types.CodeableConcept locationCodeableConcept = 25;
+  HL7.v600.types.Address locationAddress = 26;
+  HL7.v600.types.Reference locationReference = 27;
+  HL7.v600.types.Money patientPaid = 28;
+  HL7.v600.types.Quantity quantity = 29;
+  HL7.v600.types.Money unitPrice = 30;
+  HL7.v600.types.decimal factor = 31;
+  HL7.v600.types.Element shadow__factor = 32 [json_name = "_factor"];
+  HL7.v600.types.Money tax = 33;
+  HL7.v600.types.Money net = 34;
+  repeated HL7.v600.types.Reference udi = 35;
+  repeated HL7.v600.types.ExplanationOfBenefit_BodySite bodySite = 36;
+  repeated HL7.v600.types.Reference encounter = 37;
+  repeated HL7.v600.types.positiveInt noteNumber = 38;
+  repeated HL7.v600.types.Element shadow__noteNumber = 39 [json_name = "_noteNumber"];
+  HL7.v600.types.ExplanationOfBenefit_ReviewOutcome reviewOutcome = 40;
+  repeated HL7.v600.types.ExplanationOfBenefit_Adjudication adjudication = 41;
+  repeated HL7.v600.types.ExplanationOfBenefit_Detail detail = 42;
+}

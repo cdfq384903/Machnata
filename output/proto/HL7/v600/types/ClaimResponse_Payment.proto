@@ -1,0 +1,21 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/date.proto";
+import "types/string.proto";
+
+message ClaimResponse_Payment {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept type = 4;
+  HL7.v600.types.Money adjustment = 5;
+  HL7.v600.types.CodeableConcept adjustmentReason = 6;
+  HL7.v600.types.date date = 7;
+  HL7.v600.types.Element shadow__date = 8 [json_name = "_date"];
+  HL7.v600.types.Money amount = 9;
+  HL7.v600.types.Identifier identifier = 10;
+}

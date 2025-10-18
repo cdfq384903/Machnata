@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+message ocpi_2_2_1_location_opening_times_regular_hours_item {
+  int32 weekday = 1;
+  string period_begin = 2;
+  string period_end = 3;
+}

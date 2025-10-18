@@ -1,0 +1,26 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/string.proto";
+
+message BiologicallyDerivedProduct_Property {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept type = 4;
+  bool valueBoolean = 5;
+  HL7.v600.types.Element shadow__valueBoolean = 6 [json_name = "_valueBoolean"];
+  double valueInteger = 7;
+  HL7.v600.types.Element shadow__valueInteger = 8 [json_name = "_valueInteger"];
+  HL7.v600.types.CodeableConcept valueCodeableConcept = 9;
+  HL7.v600.types.Period valuePeriod = 10;
+  HL7.v600.types.Quantity valueQuantity = 11;
+  HL7.v600.types.Range valueRange = 12;
+  HL7.v600.types.Ratio valueRatio = 13;
+  string valueString = 14;
+  HL7.v600.types.Element shadow__valueString = 15 [json_name = "_valueString"];
+  HL7.v600.types.Attachment valueAttachment = 16;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CustomDataType.proto";
+import "types/enums/MessagePriorityEnumType.proto";
+import "types/enums/MessageStateEnumType.proto";
+
+message GetDisplayMessagesRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  repeated int32 id = 2;
+  // NOTE: This field is required by standard Spec.
+  int32 requestId = 3;
+  OCPP.v201.types.enums.messagepriorityenumtype.MessagePriorityEnumType priority = 4;
+  OCPP.v201.types.enums.messagestateenumtype.MessageStateEnumType state = 5;
+}

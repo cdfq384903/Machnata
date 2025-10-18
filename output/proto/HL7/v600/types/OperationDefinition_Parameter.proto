@@ -1,0 +1,41 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/OperationDefinition_Binding.proto";
+import "types/OperationDefinition_ReferencedFrom.proto";
+import "types/canonical.proto";
+import "types/code.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+import "types/unsignedInt.proto";
+
+message OperationDefinition_Parameter {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.code name = 4;
+  HL7.v600.types.Element shadow__name = 5 [json_name = "_name"];
+  HL7.v600.types.code use = 6;
+  HL7.v600.types.Element shadow__use = 7 [json_name = "_use"];
+  repeated HL7.v600.types.code scope = 8;
+  repeated HL7.v600.types.Element shadow__scope = 9 [json_name = "_scope"];
+  HL7.v600.types.unsignedInt min = 10;
+  HL7.v600.types.Element shadow__min = 11 [json_name = "_min"];
+  HL7.v600.types.string max = 12;
+  HL7.v600.types.Element shadow__max = 13 [json_name = "_max"];
+  HL7.v600.types.markdown documentation = 14;
+  HL7.v600.types.Element shadow__documentation = 15 [json_name = "_documentation"];
+  HL7.v600.types.code type = 16;
+  HL7.v600.types.Element shadow__type = 17 [json_name = "_type"];
+  repeated HL7.v600.types.code allowedType = 18;
+  repeated HL7.v600.types.Element shadow__allowedType = 19 [json_name = "_allowedType"];
+  repeated HL7.v600.types.canonical targetProfile = 20;
+  HL7.v600.types.code searchType = 21;
+  HL7.v600.types.Element shadow__searchType = 22 [json_name = "_searchType"];
+  HL7.v600.types.OperationDefinition_Binding binding = 23;
+  repeated HL7.v600.types.OperationDefinition_ReferencedFrom referencedFrom = 24;
+  repeated HL7.v600.types.OperationDefinition_Parameter part = 25;
+}

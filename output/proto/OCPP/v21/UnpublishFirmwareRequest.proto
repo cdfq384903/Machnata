@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+
+message UnpublishFirmwareRequest {
+  // NOTE: This field is required by standard Spec.
+  string checksum = 1;
+  OCPP.v21.types.CustomDataType customData = 2;
+}

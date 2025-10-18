@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.locationenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum LocationEnumType {
+  LOCATIONENUMTYPE_UNSPECIFIED = 0;
+  Body = 1;
+  Cable = 2;
+  EV = 3;
+  Inlet = 4;
+  Outlet = 5;
+  Upstream = 6;
+}

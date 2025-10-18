@@ -1,0 +1,82 @@
+{
+  "$ref": "#/definitions/ocpi.2_1_1.tokens",
+  "definitions": {
+    "ocpi.2_1_1.tokens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uid": {
+            "type": "string",
+            "maxLength": 36
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "OTHER",
+              "RFID"
+            ]
+          },
+          "auth_id": {
+            "type": "string",
+            "maxLength": 36
+          },
+          "visual_number": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 64
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "issuer": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "valid": {
+            "type": "boolean"
+          },
+          "whitelist": {
+            "type": "string",
+            "enum": [
+              "ALWAYS",
+              "ALLOWED",
+              "ALLOWED_OFFLINE",
+              "NEVER"
+            ]
+          },
+          "language": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 2,
+                "maxLength": 2
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "last_updated": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "uid",
+          "type",
+          "auth_id",
+          "issuer",
+          "valid",
+          "whitelist",
+          "last_updated"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

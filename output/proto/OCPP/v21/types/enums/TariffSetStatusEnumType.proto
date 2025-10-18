@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.tariffsetstatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum TariffSetStatusEnumType {
+  TARIFFSETSTATUSENUMTYPE_UNSPECIFIED = 0;
+  Accepted = 1;
+  Rejected = 2;
+  TooManyElements = 3;
+  ConditionNotSupported = 4;
+  DuplicateTariffId = 5;
+}

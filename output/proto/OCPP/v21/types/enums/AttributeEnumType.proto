@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.attributeenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum AttributeEnumType {
+  ATTRIBUTEENUMTYPE_UNSPECIFIED = 0;
+  Actual = 1;
+  Target = 2;
+  MinSet = 3;
+  MaxSet = 4;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+message ocpi_2_2_location_evses_item_status_schedule_item {
+  string period_begin = 1;
+  string period_end = 2;
+  string status = 3;
+}

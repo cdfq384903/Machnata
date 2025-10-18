@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/ocpi_2_1_1_tariff_elements_item.proto";
+import "types/ocpi_2_1_1_tariff_energy_mix.proto";
+import "types/ocpi_2_1_1_tariff_tariff_alt_text_item.proto";
+
+message ocpi_2_1_1_tariff {
+  string id = 1;
+  string currency = 2;
+  repeated OCPI.v211.types.ocpi_2_1_1_tariff_tariff_alt_text_item tariff_alt_text = 3;
+  string tariff_alt_url = 4;
+  repeated OCPI.v211.types.ocpi_2_1_1_tariff_elements_item elements = 5;
+  OCPI.v211.types.ocpi_2_1_1_tariff_energy_mix energy_mix = 6;
+  string last_updated = 7;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.bootnotificationresponse_status_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum BootNotificationResponse_status_enum {
+  BOOTNOTIFICATIONRESPONSE_STATUS_ENUM_UNSPECIFIED = 0;
+  Accepted = 1;
+  Pending = 2;
+  Rejected = 3;
+}

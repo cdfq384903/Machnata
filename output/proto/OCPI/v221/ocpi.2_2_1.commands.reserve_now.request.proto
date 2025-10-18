@@ -1,0 +1,21 @@
+syntax = "proto3";
+package OCPI.v221;
+option go_package = "tmp/v221;OCPIv221";
+option csharp_namespace = "OCPI.v221";
+
+import "types/ocpi_2_2_1_commands_reserve_now_request_token.proto";
+
+message ocpi_2_2_1_commands_reserve_now_request {
+  // NOTE: This field is required by standard Spec.
+  string response_url = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v221.types.ocpi_2_2_1_commands_reserve_now_request_token token = 2;
+  // NOTE: This field is required by standard Spec.
+  string expiry_date = 3;
+  // NOTE: This field is required by standard Spec.
+  string reservation_id = 4;
+  // NOTE: This field is required by standard Spec.
+  string location_id = 5;
+  string evse_uid = 6;
+  string authorization_reference = 7;
+}

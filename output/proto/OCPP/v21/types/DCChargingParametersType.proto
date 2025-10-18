@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+
+message DCChargingParametersType {
+  double evMaxCurrent = 1;
+  double evMaxVoltage = 2;
+  double evMaxPower = 3;
+  double evEnergyCapacity = 4;
+  double energyAmount = 5;
+  int32 stateOfCharge = 6;
+  int32 fullSoC = 7;
+  int32 bulkSoC = 8;
+  OCPP.v21.types.CustomDataType customData = 9;
+}

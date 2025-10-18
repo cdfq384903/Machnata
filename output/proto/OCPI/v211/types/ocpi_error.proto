@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+
+message ocpi_error {
+  string data = 1;
+  int32 status_code = 2;
+  string status_message = 3;
+  string timestamp = 4;
+}

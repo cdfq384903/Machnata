@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.setchargingprofile_cschargingprofiles_chargingprofilekind_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum SetChargingProfile_csChargingProfiles_chargingProfileKind_enum {
+  SETCHARGINGPROFILE_CSCHARGINGPROFILES_CHARGINGPROFILEKIND_ENUM_UNSPECIFIED = 0;
+  Absolute = 1;
+  Recurring = 2;
+  Relative = 3;
+}

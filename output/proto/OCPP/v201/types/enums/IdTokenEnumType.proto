@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.idtokenenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum IdTokenEnumType {
+  IDTOKENENUMTYPE_UNSPECIFIED = 0;
+  Central = 1;
+  eMAID = 2;
+  ISO14443 = 3;
+  ISO15693 = 4;
+  KeyCode = 5;
+  Local = 6;
+  MacAddress = 7;
+  NoAuthorization = 8;
+}

@@ -1,0 +1,38 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/dateTime.proto";
+import "types/decimal.proto";
+import "types/string.proto";
+import "types/unsignedInt.proto";
+
+message Contract_ValuedItem {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept entityCodeableConcept = 4;
+  HL7.v600.types.Reference entityReference = 5;
+  HL7.v600.types.Identifier identifier = 6;
+  HL7.v600.types.dateTime effectiveTime = 7;
+  HL7.v600.types.Element shadow__effectiveTime = 8 [json_name = "_effectiveTime"];
+  HL7.v600.types.Quantity quantity = 9;
+  HL7.v600.types.Money unitPrice = 10;
+  HL7.v600.types.decimal factor = 11;
+  HL7.v600.types.Element shadow__factor = 12 [json_name = "_factor"];
+  HL7.v600.types.decimal points = 13;
+  HL7.v600.types.Element shadow__points = 14 [json_name = "_points"];
+  HL7.v600.types.Money net = 15;
+  HL7.v600.types.string payment = 16;
+  HL7.v600.types.Element shadow__payment = 17 [json_name = "_payment"];
+  HL7.v600.types.dateTime paymentDate = 18;
+  HL7.v600.types.Element shadow__paymentDate = 19 [json_name = "_paymentDate"];
+  HL7.v600.types.Reference responsible = 20;
+  HL7.v600.types.Reference recipient = 21;
+  repeated HL7.v600.types.string linkId = 22;
+  repeated HL7.v600.types.Element shadow__linkId = 23 [json_name = "_linkId"];
+  repeated HL7.v600.types.unsignedInt securityLabelNumber = 24;
+  repeated HL7.v600.types.Element shadow__securityLabelNumber = 25 [json_name = "_securityLabelNumber"];
+}

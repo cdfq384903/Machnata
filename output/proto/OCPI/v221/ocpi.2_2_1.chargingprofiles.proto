@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPI.v221;
+option go_package = "tmp/v221;OCPIv221";
+option csharp_namespace = "OCPI.v221";
+
+import "types/ocpi_2_2_1_chargingprofiles_charging_profile.proto";
+
+message ocpi_2_2_1_chargingprofiles {
+  // NOTE: This field is required by standard Spec.
+  OCPI.v221.types.ocpi_2_2_1_chargingprofiles_charging_profile charging_profile = 1;
+  // NOTE: This field is required by standard Spec.
+  string response_url = 2;
+}

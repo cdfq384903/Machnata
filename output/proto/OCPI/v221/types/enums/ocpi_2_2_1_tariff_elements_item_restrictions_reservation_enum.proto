@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPI.v221.types.enums.ocpi_2_2_1_tariff_elements_item_restrictions_reservation_enum;
+option go_package = "tmp/v221/types/enums;enums";
+option csharp_namespace = "OCPI.v221.types.enums";
+
+enum ocpi_2_2_1_tariff_elements_item_restrictions_reservation_enum {
+  OCPI_2_2_1_TARIFF_ELEMENTS_ITEM_RESTRICTIONS_RESERVATION_ENUM_UNSPECIFIED = 0;
+  RESERVATION = 1;
+  RESERVATION_EXPIRES = 2;
+}

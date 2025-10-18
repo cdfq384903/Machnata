@@ -1,0 +1,31 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Ingredient_ReferenceStrength.proto";
+import "types/string.proto";
+
+message Ingredient_Strength {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Ratio presentationRatio = 4;
+  HL7.v600.types.RatioRange presentationRatioRange = 5;
+  HL7.v600.types.CodeableConcept presentationCodeableConcept = 6;
+  HL7.v600.types.Quantity presentationQuantity = 7;
+  HL7.v600.types.string textPresentation = 8;
+  HL7.v600.types.Element shadow__textPresentation = 9 [json_name = "_textPresentation"];
+  HL7.v600.types.Ratio concentrationRatio = 10;
+  HL7.v600.types.RatioRange concentrationRatioRange = 11;
+  HL7.v600.types.CodeableConcept concentrationCodeableConcept = 12;
+  HL7.v600.types.Quantity concentrationQuantity = 13;
+  HL7.v600.types.string textConcentration = 14;
+  HL7.v600.types.Element shadow__textConcentration = 15 [json_name = "_textConcentration"];
+  HL7.v600.types.CodeableConcept basis = 16;
+  HL7.v600.types.string measurementPoint = 17;
+  HL7.v600.types.Element shadow__measurementPoint = 18 [json_name = "_measurementPoint"];
+  repeated HL7.v600.types.CodeableConcept country = 19;
+  repeated HL7.v600.types.Ingredient_ReferenceStrength referenceStrength = 20;
+}

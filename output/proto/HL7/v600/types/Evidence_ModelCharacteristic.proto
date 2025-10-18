@@ -1,0 +1,26 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Evidence_AttributeEstimate.proto";
+import "types/Evidence_Variable.proto";
+import "types/boolean.proto";
+import "types/string.proto";
+
+message Evidence_ModelCharacteristic {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept code = 4;
+  HL7.v600.types.Quantity valueQuantity = 5;
+  HL7.v600.types.Range valueRange = 6;
+  HL7.v600.types.CodeableConcept valueCodeableConcept = 7;
+  HL7.v600.types.boolean intended = 8;
+  HL7.v600.types.Element shadow__intended = 9 [json_name = "_intended"];
+  HL7.v600.types.boolean applied = 10;
+  HL7.v600.types.Element shadow__applied = 11 [json_name = "_applied"];
+  repeated HL7.v600.types.Evidence_Variable variable = 12;
+  repeated HL7.v600.types.Evidence_AttributeEstimate attribute = 13;
+}

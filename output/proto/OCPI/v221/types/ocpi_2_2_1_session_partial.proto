@@ -1,0 +1,26 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+
+message ocpi_2_2_1_session_partial {
+  string country_code = 1;
+  string party_id = 2;
+  string id = 3;
+  string start_date_time = 4;
+  string end_date_time = 5;
+  string kwh = 6;
+  string cdr_token = 7;
+  string auth_method = 8;
+  string authorization_reference = 9;
+  string location_id = 10;
+  string evse_uid = 11;
+  string connector_id = 12;
+  string meter_id = 13;
+  string currency = 14;
+  string charging_periods = 15;
+  string total_cost = 16;
+  string status = 17;
+  string last_updated = 18;
+}

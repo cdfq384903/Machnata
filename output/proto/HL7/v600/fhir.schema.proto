@@ -1,0 +1,8 @@
+syntax = "proto3";
+package HL7.v600;
+option go_package = "tmp/v600;HL7v600";
+option csharp_namespace = "HL7.v600";
+
+
+message fhir_schema {
+}

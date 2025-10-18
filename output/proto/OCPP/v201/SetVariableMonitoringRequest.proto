@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CustomDataType.proto";
+import "types/SetMonitoringDataType.proto";
+
+message SetVariableMonitoringRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  // NOTE: This field is required by standard Spec.
+  repeated OCPP.v201.types.SetMonitoringDataType setMonitoringData = 2;
+}

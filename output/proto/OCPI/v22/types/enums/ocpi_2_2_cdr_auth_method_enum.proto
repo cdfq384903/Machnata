@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPI.v22.types.enums.ocpi_2_2_cdr_auth_method_enum;
+option go_package = "tmp/v22/types/enums;enums";
+option csharp_namespace = "OCPI.v22.types.enums";
+
+enum ocpi_2_2_cdr_auth_method_enum {
+  OCPI_2_2_CDR_AUTH_METHOD_ENUM_UNSPECIFIED = 0;
+  AUTH_REQUEST = 1;
+  COMMAND = 2;
+  WHITELIST = 3;
+}

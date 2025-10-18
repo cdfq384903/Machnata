@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/NetworkConnectionProfileType.proto";
+
+message SetNetworkProfileRequest {
+  // NOTE: This field is required by standard Spec.
+  int32 configurationSlot = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.NetworkConnectionProfileType connectionData = 2;
+  OCPP.v21.types.CustomDataType customData = 3;
+}

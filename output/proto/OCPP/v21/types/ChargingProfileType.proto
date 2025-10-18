@@ -1,0 +1,28 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/ChargingScheduleType.proto";
+import "types/CustomDataType.proto";
+import "types/enums/ChargingProfileKindEnumType.proto";
+import "types/enums/ChargingProfilePurposeEnumType.proto";
+import "types/enums/RecurrencyKindEnumType.proto";
+
+message ChargingProfileType {
+  int32 id = 1;
+  int32 stackLevel = 2;
+  OCPP.v21.types.enums.chargingprofilepurposeenumtype.ChargingProfilePurposeEnumType chargingProfilePurpose = 3;
+  OCPP.v21.types.enums.chargingprofilekindenumtype.ChargingProfileKindEnumType chargingProfileKind = 4;
+  OCPP.v21.types.enums.recurrencykindenumtype.RecurrencyKindEnumType recurrencyKind = 5;
+  string validFrom = 6;
+  string validTo = 7;
+  string transactionId = 8;
+  int32 maxOfflineDuration = 9;
+  repeated OCPP.v21.types.ChargingScheduleType chargingSchedule = 10;
+  bool invalidAfterOfflineDuration = 11;
+  int32 dynUpdateInterval = 12;
+  string dynUpdateTime = 13;
+  string priceScheduleSignature = 14;
+  OCPP.v21.types.CustomDataType customData = 15;
+}

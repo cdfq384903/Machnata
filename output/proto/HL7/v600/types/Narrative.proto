@@ -1,0 +1,17 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/enums/Narrative_status_enum.proto";
+import "types/string.proto";
+import "types/xhtml.proto";
+
+message Narrative {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.enums.narrative_status_enum.Narrative_status_enum status = 3;
+  HL7.v600.types.Element shadow__status = 4 [json_name = "_status"];
+  HL7.v600.types.xhtml div = 5;
+}

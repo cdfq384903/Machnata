@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPI.v211.types.enums.ocpi_2_1_1_version_details_response_data_version_enum;
+option go_package = "tmp/v211/types/enums;enums";
+option csharp_namespace = "OCPI.v211.types.enums";
+
+enum ocpi_2_1_1_version_details_response_data_version_enum {
+  OCPI_2_1_1_VERSION_DETAILS_RESPONSE_DATA_VERSION_ENUM_UNSPECIFIED = 0;
+  _2_0 = 1;
+  _2_1 = 2;
+  _2_1_1 = 3;
+}

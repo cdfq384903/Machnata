@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.batteryswapeventenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum BatterySwapEventEnumType {
+  BATTERYSWAPEVENTENUMTYPE_UNSPECIFIED = 0;
+  BatteryIn = 1;
+  BatteryOut = 2;
+  BatteryOutTimeout = 3;
+}

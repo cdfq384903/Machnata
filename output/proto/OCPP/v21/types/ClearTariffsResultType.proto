@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/StatusInfoType.proto";
+import "types/enums/TariffClearStatusEnumType.proto";
+
+message ClearTariffsResultType {
+  OCPP.v21.types.StatusInfoType statusInfo = 1;
+  string tariffId = 2;
+  OCPP.v21.types.enums.tariffclearstatusenumtype.TariffClearStatusEnumType status = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

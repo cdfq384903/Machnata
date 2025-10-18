@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CustomDataType.proto";
+import "types/StatusInfoType.proto";
+import "types/enums/SendLocalListStatusEnumType.proto";
+
+message SendLocalListResponse {
+  OCPP.v201.types.CustomDataType customData = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v201.types.enums.sendlocalliststatusenumtype.SendLocalListStatusEnumType status = 2;
+  OCPP.v201.types.StatusInfoType statusInfo = 3;
+}

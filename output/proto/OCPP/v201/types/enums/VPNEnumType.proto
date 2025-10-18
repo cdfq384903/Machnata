@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.vpnenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum VPNEnumType {
+  VPNENUMTYPE_UNSPECIFIED = 0;
+  IKEv2 = 1;
+  IPSec = 2;
+  L2TP = 3;
+  PPTP = 4;
+}

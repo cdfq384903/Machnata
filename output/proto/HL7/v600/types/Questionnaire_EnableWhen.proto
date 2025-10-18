@@ -1,0 +1,35 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/string.proto";
+
+message Questionnaire_EnableWhen {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string question = 4;
+  HL7.v600.types.Element shadow__question = 5 [json_name = "_question"];
+  HL7.v600.types.code operator = 6;
+  HL7.v600.types.Element shadow__operator = 7 [json_name = "_operator"];
+  bool answerBoolean = 8;
+  HL7.v600.types.Element shadow__answerBoolean = 9 [json_name = "_answerBoolean"];
+  double answerDecimal = 10;
+  HL7.v600.types.Element shadow__answerDecimal = 11 [json_name = "_answerDecimal"];
+  double answerInteger = 12;
+  HL7.v600.types.Element shadow__answerInteger = 13 [json_name = "_answerInteger"];
+  string answerDate = 14;
+  HL7.v600.types.Element shadow__answerDate = 15 [json_name = "_answerDate"];
+  string answerDateTime = 16;
+  HL7.v600.types.Element shadow__answerDateTime = 17 [json_name = "_answerDateTime"];
+  string answerTime = 18;
+  HL7.v600.types.Element shadow__answerTime = 19 [json_name = "_answerTime"];
+  string answerString = 20;
+  HL7.v600.types.Element shadow__answerString = 21 [json_name = "_answerString"];
+  HL7.v600.types.Coding answerCoding = 22;
+  HL7.v600.types.Quantity answerQuantity = 23;
+  HL7.v600.types.Reference answerReference = 24;
+}

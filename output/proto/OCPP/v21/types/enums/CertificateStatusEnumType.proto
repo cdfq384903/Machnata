@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.certificatestatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum CertificateStatusEnumType {
+  CERTIFICATESTATUSENUMTYPE_UNSPECIFIED = 0;
+  Good = 1;
+  Revoked = 2;
+  Unknown = 3;
+  Failed = 4;
+}

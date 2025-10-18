@@ -1,0 +1,27 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/enums/ocpi_2_2_tariffs_response_data_item_type_enum.proto";
+import "types/ocpi_2_2_tariffs_response_data_item_elements_item.proto";
+import "types/ocpi_2_2_tariffs_response_data_item_energy_mix.proto";
+import "types/ocpi_2_2_tariffs_response_data_item_min_price.proto";
+import "types/ocpi_2_2_tariffs_response_data_item_tariff_alt_text_item.proto";
+
+message ocpi_2_2_tariffs_response_data_item {
+  string country_code = 1;
+  string party_id = 2;
+  string id = 3;
+  string currency = 4;
+  OCPI.v22.types.enums.ocpi_2_2_tariffs_response_data_item_type_enum.ocpi_2_2_tariffs_response_data_item_type_enum type = 5;
+  repeated OCPI.v22.types.ocpi_2_2_tariffs_response_data_item_tariff_alt_text_item tariff_alt_text = 6;
+  string tariff_alt_url = 7;
+  OCPI.v22.types.ocpi_2_2_tariffs_response_data_item_min_price min_price = 8;
+  string max_price = 9;
+  repeated OCPI.v22.types.ocpi_2_2_tariffs_response_data_item_elements_item elements = 10;
+  string start_date_time = 11;
+  string end_date_time = 12;
+  OCPI.v22.types.ocpi_2_2_tariffs_response_data_item_energy_mix energy_mix = 13;
+  string last_updated = 14;
+}

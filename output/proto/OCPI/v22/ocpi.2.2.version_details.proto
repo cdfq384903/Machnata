@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPI.v22;
+option go_package = "tmp/v22;OCPIv22";
+option csharp_namespace = "OCPI.v22";
+
+import "types/enums/ocpi_2_2_version_details_version_enum.proto";
+import "types/ocpi_2_2_version_details_endpoints_item.proto";
+
+message ocpi_2_2_version_details {
+  // NOTE: This field is required by standard Spec.
+  OCPI.v22.types.enums.ocpi_2_2_version_details_version_enum.ocpi_2_2_version_details_version_enum version = 1;
+  // NOTE: This field is required by standard Spec.
+  repeated OCPI.v22.types.ocpi_2_2_version_details_endpoints_item endpoints = 2;
+}

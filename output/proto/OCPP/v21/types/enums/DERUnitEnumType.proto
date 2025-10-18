@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.derunitenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum DERUnitEnumType {
+  DERUNITENUMTYPE_UNSPECIFIED = 0;
+  Not_Applicable = 1;
+  PctMaxW = 2;
+  PctMaxVar = 3;
+  PctWAvail = 4;
+  PctVarAvail = 5;
+  PctEffectiveV = 6;
+}

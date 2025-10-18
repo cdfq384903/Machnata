@@ -1,0 +1,23 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+import "types/enums/ocpi_2_2_1_tariff_elements_item_restrictions_reservation_enum.proto";
+
+message ocpi_2_2_1_tariff_elements_item_restrictions {
+  string start_time = 1;
+  string end_time = 2;
+  string start_date = 3;
+  string end_date = 4;
+  double min_kwh = 5;
+  double max_kwh = 6;
+  double min_current = 7;
+  double max_current = 8;
+  double min_power = 9;
+  double max_power = 10;
+  int32 min_duration = 11;
+  int32 max_duration = 12;
+  repeated string day_of_week = 13;
+  OCPI.v221.types.enums.ocpi_2_2_1_tariff_elements_item_restrictions_reservation_enum.ocpi_2_2_1_tariff_elements_item_restrictions_reservation_enum reservation = 14;
+}

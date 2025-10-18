@@ -1,0 +1,23 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/NutritionOrder_Nutrient.proto";
+import "types/NutritionOrder_Schedule.proto";
+import "types/NutritionOrder_Texture.proto";
+import "types/string.proto";
+
+message NutritionOrder_OralDiet {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  repeated HL7.v600.types.CodeableConcept type = 4;
+  HL7.v600.types.NutritionOrder_Schedule schedule = 5;
+  repeated HL7.v600.types.NutritionOrder_Nutrient nutrient = 6;
+  repeated HL7.v600.types.NutritionOrder_Texture texture = 7;
+  HL7.v600.types.string instruction = 8;
+  HL7.v600.types.Element shadow__instruction = 9 [json_name = "_instruction"];
+  HL7.v600.types.Quantity caloricDensity = 10;
+}

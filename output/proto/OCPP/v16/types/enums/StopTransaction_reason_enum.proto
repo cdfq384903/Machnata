@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.stoptransaction_reason_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum StopTransaction_reason_enum {
+  STOPTRANSACTION_REASON_ENUM_UNSPECIFIED = 0;
+  EmergencyStop = 1;
+  EVDisconnected = 2;
+  HardReset = 3;
+  Local = 4;
+  Other = 5;
+  PowerLoss = 6;
+  Reboot = 7;
+  Remote = 8;
+  SoftReset = 9;
+  UnlockCommand = 10;
+  DeAuthorized = 11;
+}

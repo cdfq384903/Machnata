@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPI.v22.types.enums.ocpi_2_2_commands_reserve_now_request_token_whitelist_enum;
+option go_package = "tmp/v22/types/enums;enums";
+option csharp_namespace = "OCPI.v22.types.enums";
+
+enum ocpi_2_2_commands_reserve_now_request_token_whitelist_enum {
+  OCPI_2_2_COMMANDS_RESERVE_NOW_REQUEST_TOKEN_WHITELIST_ENUM_UNSPECIFIED = 0;
+  ALWAYS = 1;
+  ALLOWED = 2;
+  ALLOWED_OFFLINE = 3;
+  NEVER = 4;
+}

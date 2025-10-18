@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.remotestarttransaction_chargingprofile_chargingschedule_chargingrateunit_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum RemoteStartTransaction_chargingProfile_chargingSchedule_chargingRateUnit_enum {
+  REMOTESTARTTRANSACTION_CHARGINGPROFILE_CHARGINGSCHEDULE_CHARGINGRATEUNIT_ENUM_UNSPECIFIED = 0;
+  A = 1;
+  W = 2;
+}

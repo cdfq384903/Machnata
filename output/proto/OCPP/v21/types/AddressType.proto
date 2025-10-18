@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+
+message AddressType {
+  string name = 1;
+  string address1 = 2;
+  string address2 = 3;
+  string city = 4;
+  string postalCode = 5;
+  string country = 6;
+  OCPP.v21.types.CustomDataType customData = 7;
+}

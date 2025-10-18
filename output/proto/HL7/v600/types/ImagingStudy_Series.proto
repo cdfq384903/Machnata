@@ -1,0 +1,35 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ImagingStudy_Instance.proto";
+import "types/ImagingStudy_Performer.proto";
+import "types/dateTime.proto";
+import "types/id.proto";
+import "types/string.proto";
+import "types/unsignedInt.proto";
+
+message ImagingStudy_Series {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.id uid = 4;
+  HL7.v600.types.Element shadow__uid = 5 [json_name = "_uid"];
+  HL7.v600.types.unsignedInt number = 6;
+  HL7.v600.types.Element shadow__number = 7 [json_name = "_number"];
+  HL7.v600.types.CodeableConcept modality = 8;
+  HL7.v600.types.string description = 9;
+  HL7.v600.types.Element shadow__description = 10 [json_name = "_description"];
+  HL7.v600.types.unsignedInt numberOfInstances = 11;
+  HL7.v600.types.Element shadow__numberOfInstances = 12 [json_name = "_numberOfInstances"];
+  repeated HL7.v600.types.Reference endpoint = 13;
+  HL7.v600.types.CodeableReference bodySite = 14;
+  HL7.v600.types.CodeableConcept laterality = 15;
+  repeated HL7.v600.types.Reference specimen = 16;
+  HL7.v600.types.dateTime started = 17;
+  HL7.v600.types.Element shadow__started = 18 [json_name = "_started"];
+  repeated HL7.v600.types.ImagingStudy_Performer performer = 19;
+  repeated HL7.v600.types.ImagingStudy_Instance instance = 20;
+}

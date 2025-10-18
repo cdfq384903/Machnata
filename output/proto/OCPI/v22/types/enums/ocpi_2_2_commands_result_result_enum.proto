@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPI.v22.types.enums.ocpi_2_2_commands_result_result_enum;
+option go_package = "tmp/v22/types/enums;enums";
+option csharp_namespace = "OCPI.v22.types.enums";
+
+enum ocpi_2_2_commands_result_result_enum {
+  OCPI_2_2_COMMANDS_RESULT_RESULT_ENUM_UNSPECIFIED = 0;
+  ACCEPTED = 1;
+  CANCELED_RESERVATION = 2;
+  EVSE_OCCUPIED = 3;
+  EVSE_INOPERATIVE = 4;
+  FAILED = 5;
+  NOT_SUPPORTED = 6;
+  REJECTED = 7;
+  TIMEOUT = 8;
+  UNKNOWN_RESERVATION = 9;
+}

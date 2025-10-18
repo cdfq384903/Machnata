@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/CustomDataType.proto";
+
+message RelativeTimeIntervalType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  int32 start = 2;
+  int32 duration = 3;
+}

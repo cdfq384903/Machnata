@@ -1,0 +1,38 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/id.proto";
+import "types/string.proto";
+import "types/unsignedInt.proto";
+
+message StructureMap_Source {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.id context = 4;
+  HL7.v600.types.Element shadow__context = 5 [json_name = "_context"];
+  HL7.v600.types.unsignedInt min = 6;
+  HL7.v600.types.Element shadow__min = 7 [json_name = "_min"];
+  HL7.v600.types.string max = 8;
+  HL7.v600.types.Element shadow__max = 9 [json_name = "_max"];
+  HL7.v600.types.string type = 10;
+  HL7.v600.types.Element shadow__type = 11 [json_name = "_type"];
+  HL7.v600.types.string defaultValue = 12;
+  HL7.v600.types.Element shadow__defaultValue = 13 [json_name = "_defaultValue"];
+  HL7.v600.types.string element = 14;
+  HL7.v600.types.Element shadow__element = 15 [json_name = "_element"];
+  HL7.v600.types.code listMode = 16;
+  HL7.v600.types.Element shadow__listMode = 17 [json_name = "_listMode"];
+  HL7.v600.types.id variable = 18;
+  HL7.v600.types.Element shadow__variable = 19 [json_name = "_variable"];
+  HL7.v600.types.string condition = 20;
+  HL7.v600.types.Element shadow__condition = 21 [json_name = "_condition"];
+  HL7.v600.types.string check = 22;
+  HL7.v600.types.Element shadow__check = 23 [json_name = "_check"];
+  HL7.v600.types.string logMessage = 24;
+  HL7.v600.types.Element shadow__logMessage = 25 [json_name = "_logMessage"];
+}

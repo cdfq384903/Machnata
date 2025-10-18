@@ -1,0 +1,39 @@
+{
+  "$ref": "#/definitions/ocpi.error",
+  "definitions": {
+    "ocpi.error": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status_code": {
+          "type": "integer",
+          "minimum": 2000,
+          "maximum": 4999
+        },
+        "status_message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "status_code",
+        "timestamp"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

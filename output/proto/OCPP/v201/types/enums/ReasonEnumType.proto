@@ -1,0 +1,27 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.reasonenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum ReasonEnumType {
+  REASONENUMTYPE_UNSPECIFIED = 0;
+  DeAuthorized = 1;
+  EmergencyStop = 2;
+  EnergyLimitReached = 3;
+  EVDisconnected = 4;
+  GroundFault = 5;
+  ImmediateReset = 6;
+  Local = 7;
+  LocalOutOfCredit = 8;
+  MasterPass = 9;
+  Other = 10;
+  OvercurrentFault = 11;
+  PowerLoss = 12;
+  PowerQuality = 13;
+  Reboot = 14;
+  Remote = 15;
+  SOCLimitReached = 16;
+  StoppedByEV = 17;
+  TimeLimitReached = 18;
+  Timeout = 19;
+}

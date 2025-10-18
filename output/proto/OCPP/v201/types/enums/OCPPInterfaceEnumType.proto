@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.ocppinterfaceenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum OCPPInterfaceEnumType {
+  OCPPINTERFACEENUMTYPE_UNSPECIFIED = 0;
+  Wired0 = 1;
+  Wired1 = 2;
+  Wired2 = 3;
+  Wired3 = 4;
+  Wireless0 = 5;
+  Wireless1 = 6;
+  Wireless2 = 7;
+  Wireless3 = 8;
+}

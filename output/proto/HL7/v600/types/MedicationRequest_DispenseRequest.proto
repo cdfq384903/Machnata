@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/MedicationRequest_InitialFill.proto";
+import "types/string.proto";
+import "types/unsignedInt.proto";
+
+message MedicationRequest_DispenseRequest {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.MedicationRequest_InitialFill initialFill = 4;
+  HL7.v600.types.Duration dispenseInterval = 5;
+  HL7.v600.types.Period validityPeriod = 6;
+  HL7.v600.types.unsignedInt numberOfRepeatsAllowed = 7;
+  HL7.v600.types.Element shadow__numberOfRepeatsAllowed = 8 [json_name = "_numberOfRepeatsAllowed"];
+  HL7.v600.types.Quantity quantity = 9;
+  HL7.v600.types.Duration expectedSupplyDuration = 10;
+  HL7.v600.types.Reference dispenser = 11;
+  repeated HL7.v600.types.Annotation dispenserInstruction = 12;
+  HL7.v600.types.CodeableConcept doseAdministrationAid = 13;
+}

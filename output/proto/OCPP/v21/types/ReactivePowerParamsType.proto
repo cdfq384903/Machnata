@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+
+message ReactivePowerParamsType {
+  double vRef = 1;
+  bool autonomousVRefEnable = 2;
+  double autonomousVRefTimeConstant = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

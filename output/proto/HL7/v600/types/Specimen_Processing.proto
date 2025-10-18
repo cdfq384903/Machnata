@@ -1,0 +1,23 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/string.proto";
+
+message Specimen_Processing {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string description = 4;
+  HL7.v600.types.Element shadow__description = 5 [json_name = "_description"];
+  HL7.v600.types.CodeableConcept method = 6;
+  HL7.v600.types.Reference performer = 7;
+  HL7.v600.types.Reference device = 8;
+  repeated HL7.v600.types.Reference additive = 9;
+  string timeDateTime = 10;
+  HL7.v600.types.Element shadow__timeDateTime = 11 [json_name = "_timeDateTime"];
+  HL7.v600.types.Period timePeriod = 12;
+  HL7.v600.types.Duration timeDuration = 13;
+}

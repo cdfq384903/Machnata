@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPI.v221.types.enums.ocpi_2_2_1_chargingprofiles_response_data_result_enum;
+option go_package = "tmp/v221/types/enums;enums";
+option csharp_namespace = "OCPI.v221.types.enums";
+
+enum ocpi_2_2_1_chargingprofiles_response_data_result_enum {
+  OCPI_2_2_1_CHARGINGPROFILES_RESPONSE_DATA_RESULT_ENUM_UNSPECIFIED = 0;
+  ACCEPTED = 1;
+  NOT_SUPPORTED = 2;
+  REJECTED = 3;
+  TOO_OFTEN = 4;
+  UNKNOWN_SESSION = 5;
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/ocpi_2_2_locations_response_data_item.proto";
+
+message ocpi_2_2_locations_response {
+  repeated OCPI.v22.types.ocpi_2_2_locations_response_data_item data = 1;
+  int32 status_code = 2;
+  string status_message = 3;
+  string timestamp = 4;
+}

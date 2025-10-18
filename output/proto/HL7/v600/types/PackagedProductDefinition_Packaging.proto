@@ -1,0 +1,31 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/PackagedProductDefinition_ContainedItem.proto";
+import "types/PackagedProductDefinition_Property.proto";
+import "types/ProductShelfLife.proto";
+import "types/boolean.proto";
+import "types/integer.proto";
+import "types/string.proto";
+
+message PackagedProductDefinition_Packaging {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  repeated HL7.v600.types.Identifier identifier = 4;
+  HL7.v600.types.CodeableConcept type = 5;
+  HL7.v600.types.boolean componentPart = 6;
+  HL7.v600.types.Element shadow__componentPart = 7 [json_name = "_componentPart"];
+  HL7.v600.types.integer quantity = 8;
+  HL7.v600.types.Element shadow__quantity = 9 [json_name = "_quantity"];
+  repeated HL7.v600.types.CodeableConcept material = 10;
+  repeated HL7.v600.types.CodeableConcept alternateMaterial = 11;
+  repeated HL7.v600.types.ProductShelfLife shelfLifeStorage = 12;
+  repeated HL7.v600.types.Reference manufacturer = 13;
+  repeated HL7.v600.types.PackagedProductDefinition_Property property = 14;
+  repeated HL7.v600.types.PackagedProductDefinition_ContainedItem containedItem = 15;
+  repeated HL7.v600.types.PackagedProductDefinition_Packaging packaging = 16;
+}

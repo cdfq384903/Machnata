@@ -1,0 +1,22 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message Evidence_Certainty {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.markdown description = 4;
+  HL7.v600.types.Element shadow__description = 5 [json_name = "_description"];
+  repeated HL7.v600.types.Annotation note = 6;
+  HL7.v600.types.CodeableConcept type = 7;
+  HL7.v600.types.CodeableConcept rating = 8;
+  repeated HL7.v600.types.string rater = 9;
+  repeated HL7.v600.types.Element shadow__rater = 10 [json_name = "_rater"];
+  repeated HL7.v600.types.Evidence_Certainty subcomponent = 11;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.changeavailability_type_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum ChangeAvailability_type_enum {
+  CHANGEAVAILABILITY_TYPE_ENUM_UNSPECIFIED = 0;
+  Inoperative = 1;
+  Operative = 2;
+}

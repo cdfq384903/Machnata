@@ -1,0 +1,20 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/string.proto";
+
+message RegulatedAuthorization_Case {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Identifier identifier = 4;
+  HL7.v600.types.CodeableConcept type = 5;
+  HL7.v600.types.CodeableConcept status = 6;
+  HL7.v600.types.Period datePeriod = 7;
+  string dateDateTime = 8;
+  HL7.v600.types.Element shadow__dateDateTime = 9 [json_name = "_dateDateTime"];
+  repeated HL7.v600.types.RegulatedAuthorization_Case application = 10;
+}

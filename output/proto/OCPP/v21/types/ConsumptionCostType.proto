@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CostType.proto";
+import "types/CustomDataType.proto";
+
+message ConsumptionCostType {
+  double startValue = 1;
+  repeated OCPP.v21.types.CostType cost = 2;
+  OCPP.v21.types.CustomDataType customData = 3;
+}

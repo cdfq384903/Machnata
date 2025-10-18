@@ -1,0 +1,21 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/BatteryDataType.proto";
+import "types/CustomDataType.proto";
+import "types/IdTokenType.proto";
+import "types/enums/BatterySwapEventEnumType.proto";
+
+message BatterySwapRequest {
+  // NOTE: This field is required by standard Spec.
+  repeated OCPP.v21.types.BatteryDataType batteryData = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.enums.batteryswapeventenumtype.BatterySwapEventEnumType eventType = 2;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.IdTokenType idToken = 3;
+  // NOTE: This field is required by standard Spec.
+  int32 requestId = 4;
+  OCPP.v21.types.CustomDataType customData = 5;
+}

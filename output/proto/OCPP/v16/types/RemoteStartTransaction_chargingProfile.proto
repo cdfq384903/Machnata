@@ -1,0 +1,21 @@
+syntax = "proto3";
+package OCPP.v16.types;
+option go_package = "tmp/v16/types;types";
+option csharp_namespace = "OCPP.v16.types";
+
+import "types/RemoteStartTransaction_chargingProfile_chargingSchedule.proto";
+import "types/enums/RemoteStartTransaction_chargingProfile_chargingProfileKind_enum.proto";
+import "types/enums/RemoteStartTransaction_chargingProfile_chargingProfilePurpose_enum.proto";
+import "types/enums/RemoteStartTransaction_chargingProfile_recurrencyKind_enum.proto";
+
+message RemoteStartTransaction_chargingProfile {
+  int32 chargingProfileId = 1;
+  int32 transactionId = 2;
+  int32 stackLevel = 3;
+  OCPP.v16.types.enums.remotestarttransaction_chargingprofile_chargingprofilepurpose_enum.RemoteStartTransaction_chargingProfile_chargingProfilePurpose_enum chargingProfilePurpose = 4;
+  OCPP.v16.types.enums.remotestarttransaction_chargingprofile_chargingprofilekind_enum.RemoteStartTransaction_chargingProfile_chargingProfileKind_enum chargingProfileKind = 5;
+  OCPP.v16.types.enums.remotestarttransaction_chargingprofile_recurrencykind_enum.RemoteStartTransaction_chargingProfile_recurrencyKind_enum recurrencyKind = 6;
+  string validFrom = 7;
+  string validTo = 8;
+  OCPP.v16.types.RemoteStartTransaction_chargingProfile_chargingSchedule chargingSchedule = 9;
+}

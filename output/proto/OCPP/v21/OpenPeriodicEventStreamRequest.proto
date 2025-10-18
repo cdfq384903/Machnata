@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/ConstantStreamDataType.proto";
+import "types/CustomDataType.proto";
+
+message OpenPeriodicEventStreamRequest {
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.ConstantStreamDataType constantStreamData = 1;
+  OCPP.v21.types.CustomDataType customData = 2;
+}

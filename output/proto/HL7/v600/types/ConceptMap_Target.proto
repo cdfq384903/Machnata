@@ -1,0 +1,29 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ConceptMap_DependsOn.proto";
+import "types/ConceptMap_Property1.proto";
+import "types/canonical.proto";
+import "types/code.proto";
+import "types/string.proto";
+
+message ConceptMap_Target {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.code code = 4;
+  HL7.v600.types.Element shadow__code = 5 [json_name = "_code"];
+  HL7.v600.types.string display = 6;
+  HL7.v600.types.Element shadow__display = 7 [json_name = "_display"];
+  HL7.v600.types.canonical valueSet = 8;
+  HL7.v600.types.code relationship = 9;
+  HL7.v600.types.Element shadow__relationship = 10 [json_name = "_relationship"];
+  HL7.v600.types.string comment = 11;
+  HL7.v600.types.Element shadow__comment = 12 [json_name = "_comment"];
+  repeated HL7.v600.types.ConceptMap_Property1 property = 13;
+  repeated HL7.v600.types.ConceptMap_DependsOn dependsOn = 14;
+  repeated HL7.v600.types.ConceptMap_DependsOn product = 15;
+}

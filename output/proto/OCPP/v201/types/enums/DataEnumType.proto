@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.dataenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum DataEnumType {
+  DATAENUMTYPE_UNSPECIFIED = 0;
+  string = 1;
+  decimal = 2;
+  integer = 3;
+  dateTime = 4;
+  boolean = 5;
+  OptionList = 6;
+  SequenceList = 7;
+  MemberList = 8;
+}

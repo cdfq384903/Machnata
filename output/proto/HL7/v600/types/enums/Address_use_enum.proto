@@ -1,0 +1,13 @@
+syntax = "proto3";
+package HL7.v600.types.enums.address_use_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum Address_use_enum {
+  ADDRESS_USE_ENUM_UNSPECIFIED = 0;
+  home = 1;
+  work = 2;
+  temp = 3;
+  old = 4;
+  billing = 5;
+}

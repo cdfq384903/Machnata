@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.connectorstatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum ConnectorStatusEnumType {
+  CONNECTORSTATUSENUMTYPE_UNSPECIFIED = 0;
+  Available = 1;
+  Occupied = 2;
+  Reserved = 3;
+  Unavailable = 4;
+  Faulted = 5;
+}

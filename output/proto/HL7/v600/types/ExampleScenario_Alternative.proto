@@ -1,0 +1,51 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ExampleScenario_Operation.proto";
+import "types/boolean.proto";
+import "types/canonical.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message ExampleScenario_Alternative {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string title = 4;
+  HL7.v600.types.Element shadow__title = 5 [json_name = "_title"];
+  HL7.v600.types.markdown description = 6;
+  HL7.v600.types.Element shadow__description = 7 [json_name = "_description"];
+  repeated HL7.v600.types.ExampleScenario_Step step = 8;
+}
+
+message ExampleScenario_Step {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string number = 4;
+  HL7.v600.types.Element shadow__number = 5 [json_name = "_number"];
+  HL7.v600.types.ExampleScenario_Process process = 6;
+  HL7.v600.types.canonical workflow = 7;
+  HL7.v600.types.ExampleScenario_Operation operation = 8;
+  repeated HL7.v600.types.ExampleScenario_Alternative alternative = 9;
+  HL7.v600.types.boolean pause = 10;
+  HL7.v600.types.Element shadow__pause = 11 [json_name = "_pause"];
+}
+
+message ExampleScenario_Process {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string title = 4;
+  HL7.v600.types.Element shadow__title = 5 [json_name = "_title"];
+  HL7.v600.types.markdown description = 6;
+  HL7.v600.types.Element shadow__description = 7 [json_name = "_description"];
+  HL7.v600.types.markdown preConditions = 8;
+  HL7.v600.types.Element shadow__preConditions = 9 [json_name = "_preConditions"];
+  HL7.v600.types.markdown postConditions = 10;
+  HL7.v600.types.Element shadow__postConditions = 11 [json_name = "_postConditions"];
+  repeated HL7.v600.types.ExampleScenario_Step step = 12;
+}

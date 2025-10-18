@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/enums/ocpi_2_1_1_cdrs_response_data_item_tariffs_item_elements_item_price_components_item_type_enum.proto";
+
+message ocpi_2_1_1_cdrs_response_data_item_tariffs_item_elements_item_price_components_item {
+  OCPI.v211.types.enums.ocpi_2_1_1_cdrs_response_data_item_tariffs_item_elements_item_price_components_item_type_enum.ocpi_2_1_1_cdrs_response_data_item_tariffs_item_elements_item_price_components_item_type_enum type = 1;
+  double price = 2;
+  int32 step_size = 3;
+}

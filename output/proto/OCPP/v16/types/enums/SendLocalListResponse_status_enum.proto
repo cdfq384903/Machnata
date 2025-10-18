@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.sendlocallistresponse_status_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum SendLocalListResponse_status_enum {
+  SENDLOCALLISTRESPONSE_STATUS_ENUM_UNSPECIFIED = 0;
+  Accepted = 1;
+  Failed = 2;
+  NotSupported = 3;
+  VersionMismatch = 4;
+}

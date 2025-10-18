@@ -1,0 +1,22 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/string.proto";
+
+message SubstanceSourceMaterial_Hybrid {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string maternalOrganismId = 4;
+  HL7.v600.types.Element shadow__maternalOrganismId = 5 [json_name = "_maternalOrganismId"];
+  HL7.v600.types.string maternalOrganismName = 6;
+  HL7.v600.types.Element shadow__maternalOrganismName = 7 [json_name = "_maternalOrganismName"];
+  HL7.v600.types.string paternalOrganismId = 8;
+  HL7.v600.types.Element shadow__paternalOrganismId = 9 [json_name = "_paternalOrganismId"];
+  HL7.v600.types.string paternalOrganismName = 10;
+  HL7.v600.types.Element shadow__paternalOrganismName = 11 [json_name = "_paternalOrganismName"];
+  HL7.v600.types.CodeableConcept hybridType = 12;
+}

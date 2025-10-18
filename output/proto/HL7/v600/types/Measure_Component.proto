@@ -1,0 +1,21 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/canonical.proto";
+import "types/decimal.proto";
+import "types/string.proto";
+
+message Measure_Component {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.canonical measure = 4;
+  HL7.v600.types.Element shadow__measure = 5 [json_name = "_measure"];
+  HL7.v600.types.string groupId = 6;
+  HL7.v600.types.Element shadow__groupId = 7 [json_name = "_groupId"];
+  HL7.v600.types.decimal weight = 8;
+  HL7.v600.types.Element shadow__weight = 9 [json_name = "_weight"];
+}

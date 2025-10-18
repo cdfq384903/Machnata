@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.uploadlogstatusenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum UploadLogStatusEnumType {
+  UPLOADLOGSTATUSENUMTYPE_UNSPECIFIED = 0;
+  BadMessage = 1;
+  Idle = 2;
+  NotSupportedOperation = 3;
+  PermissionDenied = 4;
+  Uploaded = 5;
+  UploadFailure = 6;
+  Uploading = 7;
+  AcceptedCanceled = 8;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/canonical.proto";
+import "types/string.proto";
+
+message TestScript_Scope {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.canonical artifact = 4;
+  HL7.v600.types.CodeableConcept conformance = 5;
+  HL7.v600.types.CodeableConcept phase = 6;
+}

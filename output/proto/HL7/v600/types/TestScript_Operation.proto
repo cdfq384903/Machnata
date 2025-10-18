@@ -1,0 +1,51 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/TestScript_RequestHeader.proto";
+import "types/boolean.proto";
+import "types/code.proto";
+import "types/id.proto";
+import "types/integer.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message TestScript_Operation {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Coding type = 4;
+  HL7.v600.types.uri resource = 5;
+  HL7.v600.types.Element shadow__resource = 6 [json_name = "_resource"];
+  HL7.v600.types.string label = 7;
+  HL7.v600.types.Element shadow__label = 8 [json_name = "_label"];
+  HL7.v600.types.string description = 9;
+  HL7.v600.types.Element shadow__description = 10 [json_name = "_description"];
+  HL7.v600.types.code accept = 11;
+  HL7.v600.types.Element shadow__accept = 12 [json_name = "_accept"];
+  HL7.v600.types.code contentType = 13;
+  HL7.v600.types.Element shadow__contentType = 14 [json_name = "_contentType"];
+  HL7.v600.types.integer destination = 15;
+  HL7.v600.types.Element shadow__destination = 16 [json_name = "_destination"];
+  HL7.v600.types.boolean encodeRequestUrl = 17;
+  HL7.v600.types.Element shadow__encodeRequestUrl = 18 [json_name = "_encodeRequestUrl"];
+  HL7.v600.types.code method = 19;
+  HL7.v600.types.Element shadow__method = 20 [json_name = "_method"];
+  HL7.v600.types.integer origin = 21;
+  HL7.v600.types.Element shadow__origin = 22 [json_name = "_origin"];
+  HL7.v600.types.string params = 23;
+  HL7.v600.types.Element shadow__params = 24 [json_name = "_params"];
+  repeated HL7.v600.types.TestScript_RequestHeader requestHeader = 25;
+  HL7.v600.types.id requestId = 26;
+  HL7.v600.types.Element shadow__requestId = 27 [json_name = "_requestId"];
+  HL7.v600.types.id responseId = 28;
+  HL7.v600.types.Element shadow__responseId = 29 [json_name = "_responseId"];
+  HL7.v600.types.id sourceId = 30;
+  HL7.v600.types.Element shadow__sourceId = 31 [json_name = "_sourceId"];
+  HL7.v600.types.id targetId = 32;
+  HL7.v600.types.Element shadow__targetId = 33 [json_name = "_targetId"];
+  HL7.v600.types.string url = 34;
+  HL7.v600.types.Element shadow__url = 35 [json_name = "_url"];
+}

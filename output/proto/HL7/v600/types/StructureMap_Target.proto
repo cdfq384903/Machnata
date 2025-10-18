@@ -1,0 +1,29 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/StructureMap_Parameter.proto";
+import "types/code.proto";
+import "types/id.proto";
+import "types/string.proto";
+
+message StructureMap_Target {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string context = 4;
+  HL7.v600.types.Element shadow__context = 5 [json_name = "_context"];
+  HL7.v600.types.string element = 6;
+  HL7.v600.types.Element shadow__element = 7 [json_name = "_element"];
+  HL7.v600.types.id variable = 8;
+  HL7.v600.types.Element shadow__variable = 9 [json_name = "_variable"];
+  repeated HL7.v600.types.code listMode = 10;
+  repeated HL7.v600.types.Element shadow__listMode = 11 [json_name = "_listMode"];
+  HL7.v600.types.id listRuleId = 12;
+  HL7.v600.types.Element shadow__listRuleId = 13 [json_name = "_listRuleId"];
+  HL7.v600.types.code transform = 14;
+  HL7.v600.types.Element shadow__transform = 15 [json_name = "_transform"];
+  repeated HL7.v600.types.StructureMap_Parameter parameter = 16;
+}

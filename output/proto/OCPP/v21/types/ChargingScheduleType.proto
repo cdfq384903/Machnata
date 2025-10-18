@@ -1,0 +1,31 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/AbsolutePriceScheduleType.proto";
+import "types/ChargingSchedulePeriodType.proto";
+import "types/CustomDataType.proto";
+import "types/LimitAtSoCType.proto";
+import "types/PriceLevelScheduleType.proto";
+import "types/SalesTariffType.proto";
+import "types/enums/ChargingRateUnitEnumType.proto";
+
+message ChargingScheduleType {
+  int32 id = 1;
+  OCPP.v21.types.LimitAtSoCType limitAtSoC = 2;
+  string startSchedule = 3;
+  int32 duration = 4;
+  OCPP.v21.types.enums.chargingrateunitenumtype.ChargingRateUnitEnumType chargingRateUnit = 5;
+  double minChargingRate = 6;
+  double powerTolerance = 7;
+  int32 signatureId = 8;
+  string digestValue = 9;
+  bool useLocalTime = 10;
+  repeated OCPP.v21.types.ChargingSchedulePeriodType chargingSchedulePeriod = 11;
+  int32 randomizedDelay = 12;
+  OCPP.v21.types.SalesTariffType salesTariff = 13;
+  OCPP.v21.types.AbsolutePriceScheduleType absolutePriceSchedule = 14;
+  OCPP.v21.types.PriceLevelScheduleType priceLevelSchedule = 15;
+  OCPP.v21.types.CustomDataType customData = 16;
+}

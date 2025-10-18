@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/ModemType.proto";
+
+message ChargingStationType {
+  string serialNumber = 1;
+  string model = 2;
+  OCPP.v21.types.ModemType modem = 3;
+  string vendorName = 4;
+  string firmwareVersion = 5;
+  OCPP.v21.types.CustomDataType customData = 6;
+}

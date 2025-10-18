@@ -1,0 +1,33 @@
+syntax = "proto3";
+package OCPI.v211.types.enums.ocpi_2_1_1_evse_response_data_connectors_item_standard_enum;
+option go_package = "tmp/v211/types/enums;enums";
+option csharp_namespace = "OCPI.v211.types.enums";
+
+enum ocpi_2_1_1_evse_response_data_connectors_item_standard_enum {
+  OCPI_2_1_1_EVSE_RESPONSE_DATA_CONNECTORS_ITEM_STANDARD_ENUM_UNSPECIFIED = 0;
+  CHADEMO = 1;
+  DOMESTIC_A = 2;
+  DOMESTIC_B = 3;
+  DOMESTIC_C = 4;
+  DOMESTIC_D = 5;
+  DOMESTIC_E = 6;
+  DOMESTIC_F = 7;
+  DOMESTIC_G = 8;
+  DOMESTIC_H = 9;
+  DOMESTIC_I = 10;
+  DOMESTIC_J = 11;
+  DOMESTIC_K = 12;
+  DOMESTIC_L = 13;
+  IEC_60309_2_single_16 = 14;
+  IEC_60309_2_three_16 = 15;
+  IEC_60309_2_three_32 = 16;
+  IEC_60309_2_three_64 = 17;
+  IEC_62196_T1 = 18;
+  IEC_62196_T1_COMBO = 19;
+  IEC_62196_T2 = 20;
+  IEC_62196_T2_COMBO = 21;
+  IEC_62196_T3A = 22;
+  IEC_62196_T3C = 23;
+  TESLA_R = 24;
+  TESLA_S = 25;
+}

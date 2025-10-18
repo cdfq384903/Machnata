@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPI.v22.types.enums.ocpi_2_2_session_status_enum;
+option go_package = "tmp/v22/types/enums;enums";
+option csharp_namespace = "OCPI.v22.types.enums";
+
+enum ocpi_2_2_session_status_enum {
+  OCPI_2_2_SESSION_STATUS_ENUM_UNSPECIFIED = 0;
+  ACTIVE = 1;
+  COMPLETED = 2;
+  INVALID = 3;
+  PENDING = 4;
+  RESERVATION = 5;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+message ocpi_2_2_location_operator {
+  string name = 1;
+  string website = 2;
+  string logo = 3;
+}

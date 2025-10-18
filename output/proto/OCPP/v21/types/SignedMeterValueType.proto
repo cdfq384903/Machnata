@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+
+message SignedMeterValueType {
+  string signedMeterData = 1;
+  string signingMethod = 2;
+  string encodingMethod = 3;
+  string publicKey = 4;
+  OCPP.v21.types.CustomDataType customData = 5;
+}

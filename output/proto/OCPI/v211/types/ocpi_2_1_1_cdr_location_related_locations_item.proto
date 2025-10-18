@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/ocpi_2_1_1_cdr_location_related_locations_item_name.proto";
+
+message ocpi_2_1_1_cdr_location_related_locations_item {
+  string latitude = 1;
+  string longitude = 2;
+  OCPI.v211.types.ocpi_2_1_1_cdr_location_related_locations_item_name name = 3;
+}

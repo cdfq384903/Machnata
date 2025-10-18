@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/ChargingStateEnumType.proto";
+import "types/enums/ReasonEnumType.proto";
+
+message TransactionType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  string transactionId = 2;
+  OCPP.v201.types.enums.chargingstateenumtype.ChargingStateEnumType chargingState = 3;
+  int32 timeSpentCharging = 4;
+  OCPP.v201.types.enums.reasonenumtype.ReasonEnumType stoppedReason = 5;
+  int32 remoteStartId = 6;
+}

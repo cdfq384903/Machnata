@@ -1,0 +1,20 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/string.proto";
+
+message Medication_Ingredient {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableReference item = 4;
+  HL7.v600.types.boolean isActive = 5;
+  HL7.v600.types.Element shadow__isActive = 6 [json_name = "_isActive"];
+  HL7.v600.types.Ratio strengthRatio = 7;
+  HL7.v600.types.CodeableConcept strengthCodeableConcept = 8;
+  HL7.v600.types.Quantity strengthQuantity = 9;
+}

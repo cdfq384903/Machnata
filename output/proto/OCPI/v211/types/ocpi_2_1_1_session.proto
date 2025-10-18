@@ -1,0 +1,25 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/enums/ocpi_2_1_1_session_auth_method_enum.proto";
+import "types/enums/ocpi_2_1_1_session_status_enum.proto";
+import "types/ocpi_2_1_1_session_charging_periods_item.proto";
+import "types/ocpi_2_1_1_session_location.proto";
+
+message ocpi_2_1_1_session {
+  string id = 1;
+  string start_datetime = 2;
+  string end_datetime = 3;
+  double kwh = 4;
+  string auth_id = 5;
+  OCPI.v211.types.enums.ocpi_2_1_1_session_auth_method_enum.ocpi_2_1_1_session_auth_method_enum auth_method = 6;
+  OCPI.v211.types.ocpi_2_1_1_session_location location = 7;
+  string meter_id = 8;
+  string currency = 9;
+  repeated OCPI.v211.types.ocpi_2_1_1_session_charging_periods_item charging_periods = 10;
+  double total_cost = 11;
+  OCPI.v211.types.enums.ocpi_2_1_1_session_status_enum.ocpi_2_1_1_session_status_enum status = 12;
+  string last_updated = 13;
+}

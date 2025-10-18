@@ -1,0 +1,58 @@
+{
+  "$ref": "#/definitions/ocpi.2_2_1.versions.response",
+  "definitions": {
+    "ocpi.2_2_1.versions.response": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "version": {
+                "type": "string",
+                "enum": [
+                  "2.0",
+                  "2.1",
+                  "2.1.1",
+                  "2.2.1"
+                ]
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "version",
+              "url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "status_code": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 1999
+        },
+        "status_message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "data",
+        "status_code",
+        "timestamp"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

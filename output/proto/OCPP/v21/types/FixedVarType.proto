@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/DERUnitEnumType.proto";
+
+message FixedVarType {
+  int32 priority = 1;
+  double setpoint = 2;
+  OCPP.v21.types.enums.derunitenumtype.DERUnitEnumType unit = 3;
+  string startTime = 4;
+  double duration = 5;
+  OCPP.v21.types.CustomDataType customData = 6;
+}

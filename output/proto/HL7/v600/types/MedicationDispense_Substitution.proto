@@ -1,0 +1,19 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/string.proto";
+
+message MedicationDispense_Substitution {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.boolean wasSubstituted = 4;
+  HL7.v600.types.Element shadow__wasSubstituted = 5 [json_name = "_wasSubstituted"];
+  HL7.v600.types.CodeableConcept type = 6;
+  repeated HL7.v600.types.CodeableConcept reason = 7;
+  HL7.v600.types.Reference responsibleParty = 8;
+}

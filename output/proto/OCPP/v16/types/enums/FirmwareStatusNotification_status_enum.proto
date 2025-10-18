@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.firmwarestatusnotification_status_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum FirmwareStatusNotification_status_enum {
+  FIRMWARESTATUSNOTIFICATION_STATUS_ENUM_UNSPECIFIED = 0;
+  Downloaded = 1;
+  DownloadFailed = 2;
+  Downloading = 3;
+  Idle = 4;
+  InstallationFailed = 5;
+  Installing = 6;
+  Installed = 7;
+}

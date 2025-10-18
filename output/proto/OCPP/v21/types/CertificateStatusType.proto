@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CertificateHashDataType.proto";
+import "types/CustomDataType.proto";
+import "types/enums/CertificateStatusEnumType.proto";
+import "types/enums/CertificateStatusSourceEnumType.proto";
+
+message CertificateStatusType {
+  OCPP.v21.types.CertificateHashDataType certificateHashData = 1;
+  OCPP.v21.types.enums.certificatestatussourceenumtype.CertificateStatusSourceEnumType source = 2;
+  OCPP.v21.types.enums.certificatestatusenumtype.CertificateStatusEnumType status = 3;
+  string nextUpdate = 4;
+  OCPP.v21.types.CustomDataType customData = 5;
+}

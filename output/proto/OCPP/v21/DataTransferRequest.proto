@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+
+message DataTransferRequest {
+  string messageId = 1;
+  string data = 2;
+  // NOTE: This field is required by standard Spec.
+  string vendorId = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

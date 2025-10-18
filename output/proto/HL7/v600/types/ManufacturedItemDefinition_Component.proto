@@ -1,0 +1,21 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ManufacturedItemDefinition_Constituent.proto";
+import "types/ManufacturedItemDefinition_Property.proto";
+import "types/string.proto";
+
+message ManufacturedItemDefinition_Component {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept type = 4;
+  repeated HL7.v600.types.CodeableConcept function = 5;
+  repeated HL7.v600.types.Quantity amount = 6;
+  repeated HL7.v600.types.ManufacturedItemDefinition_Constituent constituent = 7;
+  repeated HL7.v600.types.ManufacturedItemDefinition_Property property = 8;
+  repeated HL7.v600.types.ManufacturedItemDefinition_Component component = 9;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v16.types;
+option go_package = "tmp/v16/types;types";
+option csharp_namespace = "OCPP.v16.types";
+
+import "types/GetCompositeScheduleResponse_chargingSchedule_chargingSchedulePeriod_item.proto";
+import "types/enums/GetCompositeScheduleResponse_chargingSchedule_chargingRateUnit_enum.proto";
+
+message GetCompositeScheduleResponse_chargingSchedule {
+  int32 duration = 1;
+  string startSchedule = 2;
+  OCPP.v16.types.enums.getcompositescheduleresponse_chargingschedule_chargingrateunit_enum.GetCompositeScheduleResponse_chargingSchedule_chargingRateUnit_enum chargingRateUnit = 3;
+  repeated OCPP.v16.types.GetCompositeScheduleResponse_chargingSchedule_chargingSchedulePeriod_item chargingSchedulePeriod = 4;
+  double minChargingRate = 5;
+}

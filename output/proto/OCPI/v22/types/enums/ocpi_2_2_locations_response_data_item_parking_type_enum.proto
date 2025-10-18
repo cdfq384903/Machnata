@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPI.v22.types.enums.ocpi_2_2_locations_response_data_item_parking_type_enum;
+option go_package = "tmp/v22/types/enums;enums";
+option csharp_namespace = "OCPI.v22.types.enums";
+
+enum ocpi_2_2_locations_response_data_item_parking_type_enum {
+  OCPI_2_2_LOCATIONS_RESPONSE_DATA_ITEM_PARKING_TYPE_ENUM_UNSPECIFIED = 0;
+  ALONG_MOTORWAY = 1;
+  ON_STREET = 2;
+  ON_DRIVEWAY = 3;
+  PARKING_GARAGE = 4;
+  UNDERGROUND_GARAGE = 5;
+  PARKING_LOT = 6;
+}

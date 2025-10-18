@@ -1,0 +1,10 @@
+syntax = "proto3";
+package HL7.v600.types.enums.datarequirement_sort_direction_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum DataRequirement_Sort_direction_enum {
+  DATAREQUIREMENT_SORT_DIRECTION_ENUM_UNSPECIFIED = 0;
+  ascending = 1;
+  descending = 2;
+}

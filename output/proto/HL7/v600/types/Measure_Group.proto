@@ -1,0 +1,44 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Measure_Component.proto";
+import "types/Measure_Population.proto";
+import "types/Measure_Stratifier.proto";
+import "types/canonical.proto";
+import "types/code.proto";
+import "types/markdown.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+
+message Measure_Group {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string linkId = 4;
+  HL7.v600.types.Element shadow__linkId = 5 [json_name = "_linkId"];
+  HL7.v600.types.CodeableConcept code = 6;
+  HL7.v600.types.markdown description = 7;
+  HL7.v600.types.Element shadow__description = 8 [json_name = "_description"];
+  repeated HL7.v600.types.CodeableConcept type = 9;
+  HL7.v600.types.CodeableConcept subjectCodeableConcept = 10;
+  HL7.v600.types.Reference subjectReference = 11;
+  HL7.v600.types.code basis = 12;
+  HL7.v600.types.Element shadow__basis = 13 [json_name = "_basis"];
+  HL7.v600.types.CodeableConcept scoring = 14;
+  HL7.v600.types.CodeableConcept scoringUnit = 15;
+  HL7.v600.types.positiveInt scoringPrecision = 16;
+  HL7.v600.types.Element shadow__scoringPrecision = 17 [json_name = "_scoringPrecision"];
+  HL7.v600.types.CodeableConcept compositeScoring = 18;
+  repeated HL7.v600.types.Measure_Component component = 19;
+  HL7.v600.types.markdown rateAggregation = 20;
+  HL7.v600.types.Element shadow__rateAggregation = 21 [json_name = "_rateAggregation"];
+  HL7.v600.types.CodeableConcept improvementNotation = 22;
+  HL7.v600.types.markdown improvementNotationGuidance = 23;
+  HL7.v600.types.Element shadow__improvementNotationGuidance = 24 [json_name = "_improvementNotationGuidance"];
+  repeated HL7.v600.types.canonical library = 25;
+  repeated HL7.v600.types.Measure_Population population = 26;
+  repeated HL7.v600.types.Measure_Stratifier stratifier = 27;
+}

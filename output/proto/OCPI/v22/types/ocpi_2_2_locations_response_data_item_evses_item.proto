@@ -1,0 +1,25 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/enums/ocpi_2_2_locations_response_data_item_evses_item_status_enum.proto";
+import "types/ocpi_2_2_locations_response_data_item_evses_item_connectors_item.proto";
+import "types/ocpi_2_2_locations_response_data_item_evses_item_images_item.proto";
+import "types/ocpi_2_2_locations_response_data_item_evses_item_status_schedule_item.proto";
+
+message ocpi_2_2_locations_response_data_item_evses_item {
+  string uid = 1;
+  string evse_id = 2;
+  OCPI.v22.types.enums.ocpi_2_2_locations_response_data_item_evses_item_status_enum.ocpi_2_2_locations_response_data_item_evses_item_status_enum status = 3;
+  repeated OCPI.v22.types.ocpi_2_2_locations_response_data_item_evses_item_status_schedule_item status_schedule = 4;
+  repeated string capabilities = 5;
+  repeated OCPI.v22.types.ocpi_2_2_locations_response_data_item_evses_item_connectors_item connectors = 6;
+  string floor_level = 7;
+  string coordinates = 8;
+  string physical_reference = 9;
+  repeated string directions = 10;
+  repeated string parking_restrictions = 11;
+  repeated OCPI.v22.types.ocpi_2_2_locations_response_data_item_evses_item_images_item images = 12;
+  string last_updated = 13;
+}

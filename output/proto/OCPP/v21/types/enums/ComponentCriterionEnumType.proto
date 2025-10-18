@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.componentcriterionenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum ComponentCriterionEnumType {
+  COMPONENTCRITERIONENUMTYPE_UNSPECIFIED = 0;
+  Active = 1;
+  Available = 2;
+  Enabled = 3;
+  Problem = 4;
+}

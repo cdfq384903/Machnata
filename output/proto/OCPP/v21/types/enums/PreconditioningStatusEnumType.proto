@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.preconditioningstatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum PreconditioningStatusEnumType {
+  PRECONDITIONINGSTATUSENUMTYPE_UNSPECIFIED = 0;
+  Unknown = 1;
+  Ready = 2;
+  NotReady = 3;
+  Preconditioning = 4;
+}

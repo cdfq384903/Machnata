@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.ocppversionenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum OCPPVersionEnumType {
+  OCPPVERSIONENUMTYPE_UNSPECIFIED = 0;
+  OCPP12 = 1;
+  OCPP15 = 2;
+  OCPP16 = 3;
+  OCPP20 = 4;
+}

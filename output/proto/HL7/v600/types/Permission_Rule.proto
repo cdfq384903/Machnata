@@ -1,0 +1,23 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Permission_Activity.proto";
+import "types/Permission_Data.proto";
+import "types/Permission_Limit.proto";
+import "types/code.proto";
+import "types/string.proto";
+
+message Permission_Rule {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Reference import = 4;
+  HL7.v600.types.code type = 5;
+  HL7.v600.types.Element shadow__type = 6 [json_name = "_type"];
+  repeated HL7.v600.types.Permission_Data data = 7;
+  repeated HL7.v600.types.Permission_Activity activity = 8;
+  repeated HL7.v600.types.Permission_Limit limit = 9;
+}

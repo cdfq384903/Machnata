@@ -1,0 +1,27 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/integer.proto";
+import "types/string.proto";
+
+message SubstanceProtein_Subunit {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.integer subunit = 4;
+  HL7.v600.types.Element shadow__subunit = 5 [json_name = "_subunit"];
+  HL7.v600.types.string sequence = 6;
+  HL7.v600.types.Element shadow__sequence = 7 [json_name = "_sequence"];
+  HL7.v600.types.integer length = 8;
+  HL7.v600.types.Element shadow__length = 9 [json_name = "_length"];
+  HL7.v600.types.Attachment sequenceAttachment = 10;
+  HL7.v600.types.Identifier nTerminalModificationId = 11;
+  HL7.v600.types.string nTerminalModification = 12;
+  HL7.v600.types.Element shadow__nTerminalModification = 13 [json_name = "_nTerminalModification"];
+  HL7.v600.types.Identifier cTerminalModificationId = 14;
+  HL7.v600.types.string cTerminalModification = 15;
+  HL7.v600.types.Element shadow__cTerminalModification = 16 [json_name = "_cTerminalModification"];
+}

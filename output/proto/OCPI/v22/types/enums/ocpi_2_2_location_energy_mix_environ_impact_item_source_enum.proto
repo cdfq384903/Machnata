@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPI.v22.types.enums.ocpi_2_2_location_energy_mix_environ_impact_item_source_enum;
+option go_package = "tmp/v22/types/enums;enums";
+option csharp_namespace = "OCPI.v22.types.enums";
+
+enum ocpi_2_2_location_energy_mix_environ_impact_item_source_enum {
+  OCPI_2_2_LOCATION_ENERGY_MIX_ENVIRON_IMPACT_ITEM_SOURCE_ENUM_UNSPECIFIED = 0;
+  NUCLEAR_WASTE = 1;
+  CARBON_DIOXIDE = 2;
+}

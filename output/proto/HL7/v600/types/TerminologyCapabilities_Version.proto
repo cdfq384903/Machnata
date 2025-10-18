@@ -1,0 +1,27 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/TerminologyCapabilities_Filter.proto";
+import "types/boolean.proto";
+import "types/code.proto";
+import "types/string.proto";
+
+message TerminologyCapabilities_Version {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string code = 4;
+  HL7.v600.types.Element shadow__code = 5 [json_name = "_code"];
+  HL7.v600.types.boolean isDefault = 6;
+  HL7.v600.types.Element shadow__isDefault = 7 [json_name = "_isDefault"];
+  HL7.v600.types.boolean compositional = 8;
+  HL7.v600.types.Element shadow__compositional = 9 [json_name = "_compositional"];
+  repeated HL7.v600.types.code language = 10;
+  repeated HL7.v600.types.Element shadow__language = 11 [json_name = "_language"];
+  repeated HL7.v600.types.TerminologyCapabilities_Filter filter = 12;
+  repeated HL7.v600.types.code property = 13;
+  repeated HL7.v600.types.Element shadow__property = 14 [json_name = "_property"];
+}

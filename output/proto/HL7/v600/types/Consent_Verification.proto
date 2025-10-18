@@ -1,0 +1,22 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/dateTime.proto";
+import "types/string.proto";
+
+message Consent_Verification {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.boolean verified = 4;
+  HL7.v600.types.Element shadow__verified = 5 [json_name = "_verified"];
+  HL7.v600.types.CodeableConcept verificationType = 6;
+  HL7.v600.types.Reference verifiedBy = 7;
+  HL7.v600.types.Reference verifiedWith = 8;
+  repeated HL7.v600.types.dateTime verificationDate = 9;
+  repeated HL7.v600.types.Element shadow__verificationDate = 10 [json_name = "_verificationDate"];
+}

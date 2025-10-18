@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/enums/ocpi_2_2_version_details_response_data_version_enum.proto";
+import "types/ocpi_2_2_version_details_response_data_endpoints_item.proto";
+
+message ocpi_2_2_version_details_response_data {
+  OCPI.v22.types.enums.ocpi_2_2_version_details_response_data_version_enum.ocpi_2_2_version_details_response_data_version_enum version = 1;
+  repeated OCPI.v22.types.ocpi_2_2_version_details_response_data_endpoints_item endpoints = 2;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/enums/DERControlEnumType.proto";
+
+message ClearDERControlRequest {
+  // NOTE: This field is required by standard Spec.
+  bool isDefault = 1;
+  OCPP.v21.types.enums.dercontrolenumtype.DERControlEnumType controlType = 2;
+  string controlId = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

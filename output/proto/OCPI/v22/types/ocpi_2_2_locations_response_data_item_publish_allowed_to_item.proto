@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/enums/ocpi_2_2_locations_response_data_item_publish_allowed_to_item_type_enum.proto";
+
+message ocpi_2_2_locations_response_data_item_publish_allowed_to_item {
+  string uid = 1;
+  OCPI.v22.types.enums.ocpi_2_2_locations_response_data_item_publish_allowed_to_item_type_enum.ocpi_2_2_locations_response_data_item_publish_allowed_to_item_type_enum type = 2;
+  string visual_number = 3;
+  string issuer = 4;
+  string group_id = 5;
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/TestReport_Requirement.proto";
+import "types/code.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message TestReport_Assert {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.code result = 4;
+  HL7.v600.types.Element shadow__result = 5 [json_name = "_result"];
+  HL7.v600.types.markdown message = 6;
+  HL7.v600.types.Element shadow__message = 7 [json_name = "_message"];
+  HL7.v600.types.string detail = 8;
+  HL7.v600.types.Element shadow__detail = 9 [json_name = "_detail"];
+  repeated HL7.v600.types.TestReport_Requirement requirement = 10;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPI.v211.types.enums.ocpi_2_1_1_tariffs_response_data_item_elements_item_restrictions_day_of_week_enum;
+option go_package = "tmp/v211/types/enums;enums";
+option csharp_namespace = "OCPI.v211.types.enums";
+
+enum ocpi_2_1_1_tariffs_response_data_item_elements_item_restrictions_day_of_week_enum {
+  OCPI_2_1_1_TARIFFS_RESPONSE_DATA_ITEM_ELEMENTS_ITEM_RESTRICTIONS_DAY_OF_WEEK_ENUM_UNSPECIFIED = 0;
+  MONDAY = 1;
+  TUESDAY = 2;
+  WEDNESDAY = 3;
+  THURSDAY = 4;
+  FRIDAY = 5;
+  SATURDAY = 6;
+  SUNDAY = 7;
+}

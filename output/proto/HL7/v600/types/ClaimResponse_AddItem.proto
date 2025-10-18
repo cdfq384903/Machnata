@@ -1,0 +1,51 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ClaimResponse_Adjudication.proto";
+import "types/ClaimResponse_BodySite.proto";
+import "types/ClaimResponse_Detail1.proto";
+import "types/ClaimResponse_ReviewOutcome.proto";
+import "types/decimal.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+
+message ClaimResponse_AddItem {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  repeated HL7.v600.types.positiveInt itemSequence = 4;
+  repeated HL7.v600.types.Element shadow__itemSequence = 5 [json_name = "_itemSequence"];
+  repeated HL7.v600.types.positiveInt detailSequence = 6;
+  repeated HL7.v600.types.Element shadow__detailSequence = 7 [json_name = "_detailSequence"];
+  repeated HL7.v600.types.positiveInt subdetailSequence = 8;
+  repeated HL7.v600.types.Element shadow__subdetailSequence = 9 [json_name = "_subdetailSequence"];
+  repeated HL7.v600.types.Identifier traceNumber = 10;
+  repeated HL7.v600.types.Reference provider = 11;
+  HL7.v600.types.CodeableConcept revenue = 12;
+  HL7.v600.types.CodeableConcept productOrService = 13;
+  HL7.v600.types.CodeableConcept productOrServiceEnd = 14;
+  repeated HL7.v600.types.Reference request = 15;
+  repeated HL7.v600.types.CodeableConcept modifier = 16;
+  repeated HL7.v600.types.CodeableConcept programCode = 17;
+  string servicedDate = 18;
+  HL7.v600.types.Element shadow__servicedDate = 19 [json_name = "_servicedDate"];
+  HL7.v600.types.Period servicedPeriod = 20;
+  HL7.v600.types.CodeableConcept locationCodeableConcept = 21;
+  HL7.v600.types.Address locationAddress = 22;
+  HL7.v600.types.Reference locationReference = 23;
+  HL7.v600.types.Quantity quantity = 24;
+  HL7.v600.types.Money unitPrice = 25;
+  HL7.v600.types.decimal factor = 26;
+  HL7.v600.types.Element shadow__factor = 27 [json_name = "_factor"];
+  HL7.v600.types.Money tax = 28;
+  HL7.v600.types.Money net = 29;
+  repeated HL7.v600.types.ClaimResponse_BodySite bodySite = 30;
+  repeated HL7.v600.types.positiveInt noteNumber = 31;
+  repeated HL7.v600.types.Element shadow__noteNumber = 32 [json_name = "_noteNumber"];
+  HL7.v600.types.ClaimResponse_ReviewOutcome reviewOutcome = 33;
+  repeated HL7.v600.types.ClaimResponse_Adjudication adjudication = 34;
+  repeated HL7.v600.types.ClaimResponse_Detail1 detail = 35;
+}

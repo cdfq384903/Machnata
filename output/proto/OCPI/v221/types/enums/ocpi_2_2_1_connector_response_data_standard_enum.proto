@@ -1,0 +1,48 @@
+syntax = "proto3";
+package OCPI.v221.types.enums.ocpi_2_2_1_connector_response_data_standard_enum;
+option go_package = "tmp/v221/types/enums;enums";
+option csharp_namespace = "OCPI.v221.types.enums";
+
+enum ocpi_2_2_1_connector_response_data_standard_enum {
+  OCPI_2_2_1_CONNECTOR_RESPONSE_DATA_STANDARD_ENUM_UNSPECIFIED = 0;
+  CHADEMO = 1;
+  CHAOJI = 2;
+  DOMESTIC_A = 3;
+  DOMESTIC_B = 4;
+  DOMESTIC_C = 5;
+  DOMESTIC_D = 6;
+  DOMESTIC_E = 7;
+  DOMESTIC_F = 8;
+  DOMESTIC_G = 9;
+  DOMESTIC_H = 10;
+  DOMESTIC_I = 11;
+  DOMESTIC_J = 12;
+  DOMESTIC_K = 13;
+  DOMESTIC_L = 14;
+  DOMESTIC_M = 15;
+  DOMESTIC_N = 16;
+  DOMESTIC_O = 17;
+  GBT_AC = 18;
+  GBT_DC = 19;
+  IEC_60309_2_single_16 = 20;
+  IEC_60309_2_three_16 = 21;
+  IEC_60309_2_three_32 = 22;
+  IEC_60309_2_three_64 = 23;
+  IEC_62196_T1 = 24;
+  IEC_62196_T1_COMBO = 25;
+  IEC_62196_T2 = 26;
+  IEC_62196_T2_COMBO = 27;
+  IEC_62196_T3A = 28;
+  IEC_62196_T3C = 29;
+  NEMA_5_20 = 30;
+  NEMA_6_30 = 31;
+  NEMA_6_50 = 32;
+  NEMA_10_30 = 33;
+  NEMA_10_50 = 34;
+  NEMA_14_30 = 35;
+  NEMA_14_50 = 36;
+  PANTOGRAPH_BOTTOM_UP = 37;
+  PANTOGRAPH_TOP_DOWN = 38;
+  TESLA_R = 39;
+  TESLA_S = 40;
+}

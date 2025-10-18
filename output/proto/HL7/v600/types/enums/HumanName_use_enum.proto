@@ -1,0 +1,15 @@
+syntax = "proto3";
+package HL7.v600.types.enums.humanname_use_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum HumanName_use_enum {
+  HUMANNAME_USE_ENUM_UNSPECIFIED = 0;
+  usual = 1;
+  official = 2;
+  temp = 3;
+  nickname = 4;
+  anonymous = 5;
+  old = 6;
+  maiden = 7;
+}

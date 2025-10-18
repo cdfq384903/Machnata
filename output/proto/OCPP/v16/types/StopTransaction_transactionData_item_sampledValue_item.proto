@@ -1,0 +1,21 @@
+syntax = "proto3";
+package OCPP.v16.types;
+option go_package = "tmp/v16/types;types";
+option csharp_namespace = "OCPP.v16.types";
+
+import "types/enums/StopTransaction_transactionData_item_sampledValue_item_context_enum.proto";
+import "types/enums/StopTransaction_transactionData_item_sampledValue_item_format_enum.proto";
+import "types/enums/StopTransaction_transactionData_item_sampledValue_item_location_enum.proto";
+import "types/enums/StopTransaction_transactionData_item_sampledValue_item_measurand_enum.proto";
+import "types/enums/StopTransaction_transactionData_item_sampledValue_item_phase_enum.proto";
+import "types/enums/StopTransaction_transactionData_item_sampledValue_item_unit_enum.proto";
+
+message StopTransaction_transactionData_item_sampledValue_item {
+  string value = 1;
+  OCPP.v16.types.enums.stoptransaction_transactiondata_item_sampledvalue_item_context_enum.StopTransaction_transactionData_item_sampledValue_item_context_enum context = 2;
+  OCPP.v16.types.enums.stoptransaction_transactiondata_item_sampledvalue_item_format_enum.StopTransaction_transactionData_item_sampledValue_item_format_enum format = 3;
+  OCPP.v16.types.enums.stoptransaction_transactiondata_item_sampledvalue_item_measurand_enum.StopTransaction_transactionData_item_sampledValue_item_measurand_enum measurand = 4;
+  OCPP.v16.types.enums.stoptransaction_transactiondata_item_sampledvalue_item_phase_enum.StopTransaction_transactionData_item_sampledValue_item_phase_enum phase = 5;
+  OCPP.v16.types.enums.stoptransaction_transactiondata_item_sampledvalue_item_location_enum.StopTransaction_transactionData_item_sampledValue_item_location_enum location = 6;
+  OCPP.v16.types.enums.stoptransaction_transactiondata_item_sampledvalue_item_unit_enum.StopTransaction_transactionData_item_sampledValue_item_unit_enum unit = 7;
+}

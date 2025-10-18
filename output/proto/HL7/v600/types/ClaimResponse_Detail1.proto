@@ -1,0 +1,34 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ClaimResponse_Adjudication.proto";
+import "types/ClaimResponse_ReviewOutcome.proto";
+import "types/ClaimResponse_SubDetail1.proto";
+import "types/decimal.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+
+message ClaimResponse_Detail1 {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  repeated HL7.v600.types.Identifier traceNumber = 4;
+  HL7.v600.types.CodeableConcept revenue = 5;
+  HL7.v600.types.CodeableConcept productOrService = 6;
+  HL7.v600.types.CodeableConcept productOrServiceEnd = 7;
+  repeated HL7.v600.types.CodeableConcept modifier = 8;
+  HL7.v600.types.Quantity quantity = 9;
+  HL7.v600.types.Money unitPrice = 10;
+  HL7.v600.types.decimal factor = 11;
+  HL7.v600.types.Element shadow__factor = 12 [json_name = "_factor"];
+  HL7.v600.types.Money tax = 13;
+  HL7.v600.types.Money net = 14;
+  repeated HL7.v600.types.positiveInt noteNumber = 15;
+  repeated HL7.v600.types.Element shadow__noteNumber = 16 [json_name = "_noteNumber"];
+  HL7.v600.types.ClaimResponse_ReviewOutcome reviewOutcome = 17;
+  repeated HL7.v600.types.ClaimResponse_Adjudication adjudication = 18;
+  repeated HL7.v600.types.ClaimResponse_SubDetail1 subDetail = 19;
+}

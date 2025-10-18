@@ -1,0 +1,45 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Contract_Subject.proto";
+import "types/boolean.proto";
+import "types/string.proto";
+import "types/unsignedInt.proto";
+
+message Contract_Action {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.boolean doNotPerform = 4;
+  HL7.v600.types.Element shadow__doNotPerform = 5 [json_name = "_doNotPerform"];
+  HL7.v600.types.CodeableConcept type = 6;
+  repeated HL7.v600.types.Contract_Subject subject = 7;
+  HL7.v600.types.CodeableConcept intent = 8;
+  repeated HL7.v600.types.string linkId = 9;
+  repeated HL7.v600.types.Element shadow__linkId = 10 [json_name = "_linkId"];
+  HL7.v600.types.CodeableConcept status = 11;
+  HL7.v600.types.Reference context = 12;
+  repeated HL7.v600.types.string contextLinkId = 13;
+  repeated HL7.v600.types.Element shadow__contextLinkId = 14 [json_name = "_contextLinkId"];
+  string occurrenceDateTime = 15;
+  HL7.v600.types.Element shadow__occurrenceDateTime = 16 [json_name = "_occurrenceDateTime"];
+  HL7.v600.types.Period occurrencePeriod = 17;
+  HL7.v600.types.Timing occurrenceTiming = 18;
+  repeated HL7.v600.types.Reference requester = 19;
+  repeated HL7.v600.types.string requesterLinkId = 20;
+  repeated HL7.v600.types.Element shadow__requesterLinkId = 21 [json_name = "_requesterLinkId"];
+  repeated HL7.v600.types.CodeableConcept performerType = 22;
+  HL7.v600.types.CodeableConcept performerRole = 23;
+  HL7.v600.types.Reference performer = 24;
+  repeated HL7.v600.types.string performerLinkId = 25;
+  repeated HL7.v600.types.Element shadow__performerLinkId = 26 [json_name = "_performerLinkId"];
+  repeated HL7.v600.types.CodeableReference reason = 27;
+  repeated HL7.v600.types.string reasonLinkId = 28;
+  repeated HL7.v600.types.Element shadow__reasonLinkId = 29 [json_name = "_reasonLinkId"];
+  repeated HL7.v600.types.Annotation note = 30;
+  repeated HL7.v600.types.unsignedInt securityLabelNumber = 31;
+  repeated HL7.v600.types.Element shadow__securityLabelNumber = 32 [json_name = "_securityLabelNumber"];
+}

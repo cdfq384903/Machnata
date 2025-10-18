@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPI.v211.types.enums.ocpi_2_1_1_location_response_data_energy_mix_energy_sources_item_source_enum;
+option go_package = "tmp/v211/types/enums;enums";
+option csharp_namespace = "OCPI.v211.types.enums";
+
+enum ocpi_2_1_1_location_response_data_energy_mix_energy_sources_item_source_enum {
+  OCPI_2_1_1_LOCATION_RESPONSE_DATA_ENERGY_MIX_ENERGY_SOURCES_ITEM_SOURCE_ENUM_UNSPECIFIED = 0;
+  NUCLEAR = 1;
+  GENERAL_FOSSIL = 2;
+  COAL = 3;
+  GAS = 4;
+  GENERAL_GREEN = 5;
+  SOLAR = 6;
+  WIND = 7;
+  WATER = 8;
+}

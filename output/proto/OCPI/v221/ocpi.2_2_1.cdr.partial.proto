@@ -1,0 +1,38 @@
+syntax = "proto3";
+package OCPI.v221;
+option go_package = "tmp/v221;OCPIv221";
+option csharp_namespace = "OCPI.v221";
+
+
+message ocpi_2_2_1_cdr_partial {
+  string country_code = 1;
+  string party_id = 2;
+  string id = 3;
+  string start_date_time = 4;
+  string end_date_time = 5;
+  string session_id = 6;
+  string cdr_token = 7;
+  string auth_method = 8;
+  string authorization_reference = 9;
+  string cdr_location = 10;
+  string meter_id = 11;
+  string currency = 12;
+  string tariffs = 13;
+  string charging_periods = 14;
+  string signed_data = 15;
+  string total_cost = 16;
+  string total_fixed_cost = 17;
+  string total_energy = 18;
+  string total_energy_cost = 19;
+  string total_time = 20;
+  string total_time_cost = 21;
+  string total_parking_time = 22;
+  string total_parking_cost = 23;
+  string total_reservation_cost = 24;
+  string remark = 25;
+  string invoice_reference_id = 26;
+  string credit = 27;
+  string credit_reference_id = 28;
+  string home_charging_compensation = 29;
+  string last_updated = 30;
+}

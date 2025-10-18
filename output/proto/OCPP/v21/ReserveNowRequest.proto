@@ -1,0 +1,20 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/IdTokenType.proto";
+
+message ReserveNowRequest {
+  // NOTE: This field is required by standard Spec.
+  int32 id = 1;
+  // NOTE: This field is required by standard Spec.
+  string expiryDateTime = 2;
+  string connectorType = 3;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.IdTokenType idToken = 4;
+  int32 evseId = 5;
+  OCPP.v21.types.IdTokenType groupIdToken = 6;
+  OCPP.v21.types.CustomDataType customData = 7;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.bootreasonenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum BootReasonEnumType {
+  BOOTREASONENUMTYPE_UNSPECIFIED = 0;
+  ApplicationReset = 1;
+  FirmwareUpdate = 2;
+  LocalReset = 3;
+  PowerUp = 4;
+  RemoteReset = 5;
+  ScheduledReset = 6;
+  Triggered = 7;
+  Unknown = 8;
+  Watchdog = 9;
+}

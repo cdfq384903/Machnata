@@ -1,0 +1,29 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ArtifactAssessment_RelatesTo.proto";
+import "types/boolean.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message ArtifactAssessment_Content {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.markdown summary = 4;
+  HL7.v600.types.Element shadow__summary = 5 [json_name = "_summary"];
+  HL7.v600.types.CodeableConcept type = 6;
+  repeated HL7.v600.types.CodeableConcept classifier = 7;
+  HL7.v600.types.Quantity quantity = 8;
+  repeated HL7.v600.types.Reference author = 9;
+  repeated HL7.v600.types.uri path = 10;
+  repeated HL7.v600.types.Element shadow__path = 11 [json_name = "_path"];
+  repeated HL7.v600.types.ArtifactAssessment_RelatesTo relatesTo = 12;
+  HL7.v600.types.boolean freeToShare = 13;
+  HL7.v600.types.Element shadow__freeToShare = 14 [json_name = "_freeToShare"];
+  repeated HL7.v600.types.ArtifactAssessment_Content component = 15;
+}

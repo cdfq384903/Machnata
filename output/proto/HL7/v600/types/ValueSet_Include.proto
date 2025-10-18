@@ -1,0 +1,27 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ValueSet_Concept.proto";
+import "types/ValueSet_Filter.proto";
+import "types/canonical.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message ValueSet_Include {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.uri system = 4;
+  HL7.v600.types.Element shadow__system = 5 [json_name = "_system"];
+  HL7.v600.types.string version = 6;
+  HL7.v600.types.Element shadow__version = 7 [json_name = "_version"];
+  repeated HL7.v600.types.ValueSet_Concept concept = 8;
+  repeated HL7.v600.types.ValueSet_Filter filter = 9;
+  repeated HL7.v600.types.canonical valueSet = 10;
+  HL7.v600.types.markdown copyright = 11;
+  HL7.v600.types.Element shadow__copyright = 12 [json_name = "_copyright"];
+}

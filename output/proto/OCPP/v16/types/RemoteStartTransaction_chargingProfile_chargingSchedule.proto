@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v16.types;
+option go_package = "tmp/v16/types;types";
+option csharp_namespace = "OCPP.v16.types";
+
+import "types/RemoteStartTransaction_chargingProfile_chargingSchedule_chargingSchedulePeriod_item.proto";
+import "types/enums/RemoteStartTransaction_chargingProfile_chargingSchedule_chargingRateUnit_enum.proto";
+
+message RemoteStartTransaction_chargingProfile_chargingSchedule {
+  int32 duration = 1;
+  string startSchedule = 2;
+  OCPP.v16.types.enums.remotestarttransaction_chargingprofile_chargingschedule_chargingrateunit_enum.RemoteStartTransaction_chargingProfile_chargingSchedule_chargingRateUnit_enum chargingRateUnit = 3;
+  repeated OCPP.v16.types.RemoteStartTransaction_chargingProfile_chargingSchedule_chargingSchedulePeriod_item chargingSchedulePeriod = 4;
+  double minChargingRate = 5;
+}

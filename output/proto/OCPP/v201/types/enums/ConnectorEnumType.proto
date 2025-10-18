@@ -1,0 +1,30 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.connectorenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum ConnectorEnumType {
+  CONNECTORENUMTYPE_UNSPECIFIED = 0;
+  cCCS1 = 1;
+  cCCS2 = 2;
+  cG105 = 3;
+  cTesla = 4;
+  cType1 = 5;
+  cType2 = 6;
+  s309_1P_16A = 7;
+  s309_1P_32A = 8;
+  s309_3P_16A = 9;
+  s309_3P_32A = 10;
+  sBS1361 = 11;
+  sCEE_7_7 = 12;
+  sType2 = 13;
+  sType3 = 14;
+  Other1PhMax16A = 15;
+  Other1PhOver16A = 16;
+  Other3Ph = 17;
+  Pan = 18;
+  wInductive = 19;
+  wResonant = 20;
+  Undetermined = 21;
+  Unknown = 22;
+}

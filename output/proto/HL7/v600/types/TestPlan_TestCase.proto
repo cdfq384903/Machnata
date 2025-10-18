@@ -1,0 +1,35 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/TestPlan_Assertion.proto";
+import "types/TestPlan_Dependency1.proto";
+import "types/TestPlan_Requirement.proto";
+import "types/TestPlan_Scope1.proto";
+import "types/TestPlan_TestData.proto";
+import "types/TestPlan_TestRun.proto";
+import "types/id.proto";
+import "types/integer.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message TestPlan_TestCase {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.id key = 4;
+  HL7.v600.types.Element shadow__key = 5 [json_name = "_key"];
+  HL7.v600.types.markdown description = 6;
+  HL7.v600.types.Element shadow__description = 7 [json_name = "_description"];
+  HL7.v600.types.integer sequence = 8;
+  HL7.v600.types.Element shadow__sequence = 9 [json_name = "_sequence"];
+  repeated HL7.v600.types.TestPlan_Scope1 scope = 10;
+  repeated HL7.v600.types.TestPlan_Requirement requirement = 11;
+  repeated HL7.v600.types.TestPlan_Dependency1 dependency = 12;
+  repeated HL7.v600.types.TestPlan_TestRun testRun = 13;
+  repeated HL7.v600.types.TestPlan_TestData testData = 14;
+  repeated HL7.v600.types.TestPlan_Assertion assertion = 15;
+  repeated HL7.v600.types.TestPlan_TestCase testCase = 16;
+}

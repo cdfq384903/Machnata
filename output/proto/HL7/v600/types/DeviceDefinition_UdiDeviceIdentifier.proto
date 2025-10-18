@@ -1,0 +1,22 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/DeviceDefinition_MarketDistribution.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message DeviceDefinition_UdiDeviceIdentifier {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string deviceIdentifier = 4;
+  HL7.v600.types.Element shadow__deviceIdentifier = 5 [json_name = "_deviceIdentifier"];
+  HL7.v600.types.uri issuer = 6;
+  HL7.v600.types.Element shadow__issuer = 7 [json_name = "_issuer"];
+  HL7.v600.types.uri jurisdiction = 8;
+  HL7.v600.types.Element shadow__jurisdiction = 9 [json_name = "_jurisdiction"];
+  repeated HL7.v600.types.DeviceDefinition_MarketDistribution marketDistribution = 10;
+}

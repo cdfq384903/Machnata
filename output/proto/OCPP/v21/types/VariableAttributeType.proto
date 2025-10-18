@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/AttributeEnumType.proto";
+import "types/enums/MutabilityEnumType.proto";
+
+message VariableAttributeType {
+  OCPP.v21.types.enums.attributeenumtype.AttributeEnumType type = 1;
+  string value = 2;
+  OCPP.v21.types.enums.mutabilityenumtype.MutabilityEnumType mutability = 3;
+  bool persistent = 4;
+  bool constant = 5;
+  OCPP.v21.types.CustomDataType customData = 6;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.setmonitoringstatusenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum SetMonitoringStatusEnumType {
+  SETMONITORINGSTATUSENUMTYPE_UNSPECIFIED = 0;
+  Accepted = 1;
+  UnknownComponent = 2;
+  UnknownVariable = 3;
+  UnsupportedMonitorType = 4;
+  Rejected = 5;
+  Duplicate = 6;
+}

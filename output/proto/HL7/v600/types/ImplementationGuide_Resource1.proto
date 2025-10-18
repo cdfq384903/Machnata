@@ -1,0 +1,22 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/canonical.proto";
+import "types/string.proto";
+import "types/url.proto";
+
+message ImplementationGuide_Resource1 {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Reference reference = 4;
+  HL7.v600.types.boolean isExample = 5;
+  HL7.v600.types.Element shadow__isExample = 6 [json_name = "_isExample"];
+  repeated HL7.v600.types.canonical profile = 7;
+  HL7.v600.types.url relativePath = 8;
+  HL7.v600.types.Element shadow__relativePath = 9 [json_name = "_relativePath"];
+}

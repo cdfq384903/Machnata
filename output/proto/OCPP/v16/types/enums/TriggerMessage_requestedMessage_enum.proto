@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.triggermessage_requestedmessage_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum TriggerMessage_requestedMessage_enum {
+  TRIGGERMESSAGE_REQUESTEDMESSAGE_ENUM_UNSPECIFIED = 0;
+  BootNotification = 1;
+  DiagnosticsStatusNotification = 2;
+  FirmwareStatusNotification = 3;
+  Heartbeat = 4;
+  MeterValues = 5;
+  StatusNotification = 6;
+}

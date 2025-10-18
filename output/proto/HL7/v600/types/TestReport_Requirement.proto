@@ -1,0 +1,17 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/string.proto";
+
+message TestReport_Requirement {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  string linkUri = 4;
+  HL7.v600.types.Element shadow__linkUri = 5 [json_name = "_linkUri"];
+  string linkCanonical = 6;
+  HL7.v600.types.Element shadow__linkCanonical = 7 [json_name = "_linkCanonical"];
+}

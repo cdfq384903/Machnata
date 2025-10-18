@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+
+message FixedPFType {
+  int32 priority = 1;
+  double displacement = 2;
+  bool excitation = 3;
+  string startTime = 4;
+  double duration = 5;
+  OCPP.v21.types.CustomDataType customData = 6;
+}

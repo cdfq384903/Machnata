@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v16.types;
+option go_package = "tmp/v16/types;types";
+option csharp_namespace = "OCPP.v16.types";
+
+import "types/enums/AuthorizeResponse_idTagInfo_status_enum.proto";
+
+message AuthorizeResponse_idTagInfo {
+  string expiryDate = 1;
+  string parentIdTag = 2;
+  OCPP.v16.types.enums.authorizeresponse_idtaginfo_status_enum.AuthorizeResponse_idTagInfo_status_enum status = 3;
+}

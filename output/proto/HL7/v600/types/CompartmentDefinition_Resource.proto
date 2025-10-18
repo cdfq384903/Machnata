@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message CompartmentDefinition_Resource {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.code code = 4;
+  HL7.v600.types.Element shadow__code = 5 [json_name = "_code"];
+  repeated HL7.v600.types.string param = 6;
+  repeated HL7.v600.types.Element shadow__param = 7 [json_name = "_param"];
+  HL7.v600.types.string documentation = 8;
+  HL7.v600.types.Element shadow__documentation = 9 [json_name = "_documentation"];
+  HL7.v600.types.uri startParam = 10;
+  HL7.v600.types.Element shadow__startParam = 11 [json_name = "_startParam"];
+  HL7.v600.types.uri endParam = 12;
+  HL7.v600.types.Element shadow__endParam = 13 [json_name = "_endParam"];
+}

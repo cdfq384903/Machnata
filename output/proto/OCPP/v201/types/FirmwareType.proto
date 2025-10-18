@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/CustomDataType.proto";
+
+message FirmwareType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  string location = 2;
+  string retrieveDateTime = 3;
+  string installDateTime = 4;
+  string signingCertificate = 5;
+  string signature = 6;
+}

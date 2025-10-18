@@ -1,0 +1,22 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/PriceType.proto";
+import "types/TotalPriceType.proto";
+import "types/enums/TariffCostEnumType.proto";
+
+message TotalCostType {
+  string currency = 1;
+  OCPP.v21.types.enums.tariffcostenumtype.TariffCostEnumType typeOfCost = 2;
+  OCPP.v21.types.PriceType fixed = 3;
+  OCPP.v21.types.PriceType energy = 4;
+  OCPP.v21.types.PriceType chargingTime = 5;
+  OCPP.v21.types.PriceType idleTime = 6;
+  OCPP.v21.types.PriceType reservationTime = 7;
+  OCPP.v21.types.PriceType reservationFixed = 8;
+  OCPP.v21.types.TotalPriceType total = 9;
+  OCPP.v21.types.CustomDataType customData = 10;
+}

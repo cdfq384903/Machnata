@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPI.v221.types.enums.ocpi_2_2_1_hubclientinfos_data_item_status_enum;
+option go_package = "tmp/v221/types/enums;enums";
+option csharp_namespace = "OCPI.v221.types.enums";
+
+enum ocpi_2_2_1_hubclientinfos_data_item_status_enum {
+  OCPI_2_2_1_HUBCLIENTINFOS_DATA_ITEM_STATUS_ENUM_UNSPECIFIED = 0;
+  CONNECTED = 1;
+  OFFLINE = 2;
+  PLANNED = 3;
+  SUSPENDED = 4;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.remotestarttransactionresponse_status_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum RemoteStartTransactionResponse_status_enum {
+  REMOTESTARTTRANSACTIONRESPONSE_STATUS_ENUM_UNSPECIFIED = 0;
+  Accepted = 1;
+  Rejected = 2;
+}

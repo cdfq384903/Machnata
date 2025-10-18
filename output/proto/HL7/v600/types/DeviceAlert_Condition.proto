@@ -1,0 +1,21 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/string.proto";
+
+message DeviceAlert_Condition {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept code = 4;
+  HL7.v600.types.boolean acknowledged = 5;
+  HL7.v600.types.Element shadow__acknowledged = 6 [json_name = "_acknowledged"];
+  HL7.v600.types.boolean presence = 7;
+  HL7.v600.types.Element shadow__presence = 8 [json_name = "_presence"];
+  HL7.v600.types.Period timing = 9;
+  HL7.v600.types.Range limit = 10;
+}

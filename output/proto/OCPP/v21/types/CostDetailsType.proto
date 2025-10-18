@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/ChargingPeriodType.proto";
+import "types/CustomDataType.proto";
+import "types/TotalCostType.proto";
+import "types/TotalUsageType.proto";
+
+message CostDetailsType {
+  repeated OCPP.v21.types.ChargingPeriodType chargingPeriods = 1;
+  OCPP.v21.types.TotalCostType totalCost = 2;
+  OCPP.v21.types.TotalUsageType totalUsage = 3;
+  bool failureToCalculate = 4;
+  string failureReason = 5;
+  OCPP.v21.types.CustomDataType customData = 6;
+}

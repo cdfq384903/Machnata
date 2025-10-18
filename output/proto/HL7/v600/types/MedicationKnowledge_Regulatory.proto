@@ -1,0 +1,19 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/MedicationKnowledge_MaxDispense.proto";
+import "types/MedicationKnowledge_Substitution.proto";
+import "types/string.proto";
+
+message MedicationKnowledge_Regulatory {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Reference regulatoryAuthority = 4;
+  repeated HL7.v600.types.MedicationKnowledge_Substitution substitution = 5;
+  repeated HL7.v600.types.CodeableConcept schedule = 6;
+  HL7.v600.types.MedicationKnowledge_MaxDispense maxDispense = 7;
+}

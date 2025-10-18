@@ -1,0 +1,24 @@
+{
+  "$ref": "#/definitions/ocpi.2_2_1.commands.cancel_reservation.request",
+  "definitions": {
+    "ocpi.2_2_1.commands.cancel_reservation.request": {
+      "type": "object",
+      "properties": {
+        "response_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "reservation_id": {
+          "type": "string",
+          "maxLength": 36
+        }
+      },
+      "required": [
+        "response_url",
+        "reservation_id"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

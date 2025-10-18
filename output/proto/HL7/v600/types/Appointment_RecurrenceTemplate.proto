@@ -1,0 +1,33 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Appointment_MonthlyTemplate.proto";
+import "types/Appointment_WeeklyTemplate.proto";
+import "types/Appointment_YearlyTemplate.proto";
+import "types/date.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+
+message Appointment_RecurrenceTemplate {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept timezone = 4;
+  HL7.v600.types.CodeableConcept recurrenceType = 5;
+  HL7.v600.types.date lastOccurrenceDate = 6;
+  HL7.v600.types.Element shadow__lastOccurrenceDate = 7 [json_name = "_lastOccurrenceDate"];
+  HL7.v600.types.positiveInt occurrenceCount = 8;
+  HL7.v600.types.Element shadow__occurrenceCount = 9 [json_name = "_occurrenceCount"];
+  repeated HL7.v600.types.date occurrenceDate = 10;
+  repeated HL7.v600.types.Element shadow__occurrenceDate = 11 [json_name = "_occurrenceDate"];
+  HL7.v600.types.Appointment_WeeklyTemplate weeklyTemplate = 12;
+  HL7.v600.types.Appointment_MonthlyTemplate monthlyTemplate = 13;
+  HL7.v600.types.Appointment_YearlyTemplate yearlyTemplate = 14;
+  repeated HL7.v600.types.date excludingDate = 15;
+  repeated HL7.v600.types.Element shadow__excludingDate = 16 [json_name = "_excludingDate"];
+  repeated HL7.v600.types.positiveInt excludingRecurrenceId = 17;
+  repeated HL7.v600.types.Element shadow__excludingRecurrenceId = 18 [json_name = "_excludingRecurrenceId"];
+}

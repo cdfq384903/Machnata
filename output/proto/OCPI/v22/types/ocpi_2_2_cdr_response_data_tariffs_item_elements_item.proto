@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/ocpi_2_2_cdr_response_data_tariffs_item_elements_item_price_components_item.proto";
+import "types/ocpi_2_2_cdr_response_data_tariffs_item_elements_item_restrictions.proto";
+
+message ocpi_2_2_cdr_response_data_tariffs_item_elements_item {
+  repeated OCPI.v22.types.ocpi_2_2_cdr_response_data_tariffs_item_elements_item_price_components_item price_components = 1;
+  OCPI.v22.types.ocpi_2_2_cdr_response_data_tariffs_item_elements_item_restrictions restrictions = 2;
+}

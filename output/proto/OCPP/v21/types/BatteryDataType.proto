@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+
+message BatteryDataType {
+  int32 evseId = 1;
+  string serialNumber = 2;
+  double soC = 3;
+  double soH = 4;
+  string productionDate = 5;
+  string vendorInfo = 6;
+  OCPP.v21.types.CustomDataType customData = 7;
+}

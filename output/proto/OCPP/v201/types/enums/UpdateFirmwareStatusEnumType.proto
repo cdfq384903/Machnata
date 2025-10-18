@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.updatefirmwarestatusenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum UpdateFirmwareStatusEnumType {
+  UPDATEFIRMWARESTATUSENUMTYPE_UNSPECIFIED = 0;
+  Accepted = 1;
+  Rejected = 2;
+  AcceptedCanceled = 3;
+  InvalidCertificate = 4;
+  RevokedCertificate = 5;
+}

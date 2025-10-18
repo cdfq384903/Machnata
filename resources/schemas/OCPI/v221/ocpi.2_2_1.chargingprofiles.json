@@ -1,0 +1,99 @@
+{
+  "$ref": "#/definitions/ocpi.2_2_1.chargingprofiles",
+  "definitions": {
+    "ocpi.2_2_1.chargingprofiles": {
+      "type": "object",
+      "properties": {
+        "charging_profile": {
+          "type": "object",
+          "properties": {
+            "start_date_time": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "duration": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "charging_rate_unit": {
+              "type": "string",
+              "enum": [
+                "W",
+                "A"
+              ]
+            },
+            "min_charging_rate": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "multipleOf": 0.1,
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "charging_profile_period": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "start_period": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "limit": {
+                        "type": "number",
+                        "multipleOf": 0.1,
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "start_period",
+                      "limit"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "charging_rate_unit"
+          ],
+          "additionalProperties": false
+        },
+        "response_url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "charging_profile",
+        "response_url"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

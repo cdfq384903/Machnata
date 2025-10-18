@@ -1,0 +1,14 @@
+syntax = "proto3";
+package HL7.v600.types.enums.elementdefinition_discriminator_type_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum ElementDefinition_Discriminator_type_enum {
+  ELEMENTDEFINITION_DISCRIMINATOR_TYPE_ENUM_UNSPECIFIED = 0;
+  value = 1;
+  exists = 2;
+  pattern = 3;
+  type = 4;
+  profile = 5;
+  position = 6;
+}

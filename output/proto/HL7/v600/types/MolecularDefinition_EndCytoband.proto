@@ -1,0 +1,29 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/string.proto";
+
+message MolecularDefinition_EndCytoband {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  string armCode = 4;
+  HL7.v600.types.Element shadow__armCode = 5 [json_name = "_armCode"];
+  string armString = 6;
+  HL7.v600.types.Element shadow__armString = 7 [json_name = "_armString"];
+  string regionCode = 8;
+  HL7.v600.types.Element shadow__regionCode = 9 [json_name = "_regionCode"];
+  string regionString = 10;
+  HL7.v600.types.Element shadow__regionString = 11 [json_name = "_regionString"];
+  string bandCode = 12;
+  HL7.v600.types.Element shadow__bandCode = 13 [json_name = "_bandCode"];
+  string bandString = 14;
+  HL7.v600.types.Element shadow__bandString = 15 [json_name = "_bandString"];
+  string subBandCode = 16;
+  HL7.v600.types.Element shadow__subBandCode = 17 [json_name = "_subBandCode"];
+  string subBandString = 18;
+  HL7.v600.types.Element shadow__subBandString = 19 [json_name = "_subBandString"];
+}

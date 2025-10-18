@@ -1,0 +1,56 @@
+{
+  "$ref": "#/definitions/ocpi.2_2.chargingprofiles.response",
+  "definitions": {
+    "ocpi.2_2.chargingprofiles.response": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "properties": {
+            "result": {
+              "type": "string",
+              "enum": [
+                "ACCEPTED",
+                "NOT_SUPPORTED",
+                "REJECTED",
+                "TOO_OFTEN",
+                "UNKNOWN_SESSION"
+              ]
+            },
+            "timeout": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "result",
+            "timeout"
+          ],
+          "additionalProperties": false
+        },
+        "status_code": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 1999
+        },
+        "status_message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "data",
+        "status_code",
+        "timestamp"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

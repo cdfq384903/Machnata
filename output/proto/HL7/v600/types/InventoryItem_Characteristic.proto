@@ -1,0 +1,33 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/string.proto";
+
+message InventoryItem_Characteristic {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept characteristicType = 4;
+  string valueString = 5;
+  HL7.v600.types.Element shadow__valueString = 6 [json_name = "_valueString"];
+  double valueInteger = 7;
+  HL7.v600.types.Element shadow__valueInteger = 8 [json_name = "_valueInteger"];
+  double valueDecimal = 9;
+  HL7.v600.types.Element shadow__valueDecimal = 10 [json_name = "_valueDecimal"];
+  bool valueBoolean = 11;
+  HL7.v600.types.Element shadow__valueBoolean = 12 [json_name = "_valueBoolean"];
+  string valueUrl = 13;
+  HL7.v600.types.Element shadow__valueUrl = 14 [json_name = "_valueUrl"];
+  string valueDateTime = 15;
+  HL7.v600.types.Element shadow__valueDateTime = 16 [json_name = "_valueDateTime"];
+  HL7.v600.types.Quantity valueQuantity = 17;
+  HL7.v600.types.Range valueRange = 18;
+  HL7.v600.types.Ratio valueRatio = 19;
+  HL7.v600.types.Annotation valueAnnotation = 20;
+  HL7.v600.types.Address valueAddress = 21;
+  HL7.v600.types.Duration valueDuration = 22;
+  HL7.v600.types.CodeableConcept valueCodeableConcept = 23;
+}

@@ -1,0 +1,45 @@
+syntax = "proto3";
+package OCPI.v211;
+option go_package = "tmp/v211;OCPIv211";
+option csharp_namespace = "OCPI.v211";
+
+import "types/enums/ocpi_2_1_1_location_type_enum.proto";
+import "types/ocpi_2_1_1_location.proto";
+import "types/ocpi_2_1_1_location_coordinates.proto";
+import "types/ocpi_2_1_1_location_energy_mix.proto";
+import "types/ocpi_2_1_1_location_evses_item.proto";
+import "types/ocpi_2_1_1_location_opening_times.proto";
+import "types/ocpi_2_1_1_location_operator.proto";
+import "types/ocpi_2_1_1_location_related_locations_item.proto";
+
+message ocpi_2_1_1_location {
+  // NOTE: This field is required by standard Spec.
+  string id = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v211.types.enums.ocpi_2_1_1_location_type_enum.ocpi_2_1_1_location_type_enum type = 2;
+  string name = 3;
+  // NOTE: This field is required by standard Spec.
+  string address = 4;
+  // NOTE: This field is required by standard Spec.
+  string city = 5;
+  // NOTE: This field is required by standard Spec.
+  string postal_code = 6;
+  // NOTE: This field is required by standard Spec.
+  string country = 7;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v211.types.ocpi_2_1_1_location_coordinates coordinates = 8;
+  repeated OCPI.v211.types.ocpi_2_1_1_location_related_locations_item related_locations = 9;
+  repeated OCPI.v211.types.ocpi_2_1_1_location_evses_item evses = 10;
+  repeated OCPI.v211.types.ocpi_2_1_1_location directions = 11;
+  OCPI.v211.types.ocpi_2_1_1_location_operator operator = 12;
+  OCPI.v211.types.ocpi_2_1_1_location suboperator = 13;
+  OCPI.v211.types.ocpi_2_1_1_location owner = 14;
+  repeated string facilities = 15;
+  string time_zone = 16;
+  OCPI.v211.types.ocpi_2_1_1_location_opening_times opening_times = 17;
+  bool charging_when_closed = 18;
+  repeated OCPI.v211.types.ocpi_2_1_1_location images = 19;
+  OCPI.v211.types.ocpi_2_1_1_location_energy_mix energy_mix = 20;
+  // NOTE: This field is required by standard Spec.
+  string last_updated = 21;
+}

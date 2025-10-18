@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.messageformatenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum MessageFormatEnumType {
+  MESSAGEFORMATENUMTYPE_UNSPECIFIED = 0;
+  ASCII = 1;
+  HTML = 2;
+  URI = 3;
+  UTF8 = 4;
+}

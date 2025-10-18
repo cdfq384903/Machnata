@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/NutritionOrder_Administration.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message NutritionOrder_EnteralFormula {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableReference type = 4;
+  HL7.v600.types.string productName = 5;
+  HL7.v600.types.Element shadow__productName = 6 [json_name = "_productName"];
+  repeated HL7.v600.types.CodeableReference deliveryDevice = 7;
+  HL7.v600.types.Quantity caloricDensity = 8;
+  repeated HL7.v600.types.CodeableConcept routeOfAdministration = 9;
+  repeated HL7.v600.types.NutritionOrder_Administration administration = 10;
+  HL7.v600.types.Quantity maxVolumeToAdminister = 11;
+  HL7.v600.types.markdown administrationInstruction = 12;
+  HL7.v600.types.Element shadow__administrationInstruction = 13 [json_name = "_administrationInstruction"];
+}

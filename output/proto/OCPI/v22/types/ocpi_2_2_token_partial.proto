@@ -1,0 +1,22 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+
+message ocpi_2_2_token_partial {
+  string country_code = 1;
+  string party_id = 2;
+  string uid = 3;
+  string type = 4;
+  string contract_id = 5;
+  string visual_number = 6;
+  string issuer = 7;
+  string group_id = 8;
+  string valid = 9;
+  string whitelist = 10;
+  string language = 11;
+  string default_profile_type = 12;
+  string energy_contract = 13;
+  string last_updated = 14;
+}

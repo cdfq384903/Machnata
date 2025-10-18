@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+import "types/ocpi_2_2_commands_reserve_now_request_token.proto";
+
+message ocpi_2_2_commands_reserve_now_request {
+  string response_url = 1;
+  OCPI.v22.types.ocpi_2_2_commands_reserve_now_request_token token = 2;
+  string expiry_date = 3;
+  string reservation_id = 4;
+  string location_id = 5;
+  string evse_uid = 6;
+  string authorization_reference = 7;
+}

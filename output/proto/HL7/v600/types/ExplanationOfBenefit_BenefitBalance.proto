@@ -1,0 +1,26 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ExplanationOfBenefit_Financial.proto";
+import "types/boolean.proto";
+import "types/string.proto";
+
+message ExplanationOfBenefit_BenefitBalance {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept category = 4;
+  HL7.v600.types.boolean excluded = 5;
+  HL7.v600.types.Element shadow__excluded = 6 [json_name = "_excluded"];
+  HL7.v600.types.string name = 7;
+  HL7.v600.types.Element shadow__name = 8 [json_name = "_name"];
+  HL7.v600.types.string description = 9;
+  HL7.v600.types.Element shadow__description = 10 [json_name = "_description"];
+  HL7.v600.types.CodeableConcept network = 11;
+  HL7.v600.types.CodeableConcept unit = 12;
+  HL7.v600.types.CodeableConcept term = 13;
+  repeated HL7.v600.types.ExplanationOfBenefit_Financial financial = 14;
+}

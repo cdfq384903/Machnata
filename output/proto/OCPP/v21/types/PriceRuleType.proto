@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/RationalNumberType.proto";
+
+message PriceRuleType {
+  int32 parkingFeePeriod = 1;
+  int32 carbonDioxideEmission = 2;
+  int32 renewableGenerationPercentage = 3;
+  OCPP.v21.types.RationalNumberType energyFee = 4;
+  OCPP.v21.types.RationalNumberType parkingFee = 5;
+  OCPP.v21.types.RationalNumberType powerRangeStart = 6;
+  OCPP.v21.types.CustomDataType customData = 7;
+}

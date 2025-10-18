@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v16.types;
+option go_package = "tmp/v16/types;types";
+option csharp_namespace = "OCPP.v16.types";
+
+message GetCompositeScheduleResponse_chargingSchedule_chargingSchedulePeriod_item {
+  int32 startPeriod = 1;
+  double limit = 2;
+  int32 numberPhases = 3;
+}

@@ -1,0 +1,27 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/SpecimenDefinition_Additive.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message SpecimenDefinition_Container {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept material = 4;
+  HL7.v600.types.CodeableConcept type = 5;
+  HL7.v600.types.CodeableConcept cap = 6;
+  HL7.v600.types.markdown description = 7;
+  HL7.v600.types.Element shadow__description = 8 [json_name = "_description"];
+  HL7.v600.types.Quantity capacity = 9;
+  HL7.v600.types.Quantity minimumVolumeQuantity = 10;
+  string minimumVolumeString = 11;
+  HL7.v600.types.Element shadow__minimumVolumeString = 12 [json_name = "_minimumVolumeString"];
+  repeated HL7.v600.types.SpecimenDefinition_Additive additive = 13;
+  HL7.v600.types.markdown preparation = 14;
+  HL7.v600.types.Element shadow__preparation = 15 [json_name = "_preparation"];
+}

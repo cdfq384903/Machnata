@@ -1,0 +1,19 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.messagetriggerenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum MessageTriggerEnumType {
+  MESSAGETRIGGERENUMTYPE_UNSPECIFIED = 0;
+  BootNotification = 1;
+  LogStatusNotification = 2;
+  FirmwareStatusNotification = 3;
+  Heartbeat = 4;
+  MeterValues = 5;
+  SignChargingStationCertificate = 6;
+  SignV2GCertificate = 7;
+  StatusNotification = 8;
+  TransactionEvent = 9;
+  SignCombinedCertificate = 10;
+  PublishFirmwareStatusNotification = 11;
+}

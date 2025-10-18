@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.getcompositeschedule_chargingrateunit_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum GetCompositeSchedule_chargingRateUnit_enum {
+  GETCOMPOSITESCHEDULE_CHARGINGRATEUNIT_ENUM_UNSPECIFIED = 0;
+  A = 1;
+  W = 2;
+}

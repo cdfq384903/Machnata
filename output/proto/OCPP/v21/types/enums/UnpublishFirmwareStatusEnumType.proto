@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.unpublishfirmwarestatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum UnpublishFirmwareStatusEnumType {
+  UNPUBLISHFIRMWARESTATUSENUMTYPE_UNSPECIFIED = 0;
+  DownloadOngoing = 1;
+  NoFirmware = 2;
+  Unpublished = 3;
+}

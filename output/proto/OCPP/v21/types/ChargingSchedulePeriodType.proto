@@ -1,0 +1,34 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/V2XFreqWattPointType.proto";
+import "types/V2XSignalWattPointType.proto";
+import "types/enums/OperationModeEnumType.proto";
+
+message ChargingSchedulePeriodType {
+  int32 startPeriod = 1;
+  double limit = 2;
+  double limit_L2 = 3;
+  double limit_L3 = 4;
+  int32 numberPhases = 5;
+  int32 phaseToUse = 6;
+  double dischargeLimit = 7;
+  double dischargeLimit_L2 = 8;
+  double dischargeLimit_L3 = 9;
+  double setpoint = 10;
+  double setpoint_L2 = 11;
+  double setpoint_L3 = 12;
+  double setpointReactive = 13;
+  double setpointReactive_L2 = 14;
+  double setpointReactive_L3 = 15;
+  bool preconditioningRequest = 16;
+  bool evseSleep = 17;
+  double v2xBaseline = 18;
+  OCPP.v21.types.enums.operationmodeenumtype.OperationModeEnumType operationMode = 19;
+  repeated OCPP.v21.types.V2XFreqWattPointType v2xFreqWattCurve = 20;
+  repeated OCPP.v21.types.V2XSignalWattPointType v2xSignalWattCurve = 21;
+  OCPP.v21.types.CustomDataType customData = 22;
+}

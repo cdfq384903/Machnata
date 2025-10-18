@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+import "types/enums/ResetEnumType.proto";
+
+message ResetRequest {
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.enums.resetenumtype.ResetEnumType type = 1;
+  int32 evseId = 2;
+  OCPP.v21.types.CustomDataType customData = 3;
+}

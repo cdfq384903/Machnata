@@ -1,0 +1,40 @@
+syntax = "proto3";
+package OCPI.v211;
+option go_package = "tmp/v211;OCPIv211";
+option csharp_namespace = "OCPI.v211";
+
+import "types/enums/ocpi_2_1_1_cdr_auth_method_enum.proto";
+import "types/ocpi_2_1_1_cdr_charging_periods_item.proto";
+import "types/ocpi_2_1_1_cdr_location.proto";
+import "types/ocpi_2_1_1_cdr_tariffs_item.proto";
+
+message ocpi_2_1_1_cdr {
+  // NOTE: This field is required by standard Spec.
+  string id = 1;
+  // NOTE: This field is required by standard Spec.
+  string start_date_time = 2;
+  // NOTE: This field is required by standard Spec.
+  string stop_date_time = 3;
+  // NOTE: This field is required by standard Spec.
+  string auth_id = 4;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v211.types.enums.ocpi_2_1_1_cdr_auth_method_enum.ocpi_2_1_1_cdr_auth_method_enum auth_method = 5;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v211.types.ocpi_2_1_1_cdr_location location = 6;
+  string meter_id = 7;
+  // NOTE: This field is required by standard Spec.
+  string currency = 8;
+  repeated OCPI.v211.types.ocpi_2_1_1_cdr_tariffs_item tariffs = 9;
+  // NOTE: This field is required by standard Spec.
+  repeated OCPI.v211.types.ocpi_2_1_1_cdr_charging_periods_item charging_periods = 10;
+  // NOTE: This field is required by standard Spec.
+  double total_cost = 11;
+  // NOTE: This field is required by standard Spec.
+  double total_energy = 12;
+  // NOTE: This field is required by standard Spec.
+  double total_time = 13;
+  double total_parking_time = 14;
+  string remark = 15;
+  // NOTE: This field is required by standard Spec.
+  string last_updated = 16;
+}

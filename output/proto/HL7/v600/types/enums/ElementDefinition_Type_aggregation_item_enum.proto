@@ -1,0 +1,11 @@
+syntax = "proto3";
+package HL7.v600.types.enums.elementdefinition_type_aggregation_item_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum ElementDefinition_Type_aggregation_item_enum {
+  ELEMENTDEFINITION_TYPE_AGGREGATION_ITEM_ENUM_UNSPECIFIED = 0;
+  contained = 1;
+  referenced = 2;
+  bundled = 3;
+}

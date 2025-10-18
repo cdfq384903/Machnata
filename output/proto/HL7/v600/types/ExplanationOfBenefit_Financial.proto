@@ -1,0 +1,22 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/string.proto";
+
+message ExplanationOfBenefit_Financial {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept type = 4;
+  double allowedUnsignedInt = 5;
+  HL7.v600.types.Element shadow__allowedUnsignedInt = 6 [json_name = "_allowedUnsignedInt"];
+  string allowedString = 7;
+  HL7.v600.types.Element shadow__allowedString = 8 [json_name = "_allowedString"];
+  HL7.v600.types.Money allowedMoney = 9;
+  double usedUnsignedInt = 10;
+  HL7.v600.types.Element shadow__usedUnsignedInt = 11 [json_name = "_usedUnsignedInt"];
+  HL7.v600.types.Money usedMoney = 12;
+}

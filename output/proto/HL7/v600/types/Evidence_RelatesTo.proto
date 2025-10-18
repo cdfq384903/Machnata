@@ -1,0 +1,24 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/string.proto";
+
+message Evidence_RelatesTo {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.code type = 4;
+  HL7.v600.types.Element shadow__type = 5 [json_name = "_type"];
+  string targetUri = 6;
+  HL7.v600.types.Element shadow__targetUri = 7 [json_name = "_targetUri"];
+  HL7.v600.types.Attachment targetAttachment = 8;
+  string targetCanonical = 9;
+  HL7.v600.types.Element shadow__targetCanonical = 10 [json_name = "_targetCanonical"];
+  HL7.v600.types.Reference targetReference = 11;
+  string targetMarkdown = 12;
+  HL7.v600.types.Element shadow__targetMarkdown = 13 [json_name = "_targetMarkdown"];
+}

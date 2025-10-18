@@ -1,0 +1,22 @@
+syntax = "proto3";
+package OCPI.v211;
+option go_package = "tmp/v211;OCPIv211";
+option csharp_namespace = "OCPI.v211";
+
+import "types/ocpi_2_1_1_tariff_elements_item.proto";
+import "types/ocpi_2_1_1_tariff_energy_mix.proto";
+import "types/ocpi_2_1_1_tariff_tariff_alt_text_item.proto";
+
+message ocpi_2_1_1_tariff {
+  // NOTE: This field is required by standard Spec.
+  string id = 1;
+  // NOTE: This field is required by standard Spec.
+  string currency = 2;
+  repeated OCPI.v211.types.ocpi_2_1_1_tariff_tariff_alt_text_item tariff_alt_text = 3;
+  string tariff_alt_url = 4;
+  // NOTE: This field is required by standard Spec.
+  repeated OCPI.v211.types.ocpi_2_1_1_tariff_elements_item elements = 5;
+  OCPI.v211.types.ocpi_2_1_1_tariff_energy_mix energy_mix = 6;
+  // NOTE: This field is required by standard Spec.
+  string last_updated = 7;
+}

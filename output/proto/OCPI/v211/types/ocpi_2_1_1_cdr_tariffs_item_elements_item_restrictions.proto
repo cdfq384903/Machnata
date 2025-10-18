@@ -1,0 +1,20 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/enums/ocpi_2_1_1_cdr_tariffs_item_elements_item_restrictions_day_of_week_enum.proto";
+
+message ocpi_2_1_1_cdr_tariffs_item_elements_item_restrictions {
+  string start_time = 1;
+  string end_time = 2;
+  string start_date = 3;
+  string end_date = 4;
+  double min_kwh = 5;
+  double max_kwh = 6;
+  double min_power = 7;
+  double max_power = 8;
+  double min_duration = 9;
+  double max_duration = 10;
+  OCPI.v211.types.enums.ocpi_2_1_1_cdr_tariffs_item_elements_item_restrictions_day_of_week_enum.ocpi_2_1_1_cdr_tariffs_item_elements_item_restrictions_day_of_week_enum day_of_week = 11;
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/canonical.proto";
+import "types/enums/ElementDefinition_Type_aggregation_item_enum.proto";
+import "types/enums/ElementDefinition_Type_versioning_enum.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message ElementDefinition_Type {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.uri code = 4;
+  HL7.v600.types.Element shadow__code = 5 [json_name = "_code"];
+  repeated HL7.v600.types.canonical profile = 6;
+  repeated HL7.v600.types.canonical targetProfile = 7;
+  repeated HL7.v600.types.enums.elementdefinition_type_aggregation_item_enum.ElementDefinition_Type_aggregation_item_enum aggregation = 8;
+  repeated HL7.v600.types.Element shadow__aggregation = 9 [json_name = "_aggregation"];
+  HL7.v600.types.enums.elementdefinition_type_versioning_enum.ElementDefinition_Type_versioning_enum versioning = 10;
+  HL7.v600.types.Element shadow__versioning = 11 [json_name = "_versioning"];
+}

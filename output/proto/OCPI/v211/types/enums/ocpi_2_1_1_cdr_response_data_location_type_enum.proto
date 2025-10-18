@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPI.v211.types.enums.ocpi_2_1_1_cdr_response_data_location_type_enum;
+option go_package = "tmp/v211/types/enums;enums";
+option csharp_namespace = "OCPI.v211.types.enums";
+
+enum ocpi_2_1_1_cdr_response_data_location_type_enum {
+  OCPI_2_1_1_CDR_RESPONSE_DATA_LOCATION_TYPE_ENUM_UNSPECIFIED = 0;
+  ON_STREET = 1;
+  PARKING_GARAGE = 2;
+  UNDERGROUND_GARAGE = 3;
+  PARKING_LOT = 4;
+  OTHER = 5;
+  UNKNOWN = 6;
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/decimal.proto";
+import "types/string.proto";
+
+message RiskAssessment_Prediction {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept outcome = 4;
+  double probabilityDecimal = 5;
+  HL7.v600.types.Element shadow__probabilityDecimal = 6 [json_name = "_probabilityDecimal"];
+  HL7.v600.types.Range probabilityRange = 7;
+  HL7.v600.types.CodeableConcept qualitativeRisk = 8;
+  HL7.v600.types.decimal relativeRisk = 9;
+  HL7.v600.types.Element shadow__relativeRisk = 10 [json_name = "_relativeRisk"];
+  HL7.v600.types.Period whenPeriod = 11;
+  HL7.v600.types.Range whenRange = 12;
+  HL7.v600.types.string rationale = 13;
+  HL7.v600.types.Element shadow__rationale = 14 [json_name = "_rationale"];
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/canonical.proto";
+import "types/code.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message Endpoint_Payload {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  repeated HL7.v600.types.CodeableConcept type = 4;
+  repeated HL7.v600.types.code mimeType = 5;
+  repeated HL7.v600.types.Element shadow__mimeType = 6 [json_name = "_mimeType"];
+  repeated HL7.v600.types.canonical profileCanonical = 7;
+  repeated HL7.v600.types.Element shadow__profileCanonical = 8 [json_name = "_profileCanonical"];
+  repeated HL7.v600.types.uri profileUri = 9;
+  repeated HL7.v600.types.Element shadow__profileUri = 10 [json_name = "_profileUri"];
+}

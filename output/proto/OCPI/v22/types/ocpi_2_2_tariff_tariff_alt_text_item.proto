@@ -1,0 +1,9 @@
+syntax = "proto3";
+package OCPI.v22.types;
+option go_package = "tmp/v22/types;types";
+option csharp_namespace = "OCPI.v22.types";
+
+message ocpi_2_2_tariff_tariff_alt_text_item {
+  string language = 1;
+  string text = 2;
+}

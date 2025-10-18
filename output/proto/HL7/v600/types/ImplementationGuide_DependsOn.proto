@@ -1,0 +1,23 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/canonical.proto";
+import "types/id.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message ImplementationGuide_DependsOn {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.canonical uri = 4;
+  HL7.v600.types.id packageId = 5;
+  HL7.v600.types.Element shadow__packageId = 6 [json_name = "_packageId"];
+  HL7.v600.types.string version = 7;
+  HL7.v600.types.Element shadow__version = 8 [json_name = "_version"];
+  HL7.v600.types.markdown reason = 9;
+  HL7.v600.types.Element shadow__reason = 10 [json_name = "_reason"];
+}

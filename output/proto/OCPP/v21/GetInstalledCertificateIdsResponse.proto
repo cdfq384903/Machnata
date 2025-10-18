@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CertificateHashDataChainType.proto";
+import "types/CustomDataType.proto";
+import "types/StatusInfoType.proto";
+import "types/enums/GetInstalledCertificateStatusEnumType.proto";
+
+message GetInstalledCertificateIdsResponse {
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.enums.getinstalledcertificatestatusenumtype.GetInstalledCertificateStatusEnumType status = 1;
+  OCPP.v21.types.StatusInfoType statusInfo = 2;
+  repeated OCPP.v21.types.CertificateHashDataChainType certificateHashDataChain = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

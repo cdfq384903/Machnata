@@ -1,0 +1,30 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/canonical.proto";
+import "types/code.proto";
+import "types/id.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message ImplementationGuide_Resource {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.Reference reference = 4;
+  repeated HL7.v600.types.code fhirVersion = 5;
+  repeated HL7.v600.types.Element shadow__fhirVersion = 6 [json_name = "_fhirVersion"];
+  HL7.v600.types.string name = 7;
+  HL7.v600.types.Element shadow__name = 8 [json_name = "_name"];
+  HL7.v600.types.markdown description = 9;
+  HL7.v600.types.Element shadow__description = 10 [json_name = "_description"];
+  HL7.v600.types.boolean isExample = 11;
+  HL7.v600.types.Element shadow__isExample = 12 [json_name = "_isExample"];
+  repeated HL7.v600.types.canonical profile = 13;
+  HL7.v600.types.id groupingId = 14;
+  HL7.v600.types.Element shadow__groupingId = 15 [json_name = "_groupingId"];
+}

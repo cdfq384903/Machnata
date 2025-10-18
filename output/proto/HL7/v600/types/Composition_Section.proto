@@ -1,0 +1,24 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Narrative.proto";
+import "types/string.proto";
+
+message Composition_Section {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string title = 4;
+  HL7.v600.types.Element shadow__title = 5 [json_name = "_title"];
+  HL7.v600.types.CodeableConcept code = 6;
+  repeated HL7.v600.types.Reference author = 7;
+  HL7.v600.types.Reference focus = 8;
+  HL7.v600.types.Narrative text = 9;
+  HL7.v600.types.CodeableConcept orderedBy = 10;
+  repeated HL7.v600.types.Reference entry = 11;
+  HL7.v600.types.CodeableConcept emptyReason = 12;
+  repeated HL7.v600.types.Composition_Section section = 13;
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/TerminologyCapabilities_Version.proto";
+import "types/boolean.proto";
+import "types/canonical.proto";
+import "types/code.proto";
+import "types/string.proto";
+
+message TerminologyCapabilities_CodeSystem {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.canonical uri = 4;
+  repeated HL7.v600.types.TerminologyCapabilities_Version version = 5;
+  HL7.v600.types.code content = 6;
+  HL7.v600.types.Element shadow__content = 7 [json_name = "_content"];
+  HL7.v600.types.boolean subsumption = 8;
+  HL7.v600.types.Element shadow__subsumption = 9 [json_name = "_subsumption"];
+}

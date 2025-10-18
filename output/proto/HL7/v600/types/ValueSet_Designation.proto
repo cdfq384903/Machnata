@@ -1,0 +1,20 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/string.proto";
+
+message ValueSet_Designation {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.code language = 4;
+  HL7.v600.types.Element shadow__language = 5 [json_name = "_language"];
+  HL7.v600.types.Coding use = 6;
+  repeated HL7.v600.types.Coding additionalUse = 7;
+  HL7.v600.types.string value = 8;
+  HL7.v600.types.Element shadow__value = 9 [json_name = "_value"];
+}

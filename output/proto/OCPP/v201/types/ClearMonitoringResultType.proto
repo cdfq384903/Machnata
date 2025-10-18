@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v201.types;
+option go_package = "tmp/v201/types;types";
+option csharp_namespace = "OCPP.v201.types";
+
+import "types/CustomDataType.proto";
+import "types/StatusInfoType.proto";
+import "types/enums/ClearMonitoringStatusEnumType.proto";
+
+message ClearMonitoringResultType {
+  OCPP.v201.types.CustomDataType customData = 1;
+  OCPP.v201.types.enums.clearmonitoringstatusenumtype.ClearMonitoringStatusEnumType status = 2;
+  int32 id = 3;
+  OCPP.v201.types.StatusInfoType statusInfo = 4;
+}

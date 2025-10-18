@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/base64Binary.proto";
+import "types/code.proto";
+import "types/id.proto";
+import "types/uri.proto";
+
+message Binary {
+  string resourceType = 1;
+  HL7.v600.types.id id = 2;
+  HL7.v600.types.Meta meta = 3;
+  HL7.v600.types.uri implicitRules = 4;
+  HL7.v600.types.Element shadow__implicitRules = 5 [json_name = "_implicitRules"];
+  HL7.v600.types.code language = 6;
+  HL7.v600.types.Element shadow__language = 7 [json_name = "_language"];
+  HL7.v600.types.code contentType = 8;
+  HL7.v600.types.Element shadow__contentType = 9 [json_name = "_contentType"];
+  HL7.v600.types.Reference securityContext = 10;
+  HL7.v600.types.base64Binary data = 11;
+  HL7.v600.types.Element shadow__data = 12 [json_name = "_data"];
+}

@@ -1,0 +1,51 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Questionnaire_AnswerOption.proto";
+import "types/Questionnaire_EnableWhen.proto";
+import "types/Questionnaire_Initial.proto";
+import "types/boolean.proto";
+import "types/canonical.proto";
+import "types/code.proto";
+import "types/integer.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message Questionnaire_Item {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string linkId = 4;
+  HL7.v600.types.Element shadow__linkId = 5 [json_name = "_linkId"];
+  HL7.v600.types.uri definition = 6;
+  HL7.v600.types.Element shadow__definition = 7 [json_name = "_definition"];
+  repeated HL7.v600.types.Coding code = 8;
+  HL7.v600.types.string prefix = 9;
+  HL7.v600.types.Element shadow__prefix = 10 [json_name = "_prefix"];
+  HL7.v600.types.string text = 11;
+  HL7.v600.types.Element shadow__text = 12 [json_name = "_text"];
+  HL7.v600.types.code type = 13;
+  HL7.v600.types.Element shadow__type = 14 [json_name = "_type"];
+  repeated HL7.v600.types.Questionnaire_EnableWhen enableWhen = 15;
+  HL7.v600.types.code enableBehavior = 16;
+  HL7.v600.types.Element shadow__enableBehavior = 17 [json_name = "_enableBehavior"];
+  HL7.v600.types.code disabledDisplay = 18;
+  HL7.v600.types.Element shadow__disabledDisplay = 19 [json_name = "_disabledDisplay"];
+  HL7.v600.types.boolean required = 20;
+  HL7.v600.types.Element shadow__required = 21 [json_name = "_required"];
+  HL7.v600.types.boolean repeats = 22;
+  HL7.v600.types.Element shadow__repeats = 23 [json_name = "_repeats"];
+  HL7.v600.types.boolean readOnly = 24;
+  HL7.v600.types.Element shadow__readOnly = 25 [json_name = "_readOnly"];
+  HL7.v600.types.integer maxLength = 26;
+  HL7.v600.types.Element shadow__maxLength = 27 [json_name = "_maxLength"];
+  HL7.v600.types.code answerConstraint = 28;
+  HL7.v600.types.Element shadow__answerConstraint = 29 [json_name = "_answerConstraint"];
+  HL7.v600.types.canonical answerValueSet = 30;
+  repeated HL7.v600.types.Questionnaire_AnswerOption answerOption = 31;
+  repeated HL7.v600.types.Questionnaire_Initial initial = 32;
+  repeated HL7.v600.types.Questionnaire_Item item = 33;
+}

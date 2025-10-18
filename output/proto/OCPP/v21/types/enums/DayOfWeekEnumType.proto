@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.dayofweekenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum DayOfWeekEnumType {
+  DAYOFWEEKENUMTYPE_UNSPECIFIED = 0;
+  Monday = 1;
+  Tuesday = 2;
+  Wednesday = 3;
+  Thursday = 4;
+  Friday = 5;
+  Saturday = 6;
+  Sunday = 7;
+}

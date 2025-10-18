@@ -1,0 +1,40 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/MeasureReport_Population.proto";
+import "types/MeasureReport_Stratifier.proto";
+import "types/dateTime.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message MeasureReport_Group {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.string linkId = 4;
+  HL7.v600.types.Element shadow__linkId = 5 [json_name = "_linkId"];
+  HL7.v600.types.dateTime calculatedDate = 6;
+  HL7.v600.types.Element shadow__calculatedDate = 7 [json_name = "_calculatedDate"];
+  HL7.v600.types.CodeableConcept code = 8;
+  HL7.v600.types.markdown description = 9;
+  HL7.v600.types.Element shadow__description = 10 [json_name = "_description"];
+  HL7.v600.types.Reference subject = 11;
+  HL7.v600.types.CodeableConcept scoring = 12;
+  HL7.v600.types.CodeableConcept improvementNotation = 13;
+  HL7.v600.types.markdown improvementNotationGuidance = 14;
+  HL7.v600.types.Element shadow__improvementNotationGuidance = 15 [json_name = "_improvementNotationGuidance"];
+  repeated HL7.v600.types.MeasureReport_Population population = 16;
+  HL7.v600.types.Quantity measureScoreQuantity = 17;
+  string measureScoreDateTime = 18;
+  HL7.v600.types.Element shadow__measureScoreDateTime = 19 [json_name = "_measureScoreDateTime"];
+  HL7.v600.types.CodeableConcept measureScoreCodeableConcept = 20;
+  HL7.v600.types.Period measureScorePeriod = 21;
+  HL7.v600.types.Range measureScoreRange = 22;
+  HL7.v600.types.Duration measureScoreDuration = 23;
+  bool measureScoreBoolean = 24;
+  HL7.v600.types.Element shadow__measureScoreBoolean = 25 [json_name = "_measureScoreBoolean"];
+  repeated HL7.v600.types.MeasureReport_Stratifier stratifier = 26;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+
+message CostUpdatedRequest {
+  // NOTE: This field is required by standard Spec.
+  double totalCost = 1;
+  // NOTE: This field is required by standard Spec.
+  string transactionId = 2;
+  OCPP.v21.types.CustomDataType customData = 3;
+}

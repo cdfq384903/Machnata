@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/CustomDataType.proto";
+import "types/enums/CertificateSigningUseEnumType.proto";
+
+message CertificateSignedRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  // NOTE: This field is required by standard Spec.
+  string certificateChain = 2;
+  OCPP.v201.types.enums.certificatesigninguseenumtype.CertificateSigningUseEnumType certificateType = 3;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+
+message EnterServiceType {
+  int32 priority = 1;
+  double highVoltage = 2;
+  double lowVoltage = 3;
+  double highFreq = 4;
+  double lowFreq = 5;
+  double delay = 6;
+  double randomDelay = 7;
+  double rampRate = 8;
+  OCPP.v21.types.CustomDataType customData = 9;
+}

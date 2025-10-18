@@ -1,0 +1,35 @@
+syntax = "proto3";
+package HL7.v600.types.enums.timing_repeat_when_item_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum Timing_Repeat_when_item_enum {
+  TIMING_REPEAT_WHEN_ITEM_ENUM_UNSPECIFIED = 0;
+  MORN = 1;
+  MORN_early = 2;
+  MORN_late = 3;
+  NOON = 4;
+  AFT = 5;
+  AFT_early = 6;
+  AFT_late = 7;
+  EVE = 8;
+  EVE_early = 9;
+  EVE_late = 10;
+  NIGHT = 11;
+  PHS = 12;
+  IMD = 13;
+  HS = 14;
+  WAKE = 15;
+  C = 16;
+  CM = 17;
+  CD = 18;
+  CV = 19;
+  AC = 20;
+  ACM = 21;
+  ACD = 22;
+  ACV = 23;
+  PC = 24;
+  PCM = 25;
+  PCD = 26;
+  PCV = 27;
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+message ocpi_2_1_1_cdr_properties_location_properties_energy_mix_anyOf_0 {
+}

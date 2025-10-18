@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPI.v22.types.enums.ocpi_2_2_version_details_version_enum;
+option go_package = "tmp/v22/types/enums;enums";
+option csharp_namespace = "OCPI.v22.types.enums";
+
+enum ocpi_2_2_version_details_version_enum {
+  OCPI_2_2_VERSION_DETAILS_VERSION_ENUM_UNSPECIFIED = 0;
+  _2_0 = 1;
+  _2_1 = 2;
+  _2_1_1 = 3;
+  _2_2 = 4;
+}

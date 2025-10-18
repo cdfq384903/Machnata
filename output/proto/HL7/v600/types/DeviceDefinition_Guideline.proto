@@ -1,0 +1,23 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message DeviceDefinition_Guideline {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  repeated HL7.v600.types.UsageContext useContext = 4;
+  HL7.v600.types.markdown usageInstruction = 5;
+  HL7.v600.types.Element shadow__usageInstruction = 6 [json_name = "_usageInstruction"];
+  repeated HL7.v600.types.RelatedArtifact relatedArtifact = 7;
+  repeated HL7.v600.types.CodeableConcept indication = 8;
+  repeated HL7.v600.types.CodeableConcept contraindication = 9;
+  repeated HL7.v600.types.CodeableConcept warning = 10;
+  HL7.v600.types.string intendedUse = 11;
+  HL7.v600.types.Element shadow__intendedUse = 12 [json_name = "_intendedUse"];
+}

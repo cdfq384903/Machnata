@@ -1,0 +1,23 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/MonetaryComponent.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+
+message Invoice_LineItem {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.positiveInt sequence = 4;
+  HL7.v600.types.Element shadow__sequence = 5 [json_name = "_sequence"];
+  string servicedDate = 6;
+  HL7.v600.types.Element shadow__servicedDate = 7 [json_name = "_servicedDate"];
+  HL7.v600.types.Period servicedPeriod = 8;
+  HL7.v600.types.Reference chargeItemReference = 9;
+  HL7.v600.types.CodeableConcept chargeItemCodeableConcept = 10;
+  repeated HL7.v600.types.MonetaryComponent priceComponent = 11;
+}

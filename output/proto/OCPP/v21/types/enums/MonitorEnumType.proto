@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.monitorenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum MonitorEnumType {
+  MONITORENUMTYPE_UNSPECIFIED = 0;
+  UpperThreshold = 1;
+  LowerThreshold = 2;
+  Delta = 3;
+  Periodic = 4;
+  PeriodicClockAligned = 5;
+  TargetDelta = 6;
+  TargetDeltaRelative = 7;
+}

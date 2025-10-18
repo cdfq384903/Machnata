@@ -1,0 +1,15 @@
+syntax = "proto3";
+package HL7.v600.types.enums.contactpoint_system_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum ContactPoint_system_enum {
+  CONTACTPOINT_SYSTEM_ENUM_UNSPECIFIED = 0;
+  phone = 1;
+  fax = 2;
+  email = 3;
+  pager = 4;
+  url = 5;
+  sms = 6;
+  other = 7;
+}

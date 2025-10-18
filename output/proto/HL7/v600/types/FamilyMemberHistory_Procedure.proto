@@ -1,0 +1,26 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/string.proto";
+
+message FamilyMemberHistory_Procedure {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept code = 4;
+  HL7.v600.types.CodeableConcept outcome = 5;
+  HL7.v600.types.boolean contributedToDeath = 6;
+  HL7.v600.types.Element shadow__contributedToDeath = 7 [json_name = "_contributedToDeath"];
+  HL7.v600.types.Age performedAge = 8;
+  HL7.v600.types.Range performedRange = 9;
+  HL7.v600.types.Period performedPeriod = 10;
+  string performedString = 11;
+  HL7.v600.types.Element shadow__performedString = 12 [json_name = "_performedString"];
+  string performedDateTime = 13;
+  HL7.v600.types.Element shadow__performedDateTime = 14 [json_name = "_performedDateTime"];
+  repeated HL7.v600.types.Annotation note = 15;
+}

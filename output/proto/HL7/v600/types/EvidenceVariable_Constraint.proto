@@ -1,0 +1,34 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/boolean.proto";
+import "types/dateTime.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+import "types/unsignedInt.proto";
+
+message EvidenceVariable_Constraint {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept conditional = 4;
+  HL7.v600.types.Quantity minimumQuantity = 5;
+  HL7.v600.types.Quantity maximumQuantity = 6;
+  HL7.v600.types.dateTime earliestDateTime = 7;
+  HL7.v600.types.Element shadow__earliestDateTime = 8 [json_name = "_earliestDateTime"];
+  HL7.v600.types.dateTime latestDateTime = 9;
+  HL7.v600.types.Element shadow__latestDateTime = 10 [json_name = "_latestDateTime"];
+  HL7.v600.types.unsignedInt minimumStringLength = 11;
+  HL7.v600.types.Element shadow__minimumStringLength = 12 [json_name = "_minimumStringLength"];
+  HL7.v600.types.positiveInt maximumStringLength = 13;
+  HL7.v600.types.Element shadow__maximumStringLength = 14 [json_name = "_maximumStringLength"];
+  HL7.v600.types.CodeableConcept code = 15;
+  HL7.v600.types.Expression expression = 16;
+  HL7.v600.types.Reference expectedValueSet = 17;
+  HL7.v600.types.Reference expectedUnitsValueSet = 18;
+  HL7.v600.types.boolean anyValueAllowed = 19;
+  HL7.v600.types.Element shadow__anyValueAllowed = 20 [json_name = "_anyValueAllowed"];
+}

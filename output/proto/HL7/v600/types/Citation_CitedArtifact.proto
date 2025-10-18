@@ -1,0 +1,41 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/Citation_Abstract.proto";
+import "types/Citation_Classification1.proto";
+import "types/Citation_Contributorship.proto";
+import "types/Citation_Part.proto";
+import "types/Citation_PublicationForm.proto";
+import "types/Citation_RelatesTo1.proto";
+import "types/Citation_StatusDate1.proto";
+import "types/Citation_Title.proto";
+import "types/Citation_WebLocation.proto";
+import "types/dateTime.proto";
+import "types/string.proto";
+
+message Citation_CitedArtifact {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  repeated HL7.v600.types.Identifier identifier = 4;
+  repeated HL7.v600.types.Identifier relatedIdentifier = 5;
+  HL7.v600.types.dateTime dateAccessed = 6;
+  HL7.v600.types.Element shadow__dateAccessed = 7 [json_name = "_dateAccessed"];
+  HL7.v600.types.string version = 8;
+  HL7.v600.types.Element shadow__version = 9 [json_name = "_version"];
+  repeated HL7.v600.types.CodeableConcept currentState = 10;
+  repeated HL7.v600.types.Citation_StatusDate1 statusDate = 11;
+  repeated HL7.v600.types.Citation_Title title = 12;
+  repeated HL7.v600.types.Citation_Abstract abstract = 13;
+  HL7.v600.types.Citation_Part part = 14;
+  HL7.v600.types.Reference baseCitation = 15;
+  repeated HL7.v600.types.Citation_RelatesTo1 relatesTo = 16;
+  repeated HL7.v600.types.Citation_PublicationForm publicationForm = 17;
+  repeated HL7.v600.types.Citation_WebLocation webLocation = 18;
+  repeated HL7.v600.types.Citation_Classification1 classification = 19;
+  HL7.v600.types.Citation_Contributorship contributorship = 20;
+  repeated HL7.v600.types.Annotation note = 21;
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/TerminologyCapabilities_Parameter.proto";
+import "types/boolean.proto";
+import "types/markdown.proto";
+import "types/string.proto";
+
+message TerminologyCapabilities_Expansion {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.boolean hierarchical = 4;
+  HL7.v600.types.Element shadow__hierarchical = 5 [json_name = "_hierarchical"];
+  HL7.v600.types.boolean paging = 6;
+  HL7.v600.types.Element shadow__paging = 7 [json_name = "_paging"];
+  HL7.v600.types.boolean incomplete = 8;
+  HL7.v600.types.Element shadow__incomplete = 9 [json_name = "_incomplete"];
+  repeated HL7.v600.types.TerminologyCapabilities_Parameter parameter = 10;
+  HL7.v600.types.markdown textFilter = 11;
+  HL7.v600.types.Element shadow__textFilter = 12 [json_name = "_textFilter"];
+}

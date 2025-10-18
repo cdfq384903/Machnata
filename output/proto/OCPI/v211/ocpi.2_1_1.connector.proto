@@ -1,0 +1,27 @@
+syntax = "proto3";
+package OCPI.v211;
+option go_package = "tmp/v211;OCPIv211";
+option csharp_namespace = "OCPI.v211";
+
+import "types/enums/ocpi_2_1_1_connector_format_enum.proto";
+import "types/enums/ocpi_2_1_1_connector_power_type_enum.proto";
+import "types/enums/ocpi_2_1_1_connector_standard_enum.proto";
+
+message ocpi_2_1_1_connector {
+  // NOTE: This field is required by standard Spec.
+  string id = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v211.types.enums.ocpi_2_1_1_connector_standard_enum.ocpi_2_1_1_connector_standard_enum standard = 2;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v211.types.enums.ocpi_2_1_1_connector_format_enum.ocpi_2_1_1_connector_format_enum format = 3;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v211.types.enums.ocpi_2_1_1_connector_power_type_enum.ocpi_2_1_1_connector_power_type_enum power_type = 4;
+  // NOTE: This field is required by standard Spec.
+  int32 voltage = 5;
+  // NOTE: This field is required by standard Spec.
+  int32 amperage = 6;
+  string tariff_id = 7;
+  string terms_and_conditions = 8;
+  // NOTE: This field is required by standard Spec.
+  string last_updated = 9;
+}

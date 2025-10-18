@@ -1,0 +1,26 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+import "types/enums/ocpi_2_2_1_token_default_profile_type_enum.proto";
+import "types/enums/ocpi_2_2_1_token_type_enum.proto";
+import "types/enums/ocpi_2_2_1_token_whitelist_enum.proto";
+import "types/ocpi_2_2_1_token_energy_contract.proto";
+
+message ocpi_2_2_1_token {
+  string country_code = 1;
+  string party_id = 2;
+  string uid = 3;
+  OCPI.v221.types.enums.ocpi_2_2_1_token_type_enum.ocpi_2_2_1_token_type_enum type = 4;
+  string contract_id = 5;
+  string visual_number = 6;
+  string issuer = 7;
+  string group_id = 8;
+  bool valid = 9;
+  OCPI.v221.types.enums.ocpi_2_2_1_token_whitelist_enum.ocpi_2_2_1_token_whitelist_enum whitelist = 10;
+  string language = 11;
+  OCPI.v221.types.enums.ocpi_2_2_1_token_default_profile_type_enum.ocpi_2_2_1_token_default_profile_type_enum default_profile_type = 12;
+  OCPI.v221.types.ocpi_2_2_1_token_energy_contract energy_contract = 13;
+  string last_updated = 14;
+}

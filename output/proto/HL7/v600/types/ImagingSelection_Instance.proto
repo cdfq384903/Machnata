@@ -1,0 +1,26 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/ImagingSelection_ImageRegion2D.proto";
+import "types/id.proto";
+import "types/oid.proto";
+import "types/string.proto";
+import "types/unsignedInt.proto";
+
+message ImagingSelection_Instance {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.id uid = 4;
+  HL7.v600.types.Element shadow__uid = 5 [json_name = "_uid"];
+  HL7.v600.types.unsignedInt number = 6;
+  HL7.v600.types.Element shadow__number = 7 [json_name = "_number"];
+  HL7.v600.types.oid sopClass = 8;
+  HL7.v600.types.Element shadow__sopClass = 9 [json_name = "_sopClass"];
+  repeated HL7.v600.types.string subset = 10;
+  repeated HL7.v600.types.Element shadow__subset = 11 [json_name = "_subset"];
+  repeated HL7.v600.types.ImagingSelection_ImageRegion2D imageRegion2D = 12;
+}

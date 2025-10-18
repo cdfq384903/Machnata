@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+
+message FreqDroopType {
+  int32 priority = 1;
+  double overFreq = 2;
+  double underFreq = 3;
+  double overDroop = 4;
+  double underDroop = 5;
+  double responseTime = 6;
+  string startTime = 7;
+  double duration = 8;
+  OCPP.v21.types.CustomDataType customData = 9;
+}

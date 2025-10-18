@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPI.v221.types;
+option go_package = "tmp/v221/types;types";
+option csharp_namespace = "OCPI.v221.types";
+
+import "types/ocpi_2_2_1_commands_start_session_request_token.proto";
+
+message ocpi_2_2_1_commands_start_session_request {
+  string response_url = 1;
+  OCPI.v221.types.ocpi_2_2_1_commands_start_session_request_token token = 2;
+  string location_id = 3;
+  string evse_uid = 4;
+  string connector_id = 5;
+  string authorization_reference = 6;
+}

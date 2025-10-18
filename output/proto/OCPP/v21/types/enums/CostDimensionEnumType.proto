@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.costdimensionenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum CostDimensionEnumType {
+  COSTDIMENSIONENUMTYPE_UNSPECIFIED = 0;
+  Energy = 1;
+  MaxCurrent = 2;
+  MinCurrent = 3;
+  MaxPower = 4;
+  MinPower = 5;
+  IdleTIme = 6;
+  ChargingTime = 7;
+}

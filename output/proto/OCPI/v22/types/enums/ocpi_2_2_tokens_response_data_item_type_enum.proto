@@ -1,0 +1,12 @@
+syntax = "proto3";
+package OCPI.v22.types.enums.ocpi_2_2_tokens_response_data_item_type_enum;
+option go_package = "tmp/v22/types/enums;enums";
+option csharp_namespace = "OCPI.v22.types.enums";
+
+enum ocpi_2_2_tokens_response_data_item_type_enum {
+  OCPI_2_2_TOKENS_RESPONSE_DATA_ITEM_TYPE_ENUM_UNSPECIFIED = 0;
+  AD_HOC_USER = 1;
+  APP_USER = 2;
+  OTHER = 3;
+  RFID = 4;
+}

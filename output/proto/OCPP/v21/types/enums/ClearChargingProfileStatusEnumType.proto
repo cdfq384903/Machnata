@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v21.types.enums.clearchargingprofilestatusenumtype;
+option go_package = "tmp/v21/types/enums;enums";
+option csharp_namespace = "OCPP.v21.types.enums";
+
+enum ClearChargingProfileStatusEnumType {
+  CLEARCHARGINGPROFILESTATUSENUMTYPE_UNSPECIFIED = 0;
+  Accepted = 1;
+  Unknown = 2;
+}

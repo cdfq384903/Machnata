@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPI.v22;
+option go_package = "tmp/v22;OCPIv22";
+option csharp_namespace = "OCPI.v22";
+
+import "types/ocpi_2_2_versions_response_data_item.proto";
+
+message ocpi_2_2_versions_response {
+  // NOTE: This field is required by standard Spec.
+  repeated OCPI.v22.types.ocpi_2_2_versions_response_data_item data = 1;
+  // NOTE: This field is required by standard Spec.
+  int32 status_code = 2;
+  string status_message = 3;
+  // NOTE: This field is required by standard Spec.
+  string timestamp = 4;
+}

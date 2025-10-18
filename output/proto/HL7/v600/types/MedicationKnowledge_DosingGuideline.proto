@@ -1,0 +1,19 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/MedicationKnowledge_Dosage.proto";
+import "types/MedicationKnowledge_PatientCharacteristic.proto";
+import "types/string.proto";
+
+message MedicationKnowledge_DosingGuideline {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.CodeableConcept treatmentIntent = 4;
+  repeated HL7.v600.types.MedicationKnowledge_Dosage dosage = 5;
+  HL7.v600.types.CodeableConcept administrationTreatment = 6;
+  repeated HL7.v600.types.MedicationKnowledge_PatientCharacteristic patientCharacteristic = 7;
+}

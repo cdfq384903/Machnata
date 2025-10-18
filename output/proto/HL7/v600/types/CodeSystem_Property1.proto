@@ -1,0 +1,29 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/code.proto";
+import "types/string.proto";
+
+message CodeSystem_Property1 {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.code code = 4;
+  HL7.v600.types.Element shadow__code = 5 [json_name = "_code"];
+  string valueCode = 6;
+  HL7.v600.types.Element shadow__valueCode = 7 [json_name = "_valueCode"];
+  HL7.v600.types.Coding valueCoding = 8;
+  string valueString = 9;
+  HL7.v600.types.Element shadow__valueString = 10 [json_name = "_valueString"];
+  double valueInteger = 11;
+  HL7.v600.types.Element shadow__valueInteger = 12 [json_name = "_valueInteger"];
+  bool valueBoolean = 13;
+  HL7.v600.types.Element shadow__valueBoolean = 14 [json_name = "_valueBoolean"];
+  string valueDateTime = 15;
+  HL7.v600.types.Element shadow__valueDateTime = 16 [json_name = "_valueDateTime"];
+  double valueDecimal = 17;
+  HL7.v600.types.Element shadow__valueDecimal = 18 [json_name = "_valueDecimal"];
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/MessageFormatEnumType.proto";
+
+message MessageContentType {
+  OCPP.v21.types.enums.messageformatenumtype.MessageFormatEnumType format = 1;
+  string language = 2;
+  string content = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

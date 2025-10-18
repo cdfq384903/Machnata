@@ -1,0 +1,20 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/MolecularDefinition_CoordinateInterval2.proto";
+import "types/integer.proto";
+import "types/string.proto";
+
+message MolecularDefinition_Edit {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.integer editOrder = 4;
+  HL7.v600.types.Element shadow__editOrder = 5 [json_name = "_editOrder"];
+  HL7.v600.types.MolecularDefinition_CoordinateInterval2 coordinateInterval = 6;
+  HL7.v600.types.Reference replacementMolecule = 7;
+  HL7.v600.types.Reference replacedMolecule = 8;
+}

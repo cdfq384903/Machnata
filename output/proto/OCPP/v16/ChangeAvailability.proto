@@ -1,0 +1,13 @@
+syntax = "proto3";
+package OCPP.v16;
+option go_package = "tmp/v16;OCPPv16";
+option csharp_namespace = "OCPP.v16";
+
+import "types/enums/ChangeAvailability_type_enum.proto";
+
+message ChangeAvailability {
+  // NOTE: This field is required by standard Spec.
+  int32 connectorId = 1;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v16.types.enums.changeavailability_type_enum.ChangeAvailability_type_enum type = 2;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/enums/TariffKindEnumType.proto";
+
+message TariffAssignmentType {
+  string tariffId = 1;
+  OCPP.v21.types.enums.tariffkindenumtype.TariffKindEnumType tariffKind = 2;
+  string validFrom = 3;
+  repeated int32 evseIds = 4;
+  repeated string idTokens = 5;
+  OCPP.v21.types.CustomDataType customData = 6;
+}

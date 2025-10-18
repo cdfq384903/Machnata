@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.reportbaseenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum ReportBaseEnumType {
+  REPORTBASEENUMTYPE_UNSPECIFIED = 0;
+  ConfigurationInventory = 1;
+  FullInventory = 2;
+  SummaryInventory = 3;
+}

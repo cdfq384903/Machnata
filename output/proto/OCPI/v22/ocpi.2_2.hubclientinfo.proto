@@ -1,0 +1,20 @@
+syntax = "proto3";
+package OCPI.v22;
+option go_package = "tmp/v22;OCPIv22";
+option csharp_namespace = "OCPI.v22";
+
+import "types/enums/ocpi_2_2_hubclientinfo_role_enum.proto";
+import "types/enums/ocpi_2_2_hubclientinfo_status_enum.proto";
+
+message ocpi_2_2_hubclientinfo {
+  // NOTE: This field is required by standard Spec.
+  string party_id = 1;
+  // NOTE: This field is required by standard Spec.
+  string country_code = 2;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v22.types.enums.ocpi_2_2_hubclientinfo_role_enum.ocpi_2_2_hubclientinfo_role_enum role = 3;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v22.types.enums.ocpi_2_2_hubclientinfo_status_enum.ocpi_2_2_hubclientinfo_status_enum status = 4;
+  // NOTE: This field is required by standard Spec.
+  string last_updated = 5;
+}

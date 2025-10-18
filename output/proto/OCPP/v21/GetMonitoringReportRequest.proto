@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/ComponentVariableType.proto";
+import "types/CustomDataType.proto";
+import "types/enums/MonitoringCriterionEnumType.proto";
+
+message GetMonitoringReportRequest {
+  repeated OCPP.v21.types.ComponentVariableType componentVariable = 1;
+  // NOTE: This field is required by standard Spec.
+  int32 requestId = 2;
+  repeated OCPP.v21.types.enums.monitoringcriterionenumtype.MonitoringCriterionEnumType monitoringCriteria = 3;
+  OCPP.v21.types.CustomDataType customData = 4;
+}

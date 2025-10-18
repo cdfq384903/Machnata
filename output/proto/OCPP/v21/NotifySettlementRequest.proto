@@ -1,0 +1,26 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/AddressType.proto";
+import "types/CustomDataType.proto";
+import "types/enums/PaymentStatusEnumType.proto";
+
+message NotifySettlementRequest {
+  string transactionId = 1;
+  // NOTE: This field is required by standard Spec.
+  string pspRef = 2;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v21.types.enums.paymentstatusenumtype.PaymentStatusEnumType status = 3;
+  string statusInfo = 4;
+  // NOTE: This field is required by standard Spec.
+  double settlementAmount = 5;
+  // NOTE: This field is required by standard Spec.
+  string settlementTime = 6;
+  string receiptId = 7;
+  string receiptUrl = 8;
+  OCPP.v21.types.AddressType vatCompany = 9;
+  string vatNumber = 10;
+  OCPP.v21.types.CustomDataType customData = 11;
+}

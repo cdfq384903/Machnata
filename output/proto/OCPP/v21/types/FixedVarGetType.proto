@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/FixedVarType.proto";
+
+message FixedVarGetType {
+  OCPP.v21.types.FixedVarType fixedVar = 1;
+  string id = 2;
+  bool isDefault = 3;
+  bool isSuperseded = 4;
+  OCPP.v21.types.CustomDataType customData = 5;
+}

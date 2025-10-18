@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OCPI.v211.types;
+option go_package = "tmp/v211/types;types";
+option csharp_namespace = "OCPI.v211.types";
+
+import "types/ocpi_2_1_1_location_response_data_opening_times_exceptional_openings_item.proto";
+import "types/ocpi_2_1_1_location_response_data_opening_times_regular_hours_item.proto";
+
+message ocpi_2_1_1_location_response_data_opening_times {
+  repeated OCPI.v211.types.ocpi_2_1_1_location_response_data_opening_times_regular_hours_item regular_hours = 1;
+  bool twentyfourseven = 2;
+  repeated OCPI.v211.types.ocpi_2_1_1_location_response_data_opening_times_exceptional_openings_item exceptional_openings = 3;
+  repeated string exceptional_closings = 4;
+}

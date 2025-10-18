@@ -1,0 +1,10 @@
+syntax = "proto3";
+package OCPP.v16.types.enums.setchargingprofile_cschargingprofiles_chargingschedule_chargingrateunit_enum;
+option go_package = "tmp/v16/types/enums;enums";
+option csharp_namespace = "OCPP.v16.types.enums";
+
+enum SetChargingProfile_csChargingProfiles_chargingSchedule_chargingRateUnit_enum {
+  SETCHARGINGPROFILE_CSCHARGINGPROFILES_CHARGINGSCHEDULE_CHARGINGRATEUNIT_ENUM_UNSPECIFIED = 0;
+  A = 1;
+  W = 2;
+}

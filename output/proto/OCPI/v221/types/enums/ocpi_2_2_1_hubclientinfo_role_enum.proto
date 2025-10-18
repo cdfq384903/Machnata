@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPI.v221.types.enums.ocpi_2_2_1_hubclientinfo_role_enum;
+option go_package = "tmp/v221/types/enums;enums";
+option csharp_namespace = "OCPI.v221.types.enums";
+
+enum ocpi_2_2_1_hubclientinfo_role_enum {
+  OCPI_2_2_1_HUBCLIENTINFO_ROLE_ENUM_UNSPECIFIED = 0;
+  CPO = 1;
+  EMSP = 2;
+  HUB = 3;
+  NAP = 4;
+  NSP = 5;
+  OTHER = 6;
+  SCSP = 7;
+}

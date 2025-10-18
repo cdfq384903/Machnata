@@ -1,0 +1,11 @@
+syntax = "proto3";
+package OCPP.v201.types.enums.monitoringbaseenumtype;
+option go_package = "tmp/v201/types/enums;enums";
+option csharp_namespace = "OCPP.v201.types.enums";
+
+enum MonitoringBaseEnumType {
+  MONITORINGBASEENUMTYPE_UNSPECIFIED = 0;
+  All = 1;
+  FactoryDefault = 2;
+  HardWiredOnly = 3;
+}

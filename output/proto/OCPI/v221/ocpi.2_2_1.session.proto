@@ -1,0 +1,44 @@
+syntax = "proto3";
+package OCPI.v221;
+option go_package = "tmp/v221;OCPIv221";
+option csharp_namespace = "OCPI.v221";
+
+import "types/enums/ocpi_2_2_1_session_auth_method_enum.proto";
+import "types/enums/ocpi_2_2_1_session_status_enum.proto";
+import "types/ocpi_2_2_1_session_cdr_token.proto";
+import "types/ocpi_2_2_1_session_charging_periods_item.proto";
+import "types/ocpi_2_2_1_session_total_cost.proto";
+
+message ocpi_2_2_1_session {
+  // NOTE: This field is required by standard Spec.
+  string country_code = 1;
+  // NOTE: This field is required by standard Spec.
+  string party_id = 2;
+  // NOTE: This field is required by standard Spec.
+  string id = 3;
+  // NOTE: This field is required by standard Spec.
+  string start_date_time = 4;
+  string end_date_time = 5;
+  // NOTE: This field is required by standard Spec.
+  double kwh = 6;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v221.types.ocpi_2_2_1_session_cdr_token cdr_token = 7;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v221.types.enums.ocpi_2_2_1_session_auth_method_enum.ocpi_2_2_1_session_auth_method_enum auth_method = 8;
+  string authorization_reference = 9;
+  // NOTE: This field is required by standard Spec.
+  string location_id = 10;
+  // NOTE: This field is required by standard Spec.
+  string evse_uid = 11;
+  // NOTE: This field is required by standard Spec.
+  string connector_id = 12;
+  string meter_id = 13;
+  // NOTE: This field is required by standard Spec.
+  string currency = 14;
+  repeated OCPI.v221.types.ocpi_2_2_1_session_charging_periods_item charging_periods = 15;
+  OCPI.v221.types.ocpi_2_2_1_session_total_cost total_cost = 16;
+  // NOTE: This field is required by standard Spec.
+  OCPI.v221.types.enums.ocpi_2_2_1_session_status_enum.ocpi_2_2_1_session_status_enum status = 17;
+  // NOTE: This field is required by standard Spec.
+  string last_updated = 18;
+}

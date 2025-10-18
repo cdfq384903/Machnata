@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPI.v22.types.enums.ocpi_2_2_location_response_data_evses_item_status_enum;
+option go_package = "tmp/v22/types/enums;enums";
+option csharp_namespace = "OCPI.v22.types.enums";
+
+enum ocpi_2_2_location_response_data_evses_item_status_enum {
+  OCPI_2_2_LOCATION_RESPONSE_DATA_EVSES_ITEM_STATUS_ENUM_UNSPECIFIED = 0;
+  AVAILABLE = 1;
+  BLOCKED = 2;
+  CHARGING = 3;
+  INOPERATIVE = 4;
+  OUTOFORDER = 5;
+  PLANNED = 6;
+  REMOVED = 7;
+  RESERVED = 8;
+  UNKNOWN = 9;
+}

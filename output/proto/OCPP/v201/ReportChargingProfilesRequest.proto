@@ -1,0 +1,21 @@
+syntax = "proto3";
+package OCPP.v201;
+option go_package = "tmp/v201;OCPPv201";
+option csharp_namespace = "OCPP.v201";
+
+import "types/ChargingProfileType.proto";
+import "types/CustomDataType.proto";
+import "types/enums/ChargingLimitSourceEnumType.proto";
+
+message ReportChargingProfilesRequest {
+  OCPP.v201.types.CustomDataType customData = 1;
+  // NOTE: This field is required by standard Spec.
+  int32 requestId = 2;
+  // NOTE: This field is required by standard Spec.
+  OCPP.v201.types.enums.charginglimitsourceenumtype.ChargingLimitSourceEnumType chargingLimitSource = 3;
+  // NOTE: This field is required by standard Spec.
+  repeated OCPP.v201.types.ChargingProfileType chargingProfile = 4;
+  bool tbc = 5;
+  // NOTE: This field is required by standard Spec.
+  int32 evseId = 6;
+}

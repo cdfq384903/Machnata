@@ -1,0 +1,10 @@
+syntax = "proto3";
+package HL7.v600.types.enums.elementdefinition_constraint_severity_enum;
+option go_package = "tmp/v600/types/enums;enums";
+option csharp_namespace = "HL7.v600.types.enums";
+
+enum ElementDefinition_Constraint_severity_enum {
+  ELEMENTDEFINITION_CONSTRAINT_SEVERITY_ENUM_UNSPECIFIED = 0;
+  error = 1;
+  warning = 2;
+}

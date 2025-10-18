@@ -1,0 +1,17 @@
+syntax = "proto3";
+package OCPP.v21;
+option go_package = "tmp/v21;OCPPv21";
+option csharp_namespace = "OCPP.v21";
+
+import "types/CustomDataType.proto";
+
+message NotifyDERStartStopRequest {
+  // NOTE: This field is required by standard Spec.
+  string controlId = 1;
+  // NOTE: This field is required by standard Spec.
+  bool started = 2;
+  // NOTE: This field is required by standard Spec.
+  string timestamp = 3;
+  repeated string supersededIds = 4;
+  OCPP.v21.types.CustomDataType customData = 5;
+}

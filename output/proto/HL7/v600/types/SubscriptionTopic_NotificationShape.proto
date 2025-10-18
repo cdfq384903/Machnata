@@ -1,0 +1,22 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/SubscriptionTopic_RelatedQuery.proto";
+import "types/string.proto";
+import "types/uri.proto";
+
+message SubscriptionTopic_NotificationShape {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  repeated HL7.v600.types.Extension modifierExtension = 3;
+  HL7.v600.types.uri resource = 4;
+  HL7.v600.types.Element shadow__resource = 5 [json_name = "_resource"];
+  repeated HL7.v600.types.string include = 6;
+  repeated HL7.v600.types.Element shadow__include = 7 [json_name = "_include"];
+  repeated HL7.v600.types.string revInclude = 8;
+  repeated HL7.v600.types.Element shadow__revInclude = 9 [json_name = "_revInclude"];
+  repeated HL7.v600.types.SubscriptionTopic_RelatedQuery relatedQuery = 10;
+}

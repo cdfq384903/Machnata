@@ -1,0 +1,15 @@
+syntax = "proto3";
+package OCPP.v21.types;
+option go_package = "tmp/v21/types;types";
+option csharp_namespace = "OCPP.v21.types";
+
+import "types/CustomDataType.proto";
+import "types/RationalNumberType.proto";
+
+message OverstayRuleType {
+  OCPP.v21.types.RationalNumberType overstayFee = 1;
+  string overstayRuleDescription = 2;
+  int32 startTime = 3;
+  int32 overstayFeePeriod = 4;
+  OCPP.v21.types.CustomDataType customData = 5;
+}

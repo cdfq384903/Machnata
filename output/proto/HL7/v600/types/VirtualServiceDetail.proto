@@ -1,0 +1,27 @@
+syntax = "proto3";
+package HL7.v600.types;
+option go_package = "tmp/v600/types;types";
+option csharp_namespace = "HL7.v600.types";
+
+import "types/Address.proto";
+import "types/positiveInt.proto";
+import "types/string.proto";
+import "types/url.proto";
+
+message VirtualServiceDetail {
+  HL7.v600.types.string id = 1;
+  repeated HL7.v600.types.Extension extension = 2;
+  HL7.v600.types.Coding channelType = 3;
+  string addressUrl = 4;
+  HL7.v600.types.Element shadow__addressUrl = 5 [json_name = "_addressUrl"];
+  string addressString = 6;
+  HL7.v600.types.Element shadow__addressString = 7 [json_name = "_addressString"];
+  HL7.v600.types.ContactPoint addressContactPoint = 8;
+  HL7.v600.types.ExtendedContactDetail addressExtendedContactDetail = 9;
+  repeated HL7.v600.types.url additionalInfo = 10;
+  repeated HL7.v600.types.Element shadow__additionalInfo = 11 [json_name = "_additionalInfo"];
+  HL7.v600.types.positiveInt maxParticipants = 12;
+  HL7.v600.types.Element shadow__maxParticipants = 13 [json_name = "_maxParticipants"];
+  HL7.v600.types.string sessionKey = 14;
+  HL7.v600.types.Element shadow__sessionKey = 15 [json_name = "_sessionKey"];
+}
