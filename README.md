@@ -185,7 +185,7 @@ If you prefer to split the pipeline and run each step yourself, use the followin
 
 ###  4.1.<a name='A.1Generate.protofromJSONSchemas'></a> Generate .proto from JSON Schemas
 ```
-cd OCPP-Schema-Generator/
+cd Machnata/
 python3 <source_code> <schema_path> <generate_path>
 python3 ./src/json_to_proto.py ./resources/schemas/OCPP/v201/ ./output/proto/OCPP/v201
 ```
